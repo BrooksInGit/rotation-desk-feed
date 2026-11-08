@@ -1,0 +1,16 @@
+[Unit]
+Description=Rotation Desk live monitor (alerts only, never trades)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=deskmon
+WorkingDirectory=/opt/rotation-desk-feed/monitor
+EnvironmentFile=/opt/rotation-desk-feed/monitor/.env
+ExecStart=/opt/rotation-desk-feed/monitor/.venv/bin/python monitor.py
+Restart=always
+RestartSec=15
+
+[Install]
+WantedBy=multi-user.target
