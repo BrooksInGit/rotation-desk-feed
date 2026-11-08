@@ -167,6 +167,44 @@ def radar_lists(radar: dict, d: date) -> tuple[list, list]:
     return r.get("leaders") or [], r.get("laggards") or []
 
 
+def stock_leg(p, sym, d, at, px, want_dir, swing, level):
+    """Same entry in shares: stock stop/target from the plan (scalps without one: the trigger level's far side,
+    1% of price), 2R target when none, 15:05 close for scalps, 10 sessions for swings. 1 cent slippage each way."""
+    planned = p.get("planned") or {}
+    sign = 1 if want_dir == "above" else -1
+    entry = px + sign * 0.01
+    stop = planned.get("stock_stop")
+    if not stop or (stop - entry) * sign >= 0:
+        stop = entry - sign * entry * (0.01 if not swing else 0.03)
+    risk = abs(entry - stop)
+    tgt = planned.get("target_stock")
+    if not tgt or (tgt - entry) * sign <= 0:
+        tgt = entry + sign * 2 * risk
+    end_day = d if not swing else LAST_DAY
+    seen_days = set()
+    for dd in sessions(d, end_day):
+        for x in stock_bars(sym, dd):
+            t = c.to_et(x["t"])
+            if not c.in_rth(t) or t <= at:
+                continue
+            seen_days.add(dd)
+            if not swing and t.time() >= datetime.strptime("15:05", "%H:%M").time():
+                ex = x["o"]; how = "15:05 close"
+            elif (sign > 0 and x["l"] <= stop) or (sign < 0 and x["h"] >= stop):
+                ex = min(stop, x["o"]) if sign > 0 else max(stop, x["o"]); how = "stop"
+            elif (sign > 0 and x["h"] >= tgt) or (sign < 0 and x["l"] <= tgt):
+                ex = max(tgt, x["o"]) if sign > 0 else min(tgt, x["o"]); how = "target"
+            elif swing and len(seen_days) > 10:
+                ex = x["c"]; how = "10-session time stop"
+            else:
+                continue
+            ex -= sign * 0.01
+            return {"entry": round(entry, 3), "stop": round(stop, 3), "target": round(tgt, 3), "exit": round(ex, 3),
+                    "how": how, "exit_time": t.isoformat(), "r": round(sign * (ex - entry) / risk, 2),
+                    "pct": round(sign * (ex - entry) / entry, 4)}
+    return {"entry": round(entry, 3), "how": "no exit in data"}
+
+
 def replay(p: dict, radar: dict, cancelled_pairs: set) -> dict:
     out = {"id": p["id"], "module": p["module"], "setup": p.get("setup"), "direction": p["direction"],
            "underlying": p["underlying"], "desk_status": p.get("status"),
@@ -256,6 +294,7 @@ def replay(p: dict, radar: dict, cancelled_pairs: set) -> dict:
             return out
         cancelled_pairs.add(pair_key)
         out["confirmed_at"] = confirmed_at.isoformat()
+        out["stock"] = stock_leg(p, sym, d, confirmed_at, entry_px, want_dir, swing, level)
         out["rvol_at_entry"] = checks_log[-1].get("rvol")
         out["rvol_required"] = rvol_req
         out["confirm_delay_min"] = round((confirmed_at - at).total_seconds() / 60, 1)
