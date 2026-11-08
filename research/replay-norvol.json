@@ -30,6 +30,16 @@
    }
   ],
   "confirmed_at": "2026-10-22T09:45:00.021336-04:00",
+  "stock": {
+   "entry": 328.36,
+   "stop": 338.211,
+   "target": 308.658,
+   "exit": 339.35,
+   "how": "stop",
+   "exit_time": "2026-10-27T09:30:00-04:00",
+   "r": -1.12,
+   "pct": -0.0335
+  },
   "rvol_at_entry": 1.0,
   "rvol_required": null,
   "confirm_delay_min": 15.0,
@@ -67,6 +77,16 @@
    }
   ],
   "confirmed_at": "2026-10-19T10:15:01.032244-04:00",
+  "stock": {
+   "entry": 720.41,
+   "stop": 713.206,
+   "target": 734.818,
+   "exit": 720.05,
+   "how": "15:05 close",
+   "exit_time": "2026-10-19T15:05:00-04:00",
+   "r": -0.05,
+   "pct": -0.0005
+  },
   "rvol_at_entry": 1.19,
   "rvol_required": 1.5,
   "confirm_delay_min": 0.0,
@@ -234,6 +254,16 @@
    }
   ],
   "confirmed_at": "2026-10-20T09:35:53.249773-04:00",
+  "stock": {
+   "entry": 67.455,
+   "stop": 68.13,
+   "target": 66.106,
+   "exit": 68.14,
+   "how": "stop",
+   "exit_time": "2026-10-20T10:07:00-04:00",
+   "r": -1.01,
+   "pct": -0.0101
+  },
   "rvol_at_entry": 1.56,
   "rvol_required": 1.5,
   "confirm_delay_min": 5.0,
@@ -279,6 +309,16 @@
    }
   ],
   "confirmed_at": "2026-10-20T09:41:23.279841-04:00",
+  "stock": {
+   "entry": 89.09,
+   "stop": 89.981,
+   "target": 87.308,
+   "exit": 89.991,
+   "how": "stop",
+   "exit_time": "2026-10-20T09:55:00-04:00",
+   "r": -1.01,
+   "pct": -0.0101
+  },
   "rvol_at_entry": 0.95,
   "rvol_required": 1.5,
   "confirm_delay_min": 10.0,
@@ -364,6 +404,16 @@
    }
   ],
   "confirmed_at": "2026-10-20T09:41:31.584109-04:00",
+  "stock": {
+   "entry": 525.44,
+   "stop": 530.694,
+   "target": 514.931,
+   "exit": 530.704,
+   "how": "stop",
+   "exit_time": "2026-10-20T09:53:00-04:00",
+   "r": -1.0,
+   "pct": -0.01
+  },
   "rvol_at_entry": 0.65,
   "rvol_required": 1.5,
   "confirm_delay_min": 0.0,
@@ -546,6 +596,16 @@
    }
   ],
   "confirmed_at": "2026-10-20T09:35:29.891350-04:00",
+  "stock": {
+   "entry": 538.75,
+   "stop": 544.138,
+   "target": 527.975,
+   "exit": 544.148,
+   "how": "stop",
+   "exit_time": "2026-10-20T10:01:00-04:00",
+   "r": -1.0,
+   "pct": -0.01
+  },
   "rvol_at_entry": 0.64,
   "rvol_required": 1.5,
   "confirm_delay_min": 0.0,
@@ -607,6 +667,16 @@
    }
   ],
   "confirmed_at": "2026-10-20T10:18:50.727848-04:00",
+  "stock": {
+   "entry": 1305.01,
+   "stop": 1291.96,
+   "target": 1331.11,
+   "exit": 1291.95,
+   "how": "stop",
+   "exit_time": "2026-10-20T12:22:00-04:00",
+   "r": -1.0,
+   "pct": -0.01
+  },
   "rvol_at_entry": 2.04,
   "rvol_required": 1.5,
   "confirm_delay_min": 0.0,
@@ -680,6 +750,16 @@
    }
   ],
   "confirmed_at": "2026-10-21T10:50:39.149294-04:00",
+  "stock": {
+   "entry": 723.71,
+   "stop": 716.473,
+   "target": 738.184,
+   "exit": 723.54,
+   "how": "15:05 close",
+   "exit_time": "2026-10-21T15:05:00-04:00",
+   "r": -0.02,
+   "pct": -0.0002
+  },
   "rvol_at_entry": 0.86,
   "rvol_required": 1.5,
   "confirm_delay_min": 0.0,
@@ -778,6 +858,16 @@
    }
   ],
   "confirmed_at": "2026-10-22T09:45:00.020162-04:00",
+  "stock": {
+   "entry": 523.236,
+   "stop": 530,
+   "target": 517,
+   "exit": 517.01,
+   "how": "target",
+   "exit_time": "2026-10-22T10:30:00-04:00",
+   "r": 0.92,
+   "pct": 0.0119
+  },
   "rvol_at_entry": 1.03,
   "rvol_required": 1.5,
   "confirm_delay_min": 15.0,
@@ -849,6 +939,16 @@
    }
   ],
   "confirmed_at": "2026-10-22T09:35:01.708314-04:00",
+  "stock": {
+   "entry": 65.75,
+   "stop": 66.407,
+   "target": 64.435,
+   "exit": 66.417,
+   "how": "stop",
+   "exit_time": "2026-10-22T10:00:00-04:00",
+   "r": -1.02,
+   "pct": -0.0102
+  },
   "rvol_at_entry": 1.17,
   "rvol_required": 1.5,
   "confirm_delay_min": 5.0,
@@ -921,6 +1021,16 @@
    }
   ],
   "confirmed_at": "2026-10-22T09:37:38.809315-04:00",
+  "stock": {
+   "entry": 1291.33,
+   "stop": 1278.417,
+   "target": 1317.157,
+   "exit": 1317.147,
+   "how": "target",
+   "exit_time": "2026-10-22T11:21:00-04:00",
+   "r": 2.0,
+   "pct": 0.02
+  },
   "rvol_at_entry": 0.63,
   "rvol_required": 1.5,
   "confirm_delay_min": 5.0,
@@ -958,6 +1068,16 @@
    }
   ],
   "confirmed_at": "2026-10-22T10:22:07.572740-04:00",
+  "stock": {
+   "entry": 711.28,
+   "stop": 718.393,
+   "target": 697.054,
+   "exit": 703.21,
+   "how": "15:05 close",
+   "exit_time": "2026-10-22T15:05:00-04:00",
+   "r": 1.13,
+   "pct": 0.0113
+  },
   "rvol_at_entry": 1.06,
   "rvol_required": 1.5,
   "confirm_delay_min": 0.0,
@@ -1004,6 +1124,16 @@
    }
   ],
   "confirmed_at": "2026-10-22T09:40:00.095883-04:00",
+  "stock": {
+   "entry": 536.48,
+   "stop": 541.845,
+   "target": 525.75,
+   "exit": 525.76,
+   "how": "target",
+   "exit_time": "2026-10-22T11:14:00-04:00",
+   "r": 2.0,
+   "pct": 0.02
+  },
   "rvol_at_entry": 0.96,
   "rvol_required": 1.5,
   "confirm_delay_min": 10.0,
@@ -1041,6 +1171,16 @@
    }
   ],
   "confirmed_at": "2026-10-22T10:24:32.183256-04:00",
+  "stock": {
+   "entry": 764.54,
+   "stop": 772.185,
+   "target": 749.249,
+   "exit": 761.84,
+   "how": "15:05 close",
+   "exit_time": "2026-10-22T15:05:00-04:00",
+   "r": 0.35,
+   "pct": 0.0035
+  },
   "rvol_at_entry": 1.34,
   "rvol_required": 1.5,
   "confirm_delay_min": 0.0,
@@ -1138,6 +1278,16 @@
    }
   ],
   "confirmed_at": "2026-10-22T10:31:41.932403-04:00",
+  "stock": {
+   "entry": 87.26,
+   "stop": 88.133,
+   "target": 85.515,
+   "exit": 85.525,
+   "how": "target",
+   "exit_time": "2026-10-22T15:03:00-04:00",
+   "r": 1.99,
+   "pct": 0.0199
+  },
   "rvol_at_entry": 0.99,
   "rvol_required": 1.5,
   "confirm_delay_min": 0.0,
@@ -1362,6 +1512,16 @@
    }
   ],
   "confirmed_at": "2026-10-26T09:55:46.753870-04:00",
+  "stock": {
+   "entry": 436.206,
+   "stop": 423.12,
+   "target": 462.378,
+   "exit": 420.33,
+   "how": "stop",
+   "exit_time": "2026-10-27T09:30:00-04:00",
+   "r": -1.21,
+   "pct": -0.0364
+  },
   "rvol_at_entry": 1.12,
   "rvol_required": null,
   "confirm_delay_min": 0.0,
@@ -1399,6 +1559,16 @@
    }
   ],
   "confirmed_at": "2026-10-23T10:13:13.165235-04:00",
+  "stock": {
+   "entry": 38.19,
+   "stop": 38.572,
+   "target": 37.426,
+   "exit": 38.582,
+   "how": "stop",
+   "exit_time": "2026-10-23T10:53:00-04:00",
+   "r": -1.03,
+   "pct": -0.0103
+  },
   "rvol_at_entry": 0.46,
   "rvol_required": 1.5,
   "confirm_delay_min": 0.0,
@@ -1444,6 +1614,16 @@
    }
   ],
   "confirmed_at": "2026-10-23T09:35:00.938245-04:00",
+  "stock": {
+   "entry": 274.43,
+   "stop": 277.174,
+   "target": 268.941,
+   "exit": 275.79,
+   "how": "15:05 close",
+   "exit_time": "2026-10-23T15:05:00-04:00",
+   "r": -0.5,
+   "pct": -0.005
+  },
   "rvol_at_entry": 0.87,
   "rvol_required": 1.5,
   "confirm_delay_min": 5.0,
@@ -1555,6 +1735,16 @@
    }
   ],
   "confirmed_at": "2026-10-23T10:16:59.699633-04:00",
+  "stock": {
+   "entry": 108.99,
+   "stop": 110.08,
+   "target": 106.81,
+   "exit": 110.09,
+   "how": "stop",
+   "exit_time": "2026-10-23T10:42:00-04:00",
+   "r": -1.01,
+   "pct": -0.0101
+  },
   "rvol_at_entry": 1.69,
   "rvol_required": 1.5,
   "confirm_delay_min": 0.0,
@@ -1676,6 +1866,10 @@
    }
   ],
   "confirmed_at": "2026-10-30T14:28:40.685237-04:00",
+  "stock": {
+   "entry": 320.22,
+   "how": "no exit in data"
+  },
   "rvol_at_entry": 1.42,
   "rvol_required": 1.5,
   "confirm_delay_min": 0.0,
@@ -1809,6 +2003,16 @@
    }
   ],
   "confirmed_at": "2026-10-26T10:18:53.505329-04:00",
+  "stock": {
+   "entry": 710.05,
+   "stop": 702.949,
+   "target": 724.251,
+   "exit": 712.67,
+   "how": "15:05 close",
+   "exit_time": "2026-10-26T15:05:00-04:00",
+   "r": 0.37,
+   "pct": 0.0037
+  },
   "rvol_at_entry": 0.73,
   "rvol_required": 1.5,
   "confirm_delay_min": 0.0,
@@ -1882,6 +2086,16 @@
    }
   ],
   "confirmed_at": "2026-11-02T13:43:46.994866-05:00",
+  "stock": {
+   "entry": 230.47,
+   "stop": 242.6,
+   "target": 206.3,
+   "exit": 206.31,
+   "how": "target",
+   "exit_time": "2026-11-05T09:30:00-05:00",
+   "r": 1.99,
+   "pct": 0.1048
+  },
   "rvol_at_entry": 0.62,
   "rvol_required": 1.5,
   "confirm_delay_min": 0.0,
@@ -1919,6 +2133,10 @@
    }
   ],
   "confirmed_at": "2026-10-27T10:23:28.563401-04:00",
+  "stock": {
+   "entry": 62.85,
+   "how": "no exit in data"
+  },
   "rvol_at_entry": 0.78,
   "rvol_required": 1.5,
   "confirm_delay_min": 0.0,
@@ -1956,6 +2174,10 @@
    }
   ],
   "confirmed_at": "2026-10-28T13:23:45.799133-04:00",
+  "stock": {
+   "entry": 20.6,
+   "how": "no exit in data"
+  },
   "rvol_at_entry": 0.85,
   "rvol_required": 1.5,
   "confirm_delay_min": 0.0,
@@ -2001,6 +2223,16 @@
    }
   ],
   "confirmed_at": "2026-10-27T09:36:05.334070-04:00",
+  "stock": {
+   "entry": 129.29,
+   "stop": 127.997,
+   "target": 131.876,
+   "exit": 131.866,
+   "how": "target",
+   "exit_time": "2026-10-27T12:07:00-04:00",
+   "r": 1.99,
+   "pct": 0.0199
+  },
   "rvol_at_entry": 0.87,
   "rvol_required": 1.5,
   "confirm_delay_min": 5.0,
@@ -2046,6 +2278,16 @@
    }
   ],
   "confirmed_at": "2026-10-27T09:39:26.647456-04:00",
+  "stock": {
+   "entry": 717.9,
+   "stop": 710.721,
+   "target": 732.258,
+   "exit": 721.25,
+   "how": "15:05 close",
+   "exit_time": "2026-10-27T15:05:00-04:00",
+   "r": 0.47,
+   "pct": 0.0047
+  },
   "rvol_at_entry": 0.65,
   "rvol_required": 1.5,
   "confirm_delay_min": 5.0,
@@ -2151,6 +2393,10 @@
    }
   ],
   "confirmed_at": "2026-10-28T09:35:00.001936-04:00",
+  "stock": {
+   "entry": 62.015,
+   "how": "no exit in data"
+  },
   "rvol_at_entry": 0.85,
   "rvol_required": 1.5,
   "confirm_delay_min": 5.0,
@@ -2200,6 +2446,16 @@
    }
   ],
   "confirmed_at": "2026-10-28T11:54:56.740566-04:00",
+  "stock": {
+   "entry": 36.01,
+   "stop": 35.65,
+   "target": 36.73,
+   "exit": 35.79,
+   "how": "15:05 close",
+   "exit_time": "2026-10-28T15:05:00-04:00",
+   "r": -0.61,
+   "pct": -0.0061
+  },
   "rvol_at_entry": 0.81,
   "rvol_required": 1.5,
   "confirm_delay_min": 0.0,
@@ -2311,6 +2567,10 @@
    }
   ],
   "confirmed_at": "2026-10-29T09:37:17.176945-04:00",
+  "stock": {
+   "entry": 61.49,
+   "how": "no exit in data"
+  },
   "rvol_at_entry": 0.63,
   "rvol_required": 1.5,
   "confirm_delay_min": 0.0,
@@ -2410,6 +2670,16 @@
    }
   ],
   "confirmed_at": "2026-10-29T09:50:01.951056-04:00",
+  "stock": {
+   "entry": 340.29,
+   "stop": 343.693,
+   "target": 333.484,
+   "exit": 343.703,
+   "how": "stop",
+   "exit_time": "2026-10-29T11:08:00-04:00",
+   "r": -1.0,
+   "pct": -0.01
+  },
   "rvol_at_entry": 0.98,
   "rvol_required": 1.5,
   "confirm_delay_min": 0.0,
@@ -2530,6 +2800,16 @@
    }
   ],
   "confirmed_at": "2026-10-29T09:35:50.367828-04:00",
+  "stock": {
+   "entry": 219.2,
+   "stop": 222,
+   "target": 213.65,
+   "exit": 222.01,
+   "how": "stop",
+   "exit_time": "2026-10-29T09:39:00-04:00",
+   "r": -1.0,
+   "pct": -0.0128
+  },
   "rvol_at_entry": 3.66,
   "rvol_required": 1.5,
   "confirm_delay_min": 0.0,
@@ -2587,6 +2867,16 @@
    }
   ],
   "confirmed_at": "2026-10-29T09:37:12.371724-04:00",
+  "stock": {
+   "entry": 712.965,
+   "stop": 720.095,
+   "target": 698.706,
+   "exit": 713.35,
+   "how": "15:05 close",
+   "exit_time": "2026-10-29T15:05:00-04:00",
+   "r": -0.05,
+   "pct": -0.0005
+  },
   "rvol_at_entry": 1.3,
   "rvol_required": 1.5,
   "confirm_delay_min": 5.0,
@@ -3000,6 +3290,16 @@
    }
   ],
   "confirmed_at": "2026-10-30T10:05:01.335387-04:00",
+  "stock": {
+   "entry": 1433.08,
+   "stop": 1418.749,
+   "target": 1461.742,
+   "exit": 1418.739,
+   "how": "stop",
+   "exit_time": "2026-10-30T10:31:00-04:00",
+   "r": -1.0,
+   "pct": -0.01
+  },
   "rvol_at_entry": 1.91,
   "rvol_required": 1.5,
   "confirm_delay_min": 35.0,
@@ -3153,6 +3453,16 @@
    }
   ],
   "confirmed_at": "2026-10-30T09:35:09.890342-04:00",
+  "stock": {
+   "entry": 694.51,
+   "stop": 701.455,
+   "target": 680.62,
+   "exit": 685.3,
+   "how": "15:05 close",
+   "exit_time": "2026-10-30T15:05:00-04:00",
+   "r": 1.33,
+   "pct": 0.0133
+  },
   "rvol_at_entry": 1.84,
   "rvol_required": 1.5,
   "confirm_delay_min": 5.0,
@@ -3198,6 +3508,16 @@
    }
   ],
   "confirmed_at": "2026-10-30T09:35:04.128740-04:00",
+  "stock": {
+   "entry": 759.71,
+   "stop": 767.307,
+   "target": 744.516,
+   "exit": 751.75,
+   "how": "15:05 close",
+   "exit_time": "2026-10-30T15:05:00-04:00",
+   "r": 1.05,
+   "pct": 0.0105
+  },
   "rvol_at_entry": 1.67,
   "rvol_required": 1.5,
   "confirm_delay_min": 5.0,
@@ -3243,6 +3563,16 @@
    }
   ],
   "confirmed_at": "2026-10-30T09:49:38.881912-04:00",
+  "stock": {
+   "entry": 70.02,
+   "stop": 69.32,
+   "target": 71.42,
+   "exit": 69.69,
+   "how": "15:05 close",
+   "exit_time": "2026-10-30T15:05:00-04:00",
+   "r": -0.47,
+   "pct": -0.0047
+  },
   "rvol_at_entry": 1.2,
   "rvol_required": 1.5,
   "confirm_delay_min": 15.0,
@@ -3288,6 +3618,16 @@
    }
   ],
   "confirmed_at": "2026-10-30T09:36:56.395984-04:00",
+  "stock": {
+   "entry": 187.64,
+   "stop": 185.764,
+   "target": 191.393,
+   "exit": 185.754,
+   "how": "stop",
+   "exit_time": "2026-10-30T10:26:00-04:00",
+   "r": -1.01,
+   "pct": -0.0101
+  },
   "rvol_at_entry": 3.02,
   "rvol_required": 1.5,
   "confirm_delay_min": 5.0,
@@ -3325,6 +3665,16 @@
    }
   ],
   "confirmed_at": "2026-10-30T10:03:59.378167-04:00",
+  "stock": {
+   "entry": 77.24,
+   "stop": 78.012,
+   "target": 75.695,
+   "exit": 76.04,
+   "how": "15:05 close",
+   "exit_time": "2026-10-30T15:05:00-04:00",
+   "r": 1.55,
+   "pct": 0.0155
+  },
   "rvol_at_entry": 2.18,
   "rvol_required": 1.5,
   "confirm_delay_min": 0.0,
@@ -3386,6 +3736,16 @@
    }
   ],
   "confirmed_at": "2026-10-30T10:00:54.664119-04:00",
+  "stock": {
+   "entry": 106.54,
+   "stop": 107.605,
+   "target": 104.409,
+   "exit": 104.86,
+   "how": "15:05 close",
+   "exit_time": "2026-10-30T15:05:00-04:00",
+   "r": 1.58,
+   "pct": 0.0158
+  },
   "rvol_at_entry": 1.44,
   "rvol_required": 1.5,
   "confirm_delay_min": 0.0,
@@ -3515,6 +3875,16 @@
    }
   ],
   "confirmed_at": "2026-11-05T09:41:59-05:00",
+  "stock": {
+   "entry": 298.79,
+   "stop": 289.826,
+   "target": 316.717,
+   "exit": 289.816,
+   "how": "stop",
+   "exit_time": "2026-11-05T15:18:00-05:00",
+   "r": -1.0,
+   "pct": -0.03
+  },
   "rvol_at_entry": 1.05,
   "rvol_required": null,
   "confirm_delay_min": 10.0,
@@ -3588,6 +3958,16 @@
    }
   ],
   "confirmed_at": "2026-11-02T09:52:54.224758-05:00",
+  "stock": {
+   "entry": 440.0,
+   "stop": 435.6,
+   "target": 448.8,
+   "exit": 437.741,
+   "how": "15:05 close",
+   "exit_time": "2026-11-02T15:05:00-05:00",
+   "r": -0.51,
+   "pct": -0.0051
+  },
   "rvol_at_entry": 1.43,
   "rvol_required": 1.5,
   "confirm_delay_min": 0.0,
@@ -3625,6 +4005,16 @@
    }
   ],
   "confirmed_at": "2026-11-02T09:42:01.204227-05:00",
+  "stock": {
+   "entry": 110.635,
+   "stop": 109.529,
+   "target": 112.848,
+   "exit": 109.49,
+   "how": "stop",
+   "exit_time": "2026-11-02T10:08:00-05:00",
+   "r": -1.03,
+   "pct": -0.0103
+  },
   "rvol_at_entry": 1.6,
   "rvol_required": 1.5,
   "confirm_delay_min": 0.0,
@@ -3746,6 +4136,16 @@
    }
   ],
   "confirmed_at": "2026-11-02T10:22:31.689809-05:00",
+  "stock": {
+   "entry": 698.26,
+   "stop": 691.277,
+   "target": 712.225,
+   "exit": 691.267,
+   "how": "stop",
+   "exit_time": "2026-11-02T12:39:00-05:00",
+   "r": -1.0,
+   "pct": -0.01
+  },
   "rvol_at_entry": 1.21,
   "rvol_required": 1.5,
   "confirm_delay_min": 0.0,
@@ -3819,6 +4219,16 @@
    }
   ],
   "confirmed_at": "2026-11-02T10:02:56.496245-05:00",
+  "stock": {
+   "entry": 182.64,
+   "stop": 184.466,
+   "target": 178.987,
+   "exit": 184.476,
+   "how": "stop",
+   "exit_time": "2026-11-02T10:08:00-05:00",
+   "r": -1.01,
+   "pct": -0.0101
+  },
   "rvol_at_entry": 2.9,
   "rvol_required": 1.5,
   "confirm_delay_min": 0.0,
@@ -3954,6 +4364,16 @@
    }
   ],
   "confirmed_at": "2026-11-04T12:27:16.168216-05:00",
+  "stock": {
+   "entry": 408.92,
+   "stop": 393.8,
+   "target": 438.41,
+   "exit": 388.1,
+   "how": "stop",
+   "exit_time": "2026-11-06T09:30:00-05:00",
+   "r": -1.38,
+   "pct": -0.0509
+  },
   "rvol_at_entry": 3.11,
   "rvol_required": 1,
   "confirm_delay_min": 0.0,
@@ -4081,6 +4501,16 @@
    }
   ],
   "confirmed_at": "2026-11-03T09:36:32.002818-05:00",
+  "stock": {
+   "entry": 218.0,
+   "stop": 220.18,
+   "target": 213.64,
+   "exit": 220.19,
+   "how": "stop",
+   "exit_time": "2026-11-03T10:21:00-05:00",
+   "r": -1.0,
+   "pct": -0.01
+  },
   "rvol_at_entry": 1.2,
   "rvol_required": 1.5,
   "confirm_delay_min": 5.0,
@@ -4130,6 +4560,16 @@
    }
   ],
   "confirmed_at": "2026-11-03T11:00:25.740138-05:00",
+  "stock": {
+   "entry": 688.26,
+   "stop": 681.377,
+   "target": 702.025,
+   "exit": 684.35,
+   "how": "15:05 close",
+   "exit_time": "2026-11-03T15:05:00-05:00",
+   "r": -0.57,
+   "pct": -0.0057
+  },
   "rvol_at_entry": 0.81,
   "rvol_required": 1.5,
   "confirm_delay_min": 0.0,
@@ -4243,6 +4683,16 @@
    }
   ],
   "confirmed_at": "2026-11-04T09:40:00.975788-05:00",
+  "stock": {
+   "entry": 234.83,
+   "stop": 226.9,
+   "target": 245.8,
+   "exit": 226.89,
+   "how": "stop",
+   "exit_time": "2026-11-05T13:37:00-05:00",
+   "r": -1.0,
+   "pct": -0.0338
+  },
   "rvol_at_entry": 1.34,
   "rvol_required": 1,
   "confirm_delay_min": 10.0,
@@ -4280,6 +4730,16 @@
    }
   ],
   "confirmed_at": "2026-11-04T09:35:00.142585-05:00",
+  "stock": {
+   "entry": 372.39,
+   "stop": 376.114,
+   "target": 364.942,
+   "exit": 376.124,
+   "how": "stop",
+   "exit_time": "2026-11-04T09:39:00-05:00",
+   "r": -1.0,
+   "pct": -0.01
+  },
   "rvol_at_entry": 0.65,
   "rvol_required": 1.5,
   "confirm_delay_min": 5.0,
@@ -4391,6 +4851,16 @@
    }
   ],
   "confirmed_at": "2026-11-04T12:37:54.798732-05:00",
+  "stock": {
+   "entry": 274.62,
+   "stop": 271.874,
+   "target": 280.112,
+   "exit": 276.19,
+   "how": "15:05 close",
+   "exit_time": "2026-11-04T15:05:00-05:00",
+   "r": 0.57,
+   "pct": 0.0057
+  },
   "rvol_at_entry": 1.82,
   "rvol_required": 1.5,
   "confirm_delay_min": 0.0,
@@ -4508,6 +4978,16 @@
    }
   ],
   "confirmed_at": "2026-11-04T09:35:13.854118-05:00",
+  "stock": {
+   "entry": 763.91,
+   "stop": 756.271,
+   "target": 779.188,
+   "exit": 767.37,
+   "how": "15:05 close",
+   "exit_time": "2026-11-04T15:05:00-05:00",
+   "r": 0.45,
+   "pct": 0.0045
+  },
   "rvol_at_entry": 1.57,
   "rvol_required": 1.5,
   "confirm_delay_min": 5.0,
@@ -4545,6 +5025,16 @@
    }
   ],
   "confirmed_at": "2026-11-04T10:01:32.592436-05:00",
+  "stock": {
+   "entry": 128.76,
+   "stop": 127.472,
+   "target": 131.335,
+   "exit": 130.41,
+   "how": "15:05 close",
+   "exit_time": "2026-11-04T15:05:00-05:00",
+   "r": 1.28,
+   "pct": 0.0128
+  },
   "rvol_at_entry": 1.58,
   "rvol_required": 1.5,
   "confirm_delay_min": 0.0,
@@ -4606,6 +5096,16 @@
    }
   ],
   "confirmed_at": "2026-11-04T10:13:40.501069-05:00",
+  "stock": {
+   "entry": 476.99,
+   "stop": 472.22,
+   "target": 486.53,
+   "exit": 484.145,
+   "how": "15:05 close",
+   "exit_time": "2026-11-04T15:05:00-05:00",
+   "r": 1.5,
+   "pct": 0.015
+  },
   "rvol_at_entry": 2.41,
   "rvol_required": 1.5,
   "confirm_delay_min": 0.0,
@@ -4687,6 +5187,16 @@
    }
   ],
   "confirmed_at": "2026-11-04T10:47:19.313028-05:00",
+  "stock": {
+   "entry": 809.71,
+   "stop": 817.807,
+   "target": 793.516,
+   "exit": 793.526,
+   "how": "target",
+   "exit_time": "2026-11-04T11:05:00-05:00",
+   "r": 2.0,
+   "pct": 0.02
+  },
   "rvol_at_entry": 1.44,
   "rvol_required": 1.5,
   "confirm_delay_min": 15.0,
@@ -4822,6 +5332,16 @@
    }
   ],
   "confirmed_at": "2026-11-05T09:35:00.375011-05:00",
+  "stock": {
+   "entry": 126.835,
+   "stop": 123.03,
+   "target": 134.445,
+   "exit": 123.02,
+   "how": "stop",
+   "exit_time": "2026-11-05T10:25:00-05:00",
+   "r": -1.0,
+   "pct": -0.0301
+  },
   "rvol_at_entry": 1.03,
   "rvol_required": null,
   "confirm_delay_min": 5.0,
@@ -4868,6 +5388,10 @@
    }
   ],
   "confirmed_at": "2026-11-05T09:35:00.763654-05:00",
+  "stock": {
+   "entry": 169.15,
+   "how": "no exit in data"
+  },
   "rvol_at_entry": 0.89,
   "rvol_required": 1.5,
   "confirm_delay_min": 5.0,
@@ -4913,6 +5437,16 @@
    }
   ],
   "confirmed_at": "2026-11-05T09:35:01.138243-05:00",
+  "stock": {
+   "entry": 237.03,
+   "stop": 229.919,
+   "target": 251.252,
+   "exit": 228.67,
+   "how": "stop",
+   "exit_time": "2026-11-06T09:30:00-05:00",
+   "r": -1.18,
+   "pct": -0.0353
+  },
   "rvol_at_entry": 1.58,
   "rvol_required": null,
   "confirm_delay_min": 5.0,
@@ -5290,6 +5824,16 @@
    }
   ],
   "confirmed_at": "2026-11-05T09:35:27.125985-05:00",
+  "stock": {
+   "entry": 678.09,
+   "stop": 683.7,
+   "target": 666.87,
+   "exit": 666.88,
+   "how": "target",
+   "exit_time": "2026-11-05T09:55:00-05:00",
+   "r": 2.0,
+   "pct": 0.0165
+  },
   "rvol_at_entry": 1.79,
   "rvol_required": 1.5,
   "confirm_delay_min": 5.0,
@@ -5436,6 +5980,16 @@
    }
   ],
   "confirmed_at": "2026-11-05T10:01:28.865575-05:00",
+  "stock": {
+   "entry": 423.3,
+   "stop": 427.533,
+   "target": 414.834,
+   "exit": 427.543,
+   "how": "stop",
+   "exit_time": "2026-11-05T10:03:00-05:00",
+   "r": -1.0,
+   "pct": -0.01
+  },
   "rvol_at_entry": 2.5,
   "rvol_required": 1.5,
   "confirm_delay_min": 0.0,
@@ -5485,6 +6039,16 @@
    }
   ],
   "confirmed_at": "2026-11-05T10:05:29.160863-05:00",
+  "stock": {
+   "entry": 306.59,
+   "stop": 309.656,
+   "target": 300.458,
+   "exit": 300.468,
+   "how": "target",
+   "exit_time": "2026-11-05T10:27:00-05:00",
+   "r": 2.0,
+   "pct": 0.02
+  },
   "rvol_at_entry": 2.37,
   "rvol_required": 1.5,
   "confirm_delay_min": 0.0,
@@ -5640,6 +6204,16 @@
    }
   ],
   "confirmed_at": "2026-11-05T10:06:15.486858-05:00",
+  "stock": {
+   "entry": 467.39,
+   "stop": 472.064,
+   "target": 458.042,
+   "exit": 458.052,
+   "how": "target",
+   "exit_time": "2026-11-05T10:27:00-05:00",
+   "r": 2.0,
+   "pct": 0.02
+  },
   "rvol_at_entry": 2.99,
   "rvol_required": 1.5,
   "confirm_delay_min": 0.0,
@@ -5713,6 +6287,16 @@
    }
   ],
   "confirmed_at": "2026-11-06T09:40:35.104400-05:00",
+  "stock": {
+   "entry": 660.36,
+   "stop": 658.3,
+   "target": 664.48,
+   "exit": 664.47,
+   "how": "target",
+   "exit_time": "2026-11-06T09:53:00-05:00",
+   "r": 2.0,
+   "pct": 0.0062
+  },
   "rvol_at_entry": 1.89,
   "rvol_required": 1.5,
   "confirm_delay_min": 0.0,
