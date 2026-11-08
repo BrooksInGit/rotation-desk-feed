@@ -359,6 +359,8 @@ def build_event(item: Item, *, kind: str, at: datetime, level: float, price: flo
             ev["option"].update(quote)
             ev["option"]["fill_est"] = est_fill(quote, slippage_frac, side)
             ev["option"]["fill_side"] = side
+    if item.raw.get("track_only"):
+        ev["track_only"] = True
     if note:
         ev["note"] = note
     return ev
@@ -371,6 +373,8 @@ def format_alert(item: Item, ev: dict) -> str:
             "cancelled_pair": "CANCELLED"}.get(ev["kind"], ev["kind"].upper())
     t = to_et(ev["time"])
     lines = [f"{head} · {ev['symbol']} {arrow} {ev['trigger_level']:.2f} · last {ev['price']:.2f} · {t:%H:%M:%S} ET"]
+    if ev.get("track_only"):
+        lines[0] = "(tracking only) " + lines[0]
     if item.raw.get("play_id"):
         lines.append(f"{item.raw.get('module','')} {item.raw.get('setup','')} {str(item.raw.get('direction','')).upper()} · {item.raw['play_id']}")
     if ev["kind"] == "entry":

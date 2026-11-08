@@ -273,6 +273,7 @@ class Monitor:
         self.stream_alerted = False
         self.ws = None
         self.subscribed: set[str] = set()
+        self.track_only: set[str] = set()
 
     # ------------------------------------------------------------ helpers
     def stock_items(self) -> list[Item]:
@@ -306,11 +307,14 @@ class Monitor:
         self.today = d
         self.fired.clear()
         self.unconfirmed.clear()
+        self.track_only.clear()
         self.bars.clear()
         self.orb.clear()
         self.spy_change = None
         # never re-alert something already recorded today (e.g. after a restart)
         for ev in self.repo.todays_events(d):
+            if ev.get("track_only"):
+                self.track_only.add(ev["item_id"])
             if ev.get("kind") != "entry" or ev.get("confirmed"):
                 self.fired.add(ev["item_id"])
             else:
@@ -347,13 +351,13 @@ class Monitor:
                     self.fired.add(item.id)
                     self.unconfirmed.pop(item.id, None)
                     grp = item.raw.get("pair")
-                    if grp:  # pm_break / orb twins: the first to confirm cancels the other
+                    if grp and not item.raw.get("track_only"):
+                        # pm_break / orb twins: the first to confirm is the desk's trade; the other keeps being
+                        # watched as a tracking-only play so both setups get measured (manual section 12)
                         for other in self.items:
                             if other.id != item.id and other.raw.get("pair") == grp and other.id not in self.fired:
-                                self.fired.add(other.id)
-                                self.repo.pending.append(core.build_event(
-                                    other, kind="cancelled_pair", at=at, level=other.level or level, price=price,
-                                    source="pair", note=f"Twin {item.raw.get('setup')} play confirmed first."))
+                                other.raw["track_only"] = True
+                                self.track_only.add(other.id)
                 else:
                     self.unconfirmed[item.id] = (_time.time(), tries + 1)
                     if tries:  # only the first unconfirmed cross gets a message
@@ -436,6 +440,9 @@ class Monitor:
                 if feed:
                     self.feed_meta = {k: v for k, v in feed.items() if k != "watch"}
                     self.items = core.active_items(feed, self.today)
+                    for it in self.items:
+                        if it.id in self.track_only:
+                            it.raw["track_only"] = True
                 await self.sync_subscriptions()
                 self.repo.status = {
                     "stream_connected": self.stream_ok, "market_open": self.market_open,
