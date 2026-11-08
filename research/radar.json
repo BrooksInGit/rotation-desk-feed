@@ -1,0 +1,182 @@
+{
+ "2026-10-26": {
+  "leaders": [
+   "CIBR",
+   "XOP",
+   "XLE",
+   "IGV"
+  ],
+  "laggards": [
+   "XLC",
+   "SMH"
+  ],
+  "regime": "Mixed, tilting risk-on today: SPY +0.70% (765.29), QQQ +1.10%, semis bounced hardest (SMH +2.7%), cyber +2.2%, industrials/defense +1.4-2.4%; defensives soft (XLP -0.3%, XLV flat) and communications fell (XLC -1.6%, META -1.9%, NFLX -3.0%, T -0.4%). Energy leadership held (XOP +1.6%)."
+ },
+ "2026-10-23": {
+  "leaders": [
+   "CIBR",
+   "XLE",
+   "IGV",
+   "XOP"
+  ],
+  "laggards": [
+   "SMH",
+   "GDX"
+  ],
+  "regime": "Mixed, leaning risk-off: SPY -0.54% (2nd down day, -0.96% over 1m), XLY/XLI/XLC/ITA weak; but cyber/software (CIBR +3.2%, IGV +1.7%) and energy (XLE +2.6%, XOP +2.4%) rallied hard while yesterday's defensive leaders (XLP -1.9%, XLV -1.1%) gave back. Semis bounced +0.7% but remain the weakest-moving group; gold miners slid (GDX -1.8%)."
+ },
+ "2026-10-16": {
+  "leaders": [
+   "XLE",
+   "XOP",
+   "XLV"
+  ],
+  "laggards": [
+   "SMH",
+   "XBI"
+  ],
+  "regime": "Risk-off: SPY -1.1% today / -2.0% on the week, QQQ and IWM lagging; money rotating into energy, health care, staples and utilities while semis, software, cyber and biotech lose rank."
+ },
+ "2026-11-03": {
+  "leaders": [
+   "XLV",
+   "XLE",
+   "XLP"
+  ],
+  "laggards": [
+   "XLK",
+   "SMH"
+  ],
+  "regime": "mixed: tech/semis bounce (SMH +2.0%, XLK +1.3%, QQQ +0.6%) while defensives and cyclicals sold (XLP -2.1%, XHB -2.5%, XLB -2.0%, GDX -1.9%, XLE -0.8%); SPY +0.31% (754.40), -2.0% on the week. Leadership unchanged (XLV/XLE/XLP); 1-day bounce has not repaired tech RS trends."
+ },
+ "2026-11-06": {
+  "leaders": [
+   "XLV",
+   "XLP",
+   "XLF",
+   "XRT"
+  ],
+  "laggards": [
+   "XLK",
+   "SMH"
+  ],
+  "regime": "mixed: relief bounce in Thursday's losers (SMH +3.6%, XLK +1.5%, QQQ +1.4%, ARKK +3.1%) while defensive leaders gave back (XLP -1.3%, XLRE -0.7%, XLF -0.6%, XLV -0.1%); SPY +0.33% (735.44) but -2.7% on the week. One-day bounce, laggard RS trends still down."
+ },
+ "2026-11-04": {
+  "leaders": [
+   "XLV",
+   "XLP",
+   "XRT",
+   "XLF"
+  ],
+  "laggards": [
+   "SMH",
+   "XLK"
+  ],
+  "regime": "risk-on (ex-tech/energy): SPY +1.64% (766.74); GDX +9.0%, XRT/XHB +5.5%, XLF +3.5%, XLP +3.4%, XLV +3.1%; XOP -6.4%, XLE -4.7%, SMH -2.7%, XLK flat (11/4 radar). Leadership broadening from health care/staples into retail and financials; tech/semis RS still falling."
+ },
+ "2026-10-29": {
+  "leaders": [
+   "CIBR",
+   "XLV",
+   "XLE",
+   "IGV"
+  ],
+  "laggards": [
+   "XLC",
+   "GDX"
+  ],
+  "regime": "Mixed, rotation out of tech: SPY -0.36% (769.52), QQQ -1.42%, IGV -3.5%, CIBR -2.8%, XLC -1.9% after MSFT/NOW/GOOGL/FTNT reports (NOW -27%, FTNT -20%, GOOGL -12.7%), while defensives and cyclicals rallied (XLV +2.4%, XLP +1.5%, XLRE +2.2%, XHB +3.4%, ITA +3.2%, IWM +1.0%). Gold miners weak (GDX -3.1%). After hours: QQQ 708.10 (-1.0%), SMH 548.60 (-2.3%), SPY 765.90 (-0.5%) as more mega-caps reported (cause not verified)."
+ },
+ "2026-11-02": {
+  "leaders": [
+   "XLV",
+   "XLE",
+   "XLP",
+   "XOP"
+  ],
+  "laggards": [
+   "XLK",
+   "SMH"
+  ],
+  "regime": "Mixed, rotation out of tech/semis and energy into cyclicals and staples: SPY -0.48% (752.12, faded from +1.1% at 763.86 high), QQQ -1.35%, XLK -2.9%, SMH -2.8%, IGV -2.3%; XLE -3.9%, XOP -5.0%; XHB +3.6%, XLY +2.4%, KRE +2.4%, ITA +2.4%, XLF +1.8%, XLP +1.6%, GDX +2.7%."
+ },
+ "2026-10-27": {
+  "leaders": [
+   "CIBR",
+   "IGV",
+   "XLE",
+   "XOP"
+  ],
+  "laggards": [
+   "XLC",
+   "PAVE"
+  ],
+  "regime": "Mixed, tilting risk-on: SPY +0.57% (769.72), QQQ +1.27%, SMH +3.0%, ARKK/URA/XME up 3-5%; energy gave back (XLE -2.0%, XOP -2.4%, VLO -9.2%), staples -0.9%, XLC -0.3%. Tech/semis bid, energy leadership fading short-term but still top-4 on 1-6m RS."
+ },
+ "2026-10-28": {
+  "leaders": [
+   "CIBR",
+   "IGV",
+   "XLE",
+   "XOP"
+  ],
+  "laggards": [
+   "XLC",
+   "SMH"
+  ],
+  "regime": "Mixed, tilting risk-on into the close: SPY +0.34% (772.31), QQQ +0.59%, SMH +1.8%, XBI/ARKK +1.4%; energy flat; staples/utilities/real estate/transports lagged. After the close, CIBR -4.6%, IGV -4.1%, XLC -2.3%, QQQ -0.7% in extended trading as MSFT, NOW, GOOGL, TMUS, FTNT and KLAC reported (cause not verified); expect a risk-off open in software/cyber."
+ },
+ "2026-10-19": {
+  "leaders": [
+   "XLE",
+   "XOP",
+   "XLV",
+   "IGV"
+  ],
+  "laggards": [
+   "SMH",
+   "XME"
+  ],
+  "regime": "Mixed: SPY +0.43%, QQQ +1.2%, semis/software/biotech bounced while Friday's leaders (energy, health care, staples, utilities) gave back ~1%; leadership table still energy/health, so a one-day tech rebound inside a risk-off rotation."
+ },
+ "2026-10-22": {
+  "leaders": [
+   "CIBR",
+   "IGV",
+   "XLV",
+   "XLE"
+  ],
+  "laggards": [
+   "SMH",
+   "XME"
+  ],
+  "regime": "Risk-off: SPY -1.18%, QQQ -2.84%, SMH -6.0% (semis -4% to -12%); defensives led (XLP +3.3%, XLU +2.0%, XLV +1.3%). Leadership table still software/cyber, health care, energy; semis and metals the weakest."
+ },
+ "2026-11-05": {
+  "leaders": [
+   "XLV",
+   "XLP",
+   "XRT",
+   "XLF"
+  ],
+  "laggards": [
+   "SMH",
+   "XLK"
+  ],
+  "regime": "risk-off: SPY -4.38% (733.25), QQQ -6.4%, SMH -11.6%, XLK -8.0%, ARKK -9.1%, IWM -4.6%; only GDX green (+1.4%). Defensives fell least (XLP -0.7%, XLU -0.7%, XLV -2.5%), so leadership is relative strength in a falling tape, not absolute buying."
+ },
+ "2026-10-30": {
+  "leaders": [
+   "XLV",
+   "XLE",
+   "XOP",
+   "XLP"
+  ],
+  "laggards": [
+   "GDX",
+   "SMH"
+  ],
+  "regime": "Risk-off tape with defensive/energy rotation: SPY -1.77% (755.70), QQQ -3.47%, SMH -6.9%, ARKK -5.9%, GDX -5.2%, IGV -3.4%, CIBR -3.8%; XLE +1.9%, XOP +2.1%, XLP +1.4%, XLU +0.7%, XLV +0.4%. Mega-cap tech and semis led the decline after earnings (INTC -28%, QCOM -11%, AMD -11% intraday)."
+ }
+}
