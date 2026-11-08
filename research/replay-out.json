@@ -1,0 +1,6559 @@
+[
+ {
+  "id": "20261016-swing-AVGO-P",
+  "module": "swing",
+  "setup": "support break / lower highs",
+  "direction": "put",
+  "underlying": "AVGO",
+  "desk_status": "passed",
+  "desk_pass_reason": "too expensive for limits: 320P mid $11.23 = $1,123/contract vs $300 swing premium cap (15% of $2,000); a 0.40+ delta str",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-10-22T09:30:00.021336-04:00",
+  "cross_price": 326.53,
+  "level": 328.5,
+  "cross_source": "trade",
+  "checks": [
+   {
+    "time": "2026-10-22T09:30:00.021336-04:00",
+    "price": 326.53,
+    "failed": [
+     "open: inside the first 5 minutes"
+    ]
+   },
+   {
+    "time": "2026-10-22T09:45:00.021336-04:00",
+    "price": 328.37,
+    "failed": []
+   }
+  ],
+  "confirmed_at": "2026-10-22T09:45:00.021336-04:00",
+  "confirm_delay_min": 15.0,
+  "option": "AVGO261120P00320000",
+  "option_how": "play contract",
+  "entry_fill": 10.578,
+  "entry_bar_time": "2026-10-22T09:45:00-04:00",
+  "exit_time": "2026-10-27T09:40:00-04:00",
+  "exit_fill": 5.531,
+  "exit_reason": "option stop",
+  "pnl_pct": -0.4771,
+  "r": -1.06,
+  "result": "trade"
+ },
+ {
+  "id": "20261019-scalp-QQQ-C",
+  "module": "scalp",
+  "setup": "pm_break",
+  "direction": "call",
+  "underlying": "QQQ",
+  "desk_status": "passed",
+  "desk_pass_reason": "rvol below 1.5 (0.60 at 11:07 check). Also crossed 720.40 in the 10:15 ET bar (high 721.73), after the paired ORB play t",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-10-19T10:15:01.032244-04:00",
+  "cross_price": 720.4,
+  "level": 720.4,
+  "cross_source": "trade",
+  "checks": [
+   {
+    "time": "2026-10-19T10:15:01.032244-04:00",
+    "price": 720.4,
+    "failed": [
+     "rvol: volume 1.19x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-19T10:20:01.032244-04:00",
+    "price": 720.92,
+    "failed": [
+     "rvol: volume 1.21x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-19T10:25:01.032244-04:00",
+    "price": 721.185,
+    "failed": [
+     "rvol: volume 1.21x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-19T10:30:01.032244-04:00",
+    "price": 720.4001,
+    "failed": [
+     "rvol: volume 1.21x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-19T10:40:01.032244-04:00",
+    "price": 720.65,
+    "failed": [
+     "rvol: volume 1.29x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-19T10:45:01.032244-04:00",
+    "price": 721.4,
+    "failed": [
+     "rvol: volume 1.28x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-19T10:50:01.032244-04:00",
+    "price": 720.67,
+    "failed": [
+     "rvol: volume 1.27x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   }
+  ],
+  "result": "monitor would pass"
+ },
+ {
+  "id": "20261019-scalp-QQQ-C-orb",
+  "module": "scalp",
+  "setup": "orb",
+  "direction": "call",
+  "underlying": "QQQ",
+  "desk_status": "passed",
+  "desk_pass_reason": "rvol below 1.5: triggered in 10:10 ET bar (high 720.275 > OR high 720.22); rvol 0.83 at trigger, 0.60 at 11:07 check (5.",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-10-19T10:14:53.156752-04:00",
+  "cross_price": 720.24,
+  "level": 720.22,
+  "cross_source": "trade",
+  "checks": [
+   {
+    "time": "2026-10-19T10:14:53.156752-04:00",
+    "price": 720.24,
+    "failed": [
+     "rvol: volume 1.17x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-19T10:19:53.156752-04:00",
+    "price": 721.09,
+    "failed": [
+     "rvol: volume 1.21x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-19T10:24:53.156752-04:00",
+    "price": 721.36,
+    "failed": [
+     "rvol: volume 1.22x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-19T10:29:53.156752-04:00",
+    "price": 721.115,
+    "failed": [
+     "rvol: volume 1.20x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-19T10:44:53.156752-04:00",
+    "price": 720.33,
+    "failed": [
+     "rvol: volume 1.28x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-19T10:49:53.156752-04:00",
+    "price": 720.805,
+    "failed": [
+     "rvol: volume 1.27x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   }
+  ],
+  "result": "monitor would pass"
+ },
+ {
+  "id": "20261020-scalp-CLF-P",
+  "module": "scalp",
+  "setup": "pm_break",
+  "direction": "put",
+  "underlying": "CLF",
+  "desk_status": "passed",
+  "desk_pass_reason": "extension: triggered (low 12.625) and price 13.135 is 4.1% past trigger 13.70 (limit 1%)",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-10-20T09:30:00.933854-04:00",
+  "cross_price": 13.68,
+  "level": 13.7,
+  "cross_source": "trade",
+  "checks": [
+   {
+    "time": "2026-10-20T09:30:00.933854-04:00",
+    "price": 13.68,
+    "failed": [
+     "vwap: above VWAP 13.59",
+     "open: inside the first 5 minutes"
+    ]
+   },
+   {
+    "time": "2026-10-20T09:35:00.933854-04:00",
+    "price": 12.751,
+    "failed": [
+     "extension: 6.93% past trigger (max 1.0%)"
+    ]
+   },
+   {
+    "time": "2026-10-20T09:40:00.933854-04:00",
+    "price": 13.1401,
+    "failed": [
+     "extension: 4.09% past trigger (max 1.0%)",
+     "vwap: above VWAP 13.07"
+    ]
+   },
+   {
+    "time": "2026-10-20T09:45:00.933854-04:00",
+    "price": 13.0397,
+    "failed": [
+     "extension: 4.82% past trigger (max 1.0%)"
+    ]
+   },
+   {
+    "time": "2026-10-20T09:50:00.933854-04:00",
+    "price": 12.975,
+    "failed": [
+     "extension: 5.29% past trigger (max 1.0%)"
+    ]
+   },
+   {
+    "time": "2026-10-20T09:55:00.933854-04:00",
+    "price": 13.195,
+    "failed": [
+     "extension: 3.69% past trigger (max 1.0%)",
+     "vwap: above VWAP 13.08"
+    ]
+   },
+   {
+    "time": "2026-10-20T10:00:00.933854-04:00",
+    "price": 13.05,
+    "failed": [
+     "extension: 4.74% past trigger (max 1.0%)"
+    ]
+   },
+   {
+    "time": "2026-10-20T10:05:00.933854-04:00",
+    "price": 13.085,
+    "failed": [
+     "extension: 4.49% past trigger (max 1.0%)",
+     "vwap: above VWAP 13.08"
+    ]
+   }
+  ],
+  "result": "monitor would pass"
+ },
+ {
+  "id": "20261020-scalp-DVN-C",
+  "module": "scalp",
+  "setup": "pm_break",
+  "direction": "call",
+  "underlying": "DVN",
+  "desk_status": "expired",
+  "desk_pass_reason": "",
+  "desk_pnl": null,
+  "desk_r": null,
+  "result": "never crossed"
+ },
+ {
+  "id": "20261020-scalp-FCX-P",
+  "module": "scalp",
+  "setup": "pm_break",
+  "direction": "put",
+  "underlying": "FCX",
+  "desk_status": "passed",
+  "desk_pass_reason": "vwap: triggered (low 67.24) but price 68.255 at 10:09 is back above trigger and above VWAP (~67.75)",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-10-20T09:30:53.249773-04:00",
+  "cross_price": 67.9,
+  "level": 67.9,
+  "cross_source": "trade",
+  "checks": [
+   {
+    "time": "2026-10-20T09:30:53.249773-04:00",
+    "price": 67.9,
+    "failed": [
+     "rvol: volume 0.02x normal for this time (min 1.50x, 1m-same-time-10d)",
+     "open: inside the first 5 minutes"
+    ]
+   },
+   {
+    "time": "2026-10-20T09:35:53.249773-04:00",
+    "price": 67.465,
+    "failed": []
+   }
+  ],
+  "confirmed_at": "2026-10-20T09:35:53.249773-04:00",
+  "confirm_delay_min": 5.0,
+  "option": "FCX261023P00067000",
+  "option_how": "nearest strike 67, exp 10/23",
+  "entry_fill": 1.163,
+  "entry_bar_time": "2026-10-20T09:32:00-04:00",
+  "exit_time": "2026-10-20T10:20:00-04:00",
+  "exit_fill": 0.645,
+  "exit_reason": "option stop",
+  "pnl_pct": -0.4451,
+  "r": -1.59,
+  "result": "trade"
+ },
+ {
+  "id": "20261020-scalp-INTC-P",
+  "module": "scalp",
+  "setup": "pm_break",
+  "direction": "put",
+  "underlying": "INTC",
+  "desk_status": "passed",
+  "desk_pass_reason": "vwap: triggered (low 88.77) but price 91.69 at 10:09 is back above trigger and above VWAP (~89.7)",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-10-20T09:31:23.279841-04:00",
+  "cross_price": 89.88,
+  "level": 89.88,
+  "cross_source": "trade",
+  "checks": [
+   {
+    "time": "2026-10-20T09:31:23.279841-04:00",
+    "price": 89.88,
+    "failed": [
+     "rvol: volume 0.66x normal for this time (min 1.50x, 1m-same-time-10d)",
+     "open: inside the first 5 minutes"
+    ]
+   },
+   {
+    "time": "2026-10-20T09:41:23.279841-04:00",
+    "price": 89.1,
+    "failed": [
+     "rvol: volume 0.95x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-20T09:46:23.279841-04:00",
+    "price": 89.5363,
+    "failed": [
+     "rvol: volume 0.97x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-20T09:51:23.279841-04:00",
+    "price": 89.3871,
+    "failed": [
+     "rvol: volume 0.94x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   }
+  ],
+  "result": "monitor would pass"
+ },
+ {
+  "id": "20261020-scalp-CLF-P-orb",
+  "module": "scalp",
+  "setup": "orb",
+  "direction": "put",
+  "underlying": "CLF",
+  "desk_status": "expired",
+  "desk_pass_reason": "",
+  "desk_pnl": null,
+  "desk_r": null,
+  "result": "never crossed"
+ },
+ {
+  "id": "20261020-scalp-DVN-C-orb",
+  "module": "scalp",
+  "setup": "orb",
+  "direction": "call",
+  "underlying": "DVN",
+  "desk_status": "expired",
+  "desk_pass_reason": "",
+  "desk_pnl": null,
+  "desk_r": null,
+  "result": "never crossed"
+ },
+ {
+  "id": "20261020-scalp-FCX-P-orb",
+  "module": "scalp",
+  "setup": "orb",
+  "direction": "put",
+  "underlying": "FCX",
+  "desk_status": "expired",
+  "desk_pass_reason": "",
+  "desk_pnl": null,
+  "desk_r": null,
+  "result": "never crossed"
+ },
+ {
+  "id": "20261020-scalp-INTC-P-orb",
+  "module": "scalp",
+  "setup": "orb",
+  "direction": "put",
+  "underlying": "INTC",
+  "desk_status": "expired",
+  "desk_pass_reason": "",
+  "desk_pnl": null,
+  "desk_r": null,
+  "result": "never crossed"
+ },
+ {
+  "id": "20261020-scalp-AMD-P",
+  "module": "scalp",
+  "setup": "pm_break",
+  "direction": "put",
+  "underlying": "AMD",
+  "desk_status": "passed",
+  "desk_pass_reason": "vwap: triggered (low 524.60, 9:40 bar) but price 540.03 at 10:09 is back above trigger and above VWAP (~530.5)",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-10-20T09:41:31.584109-04:00",
+  "cross_price": 525.45,
+  "level": 525.47,
+  "cross_source": "trade",
+  "checks": [
+   {
+    "time": "2026-10-20T09:41:31.584109-04:00",
+    "price": 525.45,
+    "failed": [
+     "rvol: volume 0.65x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   }
+  ],
+  "result": "monitor would pass"
+ },
+ {
+  "id": "20261020-scalp-ARM-P",
+  "module": "scalp",
+  "setup": "pm_break",
+  "direction": "put",
+  "underlying": "ARM",
+  "desk_status": "passed",
+  "desk_pass_reason": "vwap: triggered (low 217.26) but price 223.66 at 10:09 is back above trigger and above VWAP (~220)",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-10-20T09:32:44.108260-04:00",
+  "cross_price": 221.5,
+  "level": 221.5,
+  "cross_source": "trade",
+  "checks": [
+   {
+    "time": "2026-10-20T09:32:44.108260-04:00",
+    "price": 221.5,
+    "failed": [
+     "rvol: volume 0.83x normal for this time (min 1.50x, 1m-same-time-10d)",
+     "open: inside the first 5 minutes"
+    ]
+   },
+   {
+    "time": "2026-10-20T09:42:44.108260-04:00",
+    "price": 218.835,
+    "failed": [
+     "extension: 1.20% past trigger (max 1.0%)",
+     "rvol: volume 0.98x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-20T09:47:44.108260-04:00",
+    "price": 218.73,
+    "failed": [
+     "extension: 1.25% past trigger (max 1.0%)",
+     "rvol: volume 0.98x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-20T09:52:44.108260-04:00",
+    "price": 218.25,
+    "failed": [
+     "extension: 1.47% past trigger (max 1.0%)",
+     "rvol: volume 1.19x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   }
+  ],
+  "result": "monitor would pass"
+ },
+ {
+  "id": "20261020-scalp-LLY-C",
+  "module": "scalp",
+  "setup": "pm_break",
+  "direction": "call",
+  "underlying": "LLY",
+  "desk_status": "passed",
+  "desk_pass_reason": "extension: triggered (high 1304.31) and price 1291.68 is 2.6% past trigger 1258.90 (limit 1%)",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-10-20T09:30:00.836034-04:00",
+  "cross_price": 1263.5,
+  "level": 1258.9,
+  "cross_source": "trade",
+  "checks": [
+   {
+    "time": "2026-10-20T09:30:00.836034-04:00",
+    "price": 1263.5,
+    "failed": [
+     "vwap: below VWAP 1265.89",
+     "rvol: volume 1.32x normal for this time (min 1.50x, 1m-same-time-10d)",
+     "open: inside the first 5 minutes"
+    ]
+   },
+   {
+    "time": "2026-10-20T09:35:00.836034-04:00",
+    "price": 1287.93,
+    "failed": [
+     "extension: 2.31% past trigger (max 1.0%)"
+    ]
+   },
+   {
+    "time": "2026-10-20T09:40:00.836034-04:00",
+    "price": 1291.04,
+    "failed": [
+     "extension: 2.55% past trigger (max 1.0%)"
+    ]
+   },
+   {
+    "time": "2026-10-20T09:45:00.836034-04:00",
+    "price": 1301.675,
+    "failed": [
+     "extension: 3.40% past trigger (max 1.0%)"
+    ]
+   },
+   {
+    "time": "2026-10-20T09:50:00.836034-04:00",
+    "price": 1302.4,
+    "failed": [
+     "extension: 3.46% past trigger (max 1.0%)"
+    ]
+   },
+   {
+    "time": "2026-10-20T09:55:00.836034-04:00",
+    "price": 1292,
+    "failed": [
+     "extension: 2.63% past trigger (max 1.0%)"
+    ]
+   },
+   {
+    "time": "2026-10-20T10:00:00.836034-04:00",
+    "price": 1294.1002,
+    "failed": [
+     "extension: 2.80% past trigger (max 1.0%)"
+    ]
+   },
+   {
+    "time": "2026-10-20T10:05:00.836034-04:00",
+    "price": 1296.29,
+    "failed": [
+     "extension: 2.97% past trigger (max 1.0%)"
+    ]
+   }
+  ],
+  "result": "monitor would pass"
+ },
+ {
+  "id": "20261020-scalp-MU-P",
+  "module": "scalp",
+  "setup": "pm_break",
+  "direction": "put",
+  "underlying": "MU",
+  "desk_status": "expired",
+  "desk_pass_reason": "",
+  "desk_pnl": null,
+  "desk_r": null,
+  "result": "never crossed"
+ },
+ {
+  "id": "20261020-scalp-SMH-P",
+  "module": "scalp",
+  "setup": "pm_break",
+  "direction": "put",
+  "underlying": "SMH",
+  "desk_status": "passed",
+  "desk_pass_reason": "vwap: triggered (low 536.23) but price 547.73 at 10:09 is back above trigger and above VWAP (~540)",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-10-20T09:35:29.891350-04:00",
+  "cross_price": 538.76,
+  "level": 538.79,
+  "cross_source": "trade",
+  "checks": [
+   {
+    "time": "2026-10-20T09:35:29.891350-04:00",
+    "price": 538.76,
+    "failed": [
+     "rvol: volume 0.64x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-20T09:40:29.891350-04:00",
+    "price": 538.59,
+    "failed": [
+     "rvol: volume 0.88x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-20T09:45:29.891350-04:00",
+    "price": 538.42,
+    "failed": [
+     "rvol: volume 0.82x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-20T09:50:29.891350-04:00",
+    "price": 538.215,
+    "failed": [
+     "rvol: volume 0.79x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   }
+  ],
+  "result": "monitor would pass"
+ },
+ {
+  "id": "20261020-scalp-AMD-P-orb",
+  "module": "scalp",
+  "setup": "orb",
+  "direction": "put",
+  "underlying": "AMD",
+  "desk_status": "expired",
+  "desk_pass_reason": "",
+  "desk_pnl": null,
+  "desk_r": null,
+  "result": "never crossed"
+ },
+ {
+  "id": "20261020-scalp-ARM-P-orb",
+  "module": "scalp",
+  "setup": "orb",
+  "direction": "put",
+  "underlying": "ARM",
+  "desk_status": "expired",
+  "desk_pass_reason": "",
+  "desk_pnl": null,
+  "desk_r": null,
+  "result": "never crossed"
+ },
+ {
+  "id": "20261020-scalp-LLY-C-orb",
+  "module": "scalp",
+  "setup": "orb",
+  "direction": "call",
+  "underlying": "LLY",
+  "desk_status": "expired",
+  "desk_pass_reason": "",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-10-20T10:18:50.727848-04:00",
+  "cross_price": 1305.0,
+  "level": 1304.31,
+  "cross_source": "trade",
+  "checks": [
+   {
+    "time": "2026-10-20T10:18:50.727848-04:00",
+    "price": 1305.0,
+    "failed": []
+   }
+  ],
+  "confirmed_at": "2026-10-20T10:18:50.727848-04:00",
+  "confirm_delay_min": 0.0,
+  "option": "LLY261023C01305000",
+  "option_how": "nearest strike 1305, exp 10/23",
+  "entry_fill": 17.866,
+  "entry_bar_time": "2026-10-20T10:18:00-04:00",
+  "exit_time": "2026-10-20T12:23:00-04:00",
+  "exit_fill": 12.654,
+  "exit_reason": "option stop",
+  "pnl_pct": -0.2917,
+  "r": -1.04,
+  "result": "trade"
+ },
+ {
+  "id": "20261020-scalp-MU-P-orb",
+  "module": "scalp",
+  "setup": "orb",
+  "direction": "put",
+  "underlying": "MU",
+  "desk_status": "expired",
+  "desk_pass_reason": "",
+  "desk_pnl": null,
+  "desk_r": null,
+  "result": "never crossed"
+ },
+ {
+  "id": "20261020-scalp-SMH-P-orb",
+  "module": "scalp",
+  "setup": "orb",
+  "direction": "put",
+  "underlying": "SMH",
+  "desk_status": "expired",
+  "desk_pass_reason": "",
+  "desk_pnl": null,
+  "desk_r": null,
+  "result": "never crossed"
+ },
+ {
+  "id": "20261021-scalp-ORCL-C",
+  "module": "scalp",
+  "setup": "pm_break",
+  "direction": "call",
+  "underlying": "ORCL",
+  "desk_status": "expired",
+  "desk_pass_reason": "",
+  "desk_pnl": null,
+  "desk_r": null,
+  "result": "never crossed"
+ },
+ {
+  "id": "20261021-scalp-QQQ-C",
+  "module": "scalp",
+  "setup": "pm_break",
+  "direction": "call",
+  "underlying": "QQQ",
+  "desk_status": "passed",
+  "desk_pass_reason": "Cancelled: paired orb play triggered at 10:00 (manual 5.2). pm high 723.70 not reached (day high 723.57).",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-10-21T10:50:39.149294-04:00",
+  "cross_price": 723.7,
+  "level": 723.7,
+  "cross_source": "trade",
+  "checks": [
+   {
+    "time": "2026-10-21T10:50:39.149294-04:00",
+    "price": 723.7,
+    "failed": [
+     "rvol: volume 0.86x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-21T11:10:39.149294-04:00",
+    "price": 724.1,
+    "failed": [
+     "rvol: volume 0.84x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-21T11:15:39.149294-04:00",
+    "price": 724.5276,
+    "failed": [
+     "rvol: volume 0.83x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-21T11:25:39.149294-04:00",
+    "price": 724.58,
+    "failed": [
+     "rvol: volume 0.86x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   }
+  ],
+  "result": "monitor would pass"
+ },
+ {
+  "id": "20261021-scalp-ORCL-C-orb",
+  "module": "scalp",
+  "setup": "orb",
+  "direction": "call",
+  "underlying": "ORCL",
+  "desk_status": "expired",
+  "desk_pass_reason": "",
+  "desk_pnl": null,
+  "desk_r": null,
+  "result": "never crossed"
+ },
+ {
+  "id": "20261021-scalp-QQQ-C-orb",
+  "module": "scalp",
+  "setup": "orb",
+  "direction": "call",
+  "underlying": "QQQ",
+  "desk_status": "passed",
+  "desk_pass_reason": "VWAP and RVOL failed: QQQ 720.91 below VWAP 721.94; RVOL 0.57 (<1.5). Extension OK (price back below trigger). SPY -0.03",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-10-21T10:02:46.634129-04:00",
+  "cross_price": 723.2,
+  "level": 723.2,
+  "cross_source": "trade",
+  "checks": [
+   {
+    "time": "2026-10-21T10:02:46.634129-04:00",
+    "price": 723.2,
+    "failed": [
+     "rvol: volume 0.88x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   }
+  ],
+  "result": "monitor would pass"
+ },
+ {
+  "id": "20261022-scalp-AMD-P",
+  "module": "scalp",
+  "setup": "pm_break",
+  "direction": "put",
+  "underlying": "AMD",
+  "desk_status": "closed",
+  "desk_pass_reason": "",
+  "desk_pnl": 925,
+  "desk_r": 3.72,
+  "crossed_at": "2026-10-22T09:30:00.020162-04:00",
+  "cross_price": 524.095,
+  "level": 527.0,
+  "cross_source": "trade",
+  "checks": [
+   {
+    "time": "2026-10-22T09:30:00.020162-04:00",
+    "price": 524.095,
+    "failed": [
+     "vwap: above VWAP 523.59",
+     "rvol: volume 1.01x normal for this time (min 1.50x, 1m-same-time-10d)",
+     "open: inside the first 5 minutes"
+    ]
+   },
+   {
+    "time": "2026-10-22T09:35:00.020162-04:00",
+    "price": 523.1,
+    "failed": [
+     "vwap: above VWAP 522.68",
+     "rvol: volume 1.14x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-22T09:40:00.020162-04:00",
+    "price": 523.6138,
+    "failed": [
+     "vwap: above VWAP 523.15",
+     "rvol: volume 1.09x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-22T09:45:00.020162-04:00",
+    "price": 523.2455,
+    "failed": [
+     "rvol: volume 1.03x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-22T09:50:00.020162-04:00",
+    "price": 522.46,
+    "failed": [
+     "rvol: volume 0.99x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-22T10:05:00.020162-04:00",
+    "price": 525.14,
+    "failed": [
+     "vwap: above VWAP 524.40",
+     "rvol: volume 0.99x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   }
+  ],
+  "result": "monitor would pass"
+ },
+ {
+  "id": "20261022-scalp-CRWD-C",
+  "module": "scalp",
+  "setup": "pm_break",
+  "direction": "call",
+  "underlying": "CRWD",
+  "desk_status": "passed",
+  "desk_pass_reason": "Market + VWAP failed: SPY -0.89% (>0.75% down blocks calls); CRWD 239.19 below VWAP 242.10 (failed breakout, now below t",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-10-22T09:31:38.657214-04:00",
+  "cross_price": 244.0,
+  "level": 244.0,
+  "cross_source": "trade",
+  "checks": [
+   {
+    "time": "2026-10-22T09:31:38.657214-04:00",
+    "price": 244.0,
+    "failed": [
+     "rvol: volume 1.30x normal for this time (min 1.50x, 1m-same-time-10d)",
+     "open: inside the first 5 minutes"
+    ]
+   }
+  ],
+  "result": "monitor would pass"
+ },
+ {
+  "id": "20261022-scalp-FCX-P",
+  "module": "scalp",
+  "setup": "pm_break",
+  "direction": "put",
+  "underlying": "FCX",
+  "desk_status": "passed",
+  "desk_pass_reason": "VWAP failed: FCX 66.04 above VWAP 65.93 (back above trigger 65.90). RVOL 1.75 OK. Spread 44% also far over 5% limit; max",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-10-22T09:30:01.708314-04:00",
+  "cross_price": 65.85,
+  "level": 65.9,
+  "cross_source": "trade",
+  "checks": [
+   {
+    "time": "2026-10-22T09:30:01.708314-04:00",
+    "price": 65.85,
+    "failed": [
+     "rvol: volume 0.04x normal for this time (min 1.50x, 1m-same-time-10d)",
+     "open: inside the first 5 minutes"
+    ]
+   },
+   {
+    "time": "2026-10-22T09:35:01.708314-04:00",
+    "price": 65.7599,
+    "failed": [
+     "rvol: volume 1.17x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-22T09:40:01.708314-04:00",
+    "price": 65.81,
+    "failed": [
+     "rvol: volume 1.19x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-22T09:45:01.708314-04:00",
+    "price": 65.69,
+    "failed": [
+     "rvol: volume 1.18x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-22T09:50:01.708314-04:00",
+    "price": 65.8,
+    "failed": [
+     "rvol: volume 1.14x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   }
+  ],
+  "result": "monitor would pass"
+ },
+ {
+  "id": "20261022-scalp-INTC-P",
+  "module": "scalp",
+  "setup": "pm_break",
+  "direction": "put",
+  "underlying": "INTC",
+  "desk_status": "passed",
+  "desk_pass_reason": "VWAP failed: INTC 88.56 above VWAP 88.17 (reclaimed trigger 87.83). RVOL 2.22 OK; also max_open_scalps used by AMD.",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-10-22T09:30:00.325707-04:00",
+  "cross_price": 87.83,
+  "level": 87.83,
+  "cross_source": "trade",
+  "checks": [
+   {
+    "time": "2026-10-22T09:30:00.325707-04:00",
+    "price": 87.83,
+    "failed": [
+     "vwap: above VWAP 87.78",
+     "rvol: volume 1.09x normal for this time (min 1.50x, 1m-same-time-10d)",
+     "open: inside the first 5 minutes"
+    ]
+   }
+  ],
+  "result": "monitor would pass"
+ },
+ {
+  "id": "20261022-scalp-LLY-C",
+  "module": "scalp",
+  "setup": "pm_break",
+  "direction": "call",
+  "underlying": "LLY",
+  "desk_status": "passed",
+  "desk_pass_reason": "Market + extension failed: SPY -0.89% blocks calls; LLY 1304.01 is 1.24% past trigger 1288 (>1% scalp limit). VWAP 1294.",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-10-22T09:32:38.809315-04:00",
+  "cross_price": 1288.5,
+  "level": 1288.0,
+  "cross_source": "trade",
+  "checks": [
+   {
+    "time": "2026-10-22T09:32:38.809315-04:00",
+    "price": 1288.5,
+    "failed": [
+     "rvol: volume 0.56x normal for this time (min 1.50x, 1m-same-time-10d)",
+     "open: inside the first 5 minutes"
+    ]
+   },
+   {
+    "time": "2026-10-22T09:37:38.809315-04:00",
+    "price": 1291.32,
+    "failed": [
+     "rvol: volume 0.63x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-22T09:42:38.809315-04:00",
+    "price": 1295.0025,
+    "failed": [
+     "rvol: volume 0.79x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-22T09:52:38.809315-04:00",
+    "price": 1301.304,
+    "failed": [
+     "extension: 1.03% past trigger (max 1.0%)",
+     "rvol: volume 0.87x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-22T09:57:38.809315-04:00",
+    "price": 1297.0899,
+    "failed": [
+     "rvol: volume 0.92x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-22T10:02:38.809315-04:00",
+    "price": 1303.73,
+    "failed": [
+     "extension: 1.22% past trigger (max 1.0%)",
+     "rvol: volume 0.99x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-22T10:07:38.809315-04:00",
+    "price": 1303.54,
+    "failed": [
+     "extension: 1.21% past trigger (max 1.0%)",
+     "rvol: volume 1.00x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   }
+  ],
+  "result": "monitor would pass"
+ },
+ {
+  "id": "20261022-scalp-QQQ-P",
+  "module": "scalp",
+  "setup": "pm_break",
+  "direction": "put",
+  "underlying": "QQQ",
+  "desk_status": "passed",
+  "desk_pass_reason": "cancelled: paired QQQ orb triggered first (10:15 vs 10:20 ET bar) and was entered; one active scalp per name",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-10-22T10:22:07.572740-04:00",
+  "cross_price": 711.29,
+  "level": 711.29,
+  "cross_source": "trade",
+  "checks": [
+   {
+    "time": "2026-10-22T10:22:07.572740-04:00",
+    "price": 711.29,
+    "failed": [
+     "rvol: volume 1.06x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-22T10:27:07.572740-04:00",
+    "price": 710.45,
+    "failed": [
+     "rvol: volume 1.07x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-22T10:32:07.572740-04:00",
+    "price": 708.83,
+    "failed": [
+     "rvol: volume 1.18x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-22T10:37:07.572740-04:00",
+    "price": 708.31,
+    "failed": [
+     "rvol: volume 1.21x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-22T10:42:07.572740-04:00",
+    "price": 708.48,
+    "failed": [
+     "rvol: volume 1.27x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-22T10:47:07.572740-04:00",
+    "price": 707.67,
+    "failed": [
+     "rvol: volume 1.28x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-22T10:52:07.572740-04:00",
+    "price": 707.63,
+    "failed": [
+     "rvol: volume 1.32x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-22T10:57:07.572740-04:00",
+    "price": 707.95,
+    "failed": [
+     "rvol: volume 1.35x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   }
+  ],
+  "result": "monitor would pass"
+ },
+ {
+  "id": "20261022-scalp-SMH-P",
+  "module": "scalp",
+  "setup": "pm_break",
+  "direction": "put",
+  "underlying": "SMH",
+  "desk_status": "passed",
+  "desk_pass_reason": "Risk limit: max_open_scalps 1 already used by AMD 10/23 $525P. Otherwise confirmed: 537.36 below VWAP 537.65, RVOL 2.33,",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-10-22T09:30:00.095883-04:00",
+  "cross_price": 536.515,
+  "level": 536.8,
+  "cross_source": "trade",
+  "checks": [
+   {
+    "time": "2026-10-22T09:30:00.095883-04:00",
+    "price": 536.515,
+    "failed": [
+     "vwap: above VWAP 536.37",
+     "rvol: volume 0.62x normal for this time (min 1.50x, 1m-same-time-10d)",
+     "open: inside the first 5 minutes"
+    ]
+   },
+   {
+    "time": "2026-10-22T09:40:00.095883-04:00",
+    "price": 536.49,
+    "failed": [
+     "rvol: volume 0.96x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-22T09:45:00.095883-04:00",
+    "price": 536.5,
+    "failed": [
+     "rvol: volume 1.11x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-22T09:50:00.095883-04:00",
+    "price": 535.62,
+    "failed": [
+     "rvol: volume 1.12x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   }
+  ],
+  "result": "monitor would pass"
+ },
+ {
+  "id": "20261022-scalp-SPY-P",
+  "module": "scalp",
+  "setup": "pm_break",
+  "direction": "put",
+  "underlying": "SPY",
+  "desk_status": "passed",
+  "desk_pass_reason": "rvol 1.17 < 1.5 (scaled; raw 0.43). Trigger 764.55 hit 10:20 ET (after paired orb); SPY 762.61, 0.25% past, below VWAP 7",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-10-22T10:24:32.183256-04:00",
+  "cross_price": 764.55,
+  "level": 764.55,
+  "cross_source": "trade",
+  "checks": [
+   {
+    "time": "2026-10-22T10:24:32.183256-04:00",
+    "price": 764.55,
+    "failed": [
+     "rvol: volume 1.34x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-22T10:29:32.183256-04:00",
+    "price": 763.34,
+    "failed": [
+     "rvol: volume 1.37x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-22T10:34:32.183256-04:00",
+    "price": 762.52,
+    "failed": [
+     "rvol: volume 1.47x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-22T10:39:32.183256-04:00",
+    "price": 762.525,
+    "failed": []
+   }
+  ],
+  "confirmed_at": "2026-10-22T10:39:32.183256-04:00",
+  "confirm_delay_min": 15.0,
+  "option": "SPY261023P00765000",
+  "option_how": "play contract",
+  "entry_fill": 4.395,
+  "entry_bar_time": "2026-10-22T10:39:00-04:00",
+  "exit_time": "2026-10-22T11:24:00-04:00",
+  "exit_fill": 3.141,
+  "exit_reason": "option stop",
+  "pnl_pct": -0.2854,
+  "r": -1.02,
+  "result": "trade"
+ },
+ {
+  "id": "20261022-scalp-AMD-P-orb",
+  "module": "scalp",
+  "setup": "orb",
+  "direction": "put",
+  "underlying": "AMD",
+  "desk_status": "passed",
+  "desk_pass_reason": "Cancelled: paired pm_break play triggered and entered (manual 5.2).",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-10-22T10:14:45.428472-04:00",
+  "cross_price": 519.8,
+  "level": 519.8,
+  "cross_source": "trade",
+  "checks": [
+   {
+    "time": "2026-10-22T10:14:45.428472-04:00",
+    "price": 519.8,
+    "failed": [
+     "rvol: volume 1.03x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-22T10:19:45.428472-04:00",
+    "price": 519.47,
+    "failed": [
+     "rvol: volume 1.05x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-22T10:24:45.428472-04:00",
+    "price": 518.97,
+    "failed": [
+     "rvol: volume 1.07x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-22T10:29:45.428472-04:00",
+    "price": 518.15,
+    "failed": [
+     "rvol: volume 1.07x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-22T10:34:45.428472-04:00",
+    "price": 516.845,
+    "failed": [
+     "rvol: volume 1.08x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-22T10:39:45.428472-04:00",
+    "price": 516.155,
+    "failed": [
+     "rvol: volume 1.08x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-22T10:44:45.428472-04:00",
+    "price": 516.355,
+    "failed": [
+     "rvol: volume 1.07x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-22T10:49:45.428472-04:00",
+    "price": 514.18,
+    "failed": [
+     "extension: 1.08% past trigger (max 1.0%)",
+     "rvol: volume 1.11x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   }
+  ],
+  "result": "monitor would pass"
+ },
+ {
+  "id": "20261022-scalp-CRWD-C-orb",
+  "module": "scalp",
+  "setup": "orb",
+  "direction": "call",
+  "underlying": "CRWD",
+  "desk_status": "passed",
+  "desk_pass_reason": "Cancelled: paired pm_break play triggered (manual 5.2).",
+  "desk_pnl": null,
+  "desk_r": null,
+  "result": "never crossed"
+ },
+ {
+  "id": "20261022-scalp-FCX-P-orb",
+  "module": "scalp",
+  "setup": "orb",
+  "direction": "put",
+  "underlying": "FCX",
+  "desk_status": "passed",
+  "desk_pass_reason": "Cancelled: paired pm_break play triggered (manual 5.2).",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-10-22T10:28:13.445024-04:00",
+  "cross_price": 65.43,
+  "level": 65.43,
+  "cross_source": "trade",
+  "checks": [
+   {
+    "time": "2026-10-22T10:28:13.445024-04:00",
+    "price": 65.43,
+    "failed": [
+     "rvol: volume 1.05x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-22T10:58:13.445024-04:00",
+    "price": 65.33,
+    "failed": [
+     "rvol: volume 1.15x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-22T11:03:13.445024-04:00",
+    "price": 65.385,
+    "failed": [
+     "rvol: volume 1.15x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   }
+  ],
+  "result": "monitor would pass"
+ },
+ {
+  "id": "20261022-scalp-INTC-P-orb",
+  "module": "scalp",
+  "setup": "orb",
+  "direction": "put",
+  "underlying": "INTC",
+  "desk_status": "passed",
+  "desk_pass_reason": "Cancelled: paired pm_break play triggered (manual 5.2).",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-10-22T10:31:41.932403-04:00",
+  "cross_price": 87.27,
+  "level": 87.2727,
+  "cross_source": "trade",
+  "checks": [
+   {
+    "time": "2026-10-22T10:31:41.932403-04:00",
+    "price": 87.27,
+    "failed": [
+     "rvol: volume 0.99x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-22T10:46:41.932403-04:00",
+    "price": 87.075,
+    "failed": [
+     "rvol: volume 1.01x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-22T10:51:41.932403-04:00",
+    "price": 87.0965,
+    "failed": [
+     "rvol: volume 1.03x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-22T10:56:41.932403-04:00",
+    "price": 86.81,
+    "failed": [
+     "rvol: volume 1.04x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-22T11:06:41.932403-04:00",
+    "price": 87.004,
+    "failed": [
+     "rvol: volume 1.05x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   }
+  ],
+  "result": "monitor would pass"
+ },
+ {
+  "id": "20261022-scalp-LLY-C-orb",
+  "module": "scalp",
+  "setup": "orb",
+  "direction": "call",
+  "underlying": "LLY",
+  "desk_status": "passed",
+  "desk_pass_reason": "Cancelled: paired pm_break play triggered (manual 5.2).",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-10-22T10:01:46.689945-04:00",
+  "cross_price": 1303.0,
+  "level": 1303.0,
+  "cross_source": "trade",
+  "checks": [
+   {
+    "time": "2026-10-22T10:01:46.689945-04:00",
+    "price": 1303.0,
+    "failed": [
+     "rvol: volume 0.99x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-22T10:11:46.689945-04:00",
+    "price": 1305.19,
+    "failed": [
+     "rvol: volume 1.07x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-22T10:16:46.689945-04:00",
+    "price": 1306.43,
+    "failed": [
+     "rvol: volume 1.09x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-22T10:21:46.689945-04:00",
+    "price": 1307.1275,
+    "failed": [
+     "rvol: volume 1.08x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-22T10:26:46.689945-04:00",
+    "price": 1306.84,
+    "failed": [
+     "rvol: volume 1.08x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-22T10:31:46.689945-04:00",
+    "price": 1303.98,
+    "failed": [
+     "rvol: volume 1.07x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-22T10:36:46.689945-04:00",
+    "price": 1304.1811,
+    "failed": [
+     "rvol: volume 1.09x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   }
+  ],
+  "result": "monitor would pass"
+ },
+ {
+  "id": "20261022-scalp-QQQ-P-orb",
+  "module": "scalp",
+  "setup": "orb",
+  "direction": "put",
+  "underlying": "QQQ",
+  "desk_status": "closed",
+  "desk_pass_reason": "",
+  "desk_pnl": 141,
+  "desk_r": 1.05,
+  "crossed_at": "2026-10-22T10:15:39.422315-04:00",
+  "cross_price": 711.75,
+  "level": 711.75,
+  "cross_source": "trade",
+  "checks": [
+   {
+    "time": "2026-10-22T10:15:39.422315-04:00",
+    "price": 711.75,
+    "failed": [
+     "rvol: volume 1.05x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-22T10:20:39.422315-04:00",
+    "price": 711.6499,
+    "failed": [
+     "rvol: volume 1.05x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-22T10:25:39.422315-04:00",
+    "price": 711,
+    "failed": [
+     "rvol: volume 1.06x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-22T10:30:39.422315-04:00",
+    "price": 709.13,
+    "failed": [
+     "rvol: volume 1.11x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-22T10:35:39.422315-04:00",
+    "price": 708.32,
+    "failed": [
+     "rvol: volume 1.21x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-22T10:40:39.422315-04:00",
+    "price": 708.53,
+    "failed": [
+     "rvol: volume 1.24x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-22T10:45:39.422315-04:00",
+    "price": 708.755,
+    "failed": [
+     "rvol: volume 1.27x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-22T10:50:39.422315-04:00",
+    "price": 707.3518,
+    "failed": [
+     "rvol: volume 1.31x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   }
+  ],
+  "result": "monitor would pass"
+ },
+ {
+  "id": "20261022-scalp-SMH-P-orb",
+  "module": "scalp",
+  "setup": "orb",
+  "direction": "put",
+  "underlying": "SMH",
+  "desk_status": "passed",
+  "desk_pass_reason": "Cancelled: paired pm_break play triggered (manual 5.2).",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-10-22T10:15:41.959187-04:00",
+  "cross_price": 535.18,
+  "level": 535.18,
+  "cross_source": "trade",
+  "checks": [
+   {
+    "time": "2026-10-22T10:15:41.959187-04:00",
+    "price": 535.18,
+    "failed": [
+     "rvol: volume 1.14x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-22T10:20:41.959187-04:00",
+    "price": 535.05,
+    "failed": [
+     "rvol: volume 1.11x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-22T10:25:41.959187-04:00",
+    "price": 534.27,
+    "failed": [
+     "rvol: volume 1.16x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-22T10:30:41.959187-04:00",
+    "price": 531.87,
+    "failed": [
+     "rvol: volume 1.20x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-22T10:35:41.959187-04:00",
+    "price": 531.205,
+    "failed": [
+     "rvol: volume 1.31x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-22T10:40:41.959187-04:00",
+    "price": 531.7,
+    "failed": [
+     "rvol: volume 1.41x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-22T10:45:41.959187-04:00",
+    "price": 531.58,
+    "failed": [
+     "rvol: volume 1.38x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-22T10:50:41.959187-04:00",
+    "price": 528.73,
+    "failed": [
+     "extension: 1.21% past trigger (max 1.0%)",
+     "rvol: volume 1.39x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   }
+  ],
+  "result": "monitor would pass"
+ },
+ {
+  "id": "20261022-scalp-SPY-P-orb",
+  "module": "scalp",
+  "setup": "orb",
+  "direction": "put",
+  "underlying": "SPY",
+  "desk_status": "passed",
+  "desk_pass_reason": "rvol 1.17 < 1.5 (scaled; raw 0.43). Trigger 765.35 hit 10:15 ET; at check SPY 762.61, 0.35% past, below VWAP 764.48 \u2014 on",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-10-22T10:15:31.416095-04:00",
+  "cross_price": 765.35,
+  "level": 765.35,
+  "cross_source": "trade",
+  "checks": [
+   {
+    "time": "2026-10-22T10:15:31.416095-04:00",
+    "price": 765.35,
+    "failed": [
+     "rvol: volume 1.31x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-22T10:20:31.416095-04:00",
+    "price": 765.29,
+    "failed": [
+     "rvol: volume 1.31x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-22T10:25:31.416095-04:00",
+    "price": 764.455,
+    "failed": [
+     "rvol: volume 1.34x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-22T10:30:31.416095-04:00",
+    "price": 762.91,
+    "failed": [
+     "rvol: volume 1.41x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-22T10:35:31.416095-04:00",
+    "price": 762.31,
+    "failed": [
+     "rvol: volume 1.48x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-22T10:40:31.416095-04:00",
+    "price": 762.53,
+    "failed": []
+   }
+  ],
+  "result": "twin already taken"
+ },
+ {
+  "id": "20261022-swing-AA-P",
+  "module": "swing",
+  "setup": "breakdown",
+  "direction": "put",
+  "underlying": "AA",
+  "desk_status": "passed",
+  "desk_pass_reason": "contract: 12/18 $38P spread 19.5% (2.13/2.59), OI 1,623.",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-10-23T09:30:01.035558-04:00",
+  "cross_price": 38.28,
+  "level": 38.35,
+  "cross_source": "trade",
+  "checks": [
+   {
+    "time": "2026-10-23T09:30:01.035558-04:00",
+    "price": 38.28,
+    "failed": [
+     "open: inside the first 5 minutes"
+    ]
+   }
+  ],
+  "result": "monitor would pass"
+ },
+ {
+  "id": "20261022-swing-ASML-P",
+  "module": "swing",
+  "setup": "breakdown",
+  "direction": "put",
+  "underlying": "ASML",
+  "desk_status": "passed",
+  "desk_pass_reason": "contract: 12/18 $1560P OI 256 (< 500), spread 7.2%, mid 95.55.",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-10-23T09:30:00.150661-04:00",
+  "cross_price": 1551.0,
+  "level": 1555.94,
+  "cross_source": "trade",
+  "checks": [
+   {
+    "time": "2026-10-23T09:30:00.150661-04:00",
+    "price": 1551.0,
+    "failed": [
+     "open: inside the first 5 minutes"
+    ]
+   }
+  ],
+  "result": "monitor would pass"
+ },
+ {
+  "id": "20261022-swing-AVGO-P",
+  "module": "swing",
+  "setup": "breakdown",
+  "direction": "put",
+  "underlying": "AVGO",
+  "desk_status": "passed",
+  "desk_pass_reason": "VWAP failed: AVGO 324.79 above VWAP 323.52 (reclaimed trigger 321.02; price 1.2% above trigger, wrong side). RVOL 1.91 O",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-10-23T09:30:00.099448-04:00",
+  "cross_price": 321.02,
+  "level": 321.02,
+  "cross_source": "trade",
+  "checks": [
+   {
+    "time": "2026-10-23T09:30:00.099448-04:00",
+    "price": 321.02,
+    "failed": [
+     "vwap: above VWAP 320.85",
+     "rvol: volume 0.65x normal for this time (min 1.50x, 1m-same-time-10d)",
+     "open: inside the first 5 minutes"
+    ]
+   }
+  ],
+  "result": "monitor would pass"
+ },
+ {
+  "id": "20261022-swing-CRM-C",
+  "module": "swing",
+  "setup": "breakout",
+  "direction": "call",
+  "underlying": "CRM",
+  "desk_status": "passed",
+  "desk_pass_reason": "contract: 11/27 $250C spread 21% (12.90/15.90), OI 41; 11/27 $255C spread 17%, OI 45. Dec monthlies span the 12/2 earnin",
+  "desk_pnl": null,
+  "desk_r": null,
+  "result": "never crossed"
+ },
+ {
+  "id": "20261022-swing-VLO-C",
+  "module": "swing",
+  "setup": "pullback",
+  "direction": "call",
+  "underlying": "VLO",
+  "desk_status": "passed",
+  "desk_pass_reason": "contract: 12/18 $420C OI 289 (spread 7.3%); $430C OI 201, spread 8.1%; $440C spread 8.9%. No 30-60 DTE strike with OI >=",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-10-26T09:55:46.753870-04:00",
+  "cross_price": 436.196,
+  "level": 436.06,
+  "cross_source": "trade",
+  "checks": [
+   {
+    "time": "2026-10-26T09:55:46.753870-04:00",
+    "price": 436.196,
+    "failed": []
+   }
+  ],
+  "confirmed_at": "2026-10-26T09:55:46.753870-04:00",
+  "confirm_delay_min": 0.0,
+  "option": "VLO261030C00435000",
+  "option_how": "nearest strike 435, exp 10/30",
+  "entry_fill": 12.219,
+  "entry_bar_time": "2026-10-26T09:55:00-04:00",
+  "exit_time": "2026-10-26T12:12:00-04:00",
+  "exit_fill": 6.185,
+  "exit_reason": "option stop",
+  "pnl_pct": -0.4938,
+  "r": -1.1,
+  "result": "trade"
+ },
+ {
+  "id": "20261023-scalp-AA-P",
+  "module": "scalp",
+  "setup": "pm_break",
+  "direction": "put",
+  "underlying": "AA",
+  "desk_status": "passed",
+  "desk_pass_reason": "Triggered same 14:10Z bar as ORB pair (low 38.16 < 38.20; day low 38.02). RVOL 0.37 < 1.5; option spread 31% > 5%.",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-10-23T10:13:13.165235-04:00",
+  "cross_price": 38.2,
+  "level": 38.2,
+  "cross_source": "trade",
+  "checks": [
+   {
+    "time": "2026-10-23T10:13:13.165235-04:00",
+    "price": 38.2,
+    "failed": [
+     "rvol: volume 0.46x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-23T10:18:13.165235-04:00",
+    "price": 38.13,
+    "failed": [
+     "rvol: volume 0.49x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-23T10:23:13.165235-04:00",
+    "price": 38.1716,
+    "failed": [
+     "rvol: volume 0.49x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-23T10:28:13.165235-04:00",
+    "price": 38.0439,
+    "failed": [
+     "rvol: volume 0.50x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   }
+  ],
+  "result": "monitor would pass"
+ },
+ {
+  "id": "20261023-scalp-IWM-P",
+  "module": "scalp",
+  "setup": "pm_break",
+  "direction": "put",
+  "underlying": "IWM",
+  "desk_status": "passed",
+  "desk_pass_reason": "RVOL failed: 1.47 < 1.5 (scaled: today's 5-min volume 1.38M x 2.99 feed ratio / (20-session avg 25.8M x 0.109 session));",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-10-23T09:30:00.938245-04:00",
+  "cross_price": 274.76,
+  "level": 274.79,
+  "cross_source": "trade",
+  "checks": [
+   {
+    "time": "2026-10-23T09:30:00.938245-04:00",
+    "price": 274.76,
+    "failed": [
+     "rvol: volume 1.01x normal for this time (min 1.50x, 1m-same-time-10d)",
+     "open: inside the first 5 minutes"
+    ]
+   },
+   {
+    "time": "2026-10-23T09:35:00.938245-04:00",
+    "price": 274.44,
+    "failed": [
+     "rvol: volume 0.87x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-23T09:40:00.938245-04:00",
+    "price": 274.4,
+    "failed": [
+     "rvol: volume 0.82x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-23T09:45:00.938245-04:00",
+    "price": 274.47,
+    "failed": [
+     "rvol: volume 0.82x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-23T09:50:00.938245-04:00",
+    "price": 274.755,
+    "failed": [
+     "vwap: above VWAP 274.56",
+     "rvol: volume 0.86x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   }
+  ],
+  "result": "monitor would pass"
+ },
+ {
+  "id": "20261023-scalp-MP-P",
+  "module": "scalp",
+  "setup": "pm_break",
+  "direction": "put",
+  "underlying": "MP",
+  "desk_status": "passed",
+  "desk_pass_reason": "VWAP failed: MP 37.72 above VWAP 37.66; also option spread fails (10/30 $38P 1.31/1.53 = 15.5% > 5%). Extension 0.87% OK",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-10-23T09:31:14.909808-04:00",
+  "cross_price": 38.03,
+  "level": 38.05,
+  "cross_source": "trade",
+  "checks": [
+   {
+    "time": "2026-10-23T09:31:14.909808-04:00",
+    "price": 38.03,
+    "failed": [
+     "rvol: volume 0.50x normal for this time (min 1.50x, 1m-same-time-10d)",
+     "open: inside the first 5 minutes"
+    ]
+   },
+   {
+    "time": "2026-10-23T09:36:14.909808-04:00",
+    "price": 37.445,
+    "failed": [
+     "extension: 1.59% past trigger (max 1.0%)",
+     "rvol: volume 0.73x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-23T09:41:14.909808-04:00",
+    "price": 37.45,
+    "failed": [
+     "extension: 1.58% past trigger (max 1.0%)",
+     "rvol: volume 1.12x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-23T09:46:14.909808-04:00",
+    "price": 37.82,
+    "failed": [
+     "vwap: above VWAP 37.58",
+     "rvol: volume 1.12x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-23T09:51:14.909808-04:00",
+    "price": 37.77,
+    "failed": [
+     "vwap: above VWAP 37.61",
+     "rvol: volume 1.16x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-23T09:56:14.909808-04:00",
+    "price": 37.7867,
+    "failed": [
+     "vwap: above VWAP 37.63",
+     "rvol: volume 1.06x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-23T10:06:14.909808-04:00",
+    "price": 37.95,
+    "failed": [
+     "vwap: above VWAP 37.68",
+     "rvol: volume 0.93x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   }
+  ],
+  "result": "monitor would pass"
+ },
+ {
+  "id": "20261023-scalp-NEM-P",
+  "module": "scalp",
+  "setup": "pm_break",
+  "direction": "put",
+  "underlying": "NEM",
+  "desk_status": "passed",
+  "desk_pass_reason": "Cancelled: paired orb play triggered first (OR low 110.10 broken; pm_break 109.00 not hit) (manual 5.2).",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-10-23T10:16:59.699633-04:00",
+  "cross_price": 109.0,
+  "level": 109.0,
+  "cross_source": "trade",
+  "checks": [
+   {
+    "time": "2026-10-23T10:16:59.699633-04:00",
+    "price": 109.0,
+    "failed": []
+   }
+  ],
+  "confirmed_at": "2026-10-23T10:16:59.699633-04:00",
+  "confirm_delay_min": 0.0,
+  "option": "NEM261030P00112000",
+  "option_how": "play contract",
+  "entry_fill": 4.147,
+  "entry_bar_time": "2026-10-23T10:09:00-04:00",
+  "exit_time": "2026-10-23T15:25:00-04:00",
+  "exit_fill": 3.015,
+  "exit_reason": "15:05 scalp close",
+  "pnl_pct": -0.2729,
+  "r": -0.97,
+  "result": "trade"
+ },
+ {
+  "id": "20261023-scalp-AA-P-orb",
+  "module": "scalp",
+  "setup": "orb",
+  "direction": "put",
+  "underlying": "AA",
+  "desk_status": "passed",
+  "desk_pass_reason": "RVOL 0.37 < 1.5 (AA vol 460k by 11:07 ET vs ~5.0M 20d avg x 25% session). Also option spread 31% > 5% max. Triggered 14:",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-10-23T10:13:13.165235-04:00",
+  "cross_price": 38.2,
+  "level": 38.205,
+  "cross_source": "trade",
+  "checks": [
+   {
+    "time": "2026-10-23T10:13:13.165235-04:00",
+    "price": 38.2,
+    "failed": [
+     "rvol: volume 0.46x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-23T10:18:13.165235-04:00",
+    "price": 38.13,
+    "failed": [
+     "rvol: volume 0.49x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-23T10:23:13.165235-04:00",
+    "price": 38.1716,
+    "failed": [
+     "rvol: volume 0.49x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-23T10:28:13.165235-04:00",
+    "price": 38.0439,
+    "failed": [
+     "rvol: volume 0.50x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   }
+  ],
+  "result": "monitor would pass"
+ },
+ {
+  "id": "20261023-scalp-IWM-P-orb",
+  "module": "scalp",
+  "setup": "orb",
+  "direction": "put",
+  "underlying": "IWM",
+  "desk_status": "passed",
+  "desk_pass_reason": "Cancelled: paired pm_break play triggered (manual 5.2).",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-10-23T10:12:43.367376-04:00",
+  "cross_price": 274.05,
+  "level": 274.05,
+  "cross_source": "trade",
+  "checks": [
+   {
+    "time": "2026-10-23T10:12:43.367376-04:00",
+    "price": 274.05,
+    "failed": [
+     "rvol: volume 0.79x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-23T10:17:43.367376-04:00",
+    "price": 273.69,
+    "failed": [
+     "rvol: volume 0.81x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-23T10:22:43.367376-04:00",
+    "price": 273.61,
+    "failed": [
+     "rvol: volume 0.89x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-23T10:27:43.367376-04:00",
+    "price": 273.4,
+    "failed": [
+     "rvol: volume 0.89x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-23T10:32:43.367376-04:00",
+    "price": 273.92,
+    "failed": [
+     "rvol: volume 0.88x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-23T10:37:43.367376-04:00",
+    "price": 273.945,
+    "failed": [
+     "rvol: volume 0.86x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   }
+  ],
+  "result": "monitor would pass"
+ },
+ {
+  "id": "20261023-scalp-MP-P-orb",
+  "module": "scalp",
+  "setup": "orb",
+  "direction": "put",
+  "underlying": "MP",
+  "desk_status": "passed",
+  "desk_pass_reason": "Cancelled: paired pm_break play triggered (manual 5.2).",
+  "desk_pnl": null,
+  "desk_r": null,
+  "result": "never crossed"
+ },
+ {
+  "id": "20261023-scalp-NEM-P-orb",
+  "module": "scalp",
+  "setup": "orb",
+  "direction": "put",
+  "underlying": "NEM",
+  "desk_status": "passed",
+  "desk_pass_reason": "Spread failed: all candidate puts in 0-7 DTE / delta 0.40-0.60 wider than 5% (best 10/30 $110P 2.55/3.00 = 16.2%). Stock",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-10-23T10:10:52.979025-04:00",
+  "cross_price": 110.1,
+  "level": 110.1,
+  "cross_source": "trade",
+  "checks": [
+   {
+    "time": "2026-10-23T10:10:52.979025-04:00",
+    "price": 110.1,
+    "failed": []
+   }
+  ],
+  "result": "twin already taken"
+ },
+ {
+  "id": "20261023-swing-AVGO-P",
+  "module": "swing",
+  "setup": "breakdown",
+  "direction": "put",
+  "underlying": "AVGO",
+  "desk_status": "passed",
+  "desk_pass_reason": "contract liquidity: no 11/27 or 12/4 put met spread<=8% AND OI>=500 at the close. 330P spread 8.02% (18.55/20.10), OI 10",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-10-30T14:28:40.685237-04:00",
+  "cross_price": 320.23,
+  "level": 320.23,
+  "cross_source": "trade",
+  "checks": [
+   {
+    "time": "2026-10-30T14:28:40.685237-04:00",
+    "price": 320.23,
+    "failed": [
+     "rvol: volume 1.42x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-30T14:33:40.685237-04:00",
+    "price": 319.535,
+    "failed": [
+     "rvol: volume 1.44x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-30T14:48:40.685237-04:00",
+    "price": 320.0412,
+    "failed": []
+   }
+  ],
+  "confirmed_at": "2026-10-30T14:48:40.685237-04:00",
+  "confirm_delay_min": 20.0,
+  "option": "AVGO261127P00330000",
+  "option_how": "play contract",
+  "entry_fill": 21.217,
+  "entry_bar_time": "2026-10-30T14:37:00-04:00",
+  "exit_time": "2026-11-05T10:55:00-05:00",
+  "exit_fill": 37.797,
+  "exit_reason": "option target",
+  "pnl_pct": 0.7814,
+  "r": 1.74,
+  "result": "trade"
+ },
+ {
+  "id": "20261023-swing-GFI-P",
+  "module": "swing",
+  "setup": "breakdown",
+  "direction": "put",
+  "underlying": "GFI",
+  "desk_status": "passed",
+  "desk_pass_reason": "contract: only monthly 12/18 in DTE window ($5 strikes); 35P spread 16.5% (2.50/2.95); 30P delta -0.17. No earnings date",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-10-30T09:30:00.604354-04:00",
+  "cross_price": 33.37,
+  "level": 34.17,
+  "cross_source": "trade",
+  "checks": [
+   {
+    "time": "2026-10-30T09:30:00.604354-04:00",
+    "price": 33.37,
+    "failed": [
+     "vwap: above VWAP 33.32",
+     "rvol: volume 0.16x normal for this time (min 1.50x, 1m-same-time-10d)",
+     "open: inside the first 5 minutes"
+    ]
+   },
+   {
+    "time": "2026-10-30T09:35:00.604354-04:00",
+    "price": 33.28,
+    "failed": [
+     "extension: 2.60% past trigger (max 2.5%)",
+     "vwap: above VWAP 33.17",
+     "rvol: volume 1.02x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-30T09:40:00.604354-04:00",
+    "price": 33.39,
+    "failed": [
+     "vwap: above VWAP 33.22",
+     "rvol: volume 0.83x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-30T09:45:00.604354-04:00",
+    "price": 33.39,
+    "failed": [
+     "vwap: above VWAP 33.31",
+     "rvol: volume 1.14x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-30T09:50:00.604354-04:00",
+    "price": 33.14,
+    "failed": [
+     "extension: 3.01% past trigger (max 2.5%)",
+     "rvol: volume 1.29x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-30T09:55:00.604354-04:00",
+    "price": 32.98,
+    "failed": [
+     "extension: 3.48% past trigger (max 2.5%)",
+     "rvol: volume 1.50x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-30T10:00:00.604354-04:00",
+    "price": 32.96,
+    "failed": [
+     "extension: 3.54% past trigger (max 2.5%)"
+    ]
+   },
+   {
+    "time": "2026-10-30T10:05:00.604354-04:00",
+    "price": 32.955,
+    "failed": [
+     "extension: 3.56% past trigger (max 2.5%)",
+     "rvol: volume 1.47x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   }
+  ],
+  "result": "monitor would pass"
+ },
+ {
+  "id": "20261026-scalp-APP-C",
+  "module": "scalp",
+  "setup": "pm_break",
+  "direction": "call",
+  "underlying": "APP",
+  "desk_status": "expired",
+  "desk_pass_reason": "",
+  "desk_pnl": null,
+  "desk_r": null,
+  "result": "never crossed"
+ },
+ {
+  "id": "20261026-scalp-QQQ-C",
+  "module": "scalp",
+  "setup": "pm_break",
+  "direction": "call",
+  "underlying": "QQQ",
+  "desk_status": "passed",
+  "desk_pass_reason": "cancelled_pair: orb twin triggered first (14:15Z bar opened 709.755 above OR high 709.57; this play's 710.04 level was c",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-10-26T10:18:53.505329-04:00",
+  "cross_price": 710.04,
+  "level": 710.04,
+  "cross_source": "trade",
+  "checks": [
+   {
+    "time": "2026-10-26T10:18:53.505329-04:00",
+    "price": 710.04,
+    "failed": [
+     "rvol: volume 0.73x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-26T10:23:53.505329-04:00",
+    "price": 710.2428,
+    "failed": [
+     "rvol: volume 0.77x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-26T10:38:53.505329-04:00",
+    "price": 710.5,
+    "failed": [
+     "rvol: volume 0.75x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-26T10:43:53.505329-04:00",
+    "price": 711.26,
+    "failed": [
+     "rvol: volume 0.76x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-26T10:48:53.505329-04:00",
+    "price": 712.81,
+    "failed": [
+     "rvol: volume 0.78x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-26T10:53:53.505329-04:00",
+    "price": 713.4197,
+    "failed": [
+     "rvol: volume 0.80x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   }
+  ],
+  "result": "monitor would pass"
+ },
+ {
+  "id": "20261026-scalp-APP-C-orb",
+  "module": "scalp",
+  "setup": "orb",
+  "direction": "call",
+  "underlying": "APP",
+  "desk_status": "expired",
+  "desk_pass_reason": "",
+  "desk_pnl": null,
+  "desk_r": null,
+  "result": "never crossed"
+ },
+ {
+  "id": "20261026-scalp-QQQ-C-orb",
+  "module": "scalp",
+  "setup": "orb",
+  "direction": "call",
+  "underlying": "QQQ",
+  "desk_status": "passed",
+  "desk_pass_reason": "rvol: 0.82 vs min 1.5 (QQQ 5m volume 13:30-14:15 bars 2,776,093 vs 10-day same-time avg 3,365,046). Other checks passed:",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-10-26T10:16:56.608550-04:00",
+  "cross_price": 709.58,
+  "level": 709.57,
+  "cross_source": "trade",
+  "checks": [
+   {
+    "time": "2026-10-26T10:16:56.608550-04:00",
+    "price": 709.58,
+    "failed": [
+     "rvol: volume 0.73x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-26T10:21:56.608550-04:00",
+    "price": 710.31,
+    "failed": [
+     "rvol: volume 0.76x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-26T10:36:56.608550-04:00",
+    "price": 709.968,
+    "failed": [
+     "rvol: volume 0.74x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-26T10:41:56.608550-04:00",
+    "price": 711.38,
+    "failed": [
+     "rvol: volume 0.76x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-26T10:46:56.608550-04:00",
+    "price": 712.3,
+    "failed": [
+     "rvol: volume 0.77x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-26T10:51:56.608550-04:00",
+    "price": 713.2,
+    "failed": [
+     "rvol: volume 0.79x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   }
+  ],
+  "result": "monitor would pass"
+ },
+ {
+  "id": "20261026-swing-LRCX-P",
+  "module": "swing",
+  "setup": "breakdown",
+  "direction": "put",
+  "underlying": "LRCX",
+  "desk_status": "expired",
+  "desk_pass_reason": "",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-11-02T13:43:46.994866-05:00",
+  "cross_price": 230.48,
+  "level": 230.5,
+  "cross_source": "trade",
+  "checks": [
+   {
+    "time": "2026-11-02T13:43:46.994866-05:00",
+    "price": 230.48,
+    "failed": [
+     "rvol: volume 0.62x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-11-02T13:58:46.994866-05:00",
+    "price": 230.195,
+    "failed": [
+     "rvol: volume 0.63x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-11-02T14:03:46.994866-05:00",
+    "price": 229.63,
+    "failed": [
+     "rvol: volume 0.63x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-11-02T14:08:46.994866-05:00",
+    "price": 229.71,
+    "failed": [
+     "rvol: volume 0.64x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-11-02T14:13:46.994866-05:00",
+    "price": 229.135,
+    "failed": [
+     "rvol: volume 0.65x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-11-02T14:18:46.994866-05:00",
+    "price": 228.6,
+    "failed": [
+     "rvol: volume 0.66x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   }
+  ],
+  "result": "monitor would pass"
+ },
+ {
+  "id": "20261026-swing-NFLX-P",
+  "module": "swing",
+  "setup": "breakdown",
+  "direction": "put",
+  "underlying": "NFLX",
+  "desk_status": "passed",
+  "desk_pass_reason": "rvol: 0.83 < 1.5 (5m-same-time-10d; today 8.65M vs 10d avg 10.36M through 12:05 ET). Trigger 62.86 crossed (low 62.79 in",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-10-27T10:23:28.563401-04:00",
+  "cross_price": 62.86,
+  "level": 62.86,
+  "cross_source": "trade",
+  "checks": [
+   {
+    "time": "2026-10-27T10:23:28.563401-04:00",
+    "price": 62.86,
+    "failed": [
+     "rvol: volume 0.78x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   }
+  ],
+  "result": "monitor would pass"
+ },
+ {
+  "id": "20261026-swing-T-P",
+  "module": "swing",
+  "setup": "breakdown",
+  "direction": "put",
+  "underlying": "T",
+  "desk_status": "passed",
+  "desk_pass_reason": "rvol: triggered 13:20\u201313:25 ET (5m lows 20.61 / 20.55 vs trigger 20.61; day low 20.52 at 13:35). At 2:05 check (ran 2:07",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-10-28T13:23:45.799133-04:00",
+  "cross_price": 20.61,
+  "level": 20.61,
+  "cross_source": "trade",
+  "checks": [
+   {
+    "time": "2026-10-28T13:23:45.799133-04:00",
+    "price": 20.61,
+    "failed": [
+     "rvol: volume 0.85x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-28T13:28:45.799133-04:00",
+    "price": 20.555,
+    "failed": [
+     "rvol: volume 0.86x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-28T13:33:45.799133-04:00",
+    "price": 20.545,
+    "failed": [
+     "rvol: volume 0.88x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-28T13:38:45.799133-04:00",
+    "price": 20.575,
+    "failed": [
+     "rvol: volume 0.91x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-28T13:43:45.799133-04:00",
+    "price": 20.57,
+    "failed": [
+     "rvol: volume 0.92x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   }
+  ],
+  "result": "monitor would pass"
+ },
+ {
+  "id": "20261027-scalp-ORCL-C",
+  "module": "scalp",
+  "setup": "pm_break",
+  "direction": "call",
+  "underlying": "ORCL",
+  "desk_status": "passed",
+  "desk_pass_reason": "extension: pm high 128.35 broke in the 9:30 bar (high 129.46); price 129.96 at 10:15 ET is +1.25% past trigger (limit 1.",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-10-27T09:31:05.334070-04:00",
+  "cross_price": 128.36,
+  "level": 128.35,
+  "cross_source": "trade",
+  "checks": [
+   {
+    "time": "2026-10-27T09:31:05.334070-04:00",
+    "price": 128.36,
+    "failed": [
+     "rvol: volume 1.01x normal for this time (min 1.50x, 1m-same-time-10d)",
+     "open: inside the first 5 minutes"
+    ]
+   },
+   {
+    "time": "2026-10-27T09:36:05.334070-04:00",
+    "price": 129.28,
+    "failed": [
+     "rvol: volume 0.87x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-27T09:41:05.334070-04:00",
+    "price": 130.57,
+    "failed": [
+     "extension: 1.73% past trigger (max 1.0%)",
+     "rvol: volume 1.04x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-27T09:46:05.334070-04:00",
+    "price": 130.13,
+    "failed": [
+     "extension: 1.39% past trigger (max 1.0%)",
+     "rvol: volume 1.02x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-27T09:51:05.334070-04:00",
+    "price": 130,
+    "failed": [
+     "extension: 1.29% past trigger (max 1.0%)",
+     "rvol: volume 0.97x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-27T09:56:05.334070-04:00",
+    "price": 129.84,
+    "failed": [
+     "extension: 1.16% past trigger (max 1.0%)",
+     "rvol: volume 0.95x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-27T10:01:05.334070-04:00",
+    "price": 129.825,
+    "failed": [
+     "extension: 1.15% past trigger (max 1.0%)",
+     "rvol: volume 0.91x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-27T10:06:05.334070-04:00",
+    "price": 130.53,
+    "failed": [
+     "extension: 1.70% past trigger (max 1.0%)",
+     "rvol: volume 0.88x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   }
+  ],
+  "result": "monitor would pass"
+ },
+ {
+  "id": "20261027-scalp-QQQ-C",
+  "module": "scalp",
+  "setup": "pm_break",
+  "direction": "call",
+  "underlying": "QQQ",
+  "desk_status": "passed",
+  "desk_pass_reason": "vwap: pm high 716.61 broke in the 9:30 bar (high 716.77; day high 718.19 at 9:40), but price 714.34 at 10:15 ET is below",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-10-27T09:34:26.647456-04:00",
+  "cross_price": 716.66,
+  "level": 716.61,
+  "cross_source": "trade",
+  "checks": [
+   {
+    "time": "2026-10-27T09:34:26.647456-04:00",
+    "price": 716.66,
+    "failed": [
+     "rvol: volume 0.55x normal for this time (min 1.50x, 1m-same-time-10d)",
+     "open: inside the first 5 minutes"
+    ]
+   },
+   {
+    "time": "2026-10-27T09:39:26.647456-04:00",
+    "price": 717.89,
+    "failed": [
+     "rvol: volume 0.65x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-27T09:44:26.647456-04:00",
+    "price": 717.29,
+    "failed": [
+     "rvol: volume 0.77x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   }
+  ],
+  "result": "monitor would pass"
+ },
+ {
+  "id": "20261027-scalp-ORCL-C-orb",
+  "module": "scalp",
+  "setup": "orb",
+  "direction": "call",
+  "underlying": "ORCL",
+  "desk_status": "passed",
+  "desk_pass_reason": "cancelled_pair: twin pm_break (20261027-scalp-ORCL-C) triggered first at the 9:30 bar (5.2). Opening range 9:30-10:00 ET",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-10-27T10:08:10.730630-04:00",
+  "cross_price": 130.92,
+  "level": 130.92,
+  "cross_source": "trade",
+  "checks": [
+   {
+    "time": "2026-10-27T10:08:10.730630-04:00",
+    "price": 130.92,
+    "failed": [
+     "rvol: volume 0.90x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   }
+  ],
+  "result": "monitor would pass"
+ },
+ {
+  "id": "20261027-scalp-QQQ-C-orb",
+  "module": "scalp",
+  "setup": "orb",
+  "direction": "call",
+  "underlying": "QQQ",
+  "desk_status": "passed",
+  "desk_pass_reason": "cancelled_pair: twin pm_break (20261027-scalp-QQQ-C) triggered first at the 9:30 bar (5.2). Opening range 9:30-10:00 ET:",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-10-27T10:54:09.564098-04:00",
+  "cross_price": 718.2,
+  "level": 718.19,
+  "cross_source": "trade",
+  "checks": [
+   {
+    "time": "2026-10-27T10:54:09.564098-04:00",
+    "price": 718.2,
+    "failed": [
+     "rvol: volume 0.69x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-27T10:59:09.564098-04:00",
+    "price": 718.7,
+    "failed": [
+     "rvol: volume 0.69x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-27T11:04:09.564098-04:00",
+    "price": 719.24,
+    "failed": [
+     "rvol: volume 0.69x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-27T11:09:09.564098-04:00",
+    "price": 718.91,
+    "failed": [
+     "rvol: volume 0.68x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-27T11:14:09.564098-04:00",
+    "price": 719.6301,
+    "failed": [
+     "rvol: volume 0.68x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-27T11:19:09.564098-04:00",
+    "price": 719.76,
+    "failed": [
+     "rvol: volume 0.68x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-27T11:24:09.564098-04:00",
+    "price": 720.115,
+    "failed": [
+     "rvol: volume 0.69x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-27T11:29:09.564098-04:00",
+    "price": 720.1101,
+    "failed": [
+     "rvol: volume 0.68x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   }
+  ],
+  "result": "monitor would pass"
+ },
+ {
+  "id": "20261027-swing-CRM-C",
+  "module": "swing",
+  "setup": "pullback",
+  "direction": "call",
+  "underlying": "CRM",
+  "desk_status": "passed",
+  "desk_pass_reason": "liquidity: only 11/27 expiry clears earnings (12/2); 240C OI 27, spread 18.1% (12.30/14.75); 245C OI 44, spread 15.5%. T",
+  "desk_pnl": null,
+  "desk_r": null,
+  "result": "never crossed"
+ },
+ {
+  "id": "20261027-swing-NFLX-P",
+  "module": "swing",
+  "setup": "breakdown",
+  "direction": "put",
+  "underlying": "NFLX",
+  "desk_status": "passed",
+  "desk_pass_reason": "rvol: 0.92 < 1.5 (5m-same-time-10d: 5,592,486 sh through 10:30 ET vs 10-session avg 6,104,045 to same time). Other check",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-10-28T09:30:00.001936-04:00",
+  "cross_price": 61.95,
+  "level": 62.47,
+  "cross_source": "trade",
+  "checks": [
+   {
+    "time": "2026-10-28T09:30:00.001936-04:00",
+    "price": 61.95,
+    "failed": [
+     "rvol: volume 0.81x normal for this time (min 1.50x, 1m-same-time-10d)",
+     "open: inside the first 5 minutes"
+    ]
+   },
+   {
+    "time": "2026-10-28T09:35:00.001936-04:00",
+    "price": 62.025,
+    "failed": [
+     "rvol: volume 0.85x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-28T09:40:00.001936-04:00",
+    "price": 62.395,
+    "failed": [
+     "vwap: above VWAP 62.16",
+     "rvol: volume 0.88x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-28T09:45:00.001936-04:00",
+    "price": 62.45,
+    "failed": [
+     "vwap: above VWAP 62.19",
+     "rvol: volume 0.84x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-28T09:50:00.001936-04:00",
+    "price": 61.9812,
+    "failed": [
+     "rvol: volume 0.91x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-28T09:55:00.001936-04:00",
+    "price": 61.91,
+    "failed": [
+     "rvol: volume 0.91x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-28T10:00:00.001936-04:00",
+    "price": 61.76,
+    "failed": [
+     "rvol: volume 0.95x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-28T10:05:00.001936-04:00",
+    "price": 61.81,
+    "failed": [
+     "rvol: volume 0.96x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   }
+  ],
+  "result": "monitor would pass"
+ },
+ {
+  "id": "20261027-swing-VZ-P",
+  "module": "swing",
+  "setup": "breakdown",
+  "direction": "put",
+  "underlying": "VZ",
+  "desk_status": "passed",
+  "desk_pass_reason": "liquidity: 12/18 puts spread > 8% at the close: 42P 0.63/0.82 (26%), 43P 0.95/1.22 (25%), 44P 1.22/1.57 (25%); OI fine (",
+  "desk_pnl": null,
+  "desk_r": null,
+  "result": "never crossed"
+ },
+ {
+  "id": "20261028-scalp-HAL-C",
+  "module": "scalp",
+  "setup": "pm_break",
+  "direction": "call",
+  "underlying": "HAL",
+  "desk_status": "passed",
+  "desk_pass_reason": "cancelled_pair: orb twin triggered first (11:35 ET at 35.78); this pm_break level 36.00 was then crossed at 11:50 ET (hi",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-10-28T11:54:56.740566-04:00",
+  "cross_price": 36.0,
+  "level": 36.0,
+  "cross_source": "trade",
+  "checks": [
+   {
+    "time": "2026-10-28T11:54:56.740566-04:00",
+    "price": 36.0,
+    "failed": [
+     "rvol: volume 0.81x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   }
+  ],
+  "result": "monitor would pass"
+ },
+ {
+  "id": "20261028-scalp-VLO-C",
+  "module": "scalp",
+  "setup": "pm_break",
+  "direction": "call",
+  "underlying": "VLO",
+  "desk_status": "passed",
+  "desk_pass_reason": "vwap: price 384.44 below VWAP 385.32 (calls need above). Also rvol 1.48 < 1.5 (5m-same-time-10d: 280,633 vs 189,649) and",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-10-28T09:31:28.034217-04:00",
+  "cross_price": 394.0,
+  "level": 393.98,
+  "cross_source": "trade",
+  "checks": [
+   {
+    "time": "2026-10-28T09:31:28.034217-04:00",
+    "price": 394.0,
+    "failed": [
+     "rvol: volume 1.07x normal for this time (min 1.50x, 1m-same-time-10d)",
+     "open: inside the first 5 minutes"
+    ]
+   }
+  ],
+  "result": "monitor would pass"
+ },
+ {
+  "id": "20261028-scalp-HAL-C-orb",
+  "module": "scalp",
+  "setup": "orb",
+  "direction": "call",
+  "underlying": "HAL",
+  "desk_status": "passed",
+  "desk_pass_reason": "rvol: triggered 11:35 ET (5m high 35.80 > 35.78). At 12:05 check: last 35.92 (ext 0.39% OK), VWAP 35.53 (above, OK), SPY",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-10-28T11:30:53.158802-04:00",
+  "cross_price": 35.78,
+  "level": 35.775,
+  "cross_source": "trade",
+  "checks": [
+   {
+    "time": "2026-10-28T11:30:53.158802-04:00",
+    "price": 35.78,
+    "failed": [
+     "rvol: volume 0.77x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-28T11:35:53.158802-04:00",
+    "price": 35.795,
+    "failed": [
+     "rvol: volume 0.77x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-28T11:40:53.158802-04:00",
+    "price": 35.81,
+    "failed": [
+     "rvol: volume 0.77x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-28T11:45:53.158802-04:00",
+    "price": 35.85,
+    "failed": [
+     "rvol: volume 0.77x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-28T11:50:53.158802-04:00",
+    "price": 35.905,
+    "failed": [
+     "rvol: volume 0.79x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-28T11:55:53.158802-04:00",
+    "price": 36.01,
+    "failed": [
+     "rvol: volume 0.81x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-28T12:00:53.158802-04:00",
+    "price": 35.91,
+    "failed": [
+     "rvol: volume 0.82x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-28T12:05:53.158802-04:00",
+    "price": 35.89,
+    "failed": [
+     "rvol: volume 0.82x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   }
+  ],
+  "result": "monitor would pass"
+ },
+ {
+  "id": "20261028-scalp-VLO-C-orb",
+  "module": "scalp",
+  "setup": "orb",
+  "direction": "call",
+  "underlying": "VLO",
+  "desk_status": "passed",
+  "desk_pass_reason": "cancelled_pair: pm_break twin 20261028-scalp-VLO-C triggered at 9:30 (then passed on vwap).",
+  "desk_pnl": null,
+  "desk_r": null,
+  "result": "never crossed"
+ },
+ {
+  "id": "20261028-swing-CRM-C",
+  "module": "swing",
+  "setup": "pullback",
+  "direction": "call",
+  "underlying": "CRM",
+  "desk_status": "passed",
+  "desk_pass_reason": "liquidity: only 11/27 expiry clears earnings (12/2 pm); 245C 10.15/11.70 spread 14.2%, OI 57; 240C 12.75/15.05 spread 16",
+  "desk_pnl": null,
+  "desk_r": null,
+  "result": "never crossed"
+ },
+ {
+  "id": "20261028-swing-NFLX-P",
+  "module": "swing",
+  "setup": "breakdown",
+  "direction": "put",
+  "underlying": "NFLX",
+  "desk_status": "passed",
+  "desk_pass_reason": "vwap: price 62.245 above VWAP 61.89 at 10:13 (put needs below). Triggered 9:35 bar low 61.40 < 61.50, then reclaimed; rv",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-10-29T09:37:17.176945-04:00",
+  "cross_price": 61.5,
+  "level": 61.5,
+  "cross_source": "trade",
+  "checks": [
+   {
+    "time": "2026-10-29T09:37:17.176945-04:00",
+    "price": 61.5,
+    "failed": [
+     "rvol: volume 0.63x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   }
+  ],
+  "result": "monitor would pass"
+ },
+ {
+  "id": "20261028-swing-OKE-C",
+  "module": "swing",
+  "setup": "pullback",
+  "direction": "call",
+  "underlying": "OKE",
+  "desk_status": "passed",
+  "desk_pass_reason": "liquidity: 12/18 95C 2.80/4.70 spread 51%; 92.5C 3.20/6.00 (61%, OI 29); 97.5C 1.50/3.90 (89%). Only monthly expiries (1",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-10-29T09:30:11.932727-04:00",
+  "cross_price": 96.59,
+  "level": 96.2,
+  "cross_source": "trade",
+  "checks": [
+   {
+    "time": "2026-10-29T09:30:11.932727-04:00",
+    "price": 96.59,
+    "failed": [
+     "open: inside the first 5 minutes"
+    ]
+   }
+  ],
+  "result": "monitor would pass"
+ },
+ {
+  "id": "20261028-swing-T-P",
+  "module": "swing",
+  "setup": "breakdown",
+  "direction": "put",
+  "underlying": "T",
+  "desk_status": "passed",
+  "desk_pass_reason": "liquidity: 12/18 21P 0.90/1.04 at the close, spread 14.4% > 8% (was 0.92/0.99 intraday at the 2:05 check). Re-check poss",
+  "desk_pnl": null,
+  "desk_r": null,
+  "result": "never crossed"
+ },
+ {
+  "id": "20261028-swing-VZ-P",
+  "module": "swing",
+  "setup": "breakdown",
+  "direction": "put",
+  "underlying": "VZ",
+  "desk_status": "passed",
+  "desk_pass_reason": "liquidity: 12/18 43P 1.18/1.46 spread 21%; 12/04 puts wider (43P 0.70/1.60, 44P 1.10/2.23; OI < 30). Second liquidity pa",
+  "desk_pnl": null,
+  "desk_r": null,
+  "result": "never crossed"
+ },
+ {
+  "id": "20261029-scalp-AMD-P",
+  "module": "scalp",
+  "setup": "pm_break",
+  "direction": "put",
+  "underlying": "AMD",
+  "desk_status": "expired",
+  "desk_pass_reason": "",
+  "desk_pnl": null,
+  "desk_r": null,
+  "result": "never crossed"
+ },
+ {
+  "id": "20261029-scalp-AVGO-P",
+  "module": "scalp",
+  "setup": "pm_break",
+  "direction": "put",
+  "underlying": "AVGO",
+  "desk_status": "passed",
+  "desk_pass_reason": "rvol: 0.90 (5m-same-time-10d) < 1.5. Triggered 9:50 bar low 339.07 < 340.35; price 341.33 back above trigger, just below",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-10-29T09:50:01.951056-04:00",
+  "cross_price": 340.3,
+  "level": 340.35,
+  "cross_source": "trade",
+  "checks": [
+   {
+    "time": "2026-10-29T09:50:01.951056-04:00",
+    "price": 340.3,
+    "failed": [
+     "rvol: volume 0.98x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-29T09:55:01.951056-04:00",
+    "price": 338.95,
+    "failed": [
+     "rvol: volume 0.98x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   }
+  ],
+  "result": "monitor would pass"
+ },
+ {
+  "id": "20261029-scalp-GOOGL-P",
+  "module": "scalp",
+  "setup": "pm_break",
+  "direction": "put",
+  "underlying": "GOOGL",
+  "desk_status": "passed",
+  "desk_pass_reason": "vwap: price 284.74 above VWAP 283.61 at 10:13 (put needs below). Triggered 9:30 bar low 281.95 < 286.89 (low 280.36); ex",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-10-29T09:30:00.002777-04:00",
+  "cross_price": 286.875,
+  "level": 286.89,
+  "cross_source": "trade",
+  "checks": [
+   {
+    "time": "2026-10-29T09:30:00.002777-04:00",
+    "price": 286.875,
+    "failed": [
+     "vwap: above VWAP 286.76",
+     "open: inside the first 5 minutes"
+    ]
+   },
+   {
+    "time": "2026-10-29T09:35:00.002777-04:00",
+    "price": 281.46,
+    "failed": [
+     "extension: 1.89% past trigger (max 1.0%)"
+    ]
+   },
+   {
+    "time": "2026-10-29T09:40:00.002777-04:00",
+    "price": 281.625,
+    "failed": [
+     "extension: 1.84% past trigger (max 1.0%)"
+    ]
+   },
+   {
+    "time": "2026-10-29T09:45:00.002777-04:00",
+    "price": 283.265,
+    "failed": [
+     "extension: 1.26% past trigger (max 1.0%)"
+    ]
+   },
+   {
+    "time": "2026-10-29T09:50:00.002777-04:00",
+    "price": 283.35,
+    "failed": [
+     "extension: 1.23% past trigger (max 1.0%)"
+    ]
+   },
+   {
+    "time": "2026-10-29T09:55:00.002777-04:00",
+    "price": 282.59,
+    "failed": [
+     "extension: 1.50% past trigger (max 1.0%)"
+    ]
+   },
+   {
+    "time": "2026-10-29T10:00:00.002777-04:00",
+    "price": 285.425,
+    "failed": [
+     "vwap: above VWAP 283.55"
+    ]
+   },
+   {
+    "time": "2026-10-29T10:05:00.002777-04:00",
+    "price": 286.1493,
+    "failed": [
+     "vwap: above VWAP 283.79"
+    ]
+   }
+  ],
+  "result": "monitor would pass"
+ },
+ {
+  "id": "20261029-scalp-MRVL-P",
+  "module": "scalp",
+  "setup": "pm_break",
+  "direction": "put",
+  "underlying": "MRVL",
+  "desk_status": "closed",
+  "desk_pass_reason": "",
+  "desk_pnl": -585,
+  "desk_r": -1.22,
+  "crossed_at": "2026-10-29T09:35:50.367828-04:00",
+  "cross_price": 219.21,
+  "level": 219.21,
+  "cross_source": "trade",
+  "checks": [
+   {
+    "time": "2026-10-29T09:35:50.367828-04:00",
+    "price": 219.21,
+    "failed": []
+   }
+  ],
+  "confirmed_at": "2026-10-29T09:35:50.367828-04:00",
+  "confirm_delay_min": 0.0,
+  "option": "MRVL261030P00220000",
+  "option_how": "play contract",
+  "entry_fill": 5.19,
+  "entry_bar_time": "2026-10-29T09:35:00-04:00",
+  "exit_time": "2026-10-29T09:39:00-04:00",
+  "exit_fill": 4.401,
+  "exit_reason": "stock stop",
+  "pnl_pct": -0.1519,
+  "r": -0.54,
+  "result": "trade"
+ },
+ {
+  "id": "20261029-scalp-MSFT-C",
+  "module": "scalp",
+  "setup": "pm_break",
+  "direction": "call",
+  "underlying": "MSFT",
+  "desk_status": "expired",
+  "desk_pass_reason": "",
+  "desk_pnl": null,
+  "desk_r": null,
+  "result": "never crossed"
+ },
+ {
+  "id": "20261029-scalp-QQQ-P",
+  "module": "scalp",
+  "setup": "pm_break",
+  "direction": "put",
+  "underlying": "QQQ",
+  "desk_status": "passed",
+  "desk_pass_reason": "vwap: price 714.33 above VWAP 713.96 at 10:13 (put needs below). Triggered 9:30 bar low 712.26 < 714.98; ext 0.09%; rvol",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-10-29T09:32:12.371724-04:00",
+  "cross_price": 714.96,
+  "level": 714.98,
+  "cross_source": "trade",
+  "checks": [
+   {
+    "time": "2026-10-29T09:32:12.371724-04:00",
+    "price": 714.96,
+    "failed": [
+     "rvol: volume 1.19x normal for this time (min 1.50x, 1m-same-time-10d)",
+     "open: inside the first 5 minutes"
+    ]
+   },
+   {
+    "time": "2026-10-29T09:37:12.371724-04:00",
+    "price": 712.975,
+    "failed": [
+     "rvol: volume 1.30x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-29T09:42:12.371724-04:00",
+    "price": 714.43,
+    "failed": [
+     "vwap: above VWAP 713.90",
+     "rvol: volume 1.22x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-29T09:47:12.371724-04:00",
+    "price": 713.92,
+    "failed": [
+     "rvol: volume 1.22x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-29T09:52:12.371724-04:00",
+    "price": 714.18,
+    "failed": [
+     "vwap: above VWAP 714.01",
+     "rvol: volume 1.15x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-29T09:57:12.371724-04:00",
+    "price": 713.71,
+    "failed": [
+     "rvol: volume 1.08x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   }
+  ],
+  "result": "monitor would pass"
+ },
+ {
+  "id": "20261029-scalp-SMH-P",
+  "module": "scalp",
+  "setup": "pm_break",
+  "direction": "put",
+  "underlying": "SMH",
+  "desk_status": "expired",
+  "desk_pass_reason": "",
+  "desk_pnl": null,
+  "desk_r": null,
+  "result": "never crossed"
+ },
+ {
+  "id": "20261029-scalp-XOM-C",
+  "module": "scalp",
+  "setup": "pm_break",
+  "direction": "call",
+  "underlying": "XOM",
+  "desk_status": "expired",
+  "desk_pass_reason": "",
+  "desk_pnl": null,
+  "desk_r": null,
+  "result": "never crossed"
+ },
+ {
+  "id": "20261029-scalp-AMD-P-orb",
+  "module": "scalp",
+  "setup": "orb",
+  "direction": "put",
+  "underlying": "AMD",
+  "desk_status": "expired",
+  "desk_pass_reason": "",
+  "desk_pnl": null,
+  "desk_r": null,
+  "result": "never crossed"
+ },
+ {
+  "id": "20261029-scalp-AVGO-P-orb",
+  "module": "scalp",
+  "setup": "orb",
+  "direction": "put",
+  "underlying": "AVGO",
+  "desk_status": "passed",
+  "desk_pass_reason": "cancelled_pair: pm_break twin triggered (then passed on rvol).",
+  "desk_pnl": null,
+  "desk_r": null,
+  "result": "never crossed"
+ },
+ {
+  "id": "20261029-scalp-GOOGL-P-orb",
+  "module": "scalp",
+  "setup": "orb",
+  "direction": "put",
+  "underlying": "GOOGL",
+  "desk_status": "passed",
+  "desk_pass_reason": "cancelled_pair: pm_break twin triggered (then passed on vwap).",
+  "desk_pnl": null,
+  "desk_r": null,
+  "result": "never crossed"
+ },
+ {
+  "id": "20261029-scalp-MRVL-P-orb",
+  "module": "scalp",
+  "setup": "orb",
+  "direction": "put",
+  "underlying": "MRVL",
+  "desk_status": "passed",
+  "desk_pass_reason": "cancelled_pair: pm_break twin 20261029-scalp-MRVL-P triggered and entered at 10:05 check.",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-10-29T14:40:03.202838-04:00",
+  "cross_price": 216.2,
+  "level": 216.2004,
+  "cross_source": "trade",
+  "checks": [
+   {
+    "time": "2026-10-29T14:40:03.202838-04:00",
+    "price": 216.2,
+    "failed": []
+   }
+  ],
+  "result": "twin already taken"
+ },
+ {
+  "id": "20261029-scalp-MSFT-C-orb",
+  "module": "scalp",
+  "setup": "orb",
+  "direction": "call",
+  "underlying": "MSFT",
+  "desk_status": "expired",
+  "desk_pass_reason": "",
+  "desk_pnl": null,
+  "desk_r": null,
+  "result": "never crossed"
+ },
+ {
+  "id": "20261029-scalp-QQQ-P-orb",
+  "module": "scalp",
+  "setup": "orb",
+  "direction": "put",
+  "underlying": "QQQ",
+  "desk_status": "passed",
+  "desk_pass_reason": "cancelled_pair: pm_break twin triggered (then passed on vwap).",
+  "desk_pnl": null,
+  "desk_r": null,
+  "result": "never crossed"
+ },
+ {
+  "id": "20261029-scalp-SMH-P-orb",
+  "module": "scalp",
+  "setup": "orb",
+  "direction": "put",
+  "underlying": "SMH",
+  "desk_status": "expired",
+  "desk_pass_reason": "",
+  "desk_pnl": null,
+  "desk_r": null,
+  "result": "never crossed"
+ },
+ {
+  "id": "20261029-scalp-XOM-C-orb",
+  "module": "scalp",
+  "setup": "orb",
+  "direction": "call",
+  "underlying": "XOM",
+  "desk_status": "expired",
+  "desk_pass_reason": "",
+  "desk_pnl": null,
+  "desk_r": null,
+  "result": "never crossed"
+ },
+ {
+  "id": "20261029-swing-DHR-C",
+  "module": "swing",
+  "setup": "breakout",
+  "direction": "call",
+  "underlying": "DHR",
+  "desk_status": "passed",
+  "desk_pass_reason": "market: SPY -1.24% on the day blocks new calls. Opened 238.38 (just over trigger 238.13), then failed: price 233.57 is 1",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-10-30T09:30:00.934238-04:00",
+  "cross_price": 238.46,
+  "level": 238.13,
+  "cross_source": "trade",
+  "checks": [
+   {
+    "time": "2026-10-30T09:30:00.934238-04:00",
+    "price": 238.46,
+    "failed": [
+     "rvol: volume 0.46x normal for this time (min 1.50x, 1m-same-time-10d)",
+     "market: SPY -1.12% today (blocks at 0.75%)",
+     "open: inside the first 5 minutes"
+    ]
+   }
+  ],
+  "result": "monitor would pass"
+ },
+ {
+  "id": "20261029-swing-GOOGL-P",
+  "module": "swing",
+  "setup": "breakdown",
+  "direction": "put",
+  "underlying": "GOOGL",
+  "desk_status": "passed",
+  "desk_pass_reason": "rvol: 1.41 < 1.5 (5m-same-time-10d: 5,648,800 vs 10d avg 4,014,493 through 10:05; the 10/29 earnings-gap day is in the b",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-10-30T09:30:59-04:00",
+  "cross_price": 281.115,
+  "level": 280.36,
+  "cross_source": "bar",
+  "checks": [
+   {
+    "time": "2026-10-30T09:30:59-04:00",
+    "price": 281.115,
+    "failed": [
+     "vwap: above VWAP 280.98",
+     "rvol: volume 1.33x normal for this time (min 1.50x, 1m-same-time-10d)",
+     "open: inside the first 5 minutes"
+    ]
+   }
+  ],
+  "result": "monitor would pass"
+ },
+ {
+  "id": "20261029-swing-NFLX-P",
+  "module": "swing",
+  "setup": "breakdown",
+  "direction": "put",
+  "underlying": "NFLX",
+  "desk_status": "passed",
+  "desk_pass_reason": "other: setup invalidated before trigger \u2014 close 66.39 above planned stock stop 64.00; trigger 61.4 never hit",
+  "desk_pnl": null,
+  "desk_r": null,
+  "result": "never crossed"
+ },
+ {
+  "id": "20261029-swing-TMO-C",
+  "module": "swing",
+  "setup": "breakout",
+  "direction": "call",
+  "underlying": "TMO",
+  "desk_status": "passed",
+  "desk_pass_reason": "liquidity: 12/18 700C spread 9.2% (36.50/40.00) > 8%, OI 451 < 500; 710C 16.5% (OI 28); 690C 16.5%; 12/11 690C/700C 17-2",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-11-04T09:30:59-05:00",
+  "cross_price": 709.21,
+  "level": 711.85,
+  "cross_source": "bar",
+  "checks": [
+   {
+    "time": "2026-11-04T09:30:59-05:00",
+    "price": 709.21,
+    "failed": [
+     "open: inside the first 5 minutes"
+    ]
+   }
+  ],
+  "result": "monitor would pass"
+ },
+ {
+  "id": "20261029-swing-TMUS-P",
+  "module": "swing",
+  "setup": "breakdown",
+  "direction": "put",
+  "underlying": "TMUS",
+  "desk_status": "passed",
+  "desk_pass_reason": "liquidity: 12/18 150P spread 28% (7.90/10.50); 145P 44% (4.90/7.70).",
+  "desk_pnl": null,
+  "desk_r": null,
+  "result": "never crossed"
+ },
+ {
+  "id": "20261030-scalp-GDX-P",
+  "module": "scalp",
+  "setup": "pm_break",
+  "direction": "put",
+  "underlying": "GDX",
+  "desk_status": "passed",
+  "desk_pass_reason": "extension: price 77.16 is 1.84% below trigger 78.61 (limit 1%); opened 78.20, already through trigger. Below VWAP 77.71.",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-10-30T09:30:00.146780-04:00",
+  "cross_price": 78.235,
+  "level": 78.61,
+  "cross_source": "trade",
+  "checks": [
+   {
+    "time": "2026-10-30T09:30:00.146780-04:00",
+    "price": 78.235,
+    "failed": [
+     "vwap: above VWAP 78.15",
+     "open: inside the first 5 minutes"
+    ]
+   },
+   {
+    "time": "2026-10-30T09:35:00.146780-04:00",
+    "price": 77.83,
+    "failed": [
+     "vwap: above VWAP 77.80"
+    ]
+   },
+   {
+    "time": "2026-10-30T09:40:00.146780-04:00",
+    "price": 77.92,
+    "failed": [
+     "vwap: above VWAP 77.87"
+    ]
+   },
+   {
+    "time": "2026-10-30T09:45:00.146780-04:00",
+    "price": 77.7657,
+    "failed": [
+     "extension: 1.07% past trigger (max 1.0%)"
+    ]
+   },
+   {
+    "time": "2026-10-30T09:50:00.146780-04:00",
+    "price": 77.41,
+    "failed": [
+     "extension: 1.53% past trigger (max 1.0%)"
+    ]
+   },
+   {
+    "time": "2026-10-30T09:55:00.146780-04:00",
+    "price": 77.3,
+    "failed": [
+     "extension: 1.67% past trigger (max 1.0%)"
+    ]
+   },
+   {
+    "time": "2026-10-30T10:00:00.146780-04:00",
+    "price": 77.39,
+    "failed": [
+     "extension: 1.55% past trigger (max 1.0%)"
+    ]
+   },
+   {
+    "time": "2026-10-30T10:05:00.146780-04:00",
+    "price": 77.36,
+    "failed": [
+     "extension: 1.59% past trigger (max 1.0%)"
+    ]
+   }
+  ],
+  "result": "monitor would pass"
+ },
+ {
+  "id": "20261030-scalp-LLY-C",
+  "module": "scalp",
+  "setup": "pm_break",
+  "direction": "call",
+  "underlying": "LLY",
+  "desk_status": "passed",
+  "desk_pass_reason": "market: SPY -1.24% on the day (> 0.75% down) blocks new calls. Triggered 9:30 (high 1449.68 > 1419.06); price 1431.53 is",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-10-30T09:30:01.335387-04:00",
+  "cross_price": 1428.97,
+  "level": 1419.06,
+  "cross_source": "trade",
+  "checks": [
+   {
+    "time": "2026-10-30T09:30:01.335387-04:00",
+    "price": 1428.97,
+    "failed": [
+     "vwap: below VWAP 1441.06",
+     "open: inside the first 5 minutes"
+    ]
+   },
+   {
+    "time": "2026-10-30T09:35:01.335387-04:00",
+    "price": 1431.08,
+    "failed": [
+     "vwap: below VWAP 1437.45"
+    ]
+   },
+   {
+    "time": "2026-10-30T09:40:01.335387-04:00",
+    "price": 1430.84,
+    "failed": [
+     "vwap: below VWAP 1436.08"
+    ]
+   },
+   {
+    "time": "2026-10-30T09:45:01.335387-04:00",
+    "price": 1420.005,
+    "failed": [
+     "vwap: below VWAP 1434.62"
+    ]
+   },
+   {
+    "time": "2026-10-30T09:50:01.335387-04:00",
+    "price": 1426,
+    "failed": [
+     "vwap: below VWAP 1433.69"
+    ]
+   },
+   {
+    "time": "2026-10-30T09:55:01.335387-04:00",
+    "price": 1426.26,
+    "failed": [
+     "vwap: below VWAP 1432.83"
+    ]
+   },
+   {
+    "time": "2026-10-30T10:00:01.335387-04:00",
+    "price": 1426.935,
+    "failed": [
+     "vwap: below VWAP 1432.72"
+    ]
+   },
+   {
+    "time": "2026-10-30T10:05:01.335387-04:00",
+    "price": 1433.07,
+    "failed": []
+   }
+  ],
+  "confirmed_at": "2026-10-30T10:05:01.335387-04:00",
+  "confirm_delay_min": 35.0,
+  "option": "LLY261030C01430000",
+  "option_how": "play contract",
+  "entry_fill": 13.582,
+  "entry_bar_time": "2026-10-30T10:04:00-04:00",
+  "exit_time": "2026-10-30T10:07:00-04:00",
+  "exit_fill": 8.183,
+  "exit_reason": "option stop",
+  "pnl_pct": -0.3975,
+  "r": -1.42,
+  "result": "trade"
+ },
+ {
+  "id": "20261030-scalp-META-P",
+  "module": "scalp",
+  "setup": "pm_break",
+  "direction": "put",
+  "underlying": "META",
+  "desk_status": "passed",
+  "desk_pass_reason": "vwap: price 619.47 above VWAP 615.90. Triggered 9:30 (low 610.74 < 611.84) then reversed back above trigger.",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-10-30T09:34:19.963706-04:00",
+  "cross_price": 611.75,
+  "level": 611.84,
+  "cross_source": "trade",
+  "checks": [
+   {
+    "time": "2026-10-30T09:34:19.963706-04:00",
+    "price": 611.75,
+    "failed": [
+     "rvol: volume 0.71x normal for this time (min 1.50x, 1m-same-time-10d)",
+     "open: inside the first 5 minutes"
+    ]
+   }
+  ],
+  "result": "monitor would pass"
+ },
+ {
+  "id": "20261030-scalp-NEM-P",
+  "module": "scalp",
+  "setup": "pm_break",
+  "direction": "put",
+  "underlying": "NEM",
+  "desk_status": "passed",
+  "desk_pass_reason": "extension: price 106.655 is 1.34% below trigger 108.10 (limit 1%); opened 107.35, already through trigger. 0DTE 107P spr",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-10-30T09:30:00.911629-04:00",
+  "cross_price": 107.35,
+  "level": 108.1,
+  "cross_source": "trade",
+  "checks": [
+   {
+    "time": "2026-10-30T09:30:00.911629-04:00",
+    "price": 107.35,
+    "failed": [
+     "rvol: volume 0.87x normal for this time (min 1.50x, 1m-same-time-10d)",
+     "open: inside the first 5 minutes"
+    ]
+   },
+   {
+    "time": "2026-10-30T09:35:00.911629-04:00",
+    "price": 107.585,
+    "failed": [
+     "vwap: above VWAP 107.22",
+     "rvol: volume 0.98x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-30T09:40:00.911629-04:00",
+    "price": 107.63,
+    "failed": [
+     "vwap: above VWAP 107.40",
+     "rvol: volume 1.01x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-30T09:45:00.911629-04:00",
+    "price": 107.6,
+    "failed": [
+     "vwap: above VWAP 107.46",
+     "rvol: volume 1.04x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-30T09:50:00.911629-04:00",
+    "price": 106.98,
+    "failed": [
+     "extension: 1.04% past trigger (max 1.0%)",
+     "rvol: volume 1.08x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-30T09:55:00.911629-04:00",
+    "price": 106.76,
+    "failed": [
+     "extension: 1.24% past trigger (max 1.0%)",
+     "rvol: volume 1.29x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-30T10:00:00.911629-04:00",
+    "price": 106.56,
+    "failed": [
+     "extension: 1.42% past trigger (max 1.0%)",
+     "rvol: volume 1.44x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-30T10:05:00.911629-04:00",
+    "price": 106.535,
+    "failed": [
+     "extension: 1.45% past trigger (max 1.0%)"
+    ]
+   }
+  ],
+  "result": "monitor would pass"
+ },
+ {
+  "id": "20261030-scalp-QQQ-P",
+  "module": "scalp",
+  "setup": "pm_break",
+  "direction": "put",
+  "underlying": "QQQ",
+  "desk_status": "passed",
+  "desk_pass_reason": "vwap: price 696.56 above VWAP 696.27. Triggered 9:35 (low 694.05 < 696.35) then reclaimed the trigger. rvol not computed",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-10-30T09:30:09.890342-04:00",
+  "cross_price": 696.35,
+  "level": 696.35,
+  "cross_source": "trade",
+  "checks": [
+   {
+    "time": "2026-10-30T09:30:09.890342-04:00",
+    "price": 696.35,
+    "failed": [
+     "open: inside the first 5 minutes"
+    ]
+   },
+   {
+    "time": "2026-10-30T09:35:09.890342-04:00",
+    "price": 694.52,
+    "failed": []
+   }
+  ],
+  "confirmed_at": "2026-10-30T09:35:09.890342-04:00",
+  "confirm_delay_min": 5.0,
+  "option": "QQQ261030P00696000",
+  "option_how": "play contract",
+  "entry_fill": 4.049,
+  "entry_bar_time": "2026-10-30T09:35:00-04:00",
+  "exit_time": "2026-10-30T09:38:00-04:00",
+  "exit_fill": 2.912,
+  "exit_reason": "option stop",
+  "pnl_pct": -0.2807,
+  "r": -1.0,
+  "result": "trade"
+ },
+ {
+  "id": "20261030-scalp-SPY-P",
+  "module": "scalp",
+  "setup": "pm_break",
+  "direction": "put",
+  "underlying": "SPY",
+  "desk_status": "passed",
+  "desk_pass_reason": "rvol: 1.41 < 1.5 (5m-same-time-10d: 2,487,036 vs 10d avg 1,760,030 through 10:05). Triggered 9:35 (low 759.45 < 760.91);",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-10-30T09:30:04.128740-04:00",
+  "cross_price": 760.9,
+  "level": 760.91,
+  "cross_source": "trade",
+  "checks": [
+   {
+    "time": "2026-10-30T09:30:04.128740-04:00",
+    "price": 760.9,
+    "failed": [
+     "open: inside the first 5 minutes"
+    ]
+   },
+   {
+    "time": "2026-10-30T09:35:04.128740-04:00",
+    "price": 759.72,
+    "failed": []
+   }
+  ],
+  "confirmed_at": "2026-10-30T09:35:04.128740-04:00",
+  "confirm_delay_min": 5.0,
+  "option": "SPY261030P00760000",
+  "option_how": "play contract",
+  "entry_fill": 2.129,
+  "entry_bar_time": "2026-10-30T09:35:00-04:00",
+  "exit_time": "2026-10-30T09:40:00-04:00",
+  "exit_fill": 1.531,
+  "exit_reason": "option stop",
+  "pnl_pct": -0.2809,
+  "r": -1.0,
+  "result": "trade"
+ },
+ {
+  "id": "20261030-scalp-XLE-C",
+  "module": "scalp",
+  "setup": "pm_break",
+  "direction": "call",
+  "underlying": "XLE",
+  "desk_status": "passed",
+  "desk_pass_reason": "market: SPY -1.24% blocks new calls. Triggered 9:30 (high 69.885 > 69.79); price 70.03 is 0.34% past trigger, above VWAP",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-10-30T09:34:38.881912-04:00",
+  "cross_price": 69.79,
+  "level": 69.79,
+  "cross_source": "trade",
+  "checks": [
+   {
+    "time": "2026-10-30T09:34:38.881912-04:00",
+    "price": 69.79,
+    "failed": [
+     "rvol: volume 1.37x normal for this time (min 1.50x, 1m-same-time-10d)",
+     "open: inside the first 5 minutes"
+    ]
+   },
+   {
+    "time": "2026-10-30T09:49:38.881912-04:00",
+    "price": 70.01,
+    "failed": [
+     "rvol: volume 1.20x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-30T09:54:38.881912-04:00",
+    "price": 70.065,
+    "failed": [
+     "rvol: volume 1.22x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-30T09:59:38.881912-04:00",
+    "price": 70.13,
+    "failed": [
+     "rvol: volume 1.25x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-30T10:04:38.881912-04:00",
+    "price": 69.975,
+    "failed": [
+     "rvol: volume 1.23x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-30T10:09:38.881912-04:00",
+    "price": 70.1,
+    "failed": [
+     "rvol: volume 1.19x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   }
+  ],
+  "result": "monitor would pass"
+ },
+ {
+  "id": "20261030-scalp-XLV-C",
+  "module": "scalp",
+  "setup": "pm_break",
+  "direction": "call",
+  "underlying": "XLV",
+  "desk_status": "passed",
+  "desk_pass_reason": "market: SPY -1.24% blocks new calls. Triggered 9:30 (high 187.81 > 187.35) but price 186.48 is back under trigger and be",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-10-30T09:31:56.395984-04:00",
+  "cross_price": 187.35,
+  "level": 187.35,
+  "cross_source": "trade",
+  "checks": [
+   {
+    "time": "2026-10-30T09:31:56.395984-04:00",
+    "price": 187.35,
+    "failed": [
+     "open: inside the first 5 minutes"
+    ]
+   },
+   {
+    "time": "2026-10-30T09:36:56.395984-04:00",
+    "price": 187.63,
+    "failed": []
+   }
+  ],
+  "confirmed_at": "2026-10-30T09:36:56.395984-04:00",
+  "confirm_delay_min": 5.0,
+  "option": "XLV261030C00186000",
+  "option_how": "play contract",
+  "entry_fill": 2.407,
+  "entry_bar_time": "2026-10-30T09:36:00-04:00",
+  "exit_time": "2026-10-30T09:54:00-04:00",
+  "exit_fill": 1.287,
+  "exit_reason": "option stop",
+  "pnl_pct": -0.4653,
+  "r": -1.66,
+  "result": "trade"
+ },
+ {
+  "id": "20261030-scalp-GDX-P-orb",
+  "module": "scalp",
+  "setup": "orb",
+  "direction": "put",
+  "underlying": "GDX",
+  "desk_status": "passed",
+  "desk_pass_reason": "cancelled_pair: pm_break twin 20261030-scalp-GDX-P triggered first (near the open). Opening range 9:30-10:00 high 78.32 ",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-10-30T10:03:59.378167-04:00",
+  "cross_price": 77.25,
+  "level": 77.25,
+  "cross_source": "trade",
+  "checks": [
+   {
+    "time": "2026-10-30T10:03:59.378167-04:00",
+    "price": 77.25,
+    "failed": []
+   }
+  ],
+  "confirmed_at": "2026-10-30T10:03:59.378167-04:00",
+  "confirm_delay_min": 0.0,
+  "option": "GDX261030P00077000",
+  "option_how": "nearest strike 77, exp 10/30",
+  "entry_fill": 0.292,
+  "entry_bar_time": "2026-10-30T10:00:00-04:00",
+  "exit_time": "2026-10-30T10:10:00-04:00",
+  "exit_fill": 0.447,
+  "exit_reason": "option target",
+  "pnl_pct": 0.5286,
+  "r": 1.89,
+  "result": "trade"
+ },
+ {
+  "id": "20261030-scalp-LLY-C-orb",
+  "module": "scalp",
+  "setup": "orb",
+  "direction": "call",
+  "underlying": "LLY",
+  "desk_status": "passed",
+  "desk_pass_reason": "cancelled_pair: pm_break twin 20261030-scalp-LLY-C triggered first (near the open). Opening range 9:30-10:00 high 1449.6",
+  "desk_pnl": null,
+  "desk_r": null,
+  "result": "never crossed"
+ },
+ {
+  "id": "20261030-scalp-META-P-orb",
+  "module": "scalp",
+  "setup": "orb",
+  "direction": "put",
+  "underlying": "META",
+  "desk_status": "passed",
+  "desk_pass_reason": "cancelled_pair: pm_break twin 20261030-scalp-META-P triggered first (near the open). Opening range 9:30-10:00 high 620.3",
+  "desk_pnl": null,
+  "desk_r": null,
+  "result": "never crossed"
+ },
+ {
+  "id": "20261030-scalp-NEM-P-orb",
+  "module": "scalp",
+  "setup": "orb",
+  "direction": "put",
+  "underlying": "NEM",
+  "desk_status": "passed",
+  "desk_pass_reason": "cancelled_pair: pm_break twin 20261030-scalp-NEM-P triggered first (near the open). Opening range 9:30-10:00 high 108.07",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-10-30T10:00:54.664119-04:00",
+  "cross_price": 106.55,
+  "level": 106.555,
+  "cross_source": "trade",
+  "checks": [
+   {
+    "time": "2026-10-30T10:00:54.664119-04:00",
+    "price": 106.55,
+    "failed": [
+     "rvol: volume 1.44x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-30T10:05:54.664119-04:00",
+    "price": 106.535,
+    "failed": []
+   }
+  ],
+  "confirmed_at": "2026-10-30T10:05:54.664119-04:00",
+  "confirm_delay_min": 5.0,
+  "option": "NEM261030P00107000",
+  "option_how": "nearest strike 107, exp 10/30",
+  "entry_fill": 0.705,
+  "entry_bar_time": "2026-10-30T09:47:00-04:00",
+  "exit_time": "2026-10-30T11:12:00-04:00",
+  "exit_fill": 1.201,
+  "exit_reason": "option target",
+  "pnl_pct": 0.7028,
+  "r": 2.51,
+  "result": "trade"
+ },
+ {
+  "id": "20261030-scalp-QQQ-P-orb",
+  "module": "scalp",
+  "setup": "orb",
+  "direction": "put",
+  "underlying": "QQQ",
+  "desk_status": "passed",
+  "desk_pass_reason": "cancelled_pair: pm_break twin 20261030-scalp-QQQ-P triggered first (near the open). Opening range 9:30-10:00 high 698.63",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-10-30T10:21:29.969092-04:00",
+  "cross_price": 694.05,
+  "level": 694.05,
+  "cross_source": "trade",
+  "checks": [
+   {
+    "time": "2026-10-30T10:21:29.969092-04:00",
+    "price": 694.05,
+    "failed": []
+   }
+  ],
+  "result": "twin already taken"
+ },
+ {
+  "id": "20261030-scalp-SPY-P-orb",
+  "module": "scalp",
+  "setup": "orb",
+  "direction": "put",
+  "underlying": "SPY",
+  "desk_status": "passed",
+  "desk_pass_reason": "cancelled_pair: pm_break twin 20261030-scalp-SPY-P triggered first (near the open). Opening range 9:30-10:00 high 761.46",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-10-30T10:10:27.076888-04:00",
+  "cross_price": 759.43,
+  "level": 759.44,
+  "cross_source": "trade",
+  "checks": [
+   {
+    "time": "2026-10-30T10:10:27.076888-04:00",
+    "price": 759.43,
+    "failed": [
+     "rvol: volume 1.49x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-10-30T10:15:27.076888-04:00",
+    "price": 758.6,
+    "failed": []
+   }
+  ],
+  "result": "twin already taken"
+ },
+ {
+  "id": "20261030-scalp-XLE-C-orb",
+  "module": "scalp",
+  "setup": "orb",
+  "direction": "call",
+  "underlying": "XLE",
+  "desk_status": "passed",
+  "desk_pass_reason": "cancelled_pair: pm_break twin 20261030-scalp-XLE-C triggered first (near the open). Opening range 9:30-10:00 high 70.145",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-10-30T10:00:02.537133-04:00",
+  "cross_price": 70.14,
+  "level": 70.14,
+  "cross_source": "trade",
+  "checks": [
+   {
+    "time": "2026-10-30T10:00:02.537133-04:00",
+    "price": 70.14,
+    "failed": [
+     "rvol: volume 1.25x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   }
+  ],
+  "result": "monitor would pass"
+ },
+ {
+  "id": "20261030-scalp-XLV-C-orb",
+  "module": "scalp",
+  "setup": "orb",
+  "direction": "call",
+  "underlying": "XLV",
+  "desk_status": "passed",
+  "desk_pass_reason": "cancelled_pair: pm_break twin 20261030-scalp-XLV-C triggered first (near the open). Opening range 9:30-10:00 high 187.99",
+  "desk_pnl": null,
+  "desk_r": null,
+  "result": "never crossed"
+ },
+ {
+  "id": "20261030-swing-ABBV-C",
+  "module": "swing",
+  "setup": "breakout",
+  "direction": "call",
+  "underlying": "ABBV",
+  "desk_status": "passed",
+  "desk_pass_reason": "liquidity: 12/18 290C 14.30/15.70 spread 9.3% > 8%; 300C 9.30/10.35 spread 10.7%.",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-11-05T09:31:59-05:00",
+  "cross_price": 298.19,
+  "level": 298.74,
+  "cross_source": "bar",
+  "checks": [
+   {
+    "time": "2026-11-05T09:31:59-05:00",
+    "price": 298.19,
+    "failed": [
+     "open: inside the first 5 minutes"
+    ]
+   },
+   {
+    "time": "2026-11-05T09:41:59-05:00",
+    "price": 298.78,
+    "failed": []
+   }
+  ],
+  "confirmed_at": "2026-11-05T09:41:59-05:00",
+  "confirm_delay_min": 10.0,
+  "option": "ABBV261218C00290000",
+  "option_how": "play contract",
+  "entry_fill": 17.088,
+  "entry_bar_time": "2026-11-05T09:41:00-05:00",
+  "exit_time": "2026-11-06T09:39:00-05:00",
+  "exit_fill": 9.084,
+  "exit_reason": "option stop",
+  "pnl_pct": -0.4684,
+  "r": -1.04,
+  "result": "trade"
+ },
+ {
+  "id": "20261030-swing-CVX-C",
+  "module": "swing",
+  "setup": "breakout",
+  "direction": "call",
+  "underlying": "CVX",
+  "desk_status": "passed",
+  "desk_pass_reason": "other: setup invalidated before trigger \u2014 close 217.00 below planned stock stop 227.40; trigger 236.46 never hit",
+  "desk_pnl": null,
+  "desk_r": null,
+  "result": "never crossed"
+ },
+ {
+  "id": "20261030-swing-NEM-P",
+  "module": "swing",
+  "setup": "breakdown",
+  "direction": "put",
+  "underlying": "NEM",
+  "desk_status": "passed",
+  "desk_pass_reason": "other: setup invalidated before trigger \u2014 close 118.155 above planned stock stop 114.10; trigger 104.51 never hit",
+  "desk_pnl": null,
+  "desk_r": null,
+  "result": "never crossed"
+ },
+ {
+  "id": "20261030-swing-XOM-C",
+  "module": "swing",
+  "setup": "breakout",
+  "direction": "call",
+  "underlying": "XOM",
+  "desk_status": "passed",
+  "desk_pass_reason": "other: setup invalidated before trigger \u2014 close 169.44 below planned stock stop 179.50; trigger 188.5 never hit",
+  "desk_pnl": null,
+  "desk_r": null,
+  "result": "never crossed"
+ },
+ {
+  "id": "20261102-scalp-ISRG-C",
+  "module": "scalp",
+  "setup": "pm_break",
+  "direction": "call",
+  "underlying": "ISRG",
+  "desk_status": "passed",
+  "desk_pass_reason": "rvol: 1.24 < 1.5 (5m-same-time-10d through 10:15 ET: 296.7k vs 239.0k avg). Also price 439.31 below VWAP 439.67 and 11/0",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-11-02T09:52:54.224758-05:00",
+  "cross_price": 439.99,
+  "level": 439.88,
+  "cross_source": "trade",
+  "checks": [
+   {
+    "time": "2026-11-02T09:52:54.224758-05:00",
+    "price": 439.99,
+    "failed": [
+     "rvol: volume 1.43x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-11-02T10:22:54.224758-05:00",
+    "price": 439.99,
+    "failed": [
+     "rvol: volume 1.21x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   }
+  ],
+  "result": "monitor would pass"
+ },
+ {
+  "id": "20261102-scalp-KMB-C",
+  "module": "scalp",
+  "setup": "pm_break",
+  "direction": "call",
+  "underlying": "KMB",
+  "desk_status": "passed",
+  "desk_pass_reason": "vwap: price 108.735 below VWAP 110.13 (faded from 111.38 high). rvol 1.63 ok. Also 11/06 110C spread 43% (1.20/1.85, OI ",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-11-02T09:42:01.204227-05:00",
+  "cross_price": 110.625,
+  "level": 109.68,
+  "cross_source": "trade",
+  "checks": [
+   {
+    "time": "2026-11-02T09:42:01.204227-05:00",
+    "price": 110.625,
+    "failed": []
+   }
+  ],
+  "confirmed_at": "2026-11-02T09:42:01.204227-05:00",
+  "confirm_delay_min": 0.0,
+  "option": "KMB261106C00110000",
+  "option_how": "play contract",
+  "entry_fill": 2.556,
+  "entry_bar_time": "2026-11-02T09:38:00-05:00",
+  "exit_time": "2026-11-02T10:08:00-05:00",
+  "exit_fill": 1.573,
+  "exit_reason": "option stop",
+  "pnl_pct": -0.3848,
+  "r": -1.37,
+  "result": "trade"
+ },
+ {
+  "id": "20261102-scalp-MRVL-P",
+  "module": "scalp",
+  "setup": "pm_break",
+  "direction": "put",
+  "underlying": "MRVL",
+  "desk_status": "passed",
+  "desk_pass_reason": "extension: price 185.72 = 1.57% past trigger 188.69 (limit 1%). Also SPY +0.84% blocks new puts (market). rvol 2.71 ok, ",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-11-02T09:42:00.405206-05:00",
+  "cross_price": 187.09,
+  "level": 188.69,
+  "cross_source": "trade",
+  "checks": [
+   {
+    "time": "2026-11-02T09:42:00.405206-05:00",
+    "price": 187.09,
+    "failed": [
+     "vwap: above VWAP 186.69"
+    ]
+   },
+   {
+    "time": "2026-11-02T09:47:00.405206-05:00",
+    "price": 186.6,
+    "failed": [
+     "extension: 1.11% past trigger (max 1.0%)",
+     "vwap: above VWAP 186.55"
+    ]
+   },
+   {
+    "time": "2026-11-02T09:52:00.405206-05:00",
+    "price": 183.5,
+    "failed": [
+     "extension: 2.75% past trigger (max 1.0%)"
+    ]
+   },
+   {
+    "time": "2026-11-02T09:57:00.405206-05:00",
+    "price": 183.3,
+    "failed": [
+     "extension: 2.86% past trigger (max 1.0%)"
+    ]
+   },
+   {
+    "time": "2026-11-02T10:02:00.405206-05:00",
+    "price": 182.36,
+    "failed": [
+     "extension: 3.35% past trigger (max 1.0%)"
+    ]
+   },
+   {
+    "time": "2026-11-02T10:07:00.405206-05:00",
+    "price": 184.02,
+    "failed": [
+     "extension: 2.47% past trigger (max 1.0%)"
+    ]
+   },
+   {
+    "time": "2026-11-02T10:12:00.405206-05:00",
+    "price": 184.3501,
+    "failed": [
+     "extension: 2.30% past trigger (max 1.0%)"
+    ]
+   },
+   {
+    "time": "2026-11-02T10:17:00.405206-05:00",
+    "price": 185.675,
+    "failed": [
+     "extension: 1.60% past trigger (max 1.0%)",
+     "vwap: above VWAP 185.33"
+    ]
+   }
+  ],
+  "result": "monitor would pass"
+ },
+ {
+  "id": "20261102-scalp-QQQ-C",
+  "module": "scalp",
+  "setup": "pm_break",
+  "direction": "call",
+  "underlying": "QQQ",
+  "desk_status": "passed",
+  "desk_pass_reason": "cancelled_pair: orb twin triggered at 10:10 ET before the pre-market high 698.23 broke (day high 696.60).",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-11-02T10:22:31.689809-05:00",
+  "cross_price": 698.25,
+  "level": 698.23,
+  "cross_source": "trade",
+  "checks": [
+   {
+    "time": "2026-11-02T10:22:31.689809-05:00",
+    "price": 698.25,
+    "failed": [
+     "rvol: volume 1.21x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-11-02T10:27:31.689809-05:00",
+    "price": 699.19,
+    "failed": [
+     "rvol: volume 1.23x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   }
+  ],
+  "result": "monitor would pass"
+ },
+ {
+  "id": "20261102-scalp-ISRG-C-orb",
+  "module": "scalp",
+  "setup": "orb",
+  "direction": "call",
+  "underlying": "ISRG",
+  "desk_status": "passed",
+  "desk_pass_reason": "cancelled_pair: pm_break twin triggered at the open.",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-11-02T11:24:59-05:00",
+  "cross_price": 440.76,
+  "level": 441.87,
+  "cross_source": "bar",
+  "checks": [
+   {
+    "time": "2026-11-02T11:24:59-05:00",
+    "price": 440.76,
+    "failed": [
+     "rvol: volume 1.30x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-11-02T11:34:59-05:00",
+    "price": 443.92,
+    "failed": [
+     "rvol: volume 1.33x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-11-02T11:39:59-05:00",
+    "price": 444.4,
+    "failed": [
+     "rvol: volume 1.38x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-11-02T11:44:59-05:00",
+    "price": 444.23,
+    "failed": [
+     "rvol: volume 1.38x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-11-02T11:49:59-05:00",
+    "price": 443.59,
+    "failed": []
+   }
+  ],
+  "confirmed_at": "2026-11-02T11:49:59-05:00",
+  "confirm_delay_min": 25.0,
+  "option": "ISRG261106C00442500",
+  "option_how": "nearest strike 442.5, exp 11/06",
+  "entry_fill": 6.972,
+  "entry_bar_time": "2026-11-02T11:19:00-05:00",
+  "exit_time": "2026-11-02T13:48:00-05:00",
+  "exit_fill": 8.139,
+  "exit_reason": "open at end of data (marked)",
+  "pnl_pct": 0.1673,
+  "r": 0.6,
+  "result": "trade"
+ },
+ {
+  "id": "20261102-scalp-KMB-C-orb",
+  "module": "scalp",
+  "setup": "orb",
+  "direction": "call",
+  "underlying": "KMB",
+  "desk_status": "passed",
+  "desk_pass_reason": "cancelled_pair: pm_break twin triggered at the open.",
+  "desk_pnl": null,
+  "desk_r": null,
+  "result": "never crossed"
+ },
+ {
+  "id": "20261102-scalp-MRVL-P-orb",
+  "module": "scalp",
+  "setup": "orb",
+  "direction": "put",
+  "underlying": "MRVL",
+  "desk_status": "passed",
+  "desk_pass_reason": "cancelled_pair: pm_break twin triggered at the open.",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-11-02T10:02:56.496245-05:00",
+  "cross_price": 182.65,
+  "level": 182.658,
+  "cross_source": "trade",
+  "checks": [
+   {
+    "time": "2026-11-02T10:02:56.496245-05:00",
+    "price": 182.65,
+    "failed": []
+   }
+  ],
+  "confirmed_at": "2026-11-02T10:02:56.496245-05:00",
+  "confirm_delay_min": 0.0,
+  "option": "MRVL261106P00182500",
+  "option_how": "nearest strike 182.5, exp 11/06",
+  "entry_fill": 7.14,
+  "entry_bar_time": "2026-11-02T10:02:00-05:00",
+  "exit_time": "2026-11-02T10:24:00-05:00",
+  "exit_fill": 4.963,
+  "exit_reason": "option stop",
+  "pnl_pct": -0.305,
+  "r": -1.09,
+  "result": "trade"
+ },
+ {
+  "id": "20261102-scalp-QQQ-C-orb",
+  "module": "scalp",
+  "setup": "orb",
+  "direction": "call",
+  "underlying": "QQQ",
+  "desk_status": "passed",
+  "desk_pass_reason": "rvol: 1.17 < 1.5 (5m-same-time-10d through 10:15 ET: 3.50M vs 2.99M avg). Triggered 10:10-10:15 bar (H 696.60); price 69",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-11-02T10:12:14.640993-05:00",
+  "cross_price": 695.96,
+  "level": 695.955,
+  "cross_source": "trade",
+  "checks": [
+   {
+    "time": "2026-11-02T10:12:14.640993-05:00",
+    "price": 695.96,
+    "failed": [
+     "rvol: volume 1.18x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-11-02T10:17:14.640993-05:00",
+    "price": 696.9,
+    "failed": [
+     "rvol: volume 1.18x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-11-02T10:22:14.640993-05:00",
+    "price": 698.195,
+    "failed": [
+     "rvol: volume 1.21x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-11-02T10:27:14.640993-05:00",
+    "price": 699.19,
+    "failed": [
+     "rvol: volume 1.23x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-11-02T10:32:14.640993-05:00",
+    "price": 697.9925,
+    "failed": [
+     "rvol: volume 1.21x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-11-02T10:37:14.640993-05:00",
+    "price": 698.02,
+    "failed": [
+     "rvol: volume 1.17x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-11-02T10:42:14.640993-05:00",
+    "price": 697.83,
+    "failed": [
+     "rvol: volume 1.15x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-11-02T10:47:14.640993-05:00",
+    "price": 697.08,
+    "failed": [
+     "rvol: volume 1.12x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   }
+  ],
+  "result": "monitor would pass"
+ },
+ {
+  "id": "20261102-swing-AR-C",
+  "module": "swing",
+  "setup": "pullback",
+  "direction": "call",
+  "underlying": "AR",
+  "desk_status": "passed",
+  "desk_pass_reason": "liquidity: 12/18 40C 2.15/2.85 spread 28%, OI 173; 41C OI 35.",
+  "desk_pnl": null,
+  "desk_r": null,
+  "result": "no trigger level"
+ },
+ {
+  "id": "20261102-swing-ASML-P",
+  "module": "swing",
+  "setup": "breakdown",
+  "direction": "put",
+  "underlying": "ASML",
+  "desk_status": "passed",
+  "desk_pass_reason": "liquidity: 12/18 1560P OI 271 < 500; 1540P OI 213; 1500P OI 508 but 79.30/88.20 spread 10.6%. Premium ~$11.4k/contract a",
+  "desk_pnl": null,
+  "desk_r": null,
+  "result": "no trigger level"
+ },
+ {
+  "id": "20261102-swing-HCA-C",
+  "module": "swing",
+  "setup": "pullback",
+  "direction": "call",
+  "underlying": "HCA",
+  "desk_status": "passed",
+  "desk_pass_reason": "liquidity: 12/18 470C 21.50/24.40 spread 12.6%, OI 47; 460C OI 70, spread 10.7%.",
+  "desk_pnl": null,
+  "desk_r": null,
+  "result": "no trigger level"
+ },
+ {
+  "id": "20261102-swing-JNJ-C",
+  "module": "swing",
+  "setup": "pullback",
+  "direction": "call",
+  "underlying": "JNJ",
+  "desk_status": "passed",
+  "desk_pass_reason": "liquidity: 12/18 270C 10.10/11.50 spread 13.0%; 260C 16.15/17.80 9.7%; 280C 5.45/7.05 25.6% (all > 8%).",
+  "desk_pnl": null,
+  "desk_r": null,
+  "result": "no trigger level"
+ },
+ {
+  "id": "20261102-swing-KLAC-P",
+  "module": "swing",
+  "setup": "breakdown",
+  "direction": "put",
+  "underlying": "KLAC",
+  "desk_status": "passed",
+  "desk_pass_reason": "market: SPY +1.75% (767.57 vs 754.35) blocks new puts; also rvol 0.32 < 1.5 (5m-same-time-10d) and price 155.73 above VW",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-11-04T09:34:17.793582-05:00",
+  "cross_price": 152.73,
+  "level": 152.76,
+  "cross_source": "trade",
+  "checks": [
+   {
+    "time": "2026-11-04T09:34:17.793582-05:00",
+    "price": 152.73,
+    "failed": [
+     "rvol: volume 0.76x normal for this time (min 1.50x, 1m-same-time-10d)",
+     "open: inside the first 5 minutes"
+    ]
+   }
+  ],
+  "result": "monitor would pass"
+ },
+ {
+  "id": "20261102-swing-UNH-C",
+  "module": "swing",
+  "setup": "pullback",
+  "direction": "call",
+  "underlying": "UNH",
+  "desk_status": "closed",
+  "desk_pass_reason": "",
+  "desk_pnl": -1012,
+  "desk_r": -0.75,
+  "crossed_at": "2026-11-04T12:27:16.168216-05:00",
+  "cross_price": 408.91,
+  "level": 408.88,
+  "cross_source": "trade",
+  "checks": [
+   {
+    "time": "2026-11-04T12:27:16.168216-05:00",
+    "price": 408.91,
+    "failed": []
+   }
+  ],
+  "confirmed_at": "2026-11-04T12:27:16.168216-05:00",
+  "confirm_delay_min": 0.0,
+  "option": "UNH261218C00390000",
+  "option_how": "play contract",
+  "entry_fill": 29.063,
+  "entry_bar_time": "2026-11-04T12:15:00-05:00",
+  "exit_time": "2026-11-06T09:34:00-05:00",
+  "exit_fill": 20.067,
+  "exit_reason": "stock stop",
+  "pnl_pct": -0.3095,
+  "r": -0.69,
+  "result": "trade"
+ },
+ {
+  "id": "20261103-scalp-ADBE-P",
+  "module": "scalp",
+  "setup": "pm_break",
+  "direction": "put",
+  "underlying": "ADBE",
+  "desk_status": "passed",
+  "desk_pass_reason": "extension: triggered on the first 5-min bar (9:30 low 241.01 < 247.27); at the 10:05 check price 242.935 was 1.75% past ",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-11-03T09:30:02.420351-05:00",
+  "cross_price": 247.0,
+  "level": 247.27,
+  "cross_source": "trade",
+  "checks": [
+   {
+    "time": "2026-11-03T09:30:02.420351-05:00",
+    "price": 247.0,
+    "failed": [
+     "rvol: volume 1.13x normal for this time (min 1.50x, 1m-same-time-10d)",
+     "open: inside the first 5 minutes"
+    ]
+   },
+   {
+    "time": "2026-11-03T09:35:02.420351-05:00",
+    "price": 244.33,
+    "failed": [
+     "extension: 1.19% past trigger (max 1.0%)",
+     "rvol: volume 0.91x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-11-03T09:40:02.420351-05:00",
+    "price": 242.425,
+    "failed": [
+     "extension: 1.96% past trigger (max 1.0%)",
+     "rvol: volume 1.05x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-11-03T09:45:02.420351-05:00",
+    "price": 241.85,
+    "failed": [
+     "extension: 2.19% past trigger (max 1.0%)",
+     "rvol: volume 1.04x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-11-03T09:50:02.420351-05:00",
+    "price": 242.77,
+    "failed": [
+     "extension: 1.82% past trigger (max 1.0%)",
+     "rvol: volume 1.02x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-11-03T09:55:02.420351-05:00",
+    "price": 243.24,
+    "failed": [
+     "extension: 1.63% past trigger (max 1.0%)",
+     "rvol: volume 0.96x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-11-03T10:00:02.420351-05:00",
+    "price": 241.985,
+    "failed": [
+     "extension: 2.14% past trigger (max 1.0%)",
+     "rvol: volume 0.94x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-11-03T10:05:02.420351-05:00",
+    "price": 242.6925,
+    "failed": [
+     "extension: 1.85% past trigger (max 1.0%)",
+     "rvol: volume 0.91x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   }
+  ],
+  "result": "monitor would pass"
+ },
+ {
+  "id": "20261103-scalp-CRM-P",
+  "module": "scalp",
+  "setup": "pm_break",
+  "direction": "put",
+  "underlying": "CRM",
+  "desk_status": "passed",
+  "desk_pass_reason": "extension: triggered on the first 5-min bar (9:30 low < 220.08; day low 214.70); at the 10:05 check price 217.42 was 1.2",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-11-03T09:31:32.002818-05:00",
+  "cross_price": 220.01,
+  "level": 220.08,
+  "cross_source": "trade",
+  "checks": [
+   {
+    "time": "2026-11-03T09:31:32.002818-05:00",
+    "price": 220.01,
+    "failed": [
+     "rvol: volume 1.17x normal for this time (min 1.50x, 1m-same-time-10d)",
+     "open: inside the first 5 minutes"
+    ]
+   },
+   {
+    "time": "2026-11-03T09:36:32.002818-05:00",
+    "price": 218.01,
+    "failed": [
+     "rvol: volume 1.20x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-11-03T09:41:32.002818-05:00",
+    "price": 215.59,
+    "failed": [
+     "extension: 2.04% past trigger (max 1.0%)"
+    ]
+   },
+   {
+    "time": "2026-11-03T09:46:32.002818-05:00",
+    "price": 216.48,
+    "failed": [
+     "extension: 1.64% past trigger (max 1.0%)"
+    ]
+   },
+   {
+    "time": "2026-11-03T09:51:32.002818-05:00",
+    "price": 216.41,
+    "failed": [
+     "extension: 1.67% past trigger (max 1.0%)",
+     "rvol: volume 1.48x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-11-03T09:56:32.002818-05:00",
+    "price": 215.76,
+    "failed": [
+     "extension: 1.96% past trigger (max 1.0%)",
+     "rvol: volume 1.40x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-11-03T10:01:32.002818-05:00",
+    "price": 217,
+    "failed": [
+     "extension: 1.40% past trigger (max 1.0%)",
+     "rvol: volume 1.32x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-11-03T10:06:32.002818-05:00",
+    "price": 217.23,
+    "failed": [
+     "extension: 1.29% past trigger (max 1.0%)",
+     "rvol: volume 1.29x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   }
+  ],
+  "result": "monitor would pass"
+ },
+ {
+  "id": "20261103-scalp-NOW-P",
+  "module": "scalp",
+  "setup": "pm_break",
+  "direction": "put",
+  "underlying": "NOW",
+  "desk_status": "expired",
+  "desk_pass_reason": "",
+  "desk_pnl": null,
+  "desk_r": null,
+  "result": "never crossed"
+ },
+ {
+  "id": "20261103-scalp-QQQ-C",
+  "module": "scalp",
+  "setup": "pm_break",
+  "direction": "call",
+  "underlying": "QQQ",
+  "desk_status": "passed",
+  "desk_pass_reason": "cancelled_pair: orb twin 20261103-scalp-QQQ-C-orb triggered first (10:40 ET); this pm_break level 688.25 crossed later (",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-11-03T11:00:25.740138-05:00",
+  "cross_price": 688.25,
+  "level": 688.25,
+  "cross_source": "trade",
+  "checks": [
+   {
+    "time": "2026-11-03T11:00:25.740138-05:00",
+    "price": 688.25,
+    "failed": [
+     "rvol: volume 0.81x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   }
+  ],
+  "result": "monitor would pass"
+ },
+ {
+  "id": "20261103-scalp-ADBE-P-orb",
+  "module": "scalp",
+  "setup": "orb",
+  "direction": "put",
+  "underlying": "ADBE",
+  "desk_status": "passed",
+  "desk_pass_reason": "cancelled_pair: pm_break twin 20261103-scalp-ADBE-P triggered at 9:30 (then passed on extension).",
+  "desk_pnl": null,
+  "desk_r": null,
+  "result": "never crossed"
+ },
+ {
+  "id": "20261103-scalp-CRM-P-orb",
+  "module": "scalp",
+  "setup": "orb",
+  "direction": "put",
+  "underlying": "CRM",
+  "desk_status": "passed",
+  "desk_pass_reason": "cancelled_pair: pm_break twin 20261103-scalp-CRM-P triggered at 9:30 (then passed on extension).",
+  "desk_pnl": null,
+  "desk_r": null,
+  "result": "never crossed"
+ },
+ {
+  "id": "20261103-scalp-NOW-P-orb",
+  "module": "scalp",
+  "setup": "orb",
+  "direction": "put",
+  "underlying": "NOW",
+  "desk_status": "expired",
+  "desk_pass_reason": "",
+  "desk_pnl": null,
+  "desk_r": null,
+  "result": "never crossed"
+ },
+ {
+  "id": "20261103-scalp-QQQ-C-orb",
+  "module": "scalp",
+  "setup": "orb",
+  "direction": "call",
+  "underlying": "QQQ",
+  "desk_status": "passed",
+  "desk_pass_reason": "rvol: triggered 10:40 ET (5-min high 687.328 > 687.28); at the 11:07 check rvol 0.81 < 1.5 (5m-same-time-10d: 4,053,626 ",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-11-03T10:43:47.836385-05:00",
+  "cross_price": 687.3,
+  "level": 687.28,
+  "cross_source": "trade",
+  "checks": [
+   {
+    "time": "2026-11-03T10:43:47.836385-05:00",
+    "price": 687.3,
+    "failed": [
+     "rvol: volume 0.81x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-11-03T10:58:47.836385-05:00",
+    "price": 687.8767,
+    "failed": [
+     "rvol: volume 0.80x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-11-03T11:03:47.836385-05:00",
+    "price": 688.32,
+    "failed": [
+     "rvol: volume 0.82x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-11-03T11:08:47.836385-05:00",
+    "price": 687.79,
+    "failed": [
+     "rvol: volume 0.82x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-11-03T11:13:47.836385-05:00",
+    "price": 687.705,
+    "failed": [
+     "rvol: volume 0.82x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   }
+  ],
+  "result": "monitor would pass"
+ },
+ {
+  "id": "20261103-swing-DHR-C",
+  "module": "swing",
+  "setup": "pullback",
+  "direction": "call",
+  "underlying": "DHR",
+  "desk_status": "passed",
+  "desk_pass_reason": "vwap: price 230.61 below VWAP 234.17 after gap-open high 236.67 faded; also rvol 0.85 < 1.0 (5m-same-time-10d)",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-11-04T09:30:00.975788-05:00",
+  "cross_price": 235.33,
+  "level": 233.2,
+  "cross_source": "trade",
+  "checks": [
+   {
+    "time": "2026-11-04T09:30:00.975788-05:00",
+    "price": 235.33,
+    "failed": [
+     "rvol: volume 0.43x normal for this time (min 1.00x, 1m-same-time-10d)",
+     "open: inside the first 5 minutes"
+    ]
+   },
+   {
+    "time": "2026-11-04T09:35:00.975788-05:00",
+    "price": 234.33,
+    "failed": [
+     "vwap: below VWAP 235.10",
+     "rvol: volume 0.56x normal for this time (min 1.00x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-11-04T09:40:00.975788-05:00",
+    "price": 234.82,
+    "failed": []
+   }
+  ],
+  "confirmed_at": "2026-11-04T09:40:00.975788-05:00",
+  "confirm_delay_min": 10.0,
+  "result": "confirmed, no option print yet",
+  "option": "DHR261106C00235000"
+ },
+ {
+  "id": "20261104-scalp-AMAT-P",
+  "module": "scalp",
+  "setup": "pm_break",
+  "direction": "put",
+  "underlying": "AMAT",
+  "desk_status": "passed",
+  "desk_pass_reason": "market: SPY +1.75% (767.57 vs 754.35) blocks new puts; also rvol 0.61 < 1.5 and price 380.33 above VWAP 377.33",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-11-04T09:30:00.142585-05:00",
+  "cross_price": 372.68,
+  "level": 372.8,
+  "cross_source": "trade",
+  "checks": [
+   {
+    "time": "2026-11-04T09:30:00.142585-05:00",
+    "price": 372.68,
+    "failed": [
+     "rvol: volume 0.70x normal for this time (min 1.50x, 1m-same-time-10d)",
+     "open: inside the first 5 minutes"
+    ]
+   },
+   {
+    "time": "2026-11-04T09:35:00.142585-05:00",
+    "price": 372.4,
+    "failed": [
+     "rvol: volume 0.65x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   }
+  ],
+  "result": "monitor would pass"
+ },
+ {
+  "id": "20261104-scalp-ISRG-C",
+  "module": "scalp",
+  "setup": "pm_break",
+  "direction": "call",
+  "underlying": "ISRG",
+  "desk_status": "passed",
+  "desk_pass_reason": "extension: price 472.40 is 2.9% past trigger 459 (limit 1%); also rvol 1.27 < 1.5; 11/06 470C spread 7.10/11.90 (51%) fa",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-11-04T09:30:43.552146-05:00",
+  "cross_price": 459.0,
+  "level": 459.0,
+  "cross_source": "trade",
+  "checks": [
+   {
+    "time": "2026-11-04T09:30:43.552146-05:00",
+    "price": 459.0,
+    "failed": [
+     "rvol: volume 1.13x normal for this time (min 1.50x, 1m-same-time-10d)",
+     "open: inside the first 5 minutes"
+    ]
+   },
+   {
+    "time": "2026-11-04T09:35:43.552146-05:00",
+    "price": 472.585,
+    "failed": [
+     "extension: 2.96% past trigger (max 1.0%)"
+    ]
+   },
+   {
+    "time": "2026-11-04T09:40:43.552146-05:00",
+    "price": 473.49,
+    "failed": [
+     "extension: 3.16% past trigger (max 1.0%)"
+    ]
+   },
+   {
+    "time": "2026-11-04T09:45:43.552146-05:00",
+    "price": 475.055,
+    "failed": [
+     "extension: 3.50% past trigger (max 1.0%)"
+    ]
+   },
+   {
+    "time": "2026-11-04T09:50:43.552146-05:00",
+    "price": 472.64,
+    "failed": [
+     "extension: 2.97% past trigger (max 1.0%)"
+    ]
+   },
+   {
+    "time": "2026-11-04T09:55:43.552146-05:00",
+    "price": 473.935,
+    "failed": [
+     "extension: 3.25% past trigger (max 1.0%)"
+    ]
+   },
+   {
+    "time": "2026-11-04T10:00:43.552146-05:00",
+    "price": 475.4,
+    "failed": [
+     "extension: 3.57% past trigger (max 1.0%)"
+    ]
+   },
+   {
+    "time": "2026-11-04T10:05:43.552146-05:00",
+    "price": 473.91,
+    "failed": [
+     "extension: 3.25% past trigger (max 1.0%)"
+    ]
+   }
+  ],
+  "result": "monitor would pass"
+ },
+ {
+  "id": "20261104-scalp-JNJ-C",
+  "module": "scalp",
+  "setup": "pm_break",
+  "direction": "call",
+  "underlying": "JNJ",
+  "desk_status": "passed",
+  "desk_pass_reason": "cancelled_pair: ORB twin triggered at 12:05 (and passed on liquidity); pm_break 274.59 not reached (high 273.18)",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-11-04T12:37:54.798732-05:00",
+  "cross_price": 274.61,
+  "level": 274.59,
+  "cross_source": "trade",
+  "checks": [
+   {
+    "time": "2026-11-04T12:37:54.798732-05:00",
+    "price": 274.61,
+    "failed": []
+   }
+  ],
+  "confirmed_at": "2026-11-04T12:37:54.798732-05:00",
+  "confirm_delay_min": 0.0,
+  "option": "JNJ261106C00275000",
+  "option_how": "nearest strike 275, exp 11/06",
+  "entry_fill": 2.519,
+  "entry_bar_time": "2026-11-04T12:37:00-05:00",
+  "exit_time": "2026-11-04T15:09:00-05:00",
+  "exit_fill": 3.236,
+  "exit_reason": "15:05 scalp close",
+  "pnl_pct": 0.2846,
+  "r": 1.02,
+  "result": "trade"
+ },
+ {
+  "id": "20261104-scalp-LLY-C",
+  "module": "scalp",
+  "setup": "pm_break",
+  "direction": "call",
+  "underlying": "LLY",
+  "desk_status": "expired",
+  "desk_pass_reason": "",
+  "desk_pnl": null,
+  "desk_r": null,
+  "result": "never crossed"
+ },
+ {
+  "id": "20261104-scalp-MU-P",
+  "module": "scalp",
+  "setup": "pm_break",
+  "direction": "put",
+  "underlying": "MU",
+  "desk_status": "passed",
+  "desk_pass_reason": "market: SPY +1.75% (767.57 vs 754.35) blocks new puts; also rvol 0.86 < 1.5 and price 838.71 above VWAP 833.91",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-11-04T09:30:00.008308-05:00",
+  "cross_price": 822.995,
+  "level": 830.0,
+  "cross_source": "trade",
+  "checks": [
+   {
+    "time": "2026-11-04T09:30:00.008308-05:00",
+    "price": 822.995,
+    "failed": [
+     "rvol: volume 1.26x normal for this time (min 1.50x, 1m-same-time-10d)",
+     "open: inside the first 5 minutes"
+    ]
+   },
+   {
+    "time": "2026-11-04T09:35:00.008308-05:00",
+    "price": 819.836,
+    "failed": [
+     "extension: 1.22% past trigger (max 1.0%)",
+     "rvol: volume 1.16x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   }
+  ],
+  "result": "monitor would pass"
+ },
+ {
+  "id": "20261104-scalp-NVDA-P",
+  "module": "scalp",
+  "setup": "pm_break",
+  "direction": "put",
+  "underlying": "NVDA",
+  "desk_status": "passed",
+  "desk_pass_reason": "market: SPY +1.75% (767.57 vs 754.35) blocks new puts; also rvol 1.03 < 1.5 and price 205.62 above VWAP 204.01",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-11-04T09:33:59-05:00",
+  "cross_price": 201.9,
+  "level": 202.69,
+  "cross_source": "bar",
+  "checks": [
+   {
+    "time": "2026-11-04T09:33:59-05:00",
+    "price": 201.9,
+    "failed": [
+     "open: inside the first 5 minutes"
+    ]
+   }
+  ],
+  "result": "monitor would pass"
+ },
+ {
+  "id": "20261104-scalp-SPY-C",
+  "module": "scalp",
+  "setup": "pm_break",
+  "direction": "call",
+  "underlying": "SPY",
+  "desk_status": "passed",
+  "desk_pass_reason": "rvol: 1.09 < 1.5 (5m-same-time-10d); extension 0.55% and VWAP (766.14) ok",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-11-04T09:30:13.854118-05:00",
+  "cross_price": 763.37,
+  "level": 763.37,
+  "cross_source": "trade",
+  "checks": [
+   {
+    "time": "2026-11-04T09:30:13.854118-05:00",
+    "price": 763.37,
+    "failed": [
+     "rvol: volume 1.42x normal for this time (min 1.50x, 1m-same-time-10d)",
+     "open: inside the first 5 minutes"
+    ]
+   },
+   {
+    "time": "2026-11-04T09:35:13.854118-05:00",
+    "price": 763.9,
+    "failed": []
+   }
+  ],
+  "confirmed_at": "2026-11-04T09:35:13.854118-05:00",
+  "confirm_delay_min": 5.0,
+  "option": "SPY261104C00764000",
+  "option_how": "nearest strike 764, exp 11/04",
+  "entry_fill": 2.221,
+  "entry_bar_time": "2026-11-04T09:35:00-05:00",
+  "exit_time": "2026-11-04T09:38:00-05:00",
+  "exit_fill": 3.086,
+  "exit_reason": "option target",
+  "pnl_pct": 0.3895,
+  "r": 1.39,
+  "result": "trade"
+ },
+ {
+  "id": "20261104-scalp-WMT-C",
+  "module": "scalp",
+  "setup": "pm_break",
+  "direction": "call",
+  "underlying": "WMT",
+  "desk_status": "passed",
+  "desk_pass_reason": "rvol: 0.92 < 1.5 (5m-same-time-10d); extension and VWAP (127.38) ok",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-11-04T10:01:32.592436-05:00",
+  "cross_price": 128.75,
+  "level": 128.75,
+  "cross_source": "trade",
+  "checks": [
+   {
+    "time": "2026-11-04T10:01:32.592436-05:00",
+    "price": 128.75,
+    "failed": []
+   }
+  ],
+  "confirmed_at": "2026-11-04T10:01:32.592436-05:00",
+  "confirm_delay_min": 0.0,
+  "option": "WMT261106C00129000",
+  "option_how": "nearest strike 129, exp 11/06",
+  "entry_fill": 1.208,
+  "entry_bar_time": "2026-11-04T10:01:00-05:00",
+  "exit_time": "2026-11-04T10:06:00-05:00",
+  "exit_fill": 0.863,
+  "exit_reason": "option stop",
+  "pnl_pct": -0.2854,
+  "r": -1.02,
+  "result": "trade"
+ },
+ {
+  "id": "20261104-scalp-AMAT-P-orb",
+  "module": "scalp",
+  "setup": "orb",
+  "direction": "put",
+  "underlying": "AMAT",
+  "desk_status": "passed",
+  "desk_pass_reason": "cancelled_pair: twin pm_break play 20261104-scalp-AMAT-P triggered and was resolved at 10:05 check",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-11-04T10:52:09.965016-05:00",
+  "cross_price": 369.07,
+  "level": 369.3001,
+  "cross_source": "trade",
+  "checks": [
+   {
+    "time": "2026-11-04T10:52:09.965016-05:00",
+    "price": 369.07,
+    "failed": [
+     "rvol: volume 0.99x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-11-04T11:02:09.965016-05:00",
+    "price": 369.16,
+    "failed": [
+     "rvol: volume 1.01x normal for this time (min 1.50x, 1m-same-time-10d)",
+     "market: SPY +1.58% today (blocks at 0.75%)"
+    ]
+   },
+   {
+    "time": "2026-11-04T11:07:09.965016-05:00",
+    "price": 366.695,
+    "failed": [
+     "rvol: volume 1.07x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-11-04T11:22:09.965016-05:00",
+    "price": 368.26,
+    "failed": [
+     "rvol: volume 1.09x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-11-04T11:27:09.965016-05:00",
+    "price": 366.4352,
+    "failed": [
+     "rvol: volume 1.09x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   }
+  ],
+  "result": "monitor would pass"
+ },
+ {
+  "id": "20261104-scalp-ISRG-C-orb",
+  "module": "scalp",
+  "setup": "orb",
+  "direction": "call",
+  "underlying": "ISRG",
+  "desk_status": "passed",
+  "desk_pass_reason": "cancelled_pair: twin pm_break play 20261104-scalp-ISRG-C triggered and was resolved at 10:05 check",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-11-04T10:13:40.501069-05:00",
+  "cross_price": 476.98,
+  "level": 476.7,
+  "cross_source": "trade",
+  "checks": [
+   {
+    "time": "2026-11-04T10:13:40.501069-05:00",
+    "price": 476.98,
+    "failed": []
+   }
+  ],
+  "confirmed_at": "2026-11-04T10:13:40.501069-05:00",
+  "confirm_delay_min": 0.0,
+  "option": "ISRG261106C00475000",
+  "option_how": "nearest strike 475, exp 11/06",
+  "entry_fill": 6.78,
+  "entry_bar_time": "2026-11-04T10:04:00-05:00",
+  "exit_time": "2026-11-04T13:28:00-05:00",
+  "exit_fill": 12.505,
+  "exit_reason": "option target",
+  "pnl_pct": 0.8443,
+  "r": 3.02,
+  "result": "trade"
+ },
+ {
+  "id": "20261104-scalp-JNJ-C-orb",
+  "module": "scalp",
+  "setup": "orb",
+  "direction": "call",
+  "underlying": "JNJ",
+  "desk_status": "passed",
+  "desk_pass_reason": "liquidity: triggered (17:00 5m bar high 273.18 > ORB 273.12; last 273.61, ext 0.18%); rvol 2.09 (5m-same-time-10d), abov",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-11-04T12:03:11.797481-05:00",
+  "cross_price": 273.12,
+  "level": 273.12,
+  "cross_source": "trade",
+  "checks": [
+   {
+    "time": "2026-11-04T12:03:11.797481-05:00",
+    "price": 273.12,
+    "failed": []
+   }
+  ],
+  "result": "twin already taken"
+ },
+ {
+  "id": "20261104-scalp-LLY-C-orb",
+  "module": "scalp",
+  "setup": "orb",
+  "direction": "call",
+  "underlying": "LLY",
+  "desk_status": "expired",
+  "desk_pass_reason": "",
+  "desk_pnl": null,
+  "desk_r": null,
+  "result": "never crossed"
+ },
+ {
+  "id": "20261104-scalp-MU-P-orb",
+  "module": "scalp",
+  "setup": "orb",
+  "direction": "put",
+  "underlying": "MU",
+  "desk_status": "passed",
+  "desk_pass_reason": "cancelled_pair: twin pm_break play 20261104-scalp-MU-P triggered and was resolved at 10:05 check",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-11-04T10:32:19.313028-05:00",
+  "cross_price": 817.1,
+  "level": 817.1,
+  "cross_source": "trade",
+  "checks": [
+   {
+    "time": "2026-11-04T10:32:19.313028-05:00",
+    "price": 817.1,
+    "failed": [
+     "rvol: volume 1.35x normal for this time (min 1.50x, 1m-same-time-10d)",
+     "market: SPY +1.56% today (blocks at 0.75%)"
+    ]
+   },
+   {
+    "time": "2026-11-04T10:47:19.313028-05:00",
+    "price": 809.72,
+    "failed": [
+     "rvol: volume 1.44x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-11-04T10:52:19.313028-05:00",
+    "price": 804.655,
+    "failed": [
+     "extension: 1.52% past trigger (max 1.0%)"
+    ]
+   },
+   {
+    "time": "2026-11-04T10:57:19.313028-05:00",
+    "price": 800.9868,
+    "failed": [
+     "extension: 1.97% past trigger (max 1.0%)",
+     "market: SPY +1.54% today (blocks at 0.75%)"
+    ]
+   },
+   {
+    "time": "2026-11-04T11:02:19.313028-05:00",
+    "price": 802.385,
+    "failed": [
+     "extension: 1.80% past trigger (max 1.0%)",
+     "market: SPY +1.58% today (blocks at 0.75%)"
+    ]
+   },
+   {
+    "time": "2026-11-04T11:07:19.313028-05:00",
+    "price": 796.55,
+    "failed": [
+     "extension: 2.51% past trigger (max 1.0%)"
+    ]
+   }
+  ],
+  "result": "monitor would pass"
+ },
+ {
+  "id": "20261104-scalp-NVDA-P-orb",
+  "module": "scalp",
+  "setup": "orb",
+  "direction": "put",
+  "underlying": "NVDA",
+  "desk_status": "passed",
+  "desk_pass_reason": "cancelled_pair: twin pm_break play 20261104-scalp-NVDA-P triggered and was resolved at 10:05 check",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-11-04T15:39:59-05:00",
+  "cross_price": 200.935,
+  "level": 200.94,
+  "cross_source": "bar",
+  "checks": [
+   {
+    "time": "2026-11-04T15:39:59-05:00",
+    "price": 200.935,
+    "failed": [
+     "rvol: volume 1.47x normal for this time (min 1.50x, 1m-same-time-10d)",
+     "market: SPY +1.73% today (blocks at 0.75%)"
+    ]
+   },
+   {
+    "time": "2026-11-04T15:44:59-05:00",
+    "price": 200.79,
+    "failed": [
+     "rvol: volume 1.49x normal for this time (min 1.50x, 1m-same-time-10d)",
+     "market: SPY +1.70% today (blocks at 0.75%)"
+    ]
+   },
+   {
+    "time": "2026-11-04T15:54:59-05:00",
+    "price": 200.5999,
+    "failed": [
+     "rvol: volume 1.49x normal for this time (min 1.50x, 1m-same-time-10d)",
+     "market: SPY +1.59% today (blocks at 0.75%)"
+    ]
+   }
+  ],
+  "result": "monitor would pass"
+ },
+ {
+  "id": "20261104-scalp-SPY-C-orb",
+  "module": "scalp",
+  "setup": "orb",
+  "direction": "call",
+  "underlying": "SPY",
+  "desk_status": "passed",
+  "desk_pass_reason": "cancelled_pair: twin pm_break play 20261104-scalp-SPY-C triggered and was resolved at 10:05 check",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-11-04T10:00:45.168868-05:00",
+  "cross_price": 769.21,
+  "level": 768.11,
+  "cross_source": "trade",
+  "checks": [
+   {
+    "time": "2026-11-04T10:00:45.168868-05:00",
+    "price": 769.21,
+    "failed": []
+   }
+  ],
+  "result": "twin already taken"
+ },
+ {
+  "id": "20261104-scalp-WMT-C-orb",
+  "module": "scalp",
+  "setup": "orb",
+  "direction": "call",
+  "underlying": "WMT",
+  "desk_status": "passed",
+  "desk_pass_reason": "cancelled_pair: twin pm_break play 20261104-scalp-WMT-C triggered and was resolved at 10:05 check",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-11-04T10:00:00.515478-05:00",
+  "cross_price": 128.69,
+  "level": 128.68,
+  "cross_source": "trade",
+  "checks": [
+   {
+    "time": "2026-11-04T10:00:00.515478-05:00",
+    "price": 128.69,
+    "failed": []
+   }
+  ],
+  "result": "twin already taken"
+ },
+ {
+  "id": "20261104-swing-EBAY-C",
+  "module": "swing",
+  "setup": "breakout",
+  "direction": "call",
+  "underlying": "EBAY",
+  "desk_status": "passed",
+  "desk_pass_reason": "liquidity: 12/18 125C 5.15/5.85 spread 12.7% > 8%; 120C 7.80/9.80 22.7%",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-11-05T09:30:00.375011-05:00",
+  "cross_price": 126.904,
+  "level": 126.55,
+  "cross_source": "trade",
+  "checks": [
+   {
+    "time": "2026-11-05T09:30:00.375011-05:00",
+    "price": 126.904,
+    "failed": [
+     "open: inside the first 5 minutes"
+    ]
+   },
+   {
+    "time": "2026-11-05T09:35:00.375011-05:00",
+    "price": 126.825,
+    "failed": []
+   }
+  ],
+  "confirmed_at": "2026-11-05T09:35:00.375011-05:00",
+  "confirm_delay_min": 5.0,
+  "option": "EBAY261106C00127000",
+  "option_how": "nearest strike 127, exp 11/06",
+  "entry_fill": 1.475,
+  "entry_bar_time": "2026-11-05T09:35:00-05:00",
+  "exit_time": "2026-11-05T10:32:00-05:00",
+  "exit_fill": 0.503,
+  "exit_reason": "option stop",
+  "pnl_pct": -0.6587,
+  "r": -1.46,
+  "result": "trade"
+ },
+ {
+  "id": "20261104-swing-PG-C",
+  "module": "swing",
+  "setup": "breakout",
+  "direction": "call",
+  "underlying": "PG",
+  "desk_status": "passed",
+  "desk_pass_reason": "rvol: trigger bar 9:30 ET (14:30Z high 169.22 > 168.16, opened 169.00) rvol 0.04 (bar vol 7,312 vs 10-session same-time ",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-11-05T09:30:00.763654-05:00",
+  "cross_price": 169.0,
+  "level": 168.16,
+  "cross_source": "trade",
+  "checks": [
+   {
+    "time": "2026-11-05T09:30:00.763654-05:00",
+    "price": 169.0,
+    "failed": [
+     "vwap: below VWAP 169.11",
+     "rvol: volume 0.07x normal for this time (min 1.50x, 1m-same-time-10d)",
+     "open: inside the first 5 minutes"
+    ]
+   },
+   {
+    "time": "2026-11-05T09:35:00.763654-05:00",
+    "price": 169.14,
+    "failed": [
+     "rvol: volume 0.89x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-11-05T09:40:00.763654-05:00",
+    "price": 168.895,
+    "failed": [
+     "vwap: below VWAP 169.06",
+     "rvol: volume 1.13x normal for this time (min 1.50x, 1m-same-time-10d)",
+     "market: SPY -0.99% today (blocks at 0.75%)"
+    ]
+   },
+   {
+    "time": "2026-11-05T09:45:00.763654-05:00",
+    "price": 169.23,
+    "failed": [
+     "rvol: volume 1.16x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-11-05T09:50:00.763654-05:00",
+    "price": 169.83,
+    "failed": [
+     "rvol: volume 1.23x normal for this time (min 1.50x, 1m-same-time-10d)"
+    ]
+   },
+   {
+    "time": "2026-11-05T09:55:00.763654-05:00",
+    "price": 169.8,
+    "failed": [
+     "market: SPY -1.65% today (blocks at 0.75%)"
+    ]
+   },
+   {
+    "time": "2026-11-05T10:00:00.763654-05:00",
+    "price": 169.39,
+    "failed": [
+     "vwap: below VWAP 169.45",
+     "market: SPY -1.64% today (blocks at 0.75%)"
+    ]
+   },
+   {
+    "time": "2026-11-05T10:05:00.763654-05:00",
+    "price": 169.5999,
+    "failed": [
+     "market: SPY -1.94% today (blocks at 0.75%)"
+    ]
+   }
+  ],
+  "result": "monitor would pass"
+ },
+ {
+  "id": "20261104-swing-PGR-C",
+  "module": "swing",
+  "setup": "breakout",
+  "direction": "call",
+  "underlying": "PGR",
+  "desk_status": "passed",
+  "desk_pass_reason": "liquidity: 12/18 235C 8.40/9.30 spread 10.2% > 8%, OI 488 < 500; 230C 10.80/12.60 15.4%, OI 466; 225C 12.6%, OI 469",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-11-05T09:30:01.138243-05:00",
+  "cross_price": 238.0,
+  "level": 235.55,
+  "cross_source": "trade",
+  "checks": [
+   {
+    "time": "2026-11-05T09:30:01.138243-05:00",
+    "price": 238.0,
+    "failed": [
+     "open: inside the first 5 minutes"
+    ]
+   },
+   {
+    "time": "2026-11-05T09:35:01.138243-05:00",
+    "price": 237.02,
+    "failed": []
+   }
+  ],
+  "confirmed_at": "2026-11-05T09:35:01.138243-05:00",
+  "confirm_delay_min": 5.0,
+  "option": "PGR261113C00235000",
+  "option_how": "nearest strike 235, exp 11/13",
+  "entry_fill": 5.64,
+  "entry_bar_time": "2026-11-05T09:30:00-05:00",
+  "exit_time": "2026-11-06T10:45:00-05:00",
+  "exit_fill": 1.608,
+  "exit_reason": "option stop",
+  "pnl_pct": -0.7149,
+  "r": -1.59,
+  "result": "trade"
+ },
+ {
+  "id": "20261104-swing-TSM-P",
+  "module": "swing",
+  "setup": "breakdown",
+  "direction": "put",
+  "underlying": "TSM",
+  "desk_status": "passed",
+  "desk_pass_reason": "extension: gapped through 391.61 at the open (14:30Z bar open 379.96, close 378.705 = 3.3% past trigger; limit 2.5%). No",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-11-05T09:30:00.054061-05:00",
+  "cross_price": 379.75,
+  "level": 391.61,
+  "cross_source": "trade",
+  "checks": [
+   {
+    "time": "2026-11-05T09:30:00.054061-05:00",
+    "price": 379.75,
+    "failed": [
+     "extension: 3.03% past trigger (max 2.5%)",
+     "vwap: above VWAP 378.32",
+     "open: inside the first 5 minutes"
+    ]
+   },
+   {
+    "time": "2026-11-05T09:35:00.054061-05:00",
+    "price": 379.61,
+    "failed": [
+     "extension: 3.06% past trigger (max 2.5%)",
+     "vwap: above VWAP 378.75"
+    ]
+   },
+   {
+    "time": "2026-11-05T09:40:00.054061-05:00",
+    "price": 374.795,
+    "failed": [
+     "extension: 4.29% past trigger (max 2.5%)"
+    ]
+   },
+   {
+    "time": "2026-11-05T09:45:00.054061-05:00",
+    "price": 374.81,
+    "failed": [
+     "extension: 4.29% past trigger (max 2.5%)"
+    ]
+   },
+   {
+    "time": "2026-11-05T09:50:00.054061-05:00",
+    "price": 372.295,
+    "failed": [
+     "extension: 4.93% past trigger (max 2.5%)"
+    ]
+   },
+   {
+    "time": "2026-11-05T09:55:00.054061-05:00",
+    "price": 370.31,
+    "failed": [
+     "extension: 5.44% past trigger (max 2.5%)"
+    ]
+   },
+   {
+    "time": "2026-11-05T10:00:00.054061-05:00",
+    "price": 368.4545,
+    "failed": [
+     "extension: 5.91% past trigger (max 2.5%)"
+    ]
+   },
+   {
+    "time": "2026-11-05T10:05:00.054061-05:00",
+    "price": 367.88,
+    "failed": [
+     "extension: 6.06% past trigger (max 2.5%)"
+    ]
+   }
+  ],
+  "result": "monitor would pass"
+ },
+ {
+  "id": "20261105-scalp-AMD-P",
+  "module": "scalp",
+  "setup": "pm_break",
+  "direction": "put",
+  "underlying": "AMD",
+  "desk_status": "passed",
+  "desk_pass_reason": "extension: gapped below 462.72 at the open; trigger bar 14:30Z close 440.7 = 4.76% past (limit 1%).",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-11-05T09:30:00.006850-05:00",
+  "cross_price": 452.5,
+  "level": 462.72,
+  "cross_source": "trade",
+  "checks": [
+   {
+    "time": "2026-11-05T09:30:00.006850-05:00",
+    "price": 452.5,
+    "failed": [
+     "extension: 2.21% past trigger (max 1.0%)",
+     "vwap: above VWAP 452.01",
+     "open: inside the first 5 minutes"
+    ]
+   },
+   {
+    "time": "2026-11-05T09:35:00.006850-05:00",
+    "price": 442,
+    "failed": [
+     "extension: 4.48% past trigger (max 1.0%)"
+    ]
+   },
+   {
+    "time": "2026-11-05T09:40:00.006850-05:00",
+    "price": 437.07,
+    "failed": [
+     "extension: 5.54% past trigger (max 1.0%)"
+    ]
+   },
+   {
+    "time": "2026-11-05T09:45:00.006850-05:00",
+    "price": 435.8,
+    "failed": [
+     "extension: 5.82% past trigger (max 1.0%)"
+    ]
+   },
+   {
+    "time": "2026-11-05T09:50:00.006850-05:00",
+    "price": 434.97,
+    "failed": [
+     "extension: 6.00% past trigger (max 1.0%)"
+    ]
+   },
+   {
+    "time": "2026-11-05T09:55:00.006850-05:00",
+    "price": 427.41,
+    "failed": [
+     "extension: 7.63% past trigger (max 1.0%)"
+    ]
+   },
+   {
+    "time": "2026-11-05T10:00:00.006850-05:00",
+    "price": 426.86,
+    "failed": [
+     "extension: 7.75% past trigger (max 1.0%)"
+    ]
+   },
+   {
+    "time": "2026-11-05T10:05:00.006850-05:00",
+    "price": 426.26,
+    "failed": [
+     "extension: 7.88% past trigger (max 1.0%)"
+    ]
+   }
+  ],
+  "result": "monitor would pass"
+ },
+ {
+  "id": "20261105-scalp-AMZN-C",
+  "module": "scalp",
+  "setup": "pm_break",
+  "direction": "call",
+  "underlying": "AMZN",
+  "desk_status": "passed",
+  "desk_pass_reason": "vwap: trigger bar 14:30Z (high 273.23 > 272.8) closed 270.82, below VWAP 271.03. Stock faded after; SPY now -1.93% (also",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-11-05T09:30:59-05:00",
+  "cross_price": 271.62,
+  "level": 272.8,
+  "cross_source": "bar",
+  "checks": [
+   {
+    "time": "2026-11-05T09:30:59-05:00",
+    "price": 271.62,
+    "failed": [
+     "vwap: below VWAP 271.99",
+     "rvol: volume 1.17x normal for this time (min 1.50x, 1m-same-time-10d)",
+     "open: inside the first 5 minutes"
+    ]
+   }
+  ],
+  "result": "monitor would pass"
+ },
+ {
+  "id": "20261105-scalp-AVGO-P",
+  "module": "scalp",
+  "setup": "pm_break",
+  "direction": "put",
+  "underlying": "AVGO",
+  "desk_status": "passed",
+  "desk_pass_reason": "extension: gapped below 316.07 at the open; trigger bar 14:30Z close 311.7 = 1.38% past (limit 1%).",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-11-05T09:30:00.003065-05:00",
+  "cross_price": 311.89,
+  "level": 316.07,
+  "cross_source": "trade",
+  "checks": [
+   {
+    "time": "2026-11-05T09:30:00.003065-05:00",
+    "price": 311.89,
+    "failed": [
+     "extension: 1.32% past trigger (max 1.0%)",
+     "open: inside the first 5 minutes"
+    ]
+   },
+   {
+    "time": "2026-11-05T09:35:00.003065-05:00",
+    "price": 312.37,
+    "failed": [
+     "extension: 1.17% past trigger (max 1.0%)",
+     "vwap: above VWAP 312.31"
+    ]
+   },
+   {
+    "time": "2026-11-05T09:40:00.003065-05:00",
+    "price": 308.425,
+    "failed": [
+     "extension: 2.42% past trigger (max 1.0%)"
+    ]
+   },
+   {
+    "time": "2026-11-05T09:45:00.003065-05:00",
+    "price": 310.91,
+    "failed": [
+     "extension: 1.63% past trigger (max 1.0%)"
+    ]
+   },
+   {
+    "time": "2026-11-05T09:50:00.003065-05:00",
+    "price": 309.3,
+    "failed": [
+     "extension: 2.14% past trigger (max 1.0%)"
+    ]
+   },
+   {
+    "time": "2026-11-05T09:55:00.003065-05:00",
+    "price": 308.6895,
+    "failed": [
+     "extension: 2.34% past trigger (max 1.0%)"
+    ]
+   },
+   {
+    "time": "2026-11-05T10:00:00.003065-05:00",
+    "price": 308.94,
+    "failed": [
+     "extension: 2.26% past trigger (max 1.0%)"
+    ]
+   },
+   {
+    "time": "2026-11-05T10:05:00.003065-05:00",
+    "price": 306.53,
+    "failed": [
+     "extension: 3.02% past trigger (max 1.0%)"
+    ]
+   }
+  ],
+  "result": "monitor would pass"
+ },
+ {
+  "id": "20261105-scalp-COST-C",
+  "module": "scalp",
+  "setup": "pm_break",
+  "direction": "call",
+  "underlying": "COST",
+  "desk_status": "passed",
+  "desk_pass_reason": "rvol: trigger bar 14:30Z (high 1072.07 > 1070.91) rvol 1.49 (76,780 vs 10-session same-time avg 51,697; min 1.5). Ext/VW",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-11-05T09:30:00.204649-05:00",
+  "cross_price": 1071.26,
+  "level": 1070.91,
+  "cross_source": "trade",
+  "checks": [
+   {
+    "time": "2026-11-05T09:30:00.204649-05:00",
+    "price": 1071.26,
+    "failed": [
+     "open: inside the first 5 minutes"
+    ]
+   }
+  ],
+  "result": "monitor would pass"
+ },
+ {
+  "id": "20261105-scalp-JPM-C",
+  "module": "scalp",
+  "setup": "pm_break",
+  "direction": "call",
+  "underlying": "JPM",
+  "desk_status": "passed",
+  "desk_pass_reason": "vwap: trigger bar 14:30Z (high 359.8 > 358.92) closed 357.78, below VWAP 358.36. Stock faded after; SPY now -1.93% (also",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-11-05T09:30:04.118435-05:00",
+  "cross_price": 358.99,
+  "level": 358.92,
+  "cross_source": "trade",
+  "checks": [
+   {
+    "time": "2026-11-05T09:30:04.118435-05:00",
+    "price": 358.99,
+    "failed": [
+     "open: inside the first 5 minutes"
+    ]
+   }
+  ],
+  "result": "monitor would pass"
+ },
+ {
+  "id": "20261105-scalp-QQQ-P",
+  "module": "scalp",
+  "setup": "pm_break",
+  "direction": "put",
+  "underlying": "QQQ",
+  "desk_status": "closed",
+  "desk_pass_reason": "",
+  "desk_pnl": 675,
+  "desk_r": 1.41,
+  "crossed_at": "2026-11-05T09:30:27.125985-05:00",
+  "cross_price": 682.335,
+  "level": 682.37,
+  "cross_source": "trade",
+  "checks": [
+   {
+    "time": "2026-11-05T09:30:27.125985-05:00",
+    "price": 682.335,
+    "failed": [
+     "rvol: volume 1.35x normal for this time (min 1.50x, 1m-same-time-10d)",
+     "open: inside the first 5 minutes"
+    ]
+   },
+   {
+    "time": "2026-11-05T09:35:27.125985-05:00",
+    "price": 678.1,
+    "failed": []
+   }
+  ],
+  "confirmed_at": "2026-11-05T09:35:27.125985-05:00",
+  "confirm_delay_min": 5.0,
+  "option": "QQQ261106P00678000",
+  "option_how": "play contract",
+  "entry_fill": 5.476,
+  "entry_bar_time": "2026-11-05T09:35:00-05:00",
+  "exit_time": "2026-11-05T09:40:00-05:00",
+  "exit_fill": 7.652,
+  "exit_reason": "option target",
+  "pnl_pct": 0.3974,
+  "r": 1.42,
+  "result": "trade"
+ },
+ {
+  "id": "20261105-scalp-SMH-P",
+  "module": "scalp",
+  "setup": "pm_break",
+  "direction": "put",
+  "underlying": "SMH",
+  "desk_status": "passed",
+  "desk_pass_reason": "extension: gapped below 485.6 at the open; trigger bar 14:30Z close 479.06 = 1.35% past (limit 1%).",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-11-05T09:30:00.026980-05:00",
+  "cross_price": 482.14,
+  "level": 485.6,
+  "cross_source": "trade",
+  "checks": [
+   {
+    "time": "2026-11-05T09:30:00.026980-05:00",
+    "price": 482.14,
+    "failed": [
+     "vwap: above VWAP 482.03",
+     "open: inside the first 5 minutes"
+    ]
+   },
+   {
+    "time": "2026-11-05T09:35:00.026980-05:00",
+    "price": 480.42,
+    "failed": [
+     "extension: 1.07% past trigger (max 1.0%)"
+    ]
+   },
+   {
+    "time": "2026-11-05T09:40:00.026980-05:00",
+    "price": 475.16,
+    "failed": [
+     "extension: 2.15% past trigger (max 1.0%)"
+    ]
+   },
+   {
+    "time": "2026-11-05T09:45:00.026980-05:00",
+    "price": 476.8,
+    "failed": [
+     "extension: 1.81% past trigger (max 1.0%)"
+    ]
+   },
+   {
+    "time": "2026-11-05T09:50:00.026980-05:00",
+    "price": 473.07,
+    "failed": [
+     "extension: 2.58% past trigger (max 1.0%)"
+    ]
+   },
+   {
+    "time": "2026-11-05T09:55:00.026980-05:00",
+    "price": 469.9849,
+    "failed": [
+     "extension: 3.22% past trigger (max 1.0%)"
+    ]
+   },
+   {
+    "time": "2026-11-05T10:00:00.026980-05:00",
+    "price": 470.24,
+    "failed": [
+     "extension: 3.16% past trigger (max 1.0%)"
+    ]
+   },
+   {
+    "time": "2026-11-05T10:05:00.026980-05:00",
+    "price": 468.14,
+    "failed": [
+     "extension: 3.60% past trigger (max 1.0%)"
+    ]
+   }
+  ],
+  "result": "monitor would pass"
+ },
+ {
+  "id": "20261105-scalp-WMT-C",
+  "module": "scalp",
+  "setup": "pm_break",
+  "direction": "call",
+  "underlying": "WMT",
+  "desk_status": "passed",
+  "desk_pass_reason": "vwap: trigger bar 14:30Z (high 131.82 > 131.47) closed 130.95, below VWAP 131.04. Stock faded after; SPY now -1.93% (als",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-11-05T09:30:01.885135-05:00",
+  "cross_price": 131.47,
+  "level": 131.47,
+  "cross_source": "trade",
+  "checks": [
+   {
+    "time": "2026-11-05T09:30:01.885135-05:00",
+    "price": 131.47,
+    "failed": [
+     "rvol: volume 1.49x normal for this time (min 1.50x, 1m-same-time-10d)",
+     "open: inside the first 5 minutes"
+    ]
+   }
+  ],
+  "result": "monitor would pass"
+ },
+ {
+  "id": "20261105-scalp-AMD-P-orb",
+  "module": "scalp",
+  "setup": "orb",
+  "direction": "put",
+  "underlying": "AMD",
+  "desk_status": "passed",
+  "desk_pass_reason": "cancelled_pair: pm_break twin triggered first at the 9:30 bar (5.2).",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-11-05T10:01:28.865575-05:00",
+  "cross_price": 423.31,
+  "level": 423.35,
+  "cross_source": "trade",
+  "checks": [
+   {
+    "time": "2026-11-05T10:01:28.865575-05:00",
+    "price": 423.31,
+    "failed": []
+   }
+  ],
+  "confirmed_at": "2026-11-05T10:01:28.865575-05:00",
+  "confirm_delay_min": 0.0,
+  "option": "AMD261106P00422500",
+  "option_how": "nearest strike 422.5, exp 11/06",
+  "entry_fill": 11.713,
+  "entry_bar_time": "2026-11-05T10:01:00-05:00",
+  "exit_time": "2026-11-05T10:25:00-05:00",
+  "exit_fill": 16.276,
+  "exit_reason": "option target",
+  "pnl_pct": 0.3895,
+  "r": 1.39,
+  "result": "trade"
+ },
+ {
+  "id": "20261105-scalp-AMZN-C-orb",
+  "module": "scalp",
+  "setup": "orb",
+  "direction": "call",
+  "underlying": "AMZN",
+  "desk_status": "passed",
+  "desk_pass_reason": "cancelled_pair: pm_break twin triggered first at the 9:30 bar (5.2).",
+  "desk_pnl": null,
+  "desk_r": null,
+  "result": "never crossed"
+ },
+ {
+  "id": "20261105-scalp-AVGO-P-orb",
+  "module": "scalp",
+  "setup": "orb",
+  "direction": "put",
+  "underlying": "AVGO",
+  "desk_status": "passed",
+  "desk_pass_reason": "cancelled_pair: pm_break twin triggered first at the 9:30 bar (5.2).",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-11-05T10:05:29.160863-05:00",
+  "cross_price": 306.6,
+  "level": 306.67,
+  "cross_source": "trade",
+  "checks": [
+   {
+    "time": "2026-11-05T10:05:29.160863-05:00",
+    "price": 306.6,
+    "failed": []
+   }
+  ],
+  "confirmed_at": "2026-11-05T10:05:29.160863-05:00",
+  "confirm_delay_min": 0.0,
+  "option": "AVGO261106P00307500",
+  "option_how": "nearest strike 307.5, exp 11/06",
+  "entry_fill": 6.244,
+  "entry_bar_time": "2026-11-05T10:05:00-05:00",
+  "exit_time": "2026-11-05T10:24:00-05:00",
+  "exit_fill": 8.982,
+  "exit_reason": "option target",
+  "pnl_pct": 0.4385,
+  "r": 1.57,
+  "result": "trade"
+ },
+ {
+  "id": "20261105-scalp-COST-C-orb",
+  "module": "scalp",
+  "setup": "orb",
+  "direction": "call",
+  "underlying": "COST",
+  "desk_status": "passed",
+  "desk_pass_reason": "cancelled_pair: pm_break twin triggered first at the 9:30 bar (5.2).",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-11-05T10:09:41.808317-05:00",
+  "cross_price": 1072.9701,
+  "level": 1072.83,
+  "cross_source": "trade",
+  "checks": [
+   {
+    "time": "2026-11-05T10:09:41.808317-05:00",
+    "price": 1072.9701,
+    "failed": [
+     "market: SPY -1.94% today (blocks at 0.75%)"
+    ]
+   },
+   {
+    "time": "2026-11-05T10:14:41.808317-05:00",
+    "price": 1080.705,
+    "failed": [
+     "market: SPY -2.14% today (blocks at 0.75%)"
+    ]
+   },
+   {
+    "time": "2026-11-05T10:19:41.808317-05:00",
+    "price": 1078.47,
+    "failed": [
+     "market: SPY -2.33% today (blocks at 0.75%)"
+    ]
+   },
+   {
+    "time": "2026-11-05T10:24:41.808317-05:00",
+    "price": 1079.45,
+    "failed": [
+     "market: SPY -2.49% today (blocks at 0.75%)"
+    ]
+   },
+   {
+    "time": "2026-11-05T10:29:41.808317-05:00",
+    "price": 1076.015,
+    "failed": [
+     "market: SPY -2.53% today (blocks at 0.75%)"
+    ]
+   },
+   {
+    "time": "2026-11-05T10:34:41.808317-05:00",
+    "price": 1075.295,
+    "failed": [
+     "market: SPY -2.48% today (blocks at 0.75%)"
+    ]
+   },
+   {
+    "time": "2026-11-05T10:39:41.808317-05:00",
+    "price": 1078.285,
+    "failed": [
+     "market: SPY -2.69% today (blocks at 0.75%)"
+    ]
+   },
+   {
+    "time": "2026-11-05T10:44:41.808317-05:00",
+    "price": 1076.19,
+    "failed": [
+     "market: SPY -2.84% today (blocks at 0.75%)"
+    ]
+   }
+  ],
+  "result": "monitor would pass"
+ },
+ {
+  "id": "20261105-scalp-JPM-C-orb",
+  "module": "scalp",
+  "setup": "orb",
+  "direction": "call",
+  "underlying": "JPM",
+  "desk_status": "passed",
+  "desk_pass_reason": "cancelled_pair: pm_break twin triggered first at the 9:30 bar (5.2).",
+  "desk_pnl": null,
+  "desk_r": null,
+  "result": "never crossed"
+ },
+ {
+  "id": "20261105-scalp-QQQ-P-orb",
+  "module": "scalp",
+  "setup": "orb",
+  "direction": "put",
+  "underlying": "QQQ",
+  "desk_status": "passed",
+  "desk_pass_reason": "cancelled_pair: pm_break twin triggered first at the 9:30 bar (5.2).",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-11-05T10:01:24.226641-05:00",
+  "cross_price": 665.0,
+  "level": 665.01,
+  "cross_source": "trade",
+  "checks": [
+   {
+    "time": "2026-11-05T10:01:24.226641-05:00",
+    "price": 665.0,
+    "failed": []
+   }
+  ],
+  "result": "twin already taken"
+ },
+ {
+  "id": "20261105-scalp-SMH-P-orb",
+  "module": "scalp",
+  "setup": "orb",
+  "direction": "put",
+  "underlying": "SMH",
+  "desk_status": "passed",
+  "desk_pass_reason": "cancelled_pair: pm_break twin triggered first at the 9:30 bar (5.2).",
+  "desk_pnl": null,
+  "desk_r": null,
+  "crossed_at": "2026-11-05T10:06:15.486858-05:00",
+  "cross_price": 467.4,
+  "level": 467.4295,
+  "cross_source": "trade",
+  "checks": [
+   {
+    "time": "2026-11-05T10:06:15.486858-05:00",
+    "price": 467.4,
+    "failed": []
+   }
+  ],
+  "confirmed_at": "2026-11-05T10:06:15.486858-05:00",
+  "confirm_delay_min": 0.0,
+  "option": "SMH261106P00467500",
+  "option_how": "nearest strike 467.5, exp 11/06",
+  "entry_fill": 8.287,
+  "entry_bar_time": "2026-11-05T10:06:00-05:00",
+  "exit_time": "2026-11-05T10:22:00-05:00",
+  "exit_fill": 11.712,
+  "exit_reason": "option target",
+  "pnl_pct": 0.4133,
+  "r": 1.48,
+  "result": "trade"
+ },
+ {
+  "id": "20261105-scalp-WMT-C-orb",
+  "module": "scalp",
+  "setup": "orb",
+  "direction": "call",
+  "underlying": "WMT",
+  "desk_status": "passed",
+  "desk_pass_reason": "cancelled_pair: pm_break twin triggered first at the 9:30 bar (5.2).",
+  "desk_pnl": null,
+  "desk_r": null,
+  "result": "never crossed"
+ },
+ {
+  "id": "20261105-swing-DHR-C",
+  "module": "swing",
+  "setup": "pullback",
+  "direction": "call",
+  "underlying": "DHR",
+  "desk_status": "watching",
+  "desk_pass_reason": "",
+  "desk_pnl": null,
+  "desk_r": null,
+  "result": "never crossed"
+ },
+ {
+  "id": "20261105-swing-PM-C",
+  "module": "swing",
+  "setup": "pullback",
+  "direction": "call",
+  "underlying": "PM",
+  "desk_status": "passed",
+  "desk_pass_reason": "liquidity: 12/18 200C 8.40/9.50 spread 12.3% > 8% (OI 3,017); 195C 11.20/13.10 15.6%; 210C 4.10/4.70 13.6%; 12/11 strike",
+  "desk_pnl": null,
+  "desk_r": null,
+  "result": "never crossed"
+ },
+ {
+  "id": "20261106-scalp-QQQ-C",
+  "module": "scalp",
+  "setup": "pm_break",
+  "direction": "call",
+  "underlying": "QQQ",
+  "desk_status": "closed",
+  "desk_pass_reason": "",
+  "desk_pnl": 582,
+  "desk_r": 1.42,
+  "crossed_at": "2026-11-06T09:40:35.104400-05:00",
+  "cross_price": 660.35,
+  "level": 660.35,
+  "cross_source": "trade",
+  "checks": [
+   {
+    "time": "2026-11-06T09:40:35.104400-05:00",
+    "price": 660.35,
+    "failed": []
+   }
+  ],
+  "confirmed_at": "2026-11-06T09:40:35.104400-05:00",
+  "confirm_delay_min": 0.0,
+  "option": "QQQ261106C00660000",
+  "option_how": "play contract",
+  "entry_fill": 4.61,
+  "entry_bar_time": "2026-11-06T09:40:00-05:00",
+  "exit_time": "2026-11-06T09:48:00-05:00",
+  "exit_fill": 6.445,
+  "exit_reason": "option target",
+  "pnl_pct": 0.3981,
+  "r": 1.42,
+  "result": "trade"
+ },
+ {
+  "id": "20261106-scalp-QQQ-C-orb",
+  "module": "scalp",
+  "setup": "orb",
+  "direction": "call",
+  "underlying": "QQQ",
+  "desk_status": "passed",
+  "desk_pass_reason": "cancelled_pair: pm_break twin 20261106-scalp-QQQ-C triggered at the 14:40Z bar (5.2)",
+  "desk_pnl": null,
+  "desk_r": null,
+  "result": "never crossed"
+ },
+ {
+  "id": "20261106-swing-EBAY-C",
+  "module": "swing",
+  "setup": "pullback",
+  "direction": "call",
+  "underlying": "EBAY",
+  "desk_status": "passed",
+  "desk_pass_reason": "liquidity: no contract in 30-60 DTE with spread <= 8% at the 4 PM quote. 12/18 120C 4.80/7.85 (48%), 12/18 115C 8.15/11.",
+  "desk_pnl": null,
+  "desk_r": null,
+  "result": "never crossed"
+ },
+ {
+  "id": "20261106-swing-ON-P",
+  "module": "swing",
+  "setup": "breakdown",
+  "direction": "put",
+  "underlying": "ON",
+  "desk_status": "passed",
+  "desk_pass_reason": "liquidity: 12/18 65P 5.95/6.95 (15.5%); 12/18 60P 3.65/4.10 (11.6%, delta 0.36 below range); 12/11 62-65P 31-58%; 12/24 ",
+  "desk_pnl": null,
+  "desk_r": null,
+  "result": "never crossed"
+ }
+]
