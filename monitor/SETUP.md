@@ -50,6 +50,8 @@ unset TG
 
 ## 5. Settings file
 
+Easiest: `cd /opt/rotation-desk-feed/monitor && bash set-keys.sh` (prompts for each key, hidden; finds the Telegram chat ID). Or by hand:
+
 ```bash
 cd /opt/rotation-desk-feed/monitor
 sudo -u deskmon cp .env.example .env
