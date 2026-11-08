@@ -1,0 +1,57 @@
+15:53:06 universe 6432
+15:53:11 daily batch 0 / 65
+15:53:17 daily batch 10 / 65
+15:53:28 daily batch 20 / 65
+15:53:33 daily batch 30 / 65
+15:53:42 daily batch 40 / 65
+15:53:48 daily batch 50 / 65
+15:53:58 daily batch 60 / 65
+15:53:58 days 716 symbols ever eligible 2895
+15:53:59 selection day 0 / 716 2024-01-02 candidates 0
+15:54:12 selection day 25 / 716 2024-02-07 candidates 191
+15:54:21 selection day 50 / 716 2024-03-14 candidates 227
+15:54:29 selection day 75 / 716 2024-04-19 candidates 435
+15:54:38 selection day 100 / 716 2024-05-24 candidates 152
+15:54:46 selection day 125 / 716 2024-07-02 candidates 132
+15:54:54 selection day 150 / 716 2024-08-07 candidates 261
+15:55:01 selection day 175 / 716 2024-09-12 candidates 246
+15:55:11 selection day 200 / 716 2024-10-17 candidates 300
+15:55:19 selection day 225 / 716 2024-11-21 candidates 251
+15:55:27 selection day 250 / 716 2024-12-30 candidates 124
+15:55:33 selection day 275 / 716 2025-02-06 candidates 258
+15:55:40 selection day 300 / 716 2025-03-14 candidates 254
+15:55:47 selection day 325 / 716 2025-04-21 candidates 131
+15:55:58 selection day 350 / 716 2025-05-27 candidates 335
+15:56:10 selection day 375 / 716 2025-07-02 candidates 237
+15:56:25 selection day 400 / 716 2025-08-07 candidates 341
+15:56:42 selection day 425 / 716 2025-09-12 candidates 273
+15:56:56 selection day 450 / 716 2025-10-17 candidates 651
+15:57:07 selection day 475 / 716 2025-11-21 candidates 688
+15:57:23 selection day 500 / 716 2025-12-30 candidates 94
+15:57:37 selection day 525 / 716 2026-02-05 candidates 569
+15:57:46 selection day 550 / 716 2026-03-13 candidates 341
+15:57:55 selection day 575 / 716 2026-04-20 candidates 382
+15:58:07 selection day 600 / 716 2026-05-26 candidates 576
+15:58:17 selection day 625 / 716 2026-07-01 candidates 385
+15:58:27 selection day 650 / 716 2026-08-06 candidates 419
+15:58:37 selection day 675 / 716 2026-09-11 candidates 286
+15:58:44 selection day 700 / 716 2026-10-16 candidates 631
+15:58:51 selection day 715 / 716 2026-11-06 candidates 590
+15:58:51 days with picks 706
+15:58:51 sim day 0 / 716 trades 0
+15:58:53 sim day 50 / 716 trades 634
+15:58:54 sim day 100 / 716 trades 1424
+15:58:56 sim day 150 / 716 trades 2234
+15:58:57 sim day 200 / 716 trades 3027
+15:58:58 sim day 250 / 716 trades 3824
+15:59:00 sim day 300 / 716 trades 4629
+15:59:01 sim day 350 / 716 trades 5444
+15:59:04 sim day 400 / 716 trades 6231
+15:59:05 sim day 450 / 716 trades 7015
+15:59:07 sim day 500 / 716 trades 7790
+15:59:08 sim day 550 / 716 trades 8584
+15:59:10 sim day 600 / 716 trades 9412
+15:59:11 sim day 650 / 716 trades 10228
+15:59:13 sim day 700 / 716 trades 11020
+15:59:14 trades 11252
+15:59:15 done {"slip_0.00": {"final_equity_from_25k": 679, "total_return": -0.973, "sharpe": -5.75, "max_drawdown": 0.973, "trades": 11252, "avg_R": -0.339, "hit_rate": 0.085, "winning_weeks": 0.19, "winning_months": 0.0, "worst_month": -0.183, "best_month": -0.016, "longest_losing_month_streak": 35, "by_year": {"2024": -0.709, "2025": -0.749, "2026": -0.629}}, "slip_0.01": {"final_equity_from_25k": 185, "total_return": -0.993, "sharpe": -8.42, "max_drawdown": 0.993, "trades": 11252, "avg_R": -0.496, "hit_rate": 0.082, "winning_weeks": 0.156, "winning_months": 0.0, "worst_month": -0.217, "best_month": -0.036, "longest_losing_month_streak": 35, "by_year": {"2024": -0.834, "2025": -0.853, "2026": -0.696}}, "slip_0.02": {"final_equity_from_25k": 74, "total_return": -0.997, "sharpe": -11.04, "max_drawdown": 0.997, "trades": 11252, "avg_R": -0.653, "hit_rate": 0.08, "winning_weeks": 0.088, "winning_months": 0.0, "worst_month": -0.259, "best_month": -0.022, "longest_losing_month_streak": 35, "by_year": {"2024": -0.902, "2025": -0.902, "2026": -0.692}}}
