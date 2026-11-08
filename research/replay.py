@@ -180,6 +180,9 @@ def replay(p: dict, radar: dict, cancelled_pairs: set) -> dict:
     swing = p["module"] == "swing"
     conf = dict(p.get("confirmation") or {})
     conf.update({"spy_block_pct": 0.0075, "skip_first_minutes": 5})
+    rvol_req = conf.get("rvol_min")
+    if os.environ.get("REPLAY_IGNORE_RVOL") == "1":
+        conf.pop("rvol_min", None)
     if not swing:
         conf["max_extension_pct"] = conf.get("max_extension_pct", 0.01)
     item_raw = {"symbol": sym, "kind": "entry", "direction": p["direction"], "trigger": {"type": want_dir, "price": trig.get("price")},
@@ -234,7 +237,9 @@ def replay(p: dict, radar: dict, cancelled_pairs: set) -> dict:
             spy_chg = spy_now[-1]["c"] / spy_pc - 1 if spy_now and spy_pc else None
             und_chg = price / und_pc - 1 if und_pc else None
             checks = c.confirm_entry(item, want_dir, level, price, t, stats, None, spy_chg, rvol_profile=prof, underlying_change=und_chg)
-            checks_log.append({"time": t.isoformat(), "price": price, "failed": [f"{x.name}: {x.note}" for x in checks if not x.ok]})
+            rv = c.rvol_same_time(stats.volume, t, prof)
+            checks_log.append({"time": t.isoformat(), "price": price, "rvol": round(rv, 2) if rv else None,
+                               "failed": [f"{x.name}: {x.note}" for x in checks if not x.ok]})
             if all(x.ok for x in checks):
                 confirmed_at, entry_px = t, price
                 break
@@ -251,6 +256,8 @@ def replay(p: dict, radar: dict, cancelled_pairs: set) -> dict:
             return out
         cancelled_pairs.add(pair_key)
         out["confirmed_at"] = confirmed_at.isoformat()
+        out["rvol_at_entry"] = checks_log[-1].get("rvol")
+        out["rvol_required"] = rvol_req
         out["confirm_delay_min"] = round((confirmed_at - at).total_seconds() / 60, 1)
         osym, how = find_contract(p, confirmed_at, entry_px)
         if not osym:
