@@ -1,0 +1,14 @@
+16:00:28 re-scoring 6276 same-bar trades with tick data
+16:00:29 tick pass 0 / 11252
+16:00:39 tick pass 1000 / 11252
+16:00:49 tick pass 2000 / 11252
+16:00:58 tick pass 3000 / 11252
+16:01:08 tick pass 4000 / 11252
+16:01:17 tick pass 5000 / 11252
+16:01:27 tick pass 6000 / 11252
+16:01:37 tick pass 7000 / 11252
+16:01:47 tick pass 8000 / 11252
+16:01:56 tick pass 9000 / 11252
+16:02:06 tick pass 10000 / 11252
+16:02:16 tick pass 11000 / 11252
+16:02:22 done {"slip_0.00": {"final_equity_from_25k": 46482, "total_return": 0.859, "sharpe": 0.92, "max_drawdown": 0.272, "trades": 11250, "avg_R": 0.106, "hit_rate": 0.121, "winning_weeks": 0.497, "winning_months": 0.486, "worst_month": -0.087, "best_month": 0.224, "longest_losing_month_streak": 5, "by_year": {"2024": 0.251, "2025": 0.072, "2026": 0.386}}, "slip_0.01": {"final_equity_from_25k": 7966, "total_return": -0.681, "sharpe": -1.32, "max_drawdown": 0.689, "trades": 11250, "avg_R": -0.051, "hit_rate": 0.119, "winning_weeks": 0.367, "winning_months": 0.257, "worst_month": -0.136, "best_month": 0.169, "longest_losing_month_streak": 6, "by_year": {"2024": -0.29, "2025": -0.433, "2026": -0.209}}, "slip_0.02": {"final_equity_from_25k": 1482, "total_return": -0.941, "sharpe": -3.52, "max_drawdown": 0.941, "trades": 11250, "avg_R": -0.207, "hit_rate": 0.116, "winning_weeks": 0.252, "winning_months": 0.114, "worst_month": -0.182, "best_month": 0.117, "longest_losing_month_streak": 12, "by_year": {"2024": -0.589, "2025": -0.694, "2026": -0.528}}}
