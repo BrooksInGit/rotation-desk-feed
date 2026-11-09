@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-11-09T14:42:17Z",
- "source": "hourly check 2026-11-09 09:43 ET (5 pm_break passes removed)",
+ "updated_at": "2026-11-09T15:10:30Z",
+ "source": "hourly check 2026-11-09 10:05 ET (5 rvol passes removed: LLY pm_break+orb, SPY/GS/XLF orb)",
  "slippage_frac": 0.25,
  "watch": [
   {
@@ -69,45 +69,6 @@
    },
    "pair": "AMZN-20261109",
    "plan": "AMZN 11/13 ~$267.5C call scalp (orb), 30-min opening-range high; contract by rule (0-7 DTE, delta 0.40-0.60, spread<=5%); option stop -28%, target +40%; size 1% of E risk / 10% premium cap; closes 15:05"
-  },
-  {
-   "id": "20261109-scalp-GS-C-orb:entry",
-   "play_id": "20261109-scalp-GS-C-orb",
-   "symbol": "GS",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-09",
-   "module": "scalp",
-   "setup": "orb",
-   "direction": "call",
-   "trigger": {
-    "type": "orb_high",
-    "minutes": 30
-   },
-   "confirmation": {
-    "rvol_min": 1.5,
-    "vwap": "above",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0075,
-    "skip_first_minutes": 5,
-    "rs_exempt": {
-     "min_move_pct": 0.01,
-     "hard_block_pct": 0.015
-    }
-   },
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "GS-20261109",
-   "plan": "GS 11/13 ~$885C call scalp (orb), 30-min opening-range high; contract by rule (0-7 DTE, delta 0.40-0.60, spread<=5%); option stop -28%, target +40%; size 1% of E risk / 10% premium cap; closes 15:05"
   },
   {
    "id": "20261109-scalp-JPM-C:entry",
@@ -188,84 +149,6 @@
    "plan": "JPM 11/13 ~$340C call scalp (orb), 30-min opening-range high; contract by rule (0-7 DTE, delta 0.40-0.60, spread<=5%); option stop -28%, target +40%; size 1% of E risk / 10% premium cap; closes 15:05"
   },
   {
-   "id": "20261109-scalp-LLY-C:entry",
-   "play_id": "20261109-scalp-LLY-C",
-   "symbol": "LLY",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-09",
-   "module": "scalp",
-   "setup": "pm_break",
-   "direction": "call",
-   "trigger": {
-    "type": "above",
-    "price": 1393.07
-   },
-   "confirmation": {
-    "rvol_min": 1.5,
-    "vwap": "above",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0075,
-    "skip_first_minutes": 5,
-    "rs_exempt": {
-     "min_move_pct": 0.01,
-     "hard_block_pct": 0.015
-    }
-   },
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "LLY-20261109",
-   "plan": "LLY 11/13 ~$1390C call scalp (pm_break), trigger above 1393.07; contract by rule (0-7 DTE, delta 0.40-0.60, spread<=5%); option stop -28%, target +40%; size 1% of E risk / 10% premium cap; closes 15:05"
-  },
-  {
-   "id": "20261109-scalp-LLY-C-orb:entry",
-   "play_id": "20261109-scalp-LLY-C-orb",
-   "symbol": "LLY",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-09",
-   "module": "scalp",
-   "setup": "orb",
-   "direction": "call",
-   "trigger": {
-    "type": "orb_high",
-    "minutes": 30
-   },
-   "confirmation": {
-    "rvol_min": 1.5,
-    "vwap": "above",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0075,
-    "skip_first_minutes": 5,
-    "rs_exempt": {
-     "min_move_pct": 0.01,
-     "hard_block_pct": 0.015
-    }
-   },
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "LLY-20261109",
-   "plan": "LLY 11/13 ~$1390C call scalp (orb), 30-min opening-range high; contract by rule (0-7 DTE, delta 0.40-0.60, spread<=5%); option stop -28%, target +40%; size 1% of E risk / 10% premium cap; closes 15:05"
-  },
-  {
    "id": "20261109-scalp-NVDA-P-orb:entry",
    "play_id": "20261109-scalp-NVDA-P-orb",
    "symbol": "NVDA",
@@ -340,41 +223,6 @@
    "plan": "QQQ 0DTE or 11/13 ~$663C call scalp (orb), 30-min opening-range high; contract by rule (0-7 DTE, delta 0.40-0.60, spread<=5%); option stop -28%, target +40%; size 1% of E risk / 10% premium cap; closes 15:05"
   },
   {
-   "id": "20261109-scalp-SPY-C-orb:entry",
-   "play_id": "20261109-scalp-SPY-C-orb",
-   "symbol": "SPY",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-09",
-   "module": "scalp",
-   "setup": "orb",
-   "direction": "call",
-   "trigger": {
-    "type": "orb_high",
-    "minutes": 30
-   },
-   "confirmation": {
-    "rvol_min": 1.5,
-    "vwap": "above",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0075,
-    "skip_first_minutes": 5
-   },
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "SPY-20261109",
-   "plan": "SPY 0DTE or 11/13 ~$743C call scalp (orb), 30-min opening-range high; contract by rule (0-7 DTE, delta 0.40-0.60, spread<=5%); option stop -28%, target +40%; size 1% of E risk / 10% premium cap; closes 15:05"
-  },
-  {
    "id": "20261109-scalp-XLF-C:entry",
    "play_id": "20261109-scalp-XLF-C",
    "symbol": "XLF",
@@ -412,45 +260,6 @@
    },
    "pair": "XLF-20261109",
    "plan": "XLF 11/13 ~$58C call scalp (pm_break), trigger above 57.91; contract by rule (0-7 DTE, delta 0.40-0.60, spread<=5%); option stop -28%, target +40%; size 1% of E risk / 10% premium cap; closes 15:05"
-  },
-  {
-   "id": "20261109-scalp-XLF-C-orb:entry",
-   "play_id": "20261109-scalp-XLF-C-orb",
-   "symbol": "XLF",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-09",
-   "module": "scalp",
-   "setup": "orb",
-   "direction": "call",
-   "trigger": {
-    "type": "orb_high",
-    "minutes": 30
-   },
-   "confirmation": {
-    "rvol_min": 1.5,
-    "vwap": "above",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0075,
-    "skip_first_minutes": 5,
-    "rs_exempt": {
-     "min_move_pct": 0.01,
-     "hard_block_pct": 0.015
-    }
-   },
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "XLF-20261109",
-   "plan": "XLF 11/13 ~$58C call scalp (orb), 30-min opening-range high; contract by rule (0-7 DTE, delta 0.40-0.60, spread<=5%); option stop -28%, target +40%; size 1% of E risk / 10% premium cap; closes 15:05"
   }
  ]
 }
