@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-11-08T19:35:00Z",
- "source": "setup seed (from tracker: watching/open plays as of 2026-11-08)",
+ "updated_at": "2026-11-09T14:32:12Z",
+ "source": "hourly check 2026-11-09 09:32 ET (pre-market brief had not published today's scalps)",
  "slippage_frac": 0.25,
  "watch": [
   {
@@ -30,6 +30,614 @@
    },
    "option_symbol": "DHR261218C00220000",
    "plan": "DHR 12/18 $220C ~14.45, 3 contracts (re-size at entry); option stop 7.95 / stock stop 225.50; target 264.32 (option 26.01)"
+  },
+  {
+   "id": "20261109-scalp-AMZN-C:entry",
+   "play_id": "20261109-scalp-AMZN-C",
+   "symbol": "AMZN",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-09",
+   "module": "scalp",
+   "setup": "pm_break",
+   "direction": "call",
+   "trigger": {
+    "type": "above",
+    "price": 268.27
+   },
+   "confirmation": {
+    "rvol_min": 1.5,
+    "vwap": "above",
+    "max_extension_pct": 0.01,
+    "spy_block_pct": 0.0075,
+    "skip_first_minutes": 5,
+    "rs_exempt": {
+     "min_move_pct": 0.01,
+     "hard_block_pct": 0.015
+    }
+   },
+   "contract_rule": {
+    "dte": [
+     0,
+     7
+    ],
+    "delta": [
+     0.4,
+     0.6
+    ],
+    "max_spread_pct": 0.05
+   },
+   "pair": "AMZN-20261109",
+   "plan": "AMZN 11/13 ~$267.5C call scalp (pm_break), trigger above 268.27; contract by rule (0-7 DTE, delta 0.40-0.60, spread<=5%); option stop -28%, target +40%; size 1% of E risk / 10% premium cap; closes 15:05"
+  },
+  {
+   "id": "20261109-scalp-AMZN-C-orb:entry",
+   "play_id": "20261109-scalp-AMZN-C-orb",
+   "symbol": "AMZN",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-09",
+   "module": "scalp",
+   "setup": "orb",
+   "direction": "call",
+   "trigger": {
+    "type": "orb_high",
+    "minutes": 30
+   },
+   "confirmation": {
+    "rvol_min": 1.5,
+    "vwap": "above",
+    "max_extension_pct": 0.01,
+    "spy_block_pct": 0.0075,
+    "skip_first_minutes": 5,
+    "rs_exempt": {
+     "min_move_pct": 0.01,
+     "hard_block_pct": 0.015
+    }
+   },
+   "contract_rule": {
+    "dte": [
+     0,
+     7
+    ],
+    "delta": [
+     0.4,
+     0.6
+    ],
+    "max_spread_pct": 0.05
+   },
+   "pair": "AMZN-20261109",
+   "plan": "AMZN 11/13 ~$267.5C call scalp (orb), 30-min opening-range high; contract by rule (0-7 DTE, delta 0.40-0.60, spread<=5%); option stop -28%, target +40%; size 1% of E risk / 10% premium cap; closes 15:05"
+  },
+  {
+   "id": "20261109-scalp-GS-C:entry",
+   "play_id": "20261109-scalp-GS-C",
+   "symbol": "GS",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-09",
+   "module": "scalp",
+   "setup": "pm_break",
+   "direction": "call",
+   "trigger": {
+    "type": "above",
+    "price": 883.6446
+   },
+   "confirmation": {
+    "rvol_min": 1.5,
+    "vwap": "above",
+    "max_extension_pct": 0.01,
+    "spy_block_pct": 0.0075,
+    "skip_first_minutes": 5,
+    "rs_exempt": {
+     "min_move_pct": 0.01,
+     "hard_block_pct": 0.015
+    }
+   },
+   "contract_rule": {
+    "dte": [
+     0,
+     7
+    ],
+    "delta": [
+     0.4,
+     0.6
+    ],
+    "max_spread_pct": 0.05
+   },
+   "pair": "GS-20261109",
+   "plan": "GS 11/13 ~$885C call scalp (pm_break), trigger above 883.6446; contract by rule (0-7 DTE, delta 0.40-0.60, spread<=5%); option stop -28%, target +40%; size 1% of E risk / 10% premium cap; closes 15:05"
+  },
+  {
+   "id": "20261109-scalp-GS-C-orb:entry",
+   "play_id": "20261109-scalp-GS-C-orb",
+   "symbol": "GS",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-09",
+   "module": "scalp",
+   "setup": "orb",
+   "direction": "call",
+   "trigger": {
+    "type": "orb_high",
+    "minutes": 30
+   },
+   "confirmation": {
+    "rvol_min": 1.5,
+    "vwap": "above",
+    "max_extension_pct": 0.01,
+    "spy_block_pct": 0.0075,
+    "skip_first_minutes": 5,
+    "rs_exempt": {
+     "min_move_pct": 0.01,
+     "hard_block_pct": 0.015
+    }
+   },
+   "contract_rule": {
+    "dte": [
+     0,
+     7
+    ],
+    "delta": [
+     0.4,
+     0.6
+    ],
+    "max_spread_pct": 0.05
+   },
+   "pair": "GS-20261109",
+   "plan": "GS 11/13 ~$885C call scalp (orb), 30-min opening-range high; contract by rule (0-7 DTE, delta 0.40-0.60, spread<=5%); option stop -28%, target +40%; size 1% of E risk / 10% premium cap; closes 15:05"
+  },
+  {
+   "id": "20261109-scalp-JPM-C:entry",
+   "play_id": "20261109-scalp-JPM-C",
+   "symbol": "JPM",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-09",
+   "module": "scalp",
+   "setup": "pm_break",
+   "direction": "call",
+   "trigger": {
+    "type": "above",
+    "price": 340.405
+   },
+   "confirmation": {
+    "rvol_min": 1.5,
+    "vwap": "above",
+    "max_extension_pct": 0.01,
+    "spy_block_pct": 0.0075,
+    "skip_first_minutes": 5,
+    "rs_exempt": {
+     "min_move_pct": 0.01,
+     "hard_block_pct": 0.015
+    }
+   },
+   "contract_rule": {
+    "dte": [
+     0,
+     7
+    ],
+    "delta": [
+     0.4,
+     0.6
+    ],
+    "max_spread_pct": 0.05
+   },
+   "pair": "JPM-20261109",
+   "plan": "JPM 11/13 ~$340C call scalp (pm_break), trigger above 340.405; contract by rule (0-7 DTE, delta 0.40-0.60, spread<=5%); option stop -28%, target +40%; size 1% of E risk / 10% premium cap; closes 15:05"
+  },
+  {
+   "id": "20261109-scalp-JPM-C-orb:entry",
+   "play_id": "20261109-scalp-JPM-C-orb",
+   "symbol": "JPM",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-09",
+   "module": "scalp",
+   "setup": "orb",
+   "direction": "call",
+   "trigger": {
+    "type": "orb_high",
+    "minutes": 30
+   },
+   "confirmation": {
+    "rvol_min": 1.5,
+    "vwap": "above",
+    "max_extension_pct": 0.01,
+    "spy_block_pct": 0.0075,
+    "skip_first_minutes": 5,
+    "rs_exempt": {
+     "min_move_pct": 0.01,
+     "hard_block_pct": 0.015
+    }
+   },
+   "contract_rule": {
+    "dte": [
+     0,
+     7
+    ],
+    "delta": [
+     0.4,
+     0.6
+    ],
+    "max_spread_pct": 0.05
+   },
+   "pair": "JPM-20261109",
+   "plan": "JPM 11/13 ~$340C call scalp (orb), 30-min opening-range high; contract by rule (0-7 DTE, delta 0.40-0.60, spread<=5%); option stop -28%, target +40%; size 1% of E risk / 10% premium cap; closes 15:05"
+  },
+  {
+   "id": "20261109-scalp-LLY-C:entry",
+   "play_id": "20261109-scalp-LLY-C",
+   "symbol": "LLY",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-09",
+   "module": "scalp",
+   "setup": "pm_break",
+   "direction": "call",
+   "trigger": {
+    "type": "above",
+    "price": 1393.07
+   },
+   "confirmation": {
+    "rvol_min": 1.5,
+    "vwap": "above",
+    "max_extension_pct": 0.01,
+    "spy_block_pct": 0.0075,
+    "skip_first_minutes": 5,
+    "rs_exempt": {
+     "min_move_pct": 0.01,
+     "hard_block_pct": 0.015
+    }
+   },
+   "contract_rule": {
+    "dte": [
+     0,
+     7
+    ],
+    "delta": [
+     0.4,
+     0.6
+    ],
+    "max_spread_pct": 0.05
+   },
+   "pair": "LLY-20261109",
+   "plan": "LLY 11/13 ~$1390C call scalp (pm_break), trigger above 1393.07; contract by rule (0-7 DTE, delta 0.40-0.60, spread<=5%); option stop -28%, target +40%; size 1% of E risk / 10% premium cap; closes 15:05"
+  },
+  {
+   "id": "20261109-scalp-LLY-C-orb:entry",
+   "play_id": "20261109-scalp-LLY-C-orb",
+   "symbol": "LLY",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-09",
+   "module": "scalp",
+   "setup": "orb",
+   "direction": "call",
+   "trigger": {
+    "type": "orb_high",
+    "minutes": 30
+   },
+   "confirmation": {
+    "rvol_min": 1.5,
+    "vwap": "above",
+    "max_extension_pct": 0.01,
+    "spy_block_pct": 0.0075,
+    "skip_first_minutes": 5,
+    "rs_exempt": {
+     "min_move_pct": 0.01,
+     "hard_block_pct": 0.015
+    }
+   },
+   "contract_rule": {
+    "dte": [
+     0,
+     7
+    ],
+    "delta": [
+     0.4,
+     0.6
+    ],
+    "max_spread_pct": 0.05
+   },
+   "pair": "LLY-20261109",
+   "plan": "LLY 11/13 ~$1390C call scalp (orb), 30-min opening-range high; contract by rule (0-7 DTE, delta 0.40-0.60, spread<=5%); option stop -28%, target +40%; size 1% of E risk / 10% premium cap; closes 15:05"
+  },
+  {
+   "id": "20261109-scalp-NVDA-P:entry",
+   "play_id": "20261109-scalp-NVDA-P",
+   "symbol": "NVDA",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-09",
+   "module": "scalp",
+   "setup": "pm_break",
+   "direction": "put",
+   "trigger": {
+    "type": "below",
+    "price": 174.49
+   },
+   "confirmation": {
+    "rvol_min": 1.5,
+    "vwap": "below",
+    "max_extension_pct": 0.01,
+    "spy_block_pct": 0.0075,
+    "skip_first_minutes": 5,
+    "rs_exempt": {
+     "min_move_pct": 0.01,
+     "hard_block_pct": 0.015
+    }
+   },
+   "contract_rule": {
+    "dte": [
+     0,
+     7
+    ],
+    "delta": [
+     0.4,
+     0.6
+    ],
+    "max_spread_pct": 0.05
+   },
+   "pair": "NVDA-20261109",
+   "plan": "NVDA 11/13 ~$175P put scalp (pm_break), trigger below 174.49; contract by rule (0-7 DTE, delta 0.40-0.60, spread<=5%); option stop -28%, target +40%; size 1% of E risk / 10% premium cap; closes 15:05"
+  },
+  {
+   "id": "20261109-scalp-NVDA-P-orb:entry",
+   "play_id": "20261109-scalp-NVDA-P-orb",
+   "symbol": "NVDA",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-09",
+   "module": "scalp",
+   "setup": "orb",
+   "direction": "put",
+   "trigger": {
+    "type": "orb_low",
+    "minutes": 30
+   },
+   "confirmation": {
+    "rvol_min": 1.5,
+    "vwap": "below",
+    "max_extension_pct": 0.01,
+    "spy_block_pct": 0.0075,
+    "skip_first_minutes": 5,
+    "rs_exempt": {
+     "min_move_pct": 0.01,
+     "hard_block_pct": 0.015
+    }
+   },
+   "contract_rule": {
+    "dte": [
+     0,
+     7
+    ],
+    "delta": [
+     0.4,
+     0.6
+    ],
+    "max_spread_pct": 0.05
+   },
+   "pair": "NVDA-20261109",
+   "plan": "NVDA 11/13 ~$175P put scalp (orb), 30-min opening-range low; contract by rule (0-7 DTE, delta 0.40-0.60, spread<=5%); option stop -28%, target +40%; size 1% of E risk / 10% premium cap; closes 15:05"
+  },
+  {
+   "id": "20261109-scalp-QQQ-C:entry",
+   "play_id": "20261109-scalp-QQQ-C",
+   "symbol": "QQQ",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-09",
+   "module": "scalp",
+   "setup": "pm_break",
+   "direction": "call",
+   "trigger": {
+    "type": "above",
+    "price": 663.45
+   },
+   "confirmation": {
+    "rvol_min": 1.5,
+    "vwap": "above",
+    "max_extension_pct": 0.01,
+    "spy_block_pct": 0.0075,
+    "skip_first_minutes": 5
+   },
+   "contract_rule": {
+    "dte": [
+     0,
+     7
+    ],
+    "delta": [
+     0.4,
+     0.6
+    ],
+    "max_spread_pct": 0.05
+   },
+   "pair": "QQQ-20261109",
+   "plan": "QQQ 0DTE or 11/13 ~$663C call scalp (pm_break), trigger above 663.45; contract by rule (0-7 DTE, delta 0.40-0.60, spread<=5%); option stop -28%, target +40%; size 1% of E risk / 10% premium cap; closes 15:05"
+  },
+  {
+   "id": "20261109-scalp-QQQ-C-orb:entry",
+   "play_id": "20261109-scalp-QQQ-C-orb",
+   "symbol": "QQQ",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-09",
+   "module": "scalp",
+   "setup": "orb",
+   "direction": "call",
+   "trigger": {
+    "type": "orb_high",
+    "minutes": 30
+   },
+   "confirmation": {
+    "rvol_min": 1.5,
+    "vwap": "above",
+    "max_extension_pct": 0.01,
+    "spy_block_pct": 0.0075,
+    "skip_first_minutes": 5
+   },
+   "contract_rule": {
+    "dte": [
+     0,
+     7
+    ],
+    "delta": [
+     0.4,
+     0.6
+    ],
+    "max_spread_pct": 0.05
+   },
+   "pair": "QQQ-20261109",
+   "plan": "QQQ 0DTE or 11/13 ~$663C call scalp (orb), 30-min opening-range high; contract by rule (0-7 DTE, delta 0.40-0.60, spread<=5%); option stop -28%, target +40%; size 1% of E risk / 10% premium cap; closes 15:05"
+  },
+  {
+   "id": "20261109-scalp-SPY-C:entry",
+   "play_id": "20261109-scalp-SPY-C",
+   "symbol": "SPY",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-09",
+   "module": "scalp",
+   "setup": "pm_break",
+   "direction": "call",
+   "trigger": {
+    "type": "above",
+    "price": 743.02
+   },
+   "confirmation": {
+    "rvol_min": 1.5,
+    "vwap": "above",
+    "max_extension_pct": 0.01,
+    "spy_block_pct": 0.0075,
+    "skip_first_minutes": 5
+   },
+   "contract_rule": {
+    "dte": [
+     0,
+     7
+    ],
+    "delta": [
+     0.4,
+     0.6
+    ],
+    "max_spread_pct": 0.05
+   },
+   "pair": "SPY-20261109",
+   "plan": "SPY 0DTE or 11/13 ~$743C call scalp (pm_break), trigger above 743.02; contract by rule (0-7 DTE, delta 0.40-0.60, spread<=5%); option stop -28%, target +40%; size 1% of E risk / 10% premium cap; closes 15:05"
+  },
+  {
+   "id": "20261109-scalp-SPY-C-orb:entry",
+   "play_id": "20261109-scalp-SPY-C-orb",
+   "symbol": "SPY",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-09",
+   "module": "scalp",
+   "setup": "orb",
+   "direction": "call",
+   "trigger": {
+    "type": "orb_high",
+    "minutes": 30
+   },
+   "confirmation": {
+    "rvol_min": 1.5,
+    "vwap": "above",
+    "max_extension_pct": 0.01,
+    "spy_block_pct": 0.0075,
+    "skip_first_minutes": 5
+   },
+   "contract_rule": {
+    "dte": [
+     0,
+     7
+    ],
+    "delta": [
+     0.4,
+     0.6
+    ],
+    "max_spread_pct": 0.05
+   },
+   "pair": "SPY-20261109",
+   "plan": "SPY 0DTE or 11/13 ~$743C call scalp (orb), 30-min opening-range high; contract by rule (0-7 DTE, delta 0.40-0.60, spread<=5%); option stop -28%, target +40%; size 1% of E risk / 10% premium cap; closes 15:05"
+  },
+  {
+   "id": "20261109-scalp-XLF-C:entry",
+   "play_id": "20261109-scalp-XLF-C",
+   "symbol": "XLF",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-09",
+   "module": "scalp",
+   "setup": "pm_break",
+   "direction": "call",
+   "trigger": {
+    "type": "above",
+    "price": 57.91
+   },
+   "confirmation": {
+    "rvol_min": 1.5,
+    "vwap": "above",
+    "max_extension_pct": 0.01,
+    "spy_block_pct": 0.0075,
+    "skip_first_minutes": 5,
+    "rs_exempt": {
+     "min_move_pct": 0.01,
+     "hard_block_pct": 0.015
+    }
+   },
+   "contract_rule": {
+    "dte": [
+     0,
+     7
+    ],
+    "delta": [
+     0.4,
+     0.6
+    ],
+    "max_spread_pct": 0.05
+   },
+   "pair": "XLF-20261109",
+   "plan": "XLF 11/13 ~$58C call scalp (pm_break), trigger above 57.91; contract by rule (0-7 DTE, delta 0.40-0.60, spread<=5%); option stop -28%, target +40%; size 1% of E risk / 10% premium cap; closes 15:05"
+  },
+  {
+   "id": "20261109-scalp-XLF-C-orb:entry",
+   "play_id": "20261109-scalp-XLF-C-orb",
+   "symbol": "XLF",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-09",
+   "module": "scalp",
+   "setup": "orb",
+   "direction": "call",
+   "trigger": {
+    "type": "orb_high",
+    "minutes": 30
+   },
+   "confirmation": {
+    "rvol_min": 1.5,
+    "vwap": "above",
+    "max_extension_pct": 0.01,
+    "spy_block_pct": 0.0075,
+    "skip_first_minutes": 5,
+    "rs_exempt": {
+     "min_move_pct": 0.01,
+     "hard_block_pct": 0.015
+    }
+   },
+   "contract_rule": {
+    "dte": [
+     0,
+     7
+    ],
+    "delta": [
+     0.4,
+     0.6
+    ],
+    "max_spread_pct": 0.05
+   },
+   "pair": "XLF-20261109",
+   "plan": "XLF 11/13 ~$58C call scalp (orb), 30-min opening-range high; contract by rule (0-7 DTE, delta 0.40-0.60, spread<=5%); option stop -28%, target +40%; size 1% of E risk / 10% premium cap; closes 15:05"
   }
  ]
 }
