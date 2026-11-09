@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-11-09T17:10:00Z",
- "source": "hourly check 2026-11-09 12:05 ET (XLF pm_break rvol pass removed)",
+ "updated_at": "2026-11-09T22:00:00Z",
+ "source": "evening run 2026-11-09",
  "slippage_frac": 0.25,
  "watch": [
   {
@@ -30,84 +30,6 @@
    },
    "option_symbol": "DHR261218C00220000",
    "plan": "DHR 12/18 $220C ~14.45, 3 contracts (re-size at entry); option stop 7.95 / stock stop 225.50; target 264.32 (option 26.01)"
-  },
-  {
-   "id": "20261109-scalp-AMZN-C-orb:entry",
-   "play_id": "20261109-scalp-AMZN-C-orb",
-   "symbol": "AMZN",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-09",
-   "module": "scalp",
-   "setup": "orb",
-   "direction": "call",
-   "trigger": {
-    "type": "orb_high",
-    "minutes": 30
-   },
-   "confirmation": {
-    "rvol_min": 1.5,
-    "vwap": "above",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0075,
-    "skip_first_minutes": 5,
-    "rs_exempt": {
-     "min_move_pct": 0.01,
-     "hard_block_pct": 0.015
-    }
-   },
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "AMZN-20261109",
-   "plan": "AMZN 11/13 ~$267.5C call scalp (orb), 30-min opening-range high; contract by rule (0-7 DTE, delta 0.40-0.60, spread<=5%); option stop -28%, target +40%; size 1% of E risk / 10% premium cap; closes 15:05"
-  },
-  {
-   "id": "20261109-scalp-NVDA-P-orb:entry",
-   "play_id": "20261109-scalp-NVDA-P-orb",
-   "symbol": "NVDA",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-09",
-   "module": "scalp",
-   "setup": "orb",
-   "direction": "put",
-   "trigger": {
-    "type": "orb_low",
-    "minutes": 30
-   },
-   "confirmation": {
-    "rvol_min": 1.5,
-    "vwap": "below",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0075,
-    "skip_first_minutes": 5,
-    "rs_exempt": {
-     "min_move_pct": 0.01,
-     "hard_block_pct": 0.015
-    }
-   },
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "NVDA-20261109",
-   "plan": "NVDA 11/13 ~$175P put scalp (orb), 30-min opening-range low; contract by rule (0-7 DTE, delta 0.40-0.60, spread<=5%); option stop -28%, target +40%; size 1% of E risk / 10% premium cap; closes 15:05"
   }
  ]
 }
