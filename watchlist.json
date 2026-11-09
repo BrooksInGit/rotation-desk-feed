@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-11-09T16:10:00Z",
- "source": "hourly check 2026-11-09 11:05 ET (3 rvol passes removed: QQQ orb, JPM orb, JPM pm_break)",
+ "updated_at": "2026-11-09T17:10:00Z",
+ "source": "hourly check 2026-11-09 12:05 ET (XLF pm_break rvol pass removed)",
  "slippage_frac": 0.25,
  "watch": [
   {
@@ -108,45 +108,6 @@
    },
    "pair": "NVDA-20261109",
    "plan": "NVDA 11/13 ~$175P put scalp (orb), 30-min opening-range low; contract by rule (0-7 DTE, delta 0.40-0.60, spread<=5%); option stop -28%, target +40%; size 1% of E risk / 10% premium cap; closes 15:05"
-  },
-  {
-   "id": "20261109-scalp-XLF-C:entry",
-   "play_id": "20261109-scalp-XLF-C",
-   "symbol": "XLF",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-09",
-   "module": "scalp",
-   "setup": "pm_break",
-   "direction": "call",
-   "trigger": {
-    "type": "above",
-    "price": 57.91
-   },
-   "confirmation": {
-    "rvol_min": 1.5,
-    "vwap": "above",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0075,
-    "skip_first_minutes": 5,
-    "rs_exempt": {
-     "min_move_pct": 0.01,
-     "hard_block_pct": 0.015
-    }
-   },
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "XLF-20261109",
-   "plan": "XLF 11/13 ~$58C call scalp (pm_break), trigger above 57.91; contract by rule (0-7 DTE, delta 0.40-0.60, spread<=5%); option stop -28%, target +40%; size 1% of E risk / 10% premium cap; closes 15:05"
   }
  ]
 }
