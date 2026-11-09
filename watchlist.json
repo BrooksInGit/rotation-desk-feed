@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-11-09T15:10:30Z",
- "source": "hourly check 2026-11-09 10:05 ET (5 rvol passes removed: LLY pm_break+orb, SPY/GS/XLF orb)",
+ "updated_at": "2026-11-09T16:10:00Z",
+ "source": "hourly check 2026-11-09 11:05 ET (3 rvol passes removed: QQQ orb, JPM orb, JPM pm_break)",
  "slippage_frac": 0.25,
  "watch": [
   {
@@ -71,84 +71,6 @@
    "plan": "AMZN 11/13 ~$267.5C call scalp (orb), 30-min opening-range high; contract by rule (0-7 DTE, delta 0.40-0.60, spread<=5%); option stop -28%, target +40%; size 1% of E risk / 10% premium cap; closes 15:05"
   },
   {
-   "id": "20261109-scalp-JPM-C:entry",
-   "play_id": "20261109-scalp-JPM-C",
-   "symbol": "JPM",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-09",
-   "module": "scalp",
-   "setup": "pm_break",
-   "direction": "call",
-   "trigger": {
-    "type": "above",
-    "price": 340.405
-   },
-   "confirmation": {
-    "rvol_min": 1.5,
-    "vwap": "above",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0075,
-    "skip_first_minutes": 5,
-    "rs_exempt": {
-     "min_move_pct": 0.01,
-     "hard_block_pct": 0.015
-    }
-   },
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "JPM-20261109",
-   "plan": "JPM 11/13 ~$340C call scalp (pm_break), trigger above 340.405; contract by rule (0-7 DTE, delta 0.40-0.60, spread<=5%); option stop -28%, target +40%; size 1% of E risk / 10% premium cap; closes 15:05"
-  },
-  {
-   "id": "20261109-scalp-JPM-C-orb:entry",
-   "play_id": "20261109-scalp-JPM-C-orb",
-   "symbol": "JPM",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-09",
-   "module": "scalp",
-   "setup": "orb",
-   "direction": "call",
-   "trigger": {
-    "type": "orb_high",
-    "minutes": 30
-   },
-   "confirmation": {
-    "rvol_min": 1.5,
-    "vwap": "above",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0075,
-    "skip_first_minutes": 5,
-    "rs_exempt": {
-     "min_move_pct": 0.01,
-     "hard_block_pct": 0.015
-    }
-   },
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "JPM-20261109",
-   "plan": "JPM 11/13 ~$340C call scalp (orb), 30-min opening-range high; contract by rule (0-7 DTE, delta 0.40-0.60, spread<=5%); option stop -28%, target +40%; size 1% of E risk / 10% premium cap; closes 15:05"
-  },
-  {
    "id": "20261109-scalp-NVDA-P-orb:entry",
    "play_id": "20261109-scalp-NVDA-P-orb",
    "symbol": "NVDA",
@@ -186,41 +108,6 @@
    },
    "pair": "NVDA-20261109",
    "plan": "NVDA 11/13 ~$175P put scalp (orb), 30-min opening-range low; contract by rule (0-7 DTE, delta 0.40-0.60, spread<=5%); option stop -28%, target +40%; size 1% of E risk / 10% premium cap; closes 15:05"
-  },
-  {
-   "id": "20261109-scalp-QQQ-C-orb:entry",
-   "play_id": "20261109-scalp-QQQ-C-orb",
-   "symbol": "QQQ",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-09",
-   "module": "scalp",
-   "setup": "orb",
-   "direction": "call",
-   "trigger": {
-    "type": "orb_high",
-    "minutes": 30
-   },
-   "confirmation": {
-    "rvol_min": 1.5,
-    "vwap": "above",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0075,
-    "skip_first_minutes": 5
-   },
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "QQQ-20261109",
-   "plan": "QQQ 0DTE or 11/13 ~$663C call scalp (orb), 30-min opening-range high; contract by rule (0-7 DTE, delta 0.40-0.60, spread<=5%); option stop -28%, target +40%; size 1% of E risk / 10% premium cap; closes 15:05"
   },
   {
    "id": "20261109-scalp-XLF-C:entry",
