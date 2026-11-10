@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-11-10T13:55:00Z",
- "source": "pre-market brief 2026-11-10",
+ "updated_at": "2026-11-10T15:12:00Z",
+ "source": "hourly check 2026-11-10 10:05 ET",
  "slippage_frac": 0.25,
  "watch": [
   {
@@ -184,46 +184,6 @@
    "plan": "[rotation lane] SMH put orb: below 30-min OR low; likely 11/13 ~$475P; scalp stop -28% / target +40%, close by 15:05; size 1% E risk"
   },
   {
-   "id": "20261110-scalp-XLK-P:entry",
-   "play_id": "20261110-scalp-XLK-P",
-   "symbol": "XLK",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-10",
-   "module": "scalp",
-   "setup": "pm_break",
-   "direction": "put",
-   "trigger": {
-    "type": "below",
-    "price": 168.59
-   },
-   "confirmation": {
-    "rvol_min": 1.5,
-    "vwap": "below",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0075,
-    "skip_first_minutes": 5,
-    "rs_exempt": {
-     "min_move_pct": 0.01,
-     "hard_block_pct": 0.015
-    }
-   },
-   "option_symbol": "",
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "XLK-20261110",
-   "plan": "[rotation lane] XLK put pm_break: below PM low 168.59; likely 11/13 ~$168P; scalp stop -28% / target +40%, close by 15:05; size 1% E risk"
-  },
-  {
    "id": "20261110-scalp-XLK-P-orb:entry",
    "play_id": "20261110-scalp-XLK-P-orb",
    "symbol": "XLK",
@@ -262,46 +222,6 @@
    },
    "pair": "XLK-20261110",
    "plan": "[rotation lane] XLK put orb: below 30-min OR low; likely 11/13 ~$168P; scalp stop -28% / target +40%, close by 15:05; size 1% E risk"
-  },
-  {
-   "id": "20261110-scalp-NVDA-P:entry",
-   "play_id": "20261110-scalp-NVDA-P",
-   "symbol": "NVDA",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-10",
-   "module": "scalp",
-   "setup": "pm_break",
-   "direction": "put",
-   "trigger": {
-    "type": "below",
-    "price": 175.01
-   },
-   "confirmation": {
-    "rvol_min": 1.5,
-    "vwap": "below",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0075,
-    "skip_first_minutes": 5,
-    "rs_exempt": {
-     "min_move_pct": 0.01,
-     "hard_block_pct": 0.015
-    }
-   },
-   "option_symbol": "",
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "NVDA-20261110",
-   "plan": "[rotation lane] NVDA put pm_break: below PM low 175.01; likely 11/13 ~$175P; scalp stop -28% / target +40%, close by 15:05; size 1% E risk"
   },
   {
    "id": "20261110-scalp-NVDA-P-orb:entry",
@@ -422,46 +342,6 @@
    },
    "pair": "AMD-20261110",
    "plan": "[rotation lane] AMD put orb: below 30-min OR low; likely 11/13 ~$497.5P; scalp stop -28% / target +40%, close by 15:05; size 1% E risk"
-  },
-  {
-   "id": "20261110-scalp-MU-P:entry",
-   "play_id": "20261110-scalp-MU-P",
-   "symbol": "MU",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-10",
-   "module": "scalp",
-   "setup": "pm_break",
-   "direction": "put",
-   "trigger": {
-    "type": "below",
-    "price": 705.0
-   },
-   "confirmation": {
-    "rvol_min": 1.5,
-    "vwap": "below",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0075,
-    "skip_first_minutes": 5,
-    "rs_exempt": {
-     "min_move_pct": 0.01,
-     "hard_block_pct": 0.015
-    }
-   },
-   "option_symbol": "",
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "MU-20261110",
-   "plan": "[rotation lane] MU put pm_break: below PM low 705.0; likely 11/13 ~$710P; scalp stop -28% / target +40%, close by 15:05; size 1% E risk"
   },
   {
    "id": "20261110-scalp-MU-P-orb:entry",
@@ -814,42 +694,6 @@
    },
    "pair": "INTC-20261110",
    "plan": "[momentum lane] INTC put orb: below 30-min OR low; likely 11/13 ~$57P; scalp stop -28% / target +40%, close by 15:05; size 1% E risk"
-  },
-  {
-   "id": "20261110-scalp-HOOD-P:entry",
-   "play_id": "20261110-scalp-HOOD-P",
-   "symbol": "HOOD",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-10",
-   "module": "scalp",
-   "setup": "pm_break",
-   "direction": "put",
-   "trigger": {
-    "type": "below",
-    "price": 80.56
-   },
-   "confirmation": {
-    "rvol_min": 1.5,
-    "vwap": "below",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0075,
-    "skip_first_minutes": 5
-   },
-   "option_symbol": "",
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "HOOD-20261110",
-   "plan": "[momentum lane, counter-trend] HOOD put pm_break: below PM low 80.56; likely 11/13 ~$81P; scalp stop -28% / target +40%, close by 15:05; size 1% E risk"
   },
   {
    "id": "20261110-scalp-HOOD-P-orb:entry",
