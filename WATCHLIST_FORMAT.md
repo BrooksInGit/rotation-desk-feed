@@ -36,3 +36,10 @@ Read by the monitor every 30 seconds. Only active items are watched.
   `checks`, `confirmed`, `session_vwap`, `session_volume`, and `option` (`symbol`, `bid`, `ask`, `mid`,
   `spread_pct`, `delta`, `fill_est`, `fill_side`). The desk uses `option.fill_est` as the paper fill.
 - `status.json`: heartbeat (`updated_at`, `stream_connected`, `market_open`, `watching`).
+
+## Added 2026-11-10 (manual 11.6 and 12 E)
+- Optional on `entry` items: `stock_stop`, `target_stock` (from the play's plan). The monitor uses them for the share leg; without them it uses `exit_rules`.
+- Optional at the top level: `exit_rules` = `{"scalp": {"option_stop_pct":0.28,"option_target_mult":1.40,"stock_stop_pct":0.01,"stock_target_r":2.0}, "swing": {...}}`.
+- On every confirmed entry the monitor arms its own exits: `<play_id>:auto:option_stop|option_target` (leg `option`) and `<play_id>:auto:stop|target` (leg `shares`), and at 15:05 ET closes open scalp legs with `time_exit` events. Exit events carry `leg`, `entry_event` and, on the entry event, `exits` (the armed levels). Desk-published exit items for a play the monitor holds are ignored.
+- When an entry fails only the volume check, the monitor records a tracked twin: an `entry` event with `item_id` `<id>:no_rvol`, `variant: "no_rvol"`, `track_only: true`, `confirmed: true`, and arms its exits under play id `<play_id>-no_rvol`. These send no Telegram alerts.
+- The monitor restarts itself when anything under `monitor/` changes on `main`.

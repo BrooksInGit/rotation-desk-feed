@@ -187,6 +187,12 @@ class Repo:
         except Exception as e:
             log.warning("git pull failed, keeping the last watchlist: %s", getattr(e, "stderr", e))
 
+    def code_rev(self) -> str | None:
+        try:
+            return self._git("rev-parse", "HEAD:monitor").stdout.strip()
+        except Exception:
+            return None
+
     def load_watchlist(self) -> dict:
         try:
             return json.loads(self.s.watchlist.read_text())
@@ -274,13 +280,72 @@ class Monitor:
         self.ws = None
         self.subscribed: set[str] = set()
         self.track_only: set[str] = set()
+        self.auto_items: list[Item] = []                 # exits armed by the monitor itself on confirmed entries
+        self.auto_plays: set[str] = set()                # play ids whose exits the monitor holds
+        self.code_rev: str | None = None
 
     # ------------------------------------------------------------ helpers
+    def all_items(self) -> list[Item]:
+        desk = [i for i in self.items
+                if not (i.kind in core.STOCK_EXIT_KINDS | core.OPTION_EXIT_KINDS and i.raw.get("play_id") in self.auto_plays)]
+        return desk + self.auto_items
+
     def stock_items(self) -> list[Item]:
-        return [i for i in self.items if i.kind in core.ENTRY_KINDS | core.STOCK_EXIT_KINDS and i.id not in self.fired]
+        return [i for i in self.all_items() if i.kind in core.ENTRY_KINDS | core.STOCK_EXIT_KINDS and i.id not in self.fired]
 
     def option_items(self) -> list[Item]:
-        return [i for i in self.items if i.kind in core.OPTION_EXIT_KINDS and i.id not in self.fired and i.option_symbol]
+        return [i for i in self.all_items() if i.kind in core.OPTION_EXIT_KINDS and i.id not in self.fired and i.option_symbol]
+
+    def exit_rules(self, module: str) -> dict:
+        d = {"scalp": {"option_stop_pct": 0.28, "option_target_mult": 1.40, "stock_stop_pct": 0.01, "stock_target_r": 2.0},
+             "swing": {"option_stop_pct": 0.45, "option_target_mult": 1.80, "stock_stop_pct": 0.03, "stock_target_r": 2.0}}
+        r = dict(d.get(module, d["scalp"]))
+        r.update((self.feed_meta.get("exit_rules") or {}).get(module, {}))
+        return r
+
+    def arm_exits(self, entry: Item, ev: dict) -> None:
+        """On a confirmed entry, arm option and share exits at once so they are caught live (manual 11.6)."""
+        pid = entry.raw.get("play_id") or entry.id
+        if ev.get("variant"):
+            pid = f"{pid}-{ev['variant']}"
+        if pid in self.auto_plays:
+            return
+        r = self.exit_rules(entry.raw.get("module", "scalp"))
+        call = entry.raw.get("direction") == "call"
+        base = {k: entry.raw.get(k) for k in ("symbol", "module", "setup", "direction", "pair")}
+        base.update({"play_id": pid, "auto": True, "track_only": bool(ev.get("track_only")),
+                     "quiet": bool(entry.raw.get("quiet")), "variant": ev.get("variant"),
+                     "entry_event": ev["id"], "status": "active", "armed_after": ev["time"]})
+        preset = ev.get("exits") or {}
+        made = []
+        o = ev.get("option") or {}
+        if o.get("fill_est"):
+            f = float(o["fill_est"])
+            for kind, lvl, typ in (("option_stop", preset.get("option_stop", f * (1 - r["option_stop_pct"])), "below"),
+                                   ("option_target", preset.get("option_target", f * r["option_target_mult"]), "above")):
+                made.append(dict(base, id=f"{pid}:auto:{kind}", kind=kind, leg="option", option_symbol=o["symbol"],
+                                 trigger={"type": typ, "price": round(lvl, 2)}))
+        px = float(ev["price"])
+        stop = preset.get("stop") or entry.raw.get("stock_stop")
+        if not stop or (call and stop >= px) or (not call and stop <= px):
+            stop = px * (1 - r["stock_stop_pct"]) if call else px * (1 + r["stock_stop_pct"])
+        tgt = preset.get("target") or entry.raw.get("target_stock")
+        if not tgt or (call and tgt <= px) or (not call and tgt >= px):
+            tgt = px + r["stock_target_r"] * (px - stop)
+        made.append(dict(base, id=f"{pid}:auto:stop", kind="stop", leg="shares", option_symbol=o.get("symbol"),
+                         trigger={"type": "below" if call else "above", "price": round(stop, 4)}))
+        made.append(dict(base, id=f"{pid}:auto:target", kind="target", leg="shares", option_symbol=o.get("symbol"),
+                         trigger={"type": "above" if call else "below", "price": round(tgt, 4)}))
+        self.auto_items += [Item(x) for x in made]
+        self.auto_plays.add(pid)
+        ev["exits"] = {x["kind"]: x["trigger"]["price"] for x in made}
+
+    def close_leg(self, item: Item) -> None:
+        """An exit fired: retire the other exits of the same leg."""
+        pid, leg = item.raw.get("play_id"), item.raw.get("leg")
+        for x in self.auto_items:
+            if x.raw.get("play_id") == pid and (leg is None or x.raw.get("leg") == leg):
+                self.fired.add(x.id)
 
     def symbols(self) -> set[str]:
         return {i.symbol for i in self.stock_items()} | ({"SPY"} if self.stock_items() else set())
@@ -308,6 +373,8 @@ class Monitor:
         self.fired.clear()
         self.unconfirmed.clear()
         self.track_only.clear()
+        self.auto_items.clear()
+        self.auto_plays.clear()
         self.bars.clear()
         self.orb.clear()
         self.spy_change = None
@@ -319,6 +386,23 @@ class Monitor:
                 self.fired.add(ev["item_id"])
             else:
                 self.unconfirmed[ev["item_id"]] = (_time.time(), 1)
+        self.rearm_from_events(d)
+
+    def rearm_from_events(self, d: date) -> None:
+        """After a restart, re-create exits for confirmed entries whose legs have not closed yet."""
+        evs = self.repo.todays_events(d)
+        for ev in evs:
+            if ev.get("kind") == "entry" and ev.get("confirmed"):
+                raw = {k: ev.get(k) for k in ("symbol", "module", "setup", "direction")}
+                raw.update({"id": ev["item_id"], "play_id": ev.get("play_id"), "kind": "entry",
+                            "quiet": bool(ev.get("variant"))})
+                self.arm_exits(Item(raw), ev)
+        for ev in evs:
+            if ev.get("kind") in ("stop", "target", "option_stop", "option_target", "time_exit") and ev.get("item_id"):
+                self.fired.add(ev["item_id"])
+                for x in self.auto_items:
+                    if x.id == ev["item_id"]:
+                        self.close_leg(x)
 
     # ------------------------------------------------------------ firing
     async def fire(self, item: Item, direction: str, level: float, price: float, at: datetime, source: str,
@@ -358,20 +442,44 @@ class Monitor:
                             if other.id != item.id and other.raw.get("pair") == grp and other.id not in self.fired:
                                 other.raw["track_only"] = True
                                 self.track_only.add(other.id)
+                    self.arm_exits(item, ev)
                 else:
                     self.unconfirmed[item.id] = (_time.time(), tries + 1)
+                    # manual 12 E: when volume is the only failed check, open a tracked no-volume-rule twin
+                    failed = {c.name for c in checks if not c.ok}
+                    shadow_id = f"{item.id}:no_rvol"
+                    if failed == {"rvol"} and shadow_id not in self.fired and not item.raw.get("variant"):
+                        self.fired.add(shadow_id)
+                        sraw = dict(item.raw, id=shadow_id, track_only=True, variant="no_rvol", quiet=True)
+                        sitem = Item(sraw)
+                        sev = core.build_event(sitem, kind="entry", at=at, level=level, price=price, source=source,
+                                               checks=[c for c in checks if c.name != "rvol"], stats=stats,
+                                               option_symbol=opt_sym, quote=quote, slippage_frac=slip,
+                                               note="Tracked: would have entered without the volume rule.",
+                                               crossed_at=crossed_at)
+                        sev["variant"] = "no_rvol"
+                        sev["rvol_note"] = next((c.note for c in checks if c.name == "rvol"), None)
+                        self.arm_exits(sitem, sev)
+                        self.repo.pending.append(sev)
+                        log.info("tracked no-rvol entry %s @ %.2f", item.symbol, price)
                     if tries:  # only the first unconfirmed cross gets a message
                         self.repo.pending.append(ev)
                         return
             else:
                 self.fired.add(item.id)
+                if item.raw.get("auto"):
+                    self.close_leg(item)
                 opt_sym, quote, note = await self.option_for(item, item.raw.get("direction", ""), at.date())
                 ev = core.build_event(item, kind=item.kind, at=at, level=level, price=price, source=source,
                                       option_symbol=opt_sym, quote=quote, slippage_frac=slip, note=note,
                                       crossed_at=crossed_at)
+                for k in ("leg", "variant", "entry_event"):
+                    if item.raw.get(k):
+                        ev[k] = item.raw[k]
             self.repo.pending.append(ev)
             log.info("%s %s %s @ %.2f (%s)", ev["kind"], item.symbol, "confirmed" if ev.get("confirmed", True) else "unconfirmed", price, source)
-            await self.tg(core.format_alert(item, ev))
+            if not item.raw.get("quiet"):
+                await self.tg(core.format_alert(item, ev))
 
     async def option_for(self, item: Item, direction: str, today: date) -> tuple[str | None, dict | None, str]:
         """Live quote for the play's contract, or pick one by rule (scalps)."""
@@ -436,6 +544,11 @@ class Monitor:
         while True:
             try:
                 await asyncio.to_thread(self.repo.pull)
+                rev = self.repo.code_rev()
+                if self.code_rev and rev and rev != self.code_rev:
+                    await asyncio.to_thread(self.repo.flush, datetime.now(ET))
+                    log.warning("monitor code changed (%s -> %s); exiting so systemd restarts it", self.code_rev[:8], rev[:8])
+                    os._exit(0)
                 feed = self.repo.load_watchlist()
                 if feed:
                     self.feed_meta = {k: v for k, v in feed.items() if k != "watch"}
@@ -503,6 +616,25 @@ class Monitor:
             except Exception:
                 log.exception("sweep error")
             await asyncio.sleep(self.s.sweep_seconds)
+
+    async def time_exit_loop(self) -> None:
+        """At 15:05 ET close every open scalp leg the monitor holds (manual 5: scalps are flat by 15:05)."""
+        while True:
+            try:
+                now = datetime.now(ET)
+                if self.market_open and now.strftime("%H:%M") >= "15:05":
+                    open_legs = {}
+                    for x in self.auto_items:
+                        if x.raw.get("module") == "scalp" and x.id not in self.fired:
+                            open_legs.setdefault((x.raw["play_id"], x.raw.get("leg")), x)
+                    for (pid, leg), x in open_legs.items():
+                        snap = await asyncio.to_thread(self.rest.stock_snapshots, [x.symbol])
+                        last = ((snap.get(x.symbol) or {}).get("latestTrade") or {}).get("p")
+                        raw = dict(x.raw, id=f"{pid}:auto:time_exit:{leg}", kind="time_exit")
+                        await self.fire(Item(raw), x.ttype, float(last or 0), float(last or 0), now, "clock")
+            except Exception:
+                log.exception("time exit error")
+            await asyncio.sleep(30)
 
     async def option_loop(self) -> None:
         """Option-premium stops and targets on open paper positions."""
@@ -591,8 +723,9 @@ class Monitor:
 
     async def run(self) -> None:
         self.new_day(datetime.now(ET).date())
+        self.code_rev = self.repo.code_rev()
         await asyncio.gather(self.clock_loop(), self.feed_loop(), self.stream_loop(),
-                             self.sweep_loop(), self.option_loop())
+                             self.sweep_loop(), self.option_loop(), self.time_exit_loop())
 
 
 # ================================================================ entry

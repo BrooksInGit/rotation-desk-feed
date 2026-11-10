@@ -369,12 +369,14 @@ def build_event(item: Item, *, kind: str, at: datetime, level: float, price: flo
 def format_alert(item: Item, ev: dict) -> str:
     arrow = "↑" if item.ttype in ("above", "orb_high") else "↓"
     head = {"entry": "TRIGGER", "stop": "STOP HIT", "target": "TARGET HIT",
-            "option_stop": "OPTION STOP HIT", "option_target": "OPTION TARGET HIT",
+            "option_stop": "OPTION STOP HIT", "option_target": "OPTION TARGET HIT", "time_exit": "15:05 CLOSE",
             "cancelled_pair": "CANCELLED"}.get(ev["kind"], ev["kind"].upper())
     t = to_et(ev["time"])
     lines = [f"{head} · {ev['symbol']} {arrow} {ev['trigger_level']:.2f} · last {ev['price']:.2f} · {t:%H:%M:%S} ET"]
     if ev.get("track_only"):
         lines[0] = "(tracking only) " + lines[0]
+    if item.raw.get("leg"):
+        lines[0] += f" · {item.raw['leg']} leg"
     if item.raw.get("play_id"):
         lines.append(f"{item.raw.get('module','')} {item.raw.get('setup','')} {str(item.raw.get('direction','')).upper()} · {item.raw['play_id']}")
     if ev["kind"] == "entry":
