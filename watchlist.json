@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-11-10T18:12:00Z",
- "source": "hourly check 2026-11-10 13:05 ET",
+ "updated_at": "2026-11-10T21:47:00Z",
+ "source": "evening run 2026-11-10",
  "slippage_frac": 0.25,
  "watch": [
   {
@@ -32,23 +32,23 @@
    "plan": "DHR 12/18 $220C ~14.45, 3 contracts (re-size at entry); option stop 7.95 / stock stop 225.50; target 264.32 (option 26.01)"
   },
   {
-   "id": "20261110-scalp-SMH-P:entry",
-   "play_id": "20261110-scalp-SMH-P",
-   "symbol": "SMH",
+   "id": "20261110-swing-MO-C:entry",
+   "play_id": "20261110-swing-MO-C",
+   "symbol": "MO",
    "kind": "entry",
    "status": "active",
-   "expires": "2026-11-10",
-   "module": "scalp",
-   "setup": "pm_break",
-   "direction": "put",
+   "expires": "2026-11-17",
+   "module": "swing",
+   "setup": "pullback",
+   "direction": "call",
    "trigger": {
-    "type": "below",
-    "price": 473.94
+    "type": "above",
+    "price": 76.71
    },
    "confirmation": {
-    "rvol_min": 1.5,
-    "vwap": "below",
-    "max_extension_pct": 0.01,
+    "rvol_min": 1,
+    "vwap": "above",
+    "max_extension_pct": 0.025,
     "spy_block_pct": 0.0075,
     "skip_first_minutes": 5,
     "rs_exempt": {
@@ -56,252 +56,8 @@
      "hard_block_pct": 0.015
     }
    },
-   "option_symbol": "",
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "SMH-20261110",
-   "plan": "[rotation lane] SMH put pm_break: below PM low 473.94; likely 11/13 ~$475P; scalp stop -28% / target +40%, close by 15:05; size 1% E risk"
-  },
-  {
-   "id": "20261110-scalp-AMD-P:entry",
-   "play_id": "20261110-scalp-AMD-P",
-   "symbol": "AMD",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-10",
-   "module": "scalp",
-   "setup": "pm_break",
-   "direction": "put",
-   "trigger": {
-    "type": "below",
-    "price": 494.0
-   },
-   "confirmation": {
-    "rvol_min": 1.5,
-    "vwap": "below",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0075,
-    "skip_first_minutes": 5,
-    "rs_exempt": {
-     "min_move_pct": 0.01,
-     "hard_block_pct": 0.015
-    }
-   },
-   "option_symbol": "",
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "AMD-20261110",
-   "plan": "[rotation lane] AMD put pm_break: below PM low 494.0; likely 11/13 ~$497.5P; scalp stop -28% / target +40%, close by 15:05; size 1% E risk"
-  },
-  {
-   "id": "20261110-scalp-AMD-P-orb:entry",
-   "play_id": "20261110-scalp-AMD-P-orb",
-   "symbol": "AMD",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-10",
-   "module": "scalp",
-   "setup": "orb",
-   "direction": "put",
-   "trigger": {
-    "type": "orb_low",
-    "minutes": 30
-   },
-   "confirmation": {
-    "rvol_min": 1.5,
-    "vwap": "below",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0075,
-    "skip_first_minutes": 5,
-    "rs_exempt": {
-     "min_move_pct": 0.01,
-     "hard_block_pct": 0.015
-    }
-   },
-   "option_symbol": "",
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "AMD-20261110",
-   "plan": "[rotation lane] AMD put orb: below 30-min OR low; likely 11/13 ~$497.5P; scalp stop -28% / target +40%, close by 15:05; size 1% E risk"
-  },
-  {
-   "id": "20261110-scalp-AVGO-P:entry",
-   "play_id": "20261110-scalp-AVGO-P",
-   "symbol": "AVGO",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-10",
-   "module": "scalp",
-   "setup": "pm_break",
-   "direction": "put",
-   "trigger": {
-    "type": "below",
-    "price": 311.27
-   },
-   "confirmation": {
-    "rvol_min": 1.5,
-    "vwap": "below",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0075,
-    "skip_first_minutes": 5,
-    "rs_exempt": {
-     "min_move_pct": 0.01,
-     "hard_block_pct": 0.015
-    }
-   },
-   "option_symbol": "",
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "AVGO-20261110",
-   "plan": "[rotation lane] AVGO put pm_break: below PM low 311.27; likely 11/13 ~$315P; scalp stop -28% / target +40%, close by 15:05; size 1% E risk"
-  },
-  {
-   "id": "20261110-scalp-AVGO-P-orb:entry",
-   "play_id": "20261110-scalp-AVGO-P-orb",
-   "symbol": "AVGO",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-10",
-   "module": "scalp",
-   "setup": "orb",
-   "direction": "put",
-   "trigger": {
-    "type": "orb_low",
-    "minutes": 30
-   },
-   "confirmation": {
-    "rvol_min": 1.5,
-    "vwap": "below",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0075,
-    "skip_first_minutes": 5,
-    "rs_exempt": {
-     "min_move_pct": 0.01,
-     "hard_block_pct": 0.015
-    }
-   },
-   "option_symbol": "",
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "AVGO-20261110",
-   "plan": "[rotation lane] AVGO put orb: below 30-min OR low; likely 11/13 ~$315P; scalp stop -28% / target +40%, close by 15:05; size 1% E risk"
-  },
-  {
-   "id": "20261110-scalp-IONQ-P:entry",
-   "play_id": "20261110-scalp-IONQ-P",
-   "symbol": "IONQ",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-10",
-   "module": "scalp",
-   "setup": "pm_break",
-   "direction": "put",
-   "trigger": {
-    "type": "below",
-    "price": 33.1
-   },
-   "confirmation": {
-    "rvol_min": 1.5,
-    "vwap": "below",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0075,
-    "skip_first_minutes": 5
-   },
-   "option_symbol": "",
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "IONQ-20261110",
-   "plan": "[momentum lane] IONQ put pm_break: below PM low 33.1; likely 11/13 ~$33P; scalp stop -28% / target +40%, close by 15:05; size 1% E risk"
-  },
-  {
-   "id": "20261110-scalp-IONQ-P-orb:entry",
-   "play_id": "20261110-scalp-IONQ-P-orb",
-   "symbol": "IONQ",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-10",
-   "module": "scalp",
-   "setup": "orb",
-   "direction": "put",
-   "trigger": {
-    "type": "orb_low",
-    "minutes": 30
-   },
-   "confirmation": {
-    "rvol_min": 1.5,
-    "vwap": "below",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0075,
-    "skip_first_minutes": 5
-   },
-   "option_symbol": "",
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "IONQ-20261110",
-   "plan": "[momentum lane] IONQ put orb: below 30-min OR low; likely 11/13 ~$33P; scalp stop -28% / target +40%, close by 15:05; size 1% E risk"
+   "option_symbol": "MO261218C00075000",
+   "plan": "MO 12/18 $75C ~3.14, 18 contracts (re-size at entry); option stop 1.73 / stock stop 74.70; target 80.73 (option 5.65)"
   }
  ]
 }
