@@ -8,7 +8,8 @@ and writes the event back to the feed repo so the desk can use it as the paper
 fill. A 30-second sweep of 1-minute bars backs up the stream, so a dropped
 connection never means a missed level.
 
-It never trades. It reads prices, sends messages, and commits event files.
+It never trades from this file. When monitor/exec.env holds Alpaca PAPER keys, executor.py places share
+bracket orders for confirmed desk entries in that paper account (see executor.py for the safety limits).
 
 Settings come from environment variables; see .env.example.
 """
@@ -29,6 +30,7 @@ import requests
 import websockets
 
 import desk_core as core
+from executor import Executor
 from desk_core import ET, Item
 
 log = logging.getLogger("desk-monitor")
@@ -285,6 +287,7 @@ class Monitor:
         self.code_rev: str | None = None
         self.vwap: dict[str, float] = {}                 # session VWAP per symbol, refreshed by the sweep
         self.touched: dict[str, datetime] = {}           # reclaim items: when price first traded into the zone
+        self.exec = Executor(Path(__file__).resolve().parent, self.tg, s.tg_token, s.tg_chat, self.repo.pending.append)
 
     # ------------------------------------------------------------ helpers
     def all_items(self) -> list[Item]:
@@ -393,6 +396,8 @@ class Monitor:
         for ev in self.repo.todays_events(d):
             if ev.get("track_only"):
                 self.track_only.add(ev["item_id"])
+            if not ev.get("item_id"):
+                continue  # order / fill records from the executor
             if ev.get("kind") != "entry" or ev.get("confirmed"):
                 self.fired.add(ev["item_id"])
             else:
@@ -457,6 +462,8 @@ class Monitor:
                                 other.raw["track_only"] = True
                                 self.track_only.add(other.id)
                     self.arm_exits(item, ev)
+                    if not (item.raw.get("track_only") or item.raw.get("quiet") or item.raw.get("variant")):
+                        asyncio.get_running_loop().call_later(0.5, lambda r=dict(item.raw), e=ev: asyncio.ensure_future(self.exec.enter(r, e)))
                 else:
                     self.unconfirmed[item.id] = (_time.time(), tries + 1)
                     # manual 12 E: when volume is the only failed check, open a tracked no-volume-rule twin
@@ -569,6 +576,7 @@ class Monitor:
                 feed = self.repo.load_watchlist()
                 if feed:
                     self.feed_meta = {k: v for k, v in feed.items() if k != "watch"}
+                    self.exec.update_params(self.feed_meta)
                     self.items = core.active_items(feed, self.today)
                     for it in self.items:
                         if it.id in self.track_only:
@@ -657,6 +665,8 @@ class Monitor:
                         last = ((snap.get(x.symbol) or {}).get("latestTrade") or {}).get("p")
                         raw = dict(x.raw, id=f"{pid}:auto:time_exit:{leg}", kind="time_exit")
                         await self.fire(Item(raw), x.ttype, float(last or 0), float(last or 0), now, "clock")
+                    scalps = {x.symbol for x in self.auto_items if x.raw.get("module") == "scalp" and not x.raw.get("track_only")}
+                    await self.exec.flatten_scalps(self.today, scalps)
             except Exception:
                 log.exception("time exit error")
             await asyncio.sleep(30)
@@ -749,8 +759,9 @@ class Monitor:
     async def run(self) -> None:
         self.new_day(datetime.now(ET).date())
         self.code_rev = self.repo.code_rev()
+        self.exec.loop = asyncio.get_running_loop()
         await asyncio.gather(self.clock_loop(), self.feed_loop(), self.stream_loop(),
-                             self.sweep_loop(), self.option_loop(), self.time_exit_loop())
+                             self.sweep_loop(), self.option_loop(), self.time_exit_loop(), self.exec.command_loop())
 
 
 # ================================================================ entry

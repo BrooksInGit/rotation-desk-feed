@@ -141,6 +141,34 @@ def test_reclaim_zone_and_level():
     assert not c.in_window(datetime(2026, 11, 9, 11, 30, tzinfo=ET), ["09:45", "11:30"])
 
 
+def test_executor_sizing_and_bracket():
+    import executor as x
+    # $2,000 equity, 0.5% risk = $10; 1% stop on a $100 stock = $1/share -> 10 shares; 50% cap = 10 shares
+    assert x.size_order(2000, 4000, 100.0, 99.0, 0.005, 0.5) == 10
+    # tight stop: risk allows 100 shares but the 50% position cap allows 10
+    assert x.size_order(2000, 4000, 100.0, 99.9, 0.005, 0.5) == 10
+    assert x.size_order(2000, 4000, 900.0, 891.0, 0.005, 0.5) == 1
+    assert x.size_order(2000, 100, 100.0, 99.0, 0.005, 0.5) == 0      # no buying power
+    assert x.size_order(2000, 4000, 100.0, 100.0, 0.005, 0.5) == 0    # no stop distance
+    b = x.bracket_body("AMD", "buy", 3, 250.0, 247.5, 255.0, "day", 0.002, "rd-x")
+    assert b["limit_price"] == "250.5" and b["order_class"] == "bracket"
+    assert b["stop_loss"]["stop_price"] == "247.5" and b["take_profit"]["limit_price"] == "255.0"
+    s = x.bracket_body("AMD", "sell", 3, 250.0, 252.5, 245.0, "day", 0.002, "rd-x")
+    assert s["limit_price"] == "249.5"
+
+
+def test_executor_off_without_paper_keys(tmp_path=None):
+    import tempfile
+    from pathlib import Path
+    import executor as x
+    d = Path(tempfile.mkdtemp())
+    assert not x.Executor(d, None, "t", "1", lambda e: None).enabled
+    (d / "exec.env").write_text("EXEC_MODE=live\nEXEC_KEY_ID=a\nEXEC_SECRET_KEY=b\n")
+    assert not x.Executor(d, None, "t", "1", lambda e: None).enabled   # live is refused
+    (d / "exec.env").write_text("EXEC_MODE=paper\nEXEC_KEY_ID=a\nEXEC_SECRET_KEY=b\n")
+    assert x.Executor(d, None, "t", "1", lambda e: None).enabled
+
+
 if __name__ == "__main__":
     for name, fn in list(globals().items()):
         if name.startswith("test_"):
