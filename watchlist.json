@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-11T15:12:00Z",
+ "updated_at": "2026-11-11T15:13:00Z",
  "source": "hourly check 2026-11-11 10:05 ET",
  "slippage_frac": 0.25,
  "exit_rules": {
@@ -412,42 +412,6 @@
    },
    "pair": "SMCI-20261111",
    "plan": "[momentum lane] SMCI call pm_break: above PM high 29.86; likely 11/13 ~$30C; scalp stop -28% / target +40%, close by 15:05; size 1% E risk"
-  },
-  {
-   "id": "20261111-scalp-SMCI-C-orb:entry",
-   "play_id": "20261111-scalp-SMCI-C-orb",
-   "symbol": "SMCI",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-11",
-   "module": "scalp",
-   "setup": "orb",
-   "direction": "call",
-   "trigger": {
-    "type": "above",
-    "price": 29.8
-   },
-   "confirmation": {
-    "rvol_min": 1.5,
-    "vwap": "above",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0075,
-    "skip_first_minutes": 5
-   },
-   "option_symbol": "",
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "SMCI-20261111",
-   "plan": "[momentum lane] SMCI call orb: above 30-min OR high; likely 11/13 ~$30C; scalp stop -28% / target +40%, close by 15:05; size 1% E risk"
   },
   {
    "id": "20261111-scalp-INTC-C:entry",
