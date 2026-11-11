@@ -1,0 +1,29 @@
+14:59:46 universe 5673
+14:59:56 daily batch 0 / 57
+15:00:30 daily batch 10 / 57
+15:01:13 daily batch 20 / 57
+15:01:45 daily batch 30 / 57
+15:02:25 daily batch 40 / 57
+15:02:56 daily batch 50 / 57
+15:03:21 matrix (5673, 781) start index 63
+15:03:24 MB signals 68630
+15:03:26 MB|close|3d n 64744 avgR -0.0 avg% -0.072 base% 0.055 top2 avgR -0.055
+15:03:28 MB|close|5d n 64744 avgR -0.005 avg% -0.142 base% 0.075 top2 avgR -0.077
+15:03:30 MB|open|3d n 62421 avgR -0.022 avg% -0.207 base% 0.066 top2 avgR -0.102
+15:03:34 MB|open|5d n 62421 avgR -0.026 avg% -0.238 base% 0.072 top2 avgR -0.079
+15:03:34 MB_q signals 13287
+15:03:35 MB_q|close|3d n 12246 avgR 0.004 avg% 0.044 base% 0.11 top2 avgR 0.009
+15:03:35 MB_q|close|5d n 12246 avgR 0.025 avg% 0.142 base% 0.184 top2 avgR 0.007
+15:03:36 MB_q|open|3d n 12051 avgR -0.008 avg% -0.034 base% 0.105 top2 avgR 0.037
+15:03:38 MB_q|open|5d n 12051 avgR -0.012 avg% -0.023 base% 0.066 top2 avgR 0.069
+15:03:38 EP signals 2454
+15:03:39 EP|close|10d n 2328 avgR -0.009 avg% -1.109 base% 0.196 top2 avgR -0.017
+15:03:39 EP|close|20d n 2328 avgR -0.005 avg% -1.607 base% 0.444 top2 avgR -0.067
+15:03:40 EP|open|10d n 2283 avgR -0.012 avg% -1.55 base% 0.147 top2 avgR -0.078
+15:03:41 EP|open|20d n 2283 avgR -0.036 avg% -1.855 base% 0.341 top2 avgR -0.124
+15:03:41 EP8 signals 1465
+15:03:41 EP8|close|10d n 1401 avgR -0.044 avg% -1.758 base% 0.22 top2 avgR -0.048
+15:03:41 EP8|close|20d n 1401 avgR -0.042 avg% -2.529 base% 0.438 top2 avgR -0.084
+15:03:42 EP8|open|10d n 1379 avgR -0.086 avg% -2.559 base% 0.156 top2 avgR -0.116
+15:03:42 EP8|open|20d n 1379 avgR -0.09 avg% -2.893 base% 0.32 top2 avgR -0.137
+15:03:44 done
