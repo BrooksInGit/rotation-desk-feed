@@ -4,3 +4,4 @@ __pycache__/
 *.pyc
 monitor/exec.env
 monitor/exec.halt
+research/swing_oos/daily.npz
