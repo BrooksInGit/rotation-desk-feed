@@ -129,3 +129,18 @@ if __name__ == "__main__":
         if name.startswith("test_"):
             fn()
             print("ok", name)
+
+
+def test_reclaim_zone_and_level():
+    # AMD 11/11 shape: open 543, flush into the 525 shelf by 9:45-9:50, reclaim VWAP after
+    path = [543, 532, 528, 524, 523.2, 526, 530, 534, 539, 543]
+    bars = [bar(9, 30 + 5 * i, p + 1, p + 1.5, p - 1.2, p, v=500000) for i, p in enumerate(path)]
+    zone = [522.4, 527.6]
+    t = c.zone_touch(bars, zone, ["09:45", "11:30"], D)
+    assert (t.hour, t.minute) == (9, 45)  # the 9:35/9:40 bars are outside the window
+    assert c.zone_touch(bars, zone, ["10:30", "11:30"], D) is None
+    vwap = c.session_stats(bars, D).vwap
+    assert c.reclaim_level("above", zone, vwap) == max(vwap, 527.6)
+    assert c.reclaim_level("below", [560, 565], 533.0) == 533.0
+    assert c.in_window(datetime(2026, 11, 9, 11, 29, tzinfo=ET), ["09:45", "11:30"])
+    assert not c.in_window(datetime(2026, 11, 9, 11, 30, tzinfo=ET), ["09:45", "11:30"])

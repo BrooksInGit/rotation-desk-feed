@@ -43,3 +43,9 @@ Read by the monitor every 30 seconds. Only active items are watched.
 - On every confirmed entry the monitor arms its own exits: `<play_id>:auto:option_stop|option_target` (leg `option`) and `<play_id>:auto:stop|target` (leg `shares`), and at 15:05 ET closes open scalp legs with `time_exit` events. Exit events carry `leg`, `entry_event` and, on the entry event, `exits` (the armed levels). Desk-published exit items for a play the monitor holds are ignored.
 - When an entry fails only the volume check, the monitor records a tracked twin: an `entry` event with `item_id` `<id>:no_rvol`, `variant: "no_rvol"`, `track_only: true`, `confirmed: true`, and arms its exits under play id `<play_id>-no_rvol`. These send no Telegram alerts.
 - The monitor restarts itself when anything under `monitor/` changes on `main`.
+
+## Added 2026-11-11: pullback-to-level reclaim (manual 15)
+`trigger: {"type": "reclaim_above" | "reclaim_below", "zone": [lo, hi], "window": ["09:45", "11:30"]}`.
+The item arms when price first trades into the zone inside the window, then triggers when price trades back
+above max(session VWAP, zone high) (calls) or below min(session VWAP, zone low) (puts) while still inside the window.
+Give it a `stock_stop` just beyond the zone. Set `track_only: true` while the setup is being measured.

@@ -120,6 +120,42 @@ def opening_range(bars: list[dict], d: date, minutes: int) -> tuple[float, float
     return max(b["h"] for b in inside), min(b["l"] for b in inside)
 
 
+# ---------------------------------------------------------------- pullback-to-level reclaim (manual 15)
+RECLAIM_TYPES = ("reclaim_above", "reclaim_below")
+
+
+def _hm(s: str) -> tuple[int, int]:
+    h, m = s.split(":")
+    return int(h), int(m)
+
+
+def in_window(t: datetime, window: list[str] | None) -> bool:
+    if not window:
+        return True
+    t = t.astimezone(ET)
+    return _hm(window[0]) <= (t.hour, t.minute) < _hm(window[1])
+
+
+def zone_touch(bars: list[dict], zone: list[float], window: list[str] | None, d: date) -> datetime | None:
+    """First regular-session bar inside the window that traded into the zone [lo, hi]."""
+    lo, hi = sorted(float(z) for z in zone)
+    for b in bars:
+        t = to_et(b["t"])
+        if t.date() != d or not in_rth(t) or not in_window(t, window):
+            continue
+        if b["l"] <= hi and b["h"] >= lo:
+            return t
+    return None
+
+
+def reclaim_level(direction: str, zone: list[float], vwap: float | None) -> float | None:
+    """Calls: price must get back above both VWAP and the top of the zone; puts mirror it."""
+    if vwap is None:
+        return None
+    lo, hi = sorted(float(z) for z in zone)
+    return max(vwap, hi) if direction == "above" else min(vwap, lo)
+
+
 def resolve_level(item: Item, orb: tuple[float, float] | None) -> tuple[str, float] | None:
     """Return (direction, level) for a stock-price item, resolving ORB items."""
     t = item.ttype
@@ -367,7 +403,7 @@ def build_event(item: Item, *, kind: str, at: datetime, level: float, price: flo
 
 
 def format_alert(item: Item, ev: dict) -> str:
-    arrow = "↑" if item.ttype in ("above", "orb_high") else "↓"
+    arrow = "↑" if item.ttype in ("above", "orb_high", "reclaim_above") else "↓"
     head = {"entry": "TRIGGER", "stop": "STOP HIT", "target": "TARGET HIT",
             "option_stop": "OPTION STOP HIT", "option_target": "OPTION TARGET HIT", "time_exit": "15:05 CLOSE",
             "cancelled_pair": "CANCELLED"}.get(ev["kind"], ev["kind"].upper())

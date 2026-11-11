@@ -283,6 +283,8 @@ class Monitor:
         self.auto_items: list[Item] = []                 # exits armed by the monitor itself on confirmed entries
         self.auto_plays: set[str] = set()                # play ids whose exits the monitor holds
         self.code_rev: str | None = None
+        self.vwap: dict[str, float] = {}                 # session VWAP per symbol, refreshed by the sweep
+        self.touched: dict[str, datetime] = {}           # reclaim items: when price first traded into the zone
 
     # ------------------------------------------------------------ helpers
     def all_items(self) -> list[Item]:
@@ -351,6 +353,13 @@ class Monitor:
         return {i.symbol for i in self.stock_items()} | ({"SPY"} if self.stock_items() else set())
 
     def level_for(self, item: Item) -> tuple[str, float] | None:
+        if item.ttype in core.RECLAIM_TYPES:
+            tr = item.trigger
+            if item.id not in self.touched or not core.in_window(datetime.now(ET), tr.get("window")):
+                return None
+            direction = "above" if item.ttype == "reclaim_above" else "below"
+            lvl = core.reclaim_level(direction, tr.get("zone", []), self.vwap.get(item.symbol))
+            return (direction, lvl) if lvl else None
         orb = None
         if item.ttype in ("orb_high", "orb_low"):
             orb = self.orb.get((item.symbol, int(item.trigger.get("minutes", 30))))
@@ -377,6 +386,8 @@ class Monitor:
         self.auto_plays.clear()
         self.bars.clear()
         self.orb.clear()
+        self.vwap.clear()
+        self.touched.clear()
         self.spy_change = None
         # never re-alert something already recorded today (e.g. after a restart)
         for ev in self.repo.todays_events(d):
@@ -519,6 +530,9 @@ class Monitor:
             return
         for sym in syms:
             self.bars[sym] = data.get(sym, [])
+            st = core.session_stats(self.bars[sym], self.today)
+            if st.vwap:
+                self.vwap[sym] = st.vwap
         spy = self.bars.get("SPY")
         if spy:
             prev = await asyncio.to_thread(self.rest.prev_close, "SPY", self.today)
@@ -597,6 +611,12 @@ class Monitor:
                     syms = sorted(self.symbols())
                     await self.refresh_bars(syms)
                     for it in self.stock_items():
+                        if it.ttype in core.RECLAIM_TYPES and it.id not in self.touched:
+                            t0 = core.zone_touch(self.bars.get(it.symbol, []), it.trigger.get("zone", []),
+                                                 it.trigger.get("window"), self.today)
+                            if t0 and (not it.armed_after or t0 >= it.armed_after - timedelta(minutes=1)):
+                                self.touched[it.id] = t0
+                                log.info("reclaim zone touched %s at %s", it.symbol, t0.strftime("%H:%M"))
                         if it.ttype in ("orb_high", "orb_low"):
                             m = int(it.trigger.get("minutes", 30))
                             r = core.opening_range(self.bars.get(it.symbol, []), self.today, m)
@@ -608,6 +628,8 @@ class Monitor:
                             continue
                         direction, level = lv
                         after = it.armed_after
+                        if it.ttype in core.RECLAIM_TYPES:
+                            after = self.touched[it.id] + timedelta(minutes=1)
                         if it.ttype in ("orb_high", "orb_low") or (it.raw.get("setup") == "orb" and not after):
                             after = core.session_open(self.today) + timedelta(minutes=int(it.trigger.get("minutes", 30)))
                         b = core.first_bar_cross(direction, level, self.bars.get(it.symbol, []), after)
