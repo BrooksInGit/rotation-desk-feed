@@ -124,11 +124,6 @@ def test_active_items_filters():
     assert [i.symbol for i in c.active_items(feed, D)] == ["C"]
 
 
-if __name__ == "__main__":
-    for name, fn in list(globals().items()):
-        if name.startswith("test_"):
-            fn()
-            print("ok", name)
 
 
 def test_reclaim_zone_and_level():
@@ -144,3 +139,10 @@ def test_reclaim_zone_and_level():
     assert c.reclaim_level("below", [560, 565], 533.0) == 533.0
     assert c.in_window(datetime(2026, 11, 9, 11, 29, tzinfo=ET), ["09:45", "11:30"])
     assert not c.in_window(datetime(2026, 11, 9, 11, 30, tzinfo=ET), ["09:45", "11:30"])
+
+
+if __name__ == "__main__":
+    for name, fn in list(globals().items()):
+        if name.startswith("test_"):
+            fn()
+            print("ok", name)
