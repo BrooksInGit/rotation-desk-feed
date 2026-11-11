@@ -246,6 +246,41 @@ class Executor:
                      "time": datetime.now().astimezone().isoformat(), "account": "alpaca-paper"})
         await self.tg_send("PAPER 15:05 CLOSE: " + ", ".join(closed))
 
+    # ------------------------------------------------------------ dashboard snapshot
+    def snapshot(self) -> dict:
+        """Account, positions, recent orders and daily equity history for the dashboard (written to account.json)."""
+        a = self.account()
+        pos = self.positions()
+        hist = self._req("GET", "/v2/account/portfolio/history", params={"period": "3M", "timeframe": "1D"})
+        orders = self._req("GET", "/v2/orders", params={"status": "all", "limit": 100, "nested": "true",
+                                                         "direction": "desc"})
+        keep_o = ("symbol", "side", "qty", "filled_qty", "filled_avg_price", "limit_price", "stop_price", "type",
+                  "status", "order_class", "client_order_id", "submitted_at", "filled_at", "canceled_at")
+        def slim(o):
+            d = {k: o.get(k) for k in keep_o}
+            if o.get("legs"):
+                d["legs"] = [{k: l.get(k) for k in keep_o} for l in o["legs"]]
+            return d
+        keep_p = ("symbol", "qty", "side", "avg_entry_price", "current_price", "market_value", "cost_basis",
+                  "unrealized_pl", "unrealized_plpc", "unrealized_intraday_pl", "change_today")
+        curve = [{"t": datetime.fromtimestamp(ts).date().isoformat(), "equity": eq}
+                 for ts, eq in zip(hist.get("timestamp") or [], hist.get("equity") or []) if eq is not None]
+        return {
+            "as_of": datetime.now().astimezone().isoformat(),
+            "account": "alpaca-paper",
+            "account_last4": str(a.get("account_number", ""))[-4:],
+            "equity": float(a["equity"]), "last_equity": float(a.get("last_equity") or a["equity"]),
+            "cash": float(a.get("cash") or 0), "buying_power": float(a.get("buying_power") or 0),
+            "long_market_value": float(a.get("long_market_value") or 0),
+            "short_market_value": float(a.get("short_market_value") or 0),
+            "halted": self.halted,
+            "limits": {k: self.p[k] for k in ("max_notional_frac", "max_positions", "daily_loss_pct", "scalp_last_entry")}
+                      | {"scalp_risk_pct": self.p["scalp"]["risk_pct"], "swing_risk_pct": self.p["swing"]["risk_pct"]},
+            "positions": [{k: p.get(k) for k in keep_p} for p in pos],
+            "orders": [slim(o) for o in orders if str(o.get("client_order_id", "")).startswith("rd-")],
+            "equity_curve": curve,
+        }
+
     # ------------------------------------------------------------ telegram commands
     async def command_loop(self) -> None:
         if not self.enabled:

@@ -22,6 +22,7 @@ import os
 import random
 import subprocess
 import sys
+import threading
 import time as _time
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
@@ -178,6 +179,7 @@ class Repo:
         self.s = s
         self.pending: list[dict] = []
         self.status: dict = {}
+        self.lock = threading.Lock()
 
     def _git(self, *args: str, check: bool = True) -> subprocess.CompletedProcess:
         return subprocess.run(["git", "-C", str(self.s.repo), *args], check=check,
@@ -216,9 +218,13 @@ class Repo:
                 pass
         return out
 
-    def flush(self, now: datetime) -> None:
+    def flush(self, now: datetime, force: bool = False) -> None:
+        with self.lock:
+            self._flush(now, force)
+
+    def _flush(self, now: datetime, force: bool) -> None:
         """Append pending events, refresh status.json, commit and push."""
-        changed = False
+        changed = force
         if self.pending:
             by_day: dict[date, list[dict]] = {}
             for ev in self.pending:
@@ -246,7 +252,7 @@ class Repo:
         if not changed or not self.s.git_push:
             return
         try:
-            self._git("add", "events", "status.json")
+            self._git("add", *[x for x in ("events", "status.json", "account.json") if (self.s.repo / x).exists()])
             if self._git("diff", "--cached", "--quiet", check=False).returncode == 0:
                 return
             self._git("-c", "user.name=desk-monitor", "-c", "user.email=desk-monitor@localhost",
@@ -671,6 +677,21 @@ class Monitor:
                 log.exception("time exit error")
             await asyncio.sleep(30)
 
+    async def account_loop(self) -> None:
+        """Every 10 minutes in market hours (hourly otherwise) write the paper account snapshot to account.json."""
+        last = 0.0
+        while True:
+            try:
+                every = 600 if self.market_open else 3600
+                if self.exec.enabled and _time.time() - last >= every:
+                    snap = await asyncio.to_thread(self.exec.snapshot)
+                    (self.s.repo / "account.json").write_text(json.dumps(snap, indent=1) + "\n")
+                    last = _time.time()
+                    await asyncio.to_thread(self.repo.flush, datetime.now(ET), True)
+            except Exception:
+                log.exception("account snapshot error")
+            await asyncio.sleep(60)
+
     async def option_loop(self) -> None:
         """Option-premium stops and targets on open paper positions."""
         while True:
@@ -761,7 +782,8 @@ class Monitor:
         self.code_rev = self.repo.code_rev()
         self.exec.loop = asyncio.get_running_loop()
         await asyncio.gather(self.clock_loop(), self.feed_loop(), self.stream_loop(),
-                             self.sweep_loop(), self.option_loop(), self.time_exit_loop(), self.exec.command_loop())
+                             self.sweep_loop(), self.option_loop(), self.time_exit_loop(), self.exec.command_loop(),
+                             self.account_loop())
 
 
 # ================================================================ entry
