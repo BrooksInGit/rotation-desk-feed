@@ -412,6 +412,9 @@ class Monitor:
             if item.id in self.fired:
                 return
             slip = float(self.feed_meta.get("slippage_frac", 0.25))
+            if item.kind in core.ENTRY_KINDS and ((direction == "above" and price < level) or
+                                                   (direction == "below" and price > level)):
+                return  # price is back on the wrong side of the level: no trigger now (2026-11-11 fix)
             if item.kind in core.ENTRY_KINDS:
                 last, tries = self.unconfirmed.get(item.id, (0.0, 0))
                 if tries and _time.time() - last < 300:
@@ -605,7 +608,7 @@ class Monitor:
                             continue
                         direction, level = lv
                         after = it.armed_after
-                        if it.ttype in ("orb_high", "orb_low"):
+                        if it.ttype in ("orb_high", "orb_low") or (it.raw.get("setup") == "orb" and not after):
                             after = core.session_open(self.today) + timedelta(minutes=int(it.trigger.get("minutes", 30)))
                         b = core.first_bar_cross(direction, level, self.bars.get(it.symbol, []), after)
                         if b:
