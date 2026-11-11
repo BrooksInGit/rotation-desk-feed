@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-11-11T17:12:00Z",
- "source": "hourly check 2026-11-11 12:05 ET",
+ "updated_at": "2026-11-11T18:10:00Z",
+ "source": "hourly check 2026-11-11 13:05 ET",
  "slippage_frac": 0.25,
  "exit_rules": {
   "scalp": {
@@ -76,79 +76,6 @@
    "plan": "MO 12/18 $75C ~3.14, 18 contracts (re-size at entry); option stop 1.73 / stock stop 74.70; target 80.73 (option 5.65)",
    "stock_stop": 74.7,
    "target_stock": 80.73
-  },
-  {
-   "id": "20261111-scalp-IWM-C:entry",
-   "play_id": "20261111-scalp-IWM-C",
-   "symbol": "IWM",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-11",
-   "module": "scalp",
-   "setup": "pm_break",
-   "direction": "call",
-   "trigger": {
-    "type": "above",
-    "price": 283.32
-   },
-   "confirmation": {
-    "rvol_min": 1.5,
-    "vwap": "above",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0075,
-    "skip_first_minutes": 5
-   },
-   "option_symbol": "",
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "IWM-20261111",
-   "plan": "[rotation lane] IWM call pm_break: above PM high 283.32; likely 11/13 ~$283C; scalp stop -28% / target +40%, close by 15:05; size 1% E risk"
-  },
-  {
-   "id": "20261111-scalp-IWM-C-orb:entry",
-   "play_id": "20261111-scalp-IWM-C-orb",
-   "symbol": "IWM",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-11",
-   "module": "scalp",
-   "setup": "orb",
-   "direction": "call",
-   "trigger": {
-    "type": "above",
-    "price": 283.075
-   },
-   "confirmation": {
-    "rvol_min": 1.5,
-    "vwap": "above",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0075,
-    "skip_first_minutes": 5
-   },
-   "option_symbol": "",
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "IWM-20261111",
-   "plan": "[rotation lane] IWM call orb: above 30-min OR high; likely 11/13 ~$283C; scalp stop -28% / target +40%, close by 15:05; size 1% E risk",
-   "armed_after": "2026-11-11T15:00:00Z"
   },
   {
    "id": "20261111-scalp-COST-C-orb:entry",
