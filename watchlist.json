@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-11-11T15:13:00Z",
- "source": "hourly check 2026-11-11 10:05 ET",
+ "updated_at": "2026-11-11T16:12:00Z",
+ "source": "hourly check 2026-11-11 11:05 ET",
  "slippage_frac": 0.25,
  "exit_rules": {
   "scalp": {
@@ -78,78 +78,6 @@
    "target_stock": 80.73
   },
   {
-   "id": "20261111-scalp-SPY-C-orb:entry",
-   "play_id": "20261111-scalp-SPY-C-orb",
-   "symbol": "SPY",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-11",
-   "module": "scalp",
-   "setup": "orb",
-   "direction": "call",
-   "trigger": {
-    "type": "above",
-    "price": 757.93
-   },
-   "confirmation": {
-    "rvol_min": 1.5,
-    "vwap": "above",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0075,
-    "skip_first_minutes": 5
-   },
-   "option_symbol": "",
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "SPY-20261111",
-   "plan": "[rotation lane] SPY call orb: above 30-min OR high; likely 11/13 ~$757C; scalp stop -28% / target +40%, close by 15:05; size 1% E risk"
-  },
-  {
-   "id": "20261111-scalp-QQQ-C-orb:entry",
-   "play_id": "20261111-scalp-QQQ-C-orb",
-   "symbol": "QQQ",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-11",
-   "module": "scalp",
-   "setup": "orb",
-   "direction": "call",
-   "trigger": {
-    "type": "above",
-    "price": 689.02
-   },
-   "confirmation": {
-    "rvol_min": 1.5,
-    "vwap": "above",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0075,
-    "skip_first_minutes": 5
-   },
-   "option_symbol": "",
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "QQQ-20261111",
-   "plan": "[rotation lane] QQQ call orb: above 30-min OR high; likely 11/13 ~$688C; scalp stop -28% / target +40%, close by 15:05; size 1% E risk"
-  },
-  {
    "id": "20261111-scalp-IWM-C:entry",
    "play_id": "20261111-scalp-IWM-C",
    "symbol": "IWM",
@@ -219,87 +147,8 @@
     "max_spread_pct": 0.05
    },
    "pair": "IWM-20261111",
-   "plan": "[rotation lane] IWM call orb: above 30-min OR high; likely 11/13 ~$283C; scalp stop -28% / target +40%, close by 15:05; size 1% E risk"
-  },
-  {
-   "id": "20261111-scalp-HOOD-C-orb:entry",
-   "play_id": "20261111-scalp-HOOD-C-orb",
-   "symbol": "HOOD",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-11",
-   "module": "scalp",
-   "setup": "orb",
-   "direction": "call",
-   "trigger": {
-    "type": "above",
-    "price": 84.43
-   },
-   "confirmation": {
-    "rvol_min": 1.5,
-    "vwap": "above",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0075,
-    "skip_first_minutes": 5,
-    "rs_exempt": {
-     "min_move_pct": 0.01,
-     "hard_block_pct": 0.015
-    }
-   },
-   "option_symbol": "",
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "HOOD-20261111",
-   "plan": "[rotation lane] HOOD call orb: above 30-min OR high; likely 11/13 ~$84C; scalp stop -28% / target +40%, close by 15:05; size 1% E risk"
-  },
-  {
-   "id": "20261111-scalp-GS-C-orb:entry",
-   "play_id": "20261111-scalp-GS-C-orb",
-   "symbol": "GS",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-11",
-   "module": "scalp",
-   "setup": "orb",
-   "direction": "call",
-   "trigger": {
-    "type": "above",
-    "price": 928.38
-   },
-   "confirmation": {
-    "rvol_min": 1.5,
-    "vwap": "above",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0075,
-    "skip_first_minutes": 5,
-    "rs_exempt": {
-     "min_move_pct": 0.01,
-     "hard_block_pct": 0.015
-    }
-   },
-   "option_symbol": "",
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "GS-20261111",
-   "plan": "[rotation lane] GS call orb: above 30-min OR high; likely 11/13 ~$925C; scalp stop -28% / target +40%, close by 15:05; size 1% E risk"
+   "plan": "[rotation lane] IWM call orb: above 30-min OR high; likely 11/13 ~$283C; scalp stop -28% / target +40%, close by 15:05; size 1% E risk",
+   "armed_after": "2026-11-11T15:00:00Z"
   },
   {
    "id": "20261111-scalp-COST-C-orb:entry",
@@ -339,115 +188,8 @@
     "max_spread_pct": 0.05
    },
    "pair": "COST-20261111",
-   "plan": "[rotation lane] COST call orb: above 30-min OR high; likely 11/13 ~$1085C; scalp stop -28% / target +40%, close by 15:05; size 1% E risk"
-  },
-  {
-   "id": "20261111-scalp-ARM-C:entry",
-   "play_id": "20261111-scalp-ARM-C",
-   "symbol": "ARM",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-11",
-   "module": "scalp",
-   "setup": "pm_break",
-   "direction": "call",
-   "trigger": {
-    "type": "above",
-    "price": 194.59
-   },
-   "confirmation": {
-    "rvol_min": 1.5,
-    "vwap": "above",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0075,
-    "skip_first_minutes": 5
-   },
-   "option_symbol": "",
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "ARM-20261111",
-   "plan": "[momentum lane] ARM call pm_break: above PM high 194.59; likely 11/13 ~$195C; scalp stop -28% / target +40%, close by 15:05; size 1% E risk"
-  },
-  {
-   "id": "20261111-scalp-SMCI-C:entry",
-   "play_id": "20261111-scalp-SMCI-C",
-   "symbol": "SMCI",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-11",
-   "module": "scalp",
-   "setup": "pm_break",
-   "direction": "call",
-   "trigger": {
-    "type": "above",
-    "price": 29.86
-   },
-   "confirmation": {
-    "rvol_min": 1.5,
-    "vwap": "above",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0075,
-    "skip_first_minutes": 5
-   },
-   "option_symbol": "",
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "SMCI-20261111",
-   "plan": "[momentum lane] SMCI call pm_break: above PM high 29.86; likely 11/13 ~$30C; scalp stop -28% / target +40%, close by 15:05; size 1% E risk"
-  },
-  {
-   "id": "20261111-scalp-INTC-C:entry",
-   "play_id": "20261111-scalp-INTC-C",
-   "symbol": "INTC",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-11",
-   "module": "scalp",
-   "setup": "pm_break",
-   "direction": "call",
-   "trigger": {
-    "type": "above",
-    "price": 62.55
-   },
-   "confirmation": {
-    "rvol_min": 1.5,
-    "vwap": "above",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0075,
-    "skip_first_minutes": 5
-   },
-   "option_symbol": "",
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "INTC-20261111",
-   "plan": "[momentum lane] INTC call pm_break: above PM high 62.55; likely 11/13 ~$62.5C; scalp stop -28% / target +40%, close by 15:05; size 1% E risk"
+   "plan": "[rotation lane] COST call orb: above 30-min OR high; likely 11/13 ~$1085C; scalp stop -28% / target +40%, close by 15:05; size 1% E risk",
+   "armed_after": "2026-11-11T15:00:00Z"
   }
  ]
 }
