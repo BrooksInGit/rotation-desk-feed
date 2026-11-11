@@ -1,162 +1,162 @@
 {
- "updated_at": "2026-11-11T19:10:00Z",
- "source": "hourly check 2026-11-11 14:05 ET",
- "slippage_frac": 0.25,
- "exit_rules": {
-  "scalp": {
-   "option_stop_pct": 0.28,
-   "option_target_mult": 1.4,
-   "stock_stop_pct": 0.01,
-   "stock_target_r": 2.0
-  },
-  "swing": {
-   "option_stop_pct": 0.45,
-   "option_target_mult": 1.8,
-   "stock_stop_pct": 0.03,
-   "stock_target_r": 2.0
-  }
- },
- "watch": [
-  {
-   "id": "20261105-swing-DHR-C:entry",
-   "play_id": "20261105-swing-DHR-C",
-   "symbol": "DHR",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-12",
-   "module": "swing",
-   "setup": "pullback",
-   "direction": "call",
-   "trigger": {
-    "type": "above",
-    "price": 238.44
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "above",
-    "max_extension_pct": 0.025,
-    "spy_block_pct": 0.0075,
-    "skip_first_minutes": 5,
-    "rs_exempt": {
-     "min_move_pct": 0.01,
-     "hard_block_pct": 0.015
+  "updated_at": "2026-11-11T20:06:00Z",
+  "source": "hourly check 2026-11-11 15:05 ET",
+  "slippage_frac": 0.25,
+  "exit_rules": {
+    "scalp": {
+      "option_stop_pct": 0.28,
+      "option_target_mult": 1.4,
+      "stock_stop_pct": 0.01,
+      "stock_target_r": 2.0
+    },
+    "swing": {
+      "option_stop_pct": 0.45,
+      "option_target_mult": 1.8,
+      "stock_stop_pct": 0.03,
+      "stock_target_r": 2.0
     }
-   },
-   "option_symbol": "DHR261218C00220000",
-   "plan": "DHR 12/18 $220C ~14.45, 3 contracts (re-size at entry); option stop 7.95 / stock stop 225.50; target 264.32 (option 26.01)",
-   "stock_stop": 225.5,
-   "target_stock": 264.32
   },
-  {
-   "id": "20261111-scalp-COST-C-orb:entry",
-   "play_id": "20261111-scalp-COST-C-orb",
-   "symbol": "COST",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-11",
-   "module": "scalp",
-   "setup": "orb",
-   "direction": "call",
-   "trigger": {
-    "type": "above",
-    "price": 1091.92
-   },
-   "confirmation": {
-    "rvol_min": 1.0,
-    "vwap": "above",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0,
-    "skip_first_minutes": 5
-   },
-   "option_symbol": "",
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "COST-20261111",
-   "plan": "[rotation lane] COST call orb: above 30-min OR high; likely 11/13 ~$1085C; scalp stop -28% / target +40%, close by 15:05; size 1% E risk",
-   "armed_after": "2026-11-11T15:00:00Z"
-  },
-  {
-   "id": "20261111-scalp-ARM-C-ib:entry",
-   "play_id": "20261111-scalp-ARM-C-ib",
-   "symbol": "ARM",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-11",
-   "module": "scalp",
-   "setup": "intraday_break",
-   "direction": "call",
-   "trigger": {
-    "type": "above",
-    "price": 207.44
-   },
-   "confirmation": {
-    "rvol_min": 1.0,
-    "vwap": "above",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0,
-    "skip_first_minutes": 5
-   },
-   "option_symbol": "",
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "plan": "[intraday] ARM call intraday_break: above HOD 207.44; likely 11/13 ~$207.5C; stk stop 205.35; scalp stop -28% / target +40%, close by 15:05; size 1% E risk",
-   "stock_stop": 205.35,
-   "armed_after": "2026-11-11T19:10:00Z"
-  },
-  {
-   "id": "20261111-scalp-SMCI-C-ib:entry",
-   "play_id": "20261111-scalp-SMCI-C-ib",
-   "symbol": "SMCI",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-11",
-   "module": "scalp",
-   "setup": "intraday_break",
-   "direction": "call",
-   "trigger": {
-    "type": "above",
-    "price": 31.19
-   },
-   "confirmation": {
-    "rvol_min": 1.0,
-    "vwap": "above",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0,
-    "skip_first_minutes": 5
-   },
-   "option_symbol": "",
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "plan": "[intraday] SMCI call intraday_break: above HOD 31.19; likely 11/13 ~$31C; stk stop 30.73; scalp stop -28% / target +40%, close by 15:05; size 1% E risk",
-   "stock_stop": 30.73,
-   "armed_after": "2026-11-11T19:10:00Z"
-  }
- ]
+  "watch": [
+    {
+      "id": "20261105-swing-DHR-C:entry",
+      "play_id": "20261105-swing-DHR-C",
+      "symbol": "DHR",
+      "kind": "entry",
+      "status": "active",
+      "expires": "2026-11-12",
+      "module": "swing",
+      "setup": "pullback",
+      "direction": "call",
+      "trigger": {
+        "type": "above",
+        "price": 238.44
+      },
+      "confirmation": {
+        "rvol_min": 1,
+        "vwap": "above",
+        "max_extension_pct": 0.025,
+        "spy_block_pct": 0.0075,
+        "skip_first_minutes": 5,
+        "rs_exempt": {
+          "min_move_pct": 0.01,
+          "hard_block_pct": 0.015
+        }
+      },
+      "option_symbol": "DHR261218C00220000",
+      "plan": "DHR 12/18 $220C ~14.45, 3 contracts (re-size at entry); option stop 7.95 / stock stop 225.50; target 264.32 (option 26.01)",
+      "stock_stop": 225.5,
+      "target_stock": 264.32
+    },
+    {
+      "id": "20261111-scalp-COST-C-orb:entry",
+      "play_id": "20261111-scalp-COST-C-orb",
+      "symbol": "COST",
+      "kind": "entry",
+      "status": "active",
+      "expires": "2026-11-11",
+      "module": "scalp",
+      "setup": "orb",
+      "direction": "call",
+      "trigger": {
+        "type": "above",
+        "price": 1091.92
+      },
+      "confirmation": {
+        "rvol_min": 1.0,
+        "vwap": "above",
+        "max_extension_pct": 0.01,
+        "spy_block_pct": 0.0,
+        "skip_first_minutes": 5
+      },
+      "option_symbol": "",
+      "contract_rule": {
+        "dte": [
+          0,
+          7
+        ],
+        "delta": [
+          0.4,
+          0.6
+        ],
+        "max_spread_pct": 0.05
+      },
+      "pair": "COST-20261111",
+      "plan": "[rotation lane] COST call orb: above 30-min OR high; likely 11/13 ~$1085C; scalp stop -28% / target +40%, close by 15:05; size 1% E risk",
+      "armed_after": "2026-11-11T15:00:00Z"
+    },
+    {
+      "id": "20261111-scalp-ARM-C-ib:entry",
+      "play_id": "20261111-scalp-ARM-C-ib",
+      "symbol": "ARM",
+      "kind": "entry",
+      "status": "active",
+      "expires": "2026-11-11",
+      "module": "scalp",
+      "setup": "intraday_break",
+      "direction": "call",
+      "trigger": {
+        "type": "above",
+        "price": 207.44
+      },
+      "confirmation": {
+        "rvol_min": 1.0,
+        "vwap": "above",
+        "max_extension_pct": 0.01,
+        "spy_block_pct": 0.0,
+        "skip_first_minutes": 5
+      },
+      "option_symbol": "",
+      "contract_rule": {
+        "dte": [
+          0,
+          7
+        ],
+        "delta": [
+          0.4,
+          0.6
+        ],
+        "max_spread_pct": 0.05
+      },
+      "plan": "[intraday] ARM call intraday_break: above HOD 207.44; likely 11/13 ~$207.5C; stk stop 205.35; scalp stop -28% / target +40%, close by 15:05; size 1% E risk",
+      "stock_stop": 205.35,
+      "armed_after": "2026-11-11T19:10:00Z"
+    },
+    {
+      "id": "20261111-scalp-SMCI-C-ib:entry",
+      "play_id": "20261111-scalp-SMCI-C-ib",
+      "symbol": "SMCI",
+      "kind": "entry",
+      "status": "active",
+      "expires": "2026-11-11",
+      "module": "scalp",
+      "setup": "intraday_break",
+      "direction": "call",
+      "trigger": {
+        "type": "above",
+        "price": 31.19
+      },
+      "confirmation": {
+        "rvol_min": 1.0,
+        "vwap": "above",
+        "max_extension_pct": 0.01,
+        "spy_block_pct": 0.0,
+        "skip_first_minutes": 5
+      },
+      "option_symbol": "",
+      "contract_rule": {
+        "dte": [
+          0,
+          7
+        ],
+        "delta": [
+          0.4,
+          0.6
+        ],
+        "max_spread_pct": 0.05
+      },
+      "plan": "[intraday] SMCI call intraday_break: above HOD 31.19; likely 11/13 ~$31C; stk stop 30.73; scalp stop -28% / target +40%, close by 15:05; size 1% E risk",
+      "stock_stop": 30.73,
+      "armed_after": "2026-11-11T19:10:00Z"
+    }
+  ]
 }
