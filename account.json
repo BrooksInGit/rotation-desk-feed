@@ -1,11 +1,11 @@
 {
- "as_of": "2026-11-12T09:31:28.253673-05:00",
+ "as_of": "2026-11-12T09:41:31.002761-05:00",
  "account": "alpaca-paper",
  "account_last4": "Q90Z",
- "equity": 2000.0,
+ "equity": 1990.81,
  "last_equity": 2000.0,
- "cash": 2000.0,
- "buying_power": 8000.0,
+ "cash": 1990.81,
+ "buying_power": 7963.24,
  "long_market_value": 0.0,
  "short_market_value": 0.0,
  "halted": false,
@@ -18,7 +18,58 @@
   "swing_risk_pct": 0.01
  },
  "positions": [],
- "orders": [],
+ "orders": [
+  {
+   "symbol": "MSTR",
+   "side": "sell",
+   "qty": "8",
+   "filled_qty": "8",
+   "filled_avg_price": "113.77125",
+   "limit_price": "113.46",
+   "stop_price": null,
+   "type": "limit",
+   "status": "filled",
+   "order_class": "bracket",
+   "client_order_id": "rd-20261112-scalp-MSTR-P",
+   "submitted_at": "2026-11-12T14:35:09.588116Z",
+   "filled_at": "2026-11-12T14:35:26.072946Z",
+   "canceled_at": null,
+   "legs": [
+    {
+     "symbol": "MSTR",
+     "side": "buy",
+     "qty": "8",
+     "filled_qty": "0",
+     "filled_avg_price": null,
+     "limit_price": "111.42",
+     "stop_price": null,
+     "type": "limit",
+     "status": "canceled",
+     "order_class": "bracket",
+     "client_order_id": "7539d7ab-2fbd-4fdd-b86f-206fa75bd22e",
+     "submitted_at": "2026-11-12T14:35:33.039405Z",
+     "filled_at": null,
+     "canceled_at": "2026-11-12T14:39:13.205823Z"
+    },
+    {
+     "symbol": "MSTR",
+     "side": "buy",
+     "qty": "8",
+     "filled_qty": "8",
+     "filled_avg_price": "114.92",
+     "limit_price": null,
+     "stop_price": "114.83",
+     "type": "stop",
+     "status": "filled",
+     "order_class": "bracket",
+     "client_order_id": "bf1afb2f-495e-47a3-8803-847d5ae79a57",
+     "submitted_at": "2026-11-12T14:39:13.347405Z",
+     "filled_at": "2026-11-12T14:39:15.538397Z",
+     "canceled_at": null
+    }
+   ]
+  }
+ ],
  "equity_curve": [
   {
    "t": "2026-08-12",
