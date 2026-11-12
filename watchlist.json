@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-11-12T14:12:00Z",
- "source": "pre-market brief 2026-11-12",
+ "updated_at": "2026-11-12T15:14:00Z",
+ "source": "hourly check 2026-11-12 10:05 ET",
  "slippage_frac": 0.25,
  "exit_rules": {
   "scalp": {
@@ -46,62 +46,6 @@
    "plan": "DHR 12/18 $220C ~14.45, 3 contracts (re-size at entry); option stop 7.95 / stock stop 225.50; target 264.32 (option 26.01)",
    "stock_stop": 225.5,
    "target_stock": 264.32
-  },
-  {
-   "id": "20261111-swing-NOW-P:entry",
-   "play_id": "20261111-swing-NOW-P",
-   "symbol": "NOW",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-18",
-   "module": "swing",
-   "setup": "breakdown",
-   "direction": "put",
-   "trigger": {
-    "type": "below",
-    "price": 100.4
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "below",
-    "max_extension_pct": 0.025,
-    "spy_block_pct": 0.0075,
-    "skip_first_minutes": 5,
-    "rs_exempt": {
-     "min_move_pct": 0.01,
-     "hard_block_pct": 0.015
-    }
-   },
-   "option_symbol": "NOW261218P00104000",
-   "plan": "NOW 12/18 $104P ~6.78, 8 contracts (re-size at entry); option stop 3.73 / stock stop 104.80; target 91.60 (option 12.20)",
-   "stock_stop": 104.8,
-   "target_stock": 91.6
-  },
-  {
-   "id": "20261111-swing-COIN-P:entry",
-   "play_id": "20261111-swing-COIN-P",
-   "symbol": "COIN",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-18",
-   "module": "swing",
-   "setup": "breakdown",
-   "direction": "put",
-   "trigger": {
-    "type": "below",
-    "price": 132.87
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "below",
-    "max_extension_pct": 0.025,
-    "spy_block_pct": 0.0075,
-    "skip_first_minutes": 5
-   },
-   "option_symbol": "COIN261218P00140000",
-   "plan": "COIN 12/18 $140P ~13.36, 4 contracts (re-size at entry); option stop 7.35 / stock stop 140.00; target 118.61 (option 24.05); individual laggard",
-   "stock_stop": 140.0,
-   "target_stock": 118.61
   },
   {
    "id": "20261112-scalp-SPY-P:entry",
@@ -177,50 +121,6 @@
    "armed_after": "2026-11-12T15:00:00Z"
   },
   {
-   "id": "20261112-scalp-SPY-P-reclaim:entry",
-   "play_id": "20261112-scalp-SPY-P-reclaim",
-   "symbol": "SPY",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-12",
-   "module": "scalp",
-   "setup": "level_reclaim",
-   "direction": "put",
-   "trigger": {
-    "type": "reclaim_below",
-    "zone": [
-     756.77,
-     762.85
-    ],
-    "window": [
-     "09:45",
-     "11:30"
-    ]
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "below",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0075
-   },
-   "option_symbol": "",
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "stock_stop": 765.14,
-   "target_stock": 740.03,
-   "track_only": true,
-   "plan": "[tracked trial] SPY put level_reclaim 756.77-762.85 (prior close 759.81); stk stop 765.14 / target 740.03; likely ~$760P"
-  },
-  {
    "id": "20261112-scalp-QQQ-P:entry",
    "play_id": "20261112-scalp-QQQ-P",
    "symbol": "QQQ",
@@ -294,123 +194,6 @@
    "armed_after": "2026-11-12T15:00:00Z"
   },
   {
-   "id": "20261112-scalp-QQQ-P-reclaim:entry",
-   "play_id": "20261112-scalp-QQQ-P-reclaim",
-   "symbol": "QQQ",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-12",
-   "module": "scalp",
-   "setup": "level_reclaim",
-   "direction": "put",
-   "trigger": {
-    "type": "reclaim_below",
-    "zone": [
-     687.62,
-     693.14
-    ],
-    "window": [
-     "09:45",
-     "11:30"
-    ]
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "below",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0075
-   },
-   "option_symbol": "",
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "stock_stop": 695.22,
-   "target_stock": 672.42,
-   "track_only": true,
-   "plan": "[tracked trial] QQQ put level_reclaim 687.62-693.14 (prior close 690.38); stk stop 695.22 / target 672.42; likely ~$690P"
-  },
-  {
-   "id": "20261112-scalp-IWM-P:entry",
-   "play_id": "20261112-scalp-IWM-P",
-   "symbol": "IWM",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-12",
-   "module": "scalp",
-   "setup": "pm_break",
-   "direction": "put",
-   "trigger": {
-    "type": "below",
-    "price": 280.55
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "below",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0,
-    "skip_first_minutes": 5
-   },
-   "option_symbol": "",
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "IWM-20261112",
-   "plan": "[list] IWM put pm_break < 280.55; likely IWM weekly ~$281P; scalp stop -28% / target +40%, close by 15:05; size 1% E risk ($514)"
-  },
-  {
-   "id": "20261112-scalp-IWM-P-orb:entry",
-   "play_id": "20261112-scalp-IWM-P-orb",
-   "symbol": "IWM",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-12",
-   "module": "scalp",
-   "setup": "orb",
-   "direction": "put",
-   "trigger": {
-    "type": "orb_low",
-    "minutes": 30
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "below",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0,
-    "skip_first_minutes": 5
-   },
-   "option_symbol": "",
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "IWM-20261112",
-   "plan": "[list] IWM put orb: below 30-min OR low; likely IWM weekly ~$281P; scalp stop -28% / target +40%, close by 15:05; size 1% E risk ($514)",
-   "armed_after": "2026-11-12T15:00:00Z"
-  },
-  {
    "id": "20261112-scalp-IWM-P-reclaim:entry",
    "play_id": "20261112-scalp-IWM-P-reclaim",
    "symbol": "IWM",
@@ -455,42 +238,6 @@
    "plan": "[tracked trial] IWM put level_reclaim 281.96-284.22 (prior close 283.09); stk stop 285.07 / target 275.74; likely ~$283P"
   },
   {
-   "id": "20261112-scalp-CRWV-P:entry",
-   "play_id": "20261112-scalp-CRWV-P",
-   "symbol": "CRWV",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-12",
-   "module": "scalp",
-   "setup": "pm_break",
-   "direction": "put",
-   "trigger": {
-    "type": "below",
-    "price": 53.77
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "below",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0,
-    "skip_first_minutes": 5
-   },
-   "option_symbol": "",
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "CRWV-20261112",
-   "plan": "[list] CRWV put pm_break < 53.77; likely CRWV weekly ~$54P; scalp stop -28% / target +40%, close by 15:05; size 1% E risk ($514)"
-  },
-  {
    "id": "20261112-scalp-CRWV-P-orb:entry",
    "play_id": "20261112-scalp-CRWV-P-orb",
    "symbol": "CRWV",
@@ -526,42 +273,6 @@
    "pair": "CRWV-20261112",
    "plan": "[list] CRWV put orb: below 30-min OR low; likely CRWV weekly ~$54P; scalp stop -28% / target +40%, close by 15:05; size 1% E risk ($514)",
    "armed_after": "2026-11-12T15:00:00Z"
-  },
-  {
-   "id": "20261112-scalp-NVDA-P:entry",
-   "play_id": "20261112-scalp-NVDA-P",
-   "symbol": "NVDA",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-12",
-   "module": "scalp",
-   "setup": "pm_break",
-   "direction": "put",
-   "trigger": {
-    "type": "below",
-    "price": 158.0
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "below",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0,
-    "skip_first_minutes": 5
-   },
-   "option_symbol": "",
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "NVDA-20261112",
-   "plan": "[list] NVDA put pm_break < 158.0; likely NVDA weekly ~$157.5P; scalp stop -28% / target +40%, close by 15:05; size 1% E risk ($514)"
   },
   {
    "id": "20261112-scalp-NVDA-P-orb:entry",
@@ -601,42 +312,6 @@
    "armed_after": "2026-11-12T15:00:00Z"
   },
   {
-   "id": "20261112-scalp-MSTR-P:entry",
-   "play_id": "20261112-scalp-MSTR-P",
-   "symbol": "MSTR",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-12",
-   "module": "scalp",
-   "setup": "pm_break",
-   "direction": "put",
-   "trigger": {
-    "type": "below",
-    "price": 113.98
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "below",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0,
-    "skip_first_minutes": 5
-   },
-   "option_symbol": "",
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "MSTR-20261112",
-   "plan": "[list] MSTR put pm_break < 113.98; likely MSTR weekly ~$114P; scalp stop -28% / target +40%, close by 15:05; size 1% E risk ($514)"
-  },
-  {
    "id": "20261112-scalp-MSTR-P-orb:entry",
    "play_id": "20261112-scalp-MSTR-P-orb",
    "symbol": "MSTR",
@@ -670,44 +345,9 @@
     "max_spread_pct": 0.05
    },
    "pair": "MSTR-20261112",
-   "plan": "[list] MSTR put orb: below 30-min OR low; likely MSTR weekly ~$114P; scalp stop -28% / target +40%, close by 15:05; size 1% E risk ($514)",
-   "armed_after": "2026-11-12T15:00:00Z"
-  },
-  {
-   "id": "20261112-scalp-BE-P:entry",
-   "play_id": "20261112-scalp-BE-P",
-   "symbol": "BE",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-12",
-   "module": "scalp",
-   "setup": "pm_break",
-   "direction": "put",
-   "trigger": {
-    "type": "below",
-    "price": 196.46
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "below",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0,
-    "skip_first_minutes": 5
-   },
-   "option_symbol": "",
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "BE-20261112",
-   "plan": "[list] BE put pm_break < 196.46; likely BE weekly ~$195P; scalp stop -28% / target +40%, close by 15:05; size 1% E risk ($514)"
+   "plan": "[tracked twin; pm_break confirmed first] [list] MSTR put orb: below 30-min OR low; likely MSTR weekly ~$114P; scalp stop -28% / target +40%, close by 15:05; size 1% E risk ($514)",
+   "armed_after": "2026-11-12T15:00:00Z",
+   "track_only": true
   },
   {
    "id": "20261112-scalp-BE-P-orb:entry",
@@ -743,44 +383,9 @@
     "max_spread_pct": 0.05
    },
    "pair": "BE-20261112",
-   "plan": "[list] BE put orb: below 30-min OR low; likely BE weekly ~$195P; scalp stop -28% / target +40%, close by 15:05; size 1% E risk ($514)",
-   "armed_after": "2026-11-12T15:00:00Z"
-  },
-  {
-   "id": "20261112-scalp-SMCI-P:entry",
-   "play_id": "20261112-scalp-SMCI-P",
-   "symbol": "SMCI",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-12",
-   "module": "scalp",
-   "setup": "pm_break",
-   "direction": "put",
-   "trigger": {
-    "type": "below",
-    "price": 28.27
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "below",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0,
-    "skip_first_minutes": 5
-   },
-   "option_symbol": "",
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "SMCI-20261112",
-   "plan": "[list] SMCI put pm_break < 28.27; likely SMCI weekly ~$28.5P; scalp stop -28% / target +40%, close by 15:05; size 1% E risk ($514)"
+   "plan": "[tracked twin; pm_break confirmed first] [list] BE put orb: below 30-min OR low; likely BE weekly ~$195P; scalp stop -28% / target +40%, close by 15:05; size 1% E risk ($514)",
+   "armed_after": "2026-11-12T15:00:00Z",
+   "track_only": true
   },
   {
    "id": "20261112-scalp-SMCI-P-orb:entry",
@@ -937,42 +542,6 @@
    "armed_after": "2026-11-12T15:00:00Z"
   },
   {
-   "id": "20261112-scalp-AMD-C:entry",
-   "play_id": "20261112-scalp-AMD-C",
-   "symbol": "AMD",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-12",
-   "module": "scalp",
-   "setup": "pm_break",
-   "direction": "call",
-   "trigger": {
-    "type": "above",
-    "price": 577.99
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "above",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0,
-    "skip_first_minutes": 5
-   },
-   "option_symbol": "",
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "AMD-20261112",
-   "plan": "[list] AMD call pm_break > 577.99; likely AMD weekly ~$580C; scalp stop -28% / target +40%, close by 15:05; size 1% E risk ($514)"
-  },
-  {
    "id": "20261112-scalp-AMD-C-orb:entry",
    "play_id": "20261112-scalp-AMD-C-orb",
    "symbol": "AMD",
@@ -1054,42 +623,6 @@
    "plan": "[tracked trial] AMD call level_reclaim 550.69-555.11 (prior close 552.9); stk stop 549.04 / target 577.99; likely ~$555C"
   },
   {
-   "id": "20261112-scalp-ARM-P:entry",
-   "play_id": "20261112-scalp-ARM-P",
-   "symbol": "ARM",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-12",
-   "module": "scalp",
-   "setup": "pm_break",
-   "direction": "put",
-   "trigger": {
-    "type": "below",
-    "price": 193.97
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "below",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0,
-    "skip_first_minutes": 5
-   },
-   "option_symbol": "",
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "ARM-20261112",
-   "plan": "[list] ARM put pm_break < 193.97; likely ARM weekly ~$195P; scalp stop -28% / target +40%, close by 15:05; size 1% E risk ($514)"
-  },
-  {
    "id": "20261112-scalp-ARM-P-orb:entry",
    "play_id": "20261112-scalp-ARM-P-orb",
    "symbol": "ARM",
@@ -1169,6 +702,51 @@
    "target_stock": 193.97,
    "track_only": true,
    "plan": "[tracked trial] ARM put level_reclaim 202.55-204.17 (prior close 203.36); stk stop 204.78 / target 193.97; likely ~$202.5P"
+  },
+  {
+   "id": "20261112-scalp-AVGO-C-reclaim:entry",
+   "play_id": "20261112-scalp-AVGO-C-reclaim",
+   "symbol": "AVGO",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-12",
+   "armed_after": "2026-11-12T15:09:20Z",
+   "module": "scalp",
+   "setup": "level_reclaim",
+   "direction": "call",
+   "trigger": {
+    "type": "reclaim_above",
+    "zone": [
+     348.21,
+     351.01
+    ],
+    "window": [
+     "09:45",
+     "11:30"
+    ]
+   },
+   "confirmation": {
+    "rvol_min": 1.0,
+    "vwap": "above",
+    "max_extension_pct": 0.01,
+    "spy_block_pct": 0.0075
+   },
+   "option_symbol": "",
+   "contract_rule": {
+    "dte": [
+     0,
+     7
+    ],
+    "delta": [
+     0.4,
+     0.6
+    ],
+    "max_spread_pct": 0.05
+   },
+   "stock_stop": 347.17,
+   "target_stock": 365.71,
+   "track_only": true,
+   "plan": "[tracked trial, intraday] AVGO call level_reclaim 348.21-351.01 (shelf 349.22/350.00); stk stop 347.17 / target 365.71; likely ~$350C"
   }
  ]
 }
