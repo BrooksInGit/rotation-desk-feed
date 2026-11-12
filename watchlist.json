@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-11-12T17:20:00Z",
- "source": "hourly check 2026-11-12 12:05 ET",
+ "updated_at": "2026-11-12T18:25:00Z",
+ "source": "hourly check 2026-11-12 13:05 ET",
  "slippage_frac": 0.25,
  "exit_rules": {
   "scalp": {
@@ -346,44 +346,6 @@
    },
    "pair": "BE-20261112",
    "plan": "[tracked twin; pm_break confirmed first] [list] BE put orb: below 30-min OR low; likely BE weekly ~$195P; scalp stop -28% / target +40%, close by 15:05; size 1% E risk ($514)",
-   "armed_after": "2026-11-12T15:00:00Z",
-   "track_only": true
-  },
-  {
-   "id": "20261112-scalp-SMCI-P-orb:entry",
-   "play_id": "20261112-scalp-SMCI-P-orb",
-   "symbol": "SMCI",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-12",
-   "module": "scalp",
-   "setup": "orb",
-   "direction": "put",
-   "trigger": {
-    "type": "orb_low",
-    "minutes": 30
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "below",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0,
-    "skip_first_minutes": 5
-   },
-   "option_symbol": "",
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "SMCI-20261112",
-   "plan": "[list] SMCI put orb: below 30-min OR low; likely SMCI weekly ~$28.5P; scalp stop -28% / target +40%, close by 15:05; size 1% E risk ($514) [track_only: desk scalps halted 11:05, two-consecutive-loss stop]",
    "armed_after": "2026-11-12T15:00:00Z",
    "track_only": true
   },
