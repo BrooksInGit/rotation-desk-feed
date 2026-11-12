@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-11-12T15:16:00Z",
- "source": "hourly check 2026-11-12 10:05 ET",
+ "updated_at": "2026-11-12T16:22:00Z",
+ "source": "hourly check 2026-11-12 11:05 ET",
  "slippage_frac": 0.25,
  "exit_rules": {
   "scalp": {
@@ -81,7 +81,8 @@
     "max_spread_pct": 0.05
    },
    "pair": "SPY-20261112",
-   "plan": "[list] SPY put pm_break < 752.82; likely SPY weekly ~$753P; scalp stop -28% / target +40%, close by 15:05; size 1% E risk ($514)"
+   "plan": "[list] SPY put pm_break < 752.82; likely SPY weekly ~$753P; scalp stop -28% / target +40%, close by 15:05; size 1% E risk ($514) [track_only: desk scalps halted 11:05, two-consecutive-loss stop]",
+   "track_only": true
   },
   {
    "id": "20261112-scalp-SPY-P-orb:entry",
@@ -117,8 +118,9 @@
     "max_spread_pct": 0.05
    },
    "pair": "SPY-20261112",
-   "plan": "[list] SPY put orb: below 30-min OR low; likely SPY weekly ~$753P; scalp stop -28% / target +40%, close by 15:05; size 1% E risk ($514)",
-   "armed_after": "2026-11-12T15:00:00Z"
+   "plan": "[list] SPY put orb: below 30-min OR low; likely SPY weekly ~$753P; scalp stop -28% / target +40%, close by 15:05; size 1% E risk ($514) [track_only: desk scalps halted 11:05, two-consecutive-loss stop]",
+   "armed_after": "2026-11-12T15:00:00Z",
+   "track_only": true
   },
   {
    "id": "20261112-scalp-QQQ-P:entry",
@@ -154,7 +156,8 @@
     "max_spread_pct": 0.05
    },
    "pair": "QQQ-20261112",
-   "plan": "[list] QQQ put pm_break < 679.14; likely QQQ weekly ~$679P; scalp stop -28% / target +40%, close by 15:05; size 1% E risk ($514)"
+   "plan": "[list] QQQ put pm_break < 679.14; likely QQQ weekly ~$679P; scalp stop -28% / target +40%, close by 15:05; size 1% E risk ($514) [track_only: desk scalps halted 11:05, two-consecutive-loss stop]",
+   "track_only": true
   },
   {
    "id": "20261112-scalp-QQQ-P-orb:entry",
@@ -190,8 +193,9 @@
     "max_spread_pct": 0.05
    },
    "pair": "QQQ-20261112",
-   "plan": "[list] QQQ put orb: below 30-min OR low; likely QQQ weekly ~$679P; scalp stop -28% / target +40%, close by 15:05; size 1% E risk ($514)",
-   "armed_after": "2026-11-12T15:00:00Z"
+   "plan": "[list] QQQ put orb: below 30-min OR low; likely QQQ weekly ~$679P; scalp stop -28% / target +40%, close by 15:05; size 1% E risk ($514) [track_only: desk scalps halted 11:05, two-consecutive-loss stop]",
+   "armed_after": "2026-11-12T15:00:00Z",
+   "track_only": true
   },
   {
    "id": "20261112-scalp-IWM-P-reclaim:entry",
@@ -271,8 +275,9 @@
     "max_spread_pct": 0.05
    },
    "pair": "CRWV-20261112",
-   "plan": "[list] CRWV put orb: below 30-min OR low; likely CRWV weekly ~$54P; scalp stop -28% / target +40%, close by 15:05; size 1% E risk ($514)",
-   "armed_after": "2026-11-12T15:00:00Z"
+   "plan": "[list] CRWV put orb: below 30-min OR low; likely CRWV weekly ~$54P; scalp stop -28% / target +40%, close by 15:05; size 1% E risk ($514) [track_only: desk scalps halted 11:05, two-consecutive-loss stop]",
+   "armed_after": "2026-11-12T15:00:00Z",
+   "track_only": true
   },
   {
    "id": "20261112-scalp-NVDA-P-orb:entry",
@@ -308,8 +313,9 @@
     "max_spread_pct": 0.05
    },
    "pair": "NVDA-20261112",
-   "plan": "[list] NVDA put orb: below 30-min OR low; likely NVDA weekly ~$157.5P; scalp stop -28% / target +40%, close by 15:05; size 1% E risk ($514)",
-   "armed_after": "2026-11-12T15:00:00Z"
+   "plan": "[list] NVDA put orb: below 30-min OR low; likely NVDA weekly ~$157.5P; scalp stop -28% / target +40%, close by 15:05; size 1% E risk ($514) [track_only: desk scalps halted 11:05, two-consecutive-loss stop]",
+   "armed_after": "2026-11-12T15:00:00Z",
+   "track_only": true
   },
   {
    "id": "20261112-scalp-MSTR-P-orb:entry",
@@ -421,8 +427,9 @@
     "max_spread_pct": 0.05
    },
    "pair": "SMCI-20261112",
-   "plan": "[list] SMCI put orb: below 30-min OR low; likely SMCI weekly ~$28.5P; scalp stop -28% / target +40%, close by 15:05; size 1% E risk ($514)",
-   "armed_after": "2026-11-12T15:00:00Z"
+   "plan": "[list] SMCI put orb: below 30-min OR low; likely SMCI weekly ~$28.5P; scalp stop -28% / target +40%, close by 15:05; size 1% E risk ($514) [track_only: desk scalps halted 11:05, two-consecutive-loss stop]",
+   "armed_after": "2026-11-12T15:00:00Z",
+   "track_only": true
   },
   {
    "id": "20261112-scalp-SMCI-P-reclaim:entry",
@@ -467,43 +474,6 @@
    "target_stock": 28.27,
    "track_only": true,
    "plan": "[tracked trial] SMCI put level_reclaim 29.0-29.24 (prior-day low 29.12); stk stop 29.33 / target 28.27; likely ~$29P"
-  },
-  {
-   "id": "20261112-scalp-AMD-C-orb:entry",
-   "play_id": "20261112-scalp-AMD-C-orb",
-   "symbol": "AMD",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-12",
-   "module": "scalp",
-   "setup": "orb",
-   "direction": "call",
-   "trigger": {
-    "type": "orb_high",
-    "minutes": 30
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "above",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0,
-    "skip_first_minutes": 5
-   },
-   "option_symbol": "",
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "AMD-20261112",
-   "plan": "[list] AMD call orb: above 30-min OR high; likely AMD weekly ~$580C; scalp stop -28% / target +40%, close by 15:05; size 1% E risk ($514)",
-   "armed_after": "2026-11-12T15:00:00Z"
   },
   {
    "id": "20261112-scalp-AMD-C-reclaim:entry",
@@ -583,8 +553,9 @@
     "max_spread_pct": 0.05
    },
    "pair": "ARM-20261112",
-   "plan": "[list] ARM put orb: below 30-min OR low; likely ARM weekly ~$195P; scalp stop -28% / target +40%, close by 15:05; size 1% E risk ($514)",
-   "armed_after": "2026-11-12T15:00:00Z"
+   "plan": "[list] ARM put orb: below 30-min OR low; likely ARM weekly ~$195P; scalp stop -28% / target +40%, close by 15:05; size 1% E risk ($514) [track_only: desk scalps halted 11:05, two-consecutive-loss stop]",
+   "armed_after": "2026-11-12T15:00:00Z",
+   "track_only": true
   },
   {
    "id": "20261112-scalp-ARM-P-reclaim:entry",
