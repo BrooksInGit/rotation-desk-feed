@@ -1,13 +1,13 @@
 {
- "as_of": "2026-11-12T10:01:35.943138-05:00",
+ "as_of": "2026-11-12T10:08:35.845290-05:00",
  "account": "alpaca-paper",
  "account_last4": "Q90Z",
- "equity": 1990.81,
+ "equity": 1994.81,
  "last_equity": 2000.0,
- "cash": 1990.81,
- "buying_power": 7963.24,
+ "cash": 2974.21,
+ "buying_power": 6803.96,
  "long_market_value": 0.0,
- "short_market_value": 0.0,
+ "short_market_value": -979.4,
  "halted": false,
  "limits": {
   "max_notional_frac": 0.5,
@@ -17,8 +17,72 @@
   "scalp_risk_pct": 0.005,
   "swing_risk_pct": 0.01
  },
- "positions": [],
+ "positions": [
+  {
+   "symbol": "BE",
+   "qty": "-5",
+   "side": "short",
+   "avg_entry_price": "196.68",
+   "current_price": "195.88",
+   "market_value": "-979.4",
+   "cost_basis": "-983.4",
+   "unrealized_pl": "4",
+   "unrealized_plpc": "0.00407",
+   "unrealized_intraday_pl": "4",
+   "change_today": "-0.06488"
+  }
+ ],
  "orders": [
+  {
+   "symbol": "BE",
+   "side": "sell",
+   "qty": "5",
+   "filled_qty": "5",
+   "filled_avg_price": "196.68",
+   "limit_price": "195.61",
+   "stop_price": null,
+   "type": "limit",
+   "status": "filled",
+   "order_class": "bracket",
+   "client_order_id": "rd-20261112-scalp-BE-P",
+   "submitted_at": "2026-11-12T15:03:48.680944Z",
+   "filled_at": "2026-11-12T15:03:51.66693Z",
+   "canceled_at": null,
+   "legs": [
+    {
+     "symbol": "BE",
+     "side": "buy",
+     "qty": "5",
+     "filled_qty": "0",
+     "filled_avg_price": null,
+     "limit_price": "192.08",
+     "stop_price": null,
+     "type": "limit",
+     "status": "new",
+     "order_class": "bracket",
+     "client_order_id": "6d4ea119-7d9a-4890-ae81-e3c3cc10e2b3",
+     "submitted_at": "2026-11-12T15:03:51.675389Z",
+     "filled_at": null,
+     "canceled_at": null
+    },
+    {
+     "symbol": "BE",
+     "side": "buy",
+     "qty": "5",
+     "filled_qty": "0",
+     "filled_avg_price": null,
+     "limit_price": null,
+     "stop_price": "197.96",
+     "type": "stop",
+     "status": "held",
+     "order_class": "bracket",
+     "client_order_id": "e5af2c5d-1af9-4301-b370-0ab6b538918b",
+     "submitted_at": "2026-11-12T15:03:48.660669Z",
+     "filled_at": null,
+     "canceled_at": null
+    }
+   ]
+  },
   {
    "symbol": "MSTR",
    "side": "sell",
