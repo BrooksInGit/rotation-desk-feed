@@ -506,7 +506,8 @@ class Monitor:
             self.repo.pending.append(ev)
             log.info("%s %s %s @ %.2f (%s)", ev["kind"], item.symbol, "confirmed" if ev.get("confirmed", True) else "unconfirmed", price, source)
             if not item.raw.get("quiet"):
-                await self.tg(core.format_alert(item, ev))
+                if not self.exec.enabled:  # with execution on, Telegram carries only positions taken (executor)
+                    await self.tg(core.format_alert(item, ev))
 
     async def option_for(self, item: Item, direction: str, today: date) -> tuple[str | None, dict | None, str]:
         """Live quote for the play's contract, or pick one by rule (scalps)."""
@@ -605,7 +606,8 @@ class Monitor:
             self.stream_down_since = None
             if self.stream_alerted:
                 self.stream_alerted = False
-                await self.tg("Rotation Desk monitor: live stream is back. The 30-second backup sweep covered the gap.")
+                if not self.exec.enabled:
+                    await self.tg("Rotation Desk monitor: live stream is back. The 30-second backup sweep covered the gap.")
             return
         if not self.market_open or not self.symbols():
             self.stream_down_since = None
@@ -614,7 +616,8 @@ class Monitor:
             self.stream_down_since = _time.time()
         elif not self.stream_alerted and _time.time() - self.stream_down_since > 300:
             self.stream_alerted = True
-            await self.tg("Rotation Desk monitor: live stream has been down 5+ minutes. Still checking every "
+            if not self.exec.enabled:
+                await self.tg("Rotation Desk monitor: live stream has been down 5+ minutes. Still checking every "
                           f"{self.s.sweep_seconds}s from minute bars, so levels are not being missed, just reported later.")
 
     async def sweep_loop(self) -> None:
@@ -783,7 +786,7 @@ class Monitor:
         self.exec.loop = asyncio.get_running_loop()
         await asyncio.gather(self.clock_loop(), self.feed_loop(), self.stream_loop(),
                              self.sweep_loop(), self.option_loop(), self.time_exit_loop(), self.exec.command_loop(),
-                             self.account_loop())
+                             self.account_loop(), self.exec.exit_loop())
 
 
 # ================================================================ entry

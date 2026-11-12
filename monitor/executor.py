@@ -152,11 +152,9 @@ class Executor:
                      "stop": body["stop_loss"]["stop_price"], "target": body["take_profit"]["limit_price"],
                      "time": datetime.now().astimezone().isoformat(), "account": "alpaca-paper"})
         log.info("paper order %s %s %d @ %s", body["side"], sym, qty, body["limit_price"])
-        asyncio.run_coroutine_threadsafe(
-            self.tg_send(f"PAPER ORDER {body['side'].upper()} {qty} {sym} limit ${body['limit_price']} · "
-                         f"stop ${body['stop_loss']['stop_price']} · target ${body['take_profit']['limit_price']}"
-                         f" · risk ≈ ${qty * abs(price - float(stop)):,.0f}"), self.loop)
-        self.loop.call_soon_threadsafe(lambda: asyncio.ensure_future(self.watch_fill(o["id"], pid, sym)))
+        plan = {"stop": body["stop_loss"]["stop_price"], "target": body["take_profit"]["limit_price"],
+                "module": module}
+        self.loop.call_soon_threadsafe(lambda: asyncio.ensure_future(self.watch_fill(o["id"], pid, sym, plan)))
 
     def _skip_reason(self, module: str, long: bool, sym: str) -> str | None:
         if self.halted:
@@ -183,10 +181,9 @@ class Executor:
     def _note(self, ev: dict, pid: str, sym: str, status: str, why: str) -> None:
         self.record({"kind": "order", "status": status, "reason": why, "play_id": pid, "symbol": sym,
                      "entry_event": ev["id"], "time": datetime.now().astimezone().isoformat(), "account": "alpaca-paper"})
-        log.info("paper order %s %s: %s", status, sym, why)
-        asyncio.run_coroutine_threadsafe(self.tg_send(f"PAPER ORDER SKIPPED {sym}: {why}"), self.loop)
+        log.info("paper order %s %s: %s", status, sym, why)  # logged only: Telegram is for positions taken
 
-    async def watch_fill(self, order_id: str, pid: str, sym: str) -> None:
+    async def watch_fill(self, order_id: str, pid: str, sym: str, plan: dict | None = None) -> None:
         waited = 0
         while waited <= self.p["unfilled_cancel_s"]:
             await asyncio.sleep(5)
@@ -200,18 +197,22 @@ class Executor:
                              "qty": o.get("filled_qty"), "price": o.get("filled_avg_price"),
                              "time": o.get("filled_at") or datetime.now().astimezone().isoformat(),
                              "account": "alpaca-paper"})
-                await self.tg_send(f"PAPER FILLED {o.get('side', '').upper()} {o.get('filled_qty')} {sym} @ ${float(o['filled_avg_price']):.2f}")
+                px, q = float(o["filled_avg_price"]), int(float(o.get("filled_qty") or 0))
+                p = plan or {}
+                risk = q * abs(px - float(p["stop"])) if p.get("stop") else None
+                verb = "BOUGHT" if o.get("side") == "buy" else "SHORTED"
+                await self.tg_send(f"{verb} {q} {sym} @ ${px:.2f} ({p.get('module', '')})"
+                                   + (f"\nstop ${p['stop']} · target ${p['target']} · risk ${risk:,.0f}" if risk else "")
+                                   + "\npaper account")
                 return
             if o.get("status") in ("canceled", "expired", "rejected"):
                 self.record({"kind": "order", "status": o["status"], "play_id": pid, "symbol": sym, "order_id": order_id,
                              "time": datetime.now().astimezone().isoformat(), "account": "alpaca-paper"})
-                await self.tg_send(f"PAPER ORDER {o['status'].upper()} {sym}")
                 return
         try:
             await asyncio.to_thread(self._req, "DELETE", f"/v2/orders/{order_id}")
             self.record({"kind": "order", "status": "cancelled_unfilled", "play_id": pid, "symbol": sym,
                          "order_id": order_id, "time": datetime.now().astimezone().isoformat(), "account": "alpaca-paper"})
-            await self.tg_send(f"PAPER ORDER CANCELLED {sym}: not filled within {self.p['unfilled_cancel_s']}s")
         except Exception as e:
             log.warning("cancel unfilled %s: %s", order_id, e)
 
@@ -244,7 +245,51 @@ class Executor:
         closed = await asyncio.to_thread(self._close_symbols, mine)
         self.record({"kind": "order", "status": "time_exit", "symbols": sorted(mine),
                      "time": datetime.now().astimezone().isoformat(), "account": "alpaca-paper"})
-        await self.tg_send("PAPER 15:05 CLOSE: " + ", ".join(closed))
+        await self.tg_send("CLOSED at 15:05 (scalp time exit): " + ", ".join(closed) + "\npaper account")
+
+    async def exit_loop(self) -> None:
+        """Every 30 s: tell James when a bracket stop or target closes a desk position (legs filled after start)."""
+        if not self.enabled:
+            return
+        started = datetime.now().astimezone()
+        told: set[str] = set()
+        while True:
+            try:
+                await asyncio.to_thread(self._check_exits, started, told)
+            except Exception:
+                log.exception("exit check")
+            await asyncio.sleep(30)
+
+    def _check_exits(self, started, told: set[str]) -> None:
+        orders = self._req("GET", "/v2/orders", params={"status": "all", "limit": 100, "nested": "true",
+                                                        "direction": "desc"})
+        for o in orders:
+            if not str(o.get("client_order_id", "")).startswith("rd-") or o.get("status") != "filled":
+                continue
+            legs = o.get("legs") or []
+            stop_leg = next((l for l in legs if l.get("type") in ("stop", "stop_limit")), None)
+            for l in legs:
+                if l.get("status") != "filled" or l["id"] in told or not l.get("filled_at"):
+                    continue
+                told.add(l["id"])
+                if datetime.fromisoformat(l["filled_at"].replace("Z", "+00:00")) < started:
+                    continue  # filled before this process started (already reported or pre-restart)
+                entry, px = float(o["filled_avg_price"]), float(l["filled_avg_price"])
+                q = int(float(l.get("filled_qty") or o.get("filled_qty") or 0))
+                long = o.get("side") == "buy"
+                pnl = (px - entry) * q * (1 if long else -1)
+                r = None
+                if stop_leg and stop_leg.get("stop_price"):
+                    per = abs(entry - float(stop_leg["stop_price"]))
+                    r = pnl / (per * q) if per and q else None
+                why = "stop" if l.get("type") in ("stop", "stop_limit") else "target"
+                self.record({"kind": "exit_fill", "play_id": o["client_order_id"][3:], "symbol": o["symbol"],
+                             "reason": why, "qty": q, "price": px, "pnl": round(pnl, 2),
+                             "time": l["filled_at"], "account": "alpaca-paper"})
+                verb = "SOLD" if long else "COVERED"
+                asyncio.run_coroutine_threadsafe(self.tg_send(
+                    f"{verb} {q} {o['symbol']} @ ${px:.2f} ({why})\n{'+' if pnl >= 0 else '−'}${abs(pnl):,.2f}"
+                    + (f" · {r:+.2f}R" if r is not None else "") + "\npaper account"), self.loop)
 
     # ------------------------------------------------------------ dashboard snapshot
     def snapshot(self) -> dict:
