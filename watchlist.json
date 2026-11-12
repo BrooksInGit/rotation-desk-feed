@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-11-12T16:22:00Z",
- "source": "hourly check 2026-11-12 11:05 ET",
+ "updated_at": "2026-11-12T17:20:00Z",
+ "source": "hourly check 2026-11-12 12:05 ET",
  "slippage_frac": 0.25,
  "exit_rules": {
   "scalp": {
@@ -198,50 +198,6 @@
    "track_only": true
   },
   {
-   "id": "20261112-scalp-IWM-P-reclaim:entry",
-   "play_id": "20261112-scalp-IWM-P-reclaim",
-   "symbol": "IWM",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-12",
-   "module": "scalp",
-   "setup": "level_reclaim",
-   "direction": "put",
-   "trigger": {
-    "type": "reclaim_below",
-    "zone": [
-     281.96,
-     284.22
-    ],
-    "window": [
-     "09:45",
-     "11:30"
-    ]
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "below",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0075
-   },
-   "option_symbol": "",
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "stock_stop": 285.07,
-   "target_stock": 275.74,
-   "track_only": true,
-   "plan": "[tracked trial] IWM put level_reclaim 281.96-284.22 (prior close 283.09); stk stop 285.07 / target 275.74; likely ~$283P"
-  },
-  {
    "id": "20261112-scalp-CRWV-P-orb:entry",
    "play_id": "20261112-scalp-CRWV-P-orb",
    "symbol": "CRWV",
@@ -432,94 +388,6 @@
    "track_only": true
   },
   {
-   "id": "20261112-scalp-SMCI-P-reclaim:entry",
-   "play_id": "20261112-scalp-SMCI-P-reclaim",
-   "symbol": "SMCI",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-12",
-   "module": "scalp",
-   "setup": "level_reclaim",
-   "direction": "put",
-   "trigger": {
-    "type": "reclaim_below",
-    "zone": [
-     29.0,
-     29.24
-    ],
-    "window": [
-     "09:45",
-     "11:30"
-    ]
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "below",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0075
-   },
-   "option_symbol": "",
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "stock_stop": 29.33,
-   "target_stock": 28.27,
-   "track_only": true,
-   "plan": "[tracked trial] SMCI put level_reclaim 29.0-29.24 (prior-day low 29.12); stk stop 29.33 / target 28.27; likely ~$29P"
-  },
-  {
-   "id": "20261112-scalp-AMD-C-reclaim:entry",
-   "play_id": "20261112-scalp-AMD-C-reclaim",
-   "symbol": "AMD",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-12",
-   "module": "scalp",
-   "setup": "level_reclaim",
-   "direction": "call",
-   "trigger": {
-    "type": "reclaim_above",
-    "zone": [
-     550.69,
-     555.11
-    ],
-    "window": [
-     "09:45",
-     "11:30"
-    ]
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "above",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0075
-   },
-   "option_symbol": "",
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "stock_stop": 549.04,
-   "target_stock": 577.99,
-   "track_only": true,
-   "plan": "[tracked trial] AMD call level_reclaim 550.69-555.11 (prior close 552.9); stk stop 549.04 / target 577.99; likely ~$555C"
-  },
-  {
    "id": "20261112-scalp-ARM-P-orb:entry",
    "play_id": "20261112-scalp-ARM-P-orb",
    "symbol": "ARM",
@@ -556,95 +424,6 @@
    "plan": "[list] ARM put orb: below 30-min OR low; likely ARM weekly ~$195P; scalp stop -28% / target +40%, close by 15:05; size 1% E risk ($514) [track_only: desk scalps halted 11:05, two-consecutive-loss stop]",
    "armed_after": "2026-11-12T15:00:00Z",
    "track_only": true
-  },
-  {
-   "id": "20261112-scalp-ARM-P-reclaim:entry",
-   "play_id": "20261112-scalp-ARM-P-reclaim",
-   "symbol": "ARM",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-12",
-   "module": "scalp",
-   "setup": "level_reclaim",
-   "direction": "put",
-   "trigger": {
-    "type": "reclaim_below",
-    "zone": [
-     202.55,
-     204.17
-    ],
-    "window": [
-     "09:45",
-     "11:30"
-    ]
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "below",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0075
-   },
-   "option_symbol": "",
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "stock_stop": 204.78,
-   "target_stock": 193.97,
-   "track_only": true,
-   "plan": "[tracked trial] ARM put level_reclaim 202.55-204.17 (prior close 203.36); stk stop 204.78 / target 193.97; likely ~$202.5P"
-  },
-  {
-   "id": "20261112-scalp-AVGO-C-reclaim:entry",
-   "play_id": "20261112-scalp-AVGO-C-reclaim",
-   "symbol": "AVGO",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-12",
-   "armed_after": "2026-11-12T15:09:20Z",
-   "module": "scalp",
-   "setup": "level_reclaim",
-   "direction": "call",
-   "trigger": {
-    "type": "reclaim_above",
-    "zone": [
-     348.21,
-     351.01
-    ],
-    "window": [
-     "09:45",
-     "11:30"
-    ]
-   },
-   "confirmation": {
-    "rvol_min": 1.0,
-    "vwap": "above",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0075
-   },
-   "option_symbol": "",
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "stock_stop": 347.17,
-   "target_stock": 365.71,
-   "track_only": true,
-   "plan": "[tracked trial, intraday] AVGO call level_reclaim 348.21-351.01 (shelf 349.22/350.00); stk stop 347.17 / target 365.71; likely ~$350C"
   }
  ]
 }
