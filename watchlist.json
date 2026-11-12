@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-12T15:14:00Z",
+ "updated_at": "2026-11-12T15:16:00Z",
  "source": "hourly check 2026-11-12 10:05 ET",
  "slippage_frac": 0.25,
  "exit_rules": {
@@ -467,79 +467,6 @@
    "target_stock": 28.27,
    "track_only": true,
    "plan": "[tracked trial] SMCI put level_reclaim 29.0-29.24 (prior-day low 29.12); stk stop 29.33 / target 28.27; likely ~$29P"
-  },
-  {
-   "id": "20261112-scalp-MU-P:entry",
-   "play_id": "20261112-scalp-MU-P",
-   "symbol": "MU",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-12",
-   "module": "scalp",
-   "setup": "pm_break",
-   "direction": "put",
-   "trigger": {
-    "type": "below",
-    "price": 764.8
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "below",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0,
-    "skip_first_minutes": 5
-   },
-   "option_symbol": "",
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "MU-20261112",
-   "plan": "[list] MU put pm_break < 764.8; likely MU weekly ~$765P; scalp stop -28% / target +40%, close by 15:05; size 1% E risk ($514)"
-  },
-  {
-   "id": "20261112-scalp-MU-P-orb:entry",
-   "play_id": "20261112-scalp-MU-P-orb",
-   "symbol": "MU",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-12",
-   "module": "scalp",
-   "setup": "orb",
-   "direction": "put",
-   "trigger": {
-    "type": "orb_low",
-    "minutes": 30
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "below",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0,
-    "skip_first_minutes": 5
-   },
-   "option_symbol": "",
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "MU-20261112",
-   "plan": "[list] MU put orb: below 30-min OR low; likely MU weekly ~$765P; scalp stop -28% / target +40%, close by 15:05; size 1% E risk ($514)",
-   "armed_after": "2026-11-12T15:00:00Z"
   },
   {
    "id": "20261112-scalp-AMD-C-orb:entry",
