@@ -174,3 +174,12 @@ if __name__ == "__main__":
         if name.startswith("test_"):
             fn()
             print("ok", name)
+
+
+def test_pdt_block():
+    import executor as x
+    assert x.pdt_block("scalp", {"equity": "1972.76", "daytrade_count": 4}) .startswith("PDT:")
+    assert x.pdt_block("scalp", {"equity": "1972.76", "daytrade_count": 0, "pattern_day_trader": True}).startswith("PDT:")
+    assert x.pdt_block("scalp", {"equity": "1972.76", "daytrade_count": 2}) is None
+    assert x.pdt_block("swing", {"equity": "1972.76", "daytrade_count": 4}) is None
+    assert x.pdt_block("scalp", {"equity": "30000", "daytrade_count": 5}) is None

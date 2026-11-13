@@ -75,6 +75,24 @@ def bracket_body(symbol: str, side: str, qty: int, price: float, stop: float, ta
             "stop_loss": {"stop_price": str(round_px(stop))}}
 
 
+PDT_EQUITY = 25000.0
+
+
+def pdt_block(module: str, acct: dict) -> str | None:
+    """Pattern-day-trader rule: under $25k equity, a 4th day trade in 5 business days is refused by the broker.
+    Scalps always day-trade (15:05 close), so skip them up front with a clear reason instead of a rejected order."""
+    if module != "scalp":
+        return None
+    eq = float(acct.get("equity") or 0)
+    if eq >= PDT_EQUITY:
+        return None
+    n = int(acct.get("daytrade_count") or 0)
+    if acct.get("pattern_day_trader") or n >= 3:
+        flag = "flagged pattern day trader" if acct.get("pattern_day_trader") else f"{n} day trades in 5 days"
+        return f"PDT: {flag}, equity ${eq:,.0f} < $25k"
+    return None
+
+
 class Executor:
     def __init__(self, monitor_dir: Path, tg_send, tg_token: str, tg_chat: str, record) -> None:
         cfg = load_env(monitor_dir / "exec.env")
@@ -122,6 +140,14 @@ class Executor:
             await asyncio.to_thread(self._enter, raw, ev)
         except Exception as e:
             log.exception("order failed")
+            # write the failure to the events file too, so the desk can record it (it was Telegram-only before)
+            try:
+                self.record({"kind": "order", "status": "error", "reason": str(e)[:300],
+                             "play_id": raw.get("play_id") or raw.get("id"), "symbol": raw.get("symbol"),
+                             "entry_event": ev.get("id"), "time": datetime.now().astimezone().isoformat(),
+                             "account": "alpaca-paper"})
+            except Exception:
+                log.exception("could not record the order failure")
             await self.tg_send(f"PAPER ORDER FAILED {raw.get('symbol')}: {str(e)[:200]}")
 
     def _enter(self, raw: dict, ev: dict) -> None:
@@ -167,6 +193,9 @@ class Executor:
         eq, last = float(acct["equity"]), float(acct.get("last_equity") or acct["equity"])
         if last and eq <= last * (1 - self.p["daily_loss_pct"]):
             return f"daily loss limit ({(eq / last - 1) * 100:.1f}% today)"
+        pdt = pdt_block(module, acct)
+        if pdt:
+            return pdt
         pos = self.positions()
         if len(pos) >= self.p["max_positions"]:
             return f"{len(pos)} positions open (max {self.p['max_positions']})"
@@ -319,6 +348,9 @@ class Executor:
             "long_market_value": float(a.get("long_market_value") or 0),
             "short_market_value": float(a.get("short_market_value") or 0),
             "halted": self.halted,
+            "daytrade_count": int(a.get("daytrade_count") or 0),
+            "pattern_day_trader": bool(a.get("pattern_day_trader")),
+            "trading_blocked": bool(a.get("trading_blocked") or a.get("account_blocked")),
             "limits": {k: self.p[k] for k in ("max_notional_frac", "max_positions", "daily_loss_pct", "scalp_last_entry")}
                       | {"scalp_risk_pct": self.p["scalp"]["risk_pct"], "swing_risk_pct": self.p["swing"]["risk_pct"]},
             "positions": [{k: p.get(k) for k in keep_p} for p in pos],
