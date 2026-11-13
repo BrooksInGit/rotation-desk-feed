@@ -1,11 +1,11 @@
 {
- "as_of": "2026-11-13T03:00:20.168281-05:00",
+ "as_of": "2026-11-13T04:00:22.998456-05:00",
  "account": "alpaca-paper",
  "account_last4": "Q90Z",
- "equity": 1972.84,
- "last_equity": 2000.0,
- "cash": 1972.84,
- "buying_power": 7891.36,
+ "equity": 1972.76,
+ "last_equity": 1972.76,
+ "cash": 1972.76,
+ "buying_power": 1972.76,
  "long_market_value": 0.0,
  "short_market_value": 0.0,
  "halted": false,
@@ -480,6 +480,10 @@
   {
    "t": "2026-11-11",
    "equity": 2000.0
+  },
+  {
+   "t": "2026-11-12",
+   "equity": 1972.76
   }
  ]
 }
