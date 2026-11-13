@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-11-13T17:15:00Z",
- "source": "hourly check 2026-11-13 12:05 ET run",
+ "updated_at": "2026-11-13T19:10:00Z",
+ "source": "hourly check 2026-11-13 14:05 ET run",
  "slippage_frac": 0.25,
  "exit_rules": {
   "scalp": {
@@ -41,6 +41,32 @@
    "plan": "GILD long shares (individual leader pullback), trigger > 171.70, stk stop 163.50, target 188.10",
    "stock_stop": 163.5,
    "target_stock": 188.1
+  },
+  {
+   "id": "20261113-swing-AAPL-C:entry",
+   "play_id": "20261113-swing-AAPL-C",
+   "symbol": "AAPL",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-20",
+   "armed_after": "2026-11-13T19:08:00Z",
+   "module": "swing",
+   "setup": "breakout",
+   "direction": "call",
+   "trigger": {
+    "type": "above",
+    "price": 359.37
+   },
+   "confirmation": {
+    "rvol_min": 1.0,
+    "vwap": "above",
+    "max_extension_pct": 0.025,
+    "spy_block_pct": 0.0075,
+    "skip_first_minutes": 5
+   },
+   "plan": "AAPL long shares (individual leader breakout, intraday find), trigger > 359.37, stk stop 338.20, target 401.71",
+   "stock_stop": 338.2,
+   "target_stock": 401.71
   }
  ]
 }
