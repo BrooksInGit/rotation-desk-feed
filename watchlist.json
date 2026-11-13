@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-11-13T15:56:00Z",
- "source": "hourly check 2026-11-13 10:05 ET run (fired 10:49 ET)",
+ "updated_at": "2026-11-13T16:28:00Z",
+ "source": "hourly check 2026-11-13 11:05 ET run (fired 11:23 ET)",
  "slippage_frac": 0.25,
  "exit_rules": {
   "scalp": {
@@ -491,43 +491,6 @@
    "track_only": true,
    "armed_after": "2026-11-13T15:18:00Z",
    "plan": "[tracked trial] HOOD put level_reclaim 79.44-80.08 (shelf ~79.76); stk stop 80.32 / target 75.18"
-  },
-  {
-   "id": "20261113-scalp-CSCO-P:entry",
-   "play_id": "20261113-scalp-CSCO-P",
-   "symbol": "CSCO",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-13",
-   "armed_after": "2026-11-13T15:55:00Z",
-   "module": "scalp",
-   "setup": "intraday_break",
-   "direction": "put",
-   "trigger": {
-    "type": "below",
-    "price": 96.0
-   },
-   "confirmation": {
-    "rvol_min": 1.0,
-    "vwap": "below",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0,
-    "skip_first_minutes": 5
-   },
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "plan": "CSCO short shares (intraday_break), trigger < 96.00 (low of day), stk stop 97.42, target 93.16",
-   "stock_stop": 97.42,
-   "target_stock": 93.16
   }
  ]
 }
