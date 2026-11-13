@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-11-13T19:10:00Z",
- "source": "hourly check 2026-11-13 14:05 ET run",
+ "updated_at": "2026-11-13T21:52:00Z",
+ "source": "evening run 2026-11-13",
  "slippage_frac": 0.25,
  "exit_rules": {
   "scalp": {
@@ -49,7 +49,6 @@
    "kind": "entry",
    "status": "active",
    "expires": "2026-11-20",
-   "armed_after": "2026-11-13T19:08:00Z",
    "module": "swing",
    "setup": "breakout",
    "direction": "call",
@@ -64,9 +63,92 @@
     "spy_block_pct": 0.0075,
     "skip_first_minutes": 5
    },
-   "plan": "AAPL long shares (individual leader breakout, intraday find), trigger > 359.37, stk stop 338.20, target 401.71",
+   "plan": "AAPL long shares (individual leader breakout), trigger > 359.37, stk stop 338.20, target 401.71",
    "stock_stop": 338.2,
    "target_stock": 401.71
+  },
+  {
+   "id": "20261113-swing-V-C:entry",
+   "play_id": "20261113-swing-V-C",
+   "symbol": "V",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-20",
+   "module": "swing",
+   "setup": "pullback",
+   "direction": "call",
+   "trigger": {
+    "type": "above",
+    "price": 427.45
+   },
+   "confirmation": {
+    "rvol_min": 1.0,
+    "vwap": "above",
+    "max_extension_pct": 0.025,
+    "spy_block_pct": 0.0075,
+    "skip_first_minutes": 5,
+    "rs_exempt": {
+     "min_move_pct": 0.01,
+     "hard_block_pct": 0.015
+    }
+   },
+   "plan": "V long shares (XLF leader pullback), trigger > 427.45, stk stop 412.50, target 457.35",
+   "stock_stop": 412.5,
+   "target_stock": 457.35
+  },
+  {
+   "id": "20261113-swing-BLK-C:entry",
+   "play_id": "20261113-swing-BLK-C",
+   "symbol": "BLK",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-20",
+   "module": "swing",
+   "setup": "breakout",
+   "direction": "call",
+   "trigger": {
+    "type": "above",
+    "price": 1236.93
+   },
+   "confirmation": {
+    "rvol_min": 1.0,
+    "vwap": "above",
+    "max_extension_pct": 0.025,
+    "spy_block_pct": 0.0075,
+    "skip_first_minutes": 5,
+    "rs_exempt": {
+     "min_move_pct": 0.01,
+     "hard_block_pct": 0.015
+    }
+   },
+   "plan": "BLK long shares (XLF leader base breakout), trigger > 1236.93, stk stop 1190.00, target 1330.79",
+   "stock_stop": 1190.0,
+   "target_stock": 1330.79
+  },
+  {
+   "id": "20261113-swing-PG-C:entry",
+   "play_id": "20261113-swing-PG-C",
+   "symbol": "PG",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-20",
+   "module": "swing",
+   "setup": "breakout",
+   "direction": "call",
+   "trigger": {
+    "type": "above",
+    "price": 170.73
+   },
+   "confirmation": {
+    "rvol_min": 1.0,
+    "vwap": "above",
+    "max_extension_pct": 0.025,
+    "spy_block_pct": 0.0075,
+    "skip_first_minutes": 5
+   },
+   "plan": "PG long shares (individual leader breakout), trigger > 170.73, stk stop 161.90, target 188.39",
+   "stock_stop": 161.9,
+   "target_stock": 188.39
   }
  ]
 }
