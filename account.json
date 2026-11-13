@@ -1,5 +1,5 @@
 {
- "as_of": "2026-11-13T11:29:05.177072-05:00",
+ "as_of": "2026-11-13T11:29:56.256204-05:00",
  "account": "alpaca-paper",
  "account_last4": "Q90Z",
  "equity": 1972.76,
@@ -12,6 +12,8 @@
  "daytrade_count": 0,
  "pattern_day_trader": false,
  "trading_blocked": false,
+ "shorting_enabled": false,
+ "multiplier": "1",
  "limits": {
   "max_notional_frac": 0.5,
   "max_positions": 3,
