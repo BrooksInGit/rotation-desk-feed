@@ -201,6 +201,9 @@ class Executor:
             return f"{len(pos)} positions open (max {self.p['max_positions']})"
         if any(p["symbol"] == sym for p in pos):
             return f"already holding {sym}"
+        if not long and not acct.get("shorting_enabled", True):
+            return (f"shorting disabled on the account (equity ${eq:,.2f}; Alpaca allows short selling "
+                    f"only with margin, which needs at least $2,000 equity)")
         if not long:
             a = self._req("GET", f"/v2/assets/{sym}")
             if not (a.get("shortable") and a.get("easy_to_borrow")):
@@ -351,6 +354,8 @@ class Executor:
             "daytrade_count": int(a.get("daytrade_count") or 0),
             "pattern_day_trader": bool(a.get("pattern_day_trader")),
             "trading_blocked": bool(a.get("trading_blocked") or a.get("account_blocked")),
+            "shorting_enabled": bool(a.get("shorting_enabled")),
+            "multiplier": a.get("multiplier"),
             "limits": {k: self.p[k] for k in ("max_notional_frac", "max_positions", "daily_loss_pct", "scalp_last_entry")}
                       | {"scalp_risk_pct": self.p["scalp"]["risk_pct"], "swing_risk_pct": self.p["swing"]["risk_pct"]},
             "positions": [{k: p.get(k) for k in keep_p} for p in pos],
