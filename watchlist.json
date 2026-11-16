@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-11-16T20:09:00Z",
- "source": "hourly check 2026-11-16 15:05 ET",
+ "updated_at": "2026-11-16T21:50:00Z",
+ "source": "evening run 2026-11-16",
  "slippage_frac": 0.25,
  "exit_rules": {
   "scalp": {
@@ -70,6 +70,93 @@
    "plan": "BLK long shares (XLF leader base breakout), trigger > 1236.93, stk stop 1190.00, target 1330.79",
    "stock_stop": 1190.0,
    "target_stock": 1330.79
+  },
+  {
+   "id": "20261116-swing-PGR-C:entry",
+   "play_id": "20261116-swing-PGR-C",
+   "symbol": "PGR",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-23",
+   "module": "swing",
+   "setup": "breakout",
+   "direction": "call",
+   "trigger": {
+    "type": "above",
+    "price": 239.44
+   },
+   "confirmation": {
+    "rvol_min": 1.0,
+    "vwap": "above",
+    "max_extension_pct": 0.025,
+    "spy_block_pct": 0.0075,
+    "skip_first_minutes": 5,
+    "rs_exempt": {
+     "min_move_pct": 0.01,
+     "hard_block_pct": 0.015
+    }
+   },
+   "plan": "PGR long shares (XLF leader flag breakout), trigger > 239.44, stk stop 226.50, target 265.32",
+   "stock_stop": 226.5,
+   "target_stock": 265.32
+  },
+  {
+   "id": "20261116-swing-CL-C:entry",
+   "play_id": "20261116-swing-CL-C",
+   "symbol": "CL",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-23",
+   "module": "swing",
+   "setup": "breakout",
+   "direction": "call",
+   "trigger": {
+    "type": "above",
+    "price": 101.81
+   },
+   "confirmation": {
+    "rvol_min": 1.0,
+    "vwap": "above",
+    "max_extension_pct": 0.025,
+    "spy_block_pct": 0.0075,
+    "skip_first_minutes": 5,
+    "rs_exempt": {
+     "min_move_pct": 0.01,
+     "hard_block_pct": 0.015
+    }
+   },
+   "plan": "CL long shares (XLP leader new-high breakout), trigger > 101.81, stk stop 96.60, target 112.23",
+   "stock_stop": 96.6,
+   "target_stock": 112.23
+  },
+  {
+   "id": "20261116-swing-HCA-C:entry",
+   "play_id": "20261116-swing-HCA-C",
+   "symbol": "HCA",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-23",
+   "module": "swing",
+   "setup": "breakout",
+   "direction": "call",
+   "trigger": {
+    "type": "above",
+    "price": 521.48
+   },
+   "confirmation": {
+    "rvol_min": 1.0,
+    "vwap": "above",
+    "max_extension_pct": 0.025,
+    "spy_block_pct": 0.0075,
+    "skip_first_minutes": 5,
+    "rs_exempt": {
+     "min_move_pct": 0.01,
+     "hard_block_pct": 0.015
+    }
+   },
+   "plan": "HCA long shares (XLV leader base breakout), trigger > 521.48, stk stop 493.00, target 578.44",
+   "stock_stop": 493.0,
+   "target_stock": 578.44
   }
  ]
 }
