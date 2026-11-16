@@ -1,329 +1,256 @@
 {
-  "updated_at": "2026-11-16T17:09:00Z",
-  "source": "hourly check 2026-11-16 12:05 ET",
-  "slippage_frac": 0.25,
-  "exit_rules": {
-    "scalp": {
-      "option_stop_pct": 0.28,
-      "option_target_mult": 1.4,
-      "stock_stop_pct": 0.01,
-      "stock_target_r": 2.0
-    },
-    "swing": {
-      "option_stop_pct": 0.45,
-      "option_target_mult": 1.8,
-      "stock_stop_pct": 0.03,
-      "stock_target_r": 2.0
-    }
+ "updated_at": "2026-11-16T18:12:00Z",
+ "source": "hourly check 2026-11-16 13:05 ET",
+ "slippage_frac": 0.25,
+ "exit_rules": {
+  "scalp": {
+   "option_stop_pct": 0.28,
+   "option_target_mult": 1.4,
+   "stock_stop_pct": 0.01,
+   "stock_target_r": 2.0
   },
-  "watch": [
-    {
-      "id": "20261113-swing-AAPL-C:entry",
-      "play_id": "20261113-swing-AAPL-C",
-      "symbol": "AAPL",
-      "kind": "entry",
-      "status": "active",
-      "expires": "2026-11-20",
-      "module": "swing",
-      "setup": "breakout",
-      "direction": "call",
-      "trigger": {
-        "type": "above",
-        "price": 359.37
-      },
-      "confirmation": {
-        "rvol_min": 1.0,
-        "vwap": "above",
-        "max_extension_pct": 0.025,
-        "spy_block_pct": 0.0075,
-        "skip_first_minutes": 5
-      },
-      "plan": "AAPL long shares (individual leader breakout), trigger > 359.37, stk stop 338.20, target 401.71",
-      "stock_stop": 338.2,
-      "target_stock": 401.71
-    },
-    {
-      "id": "20261113-swing-BLK-C:entry",
-      "play_id": "20261113-swing-BLK-C",
-      "symbol": "BLK",
-      "kind": "entry",
-      "status": "active",
-      "expires": "2026-11-20",
-      "module": "swing",
-      "setup": "breakout",
-      "direction": "call",
-      "trigger": {
-        "type": "above",
-        "price": 1236.93
-      },
-      "confirmation": {
-        "rvol_min": 1.0,
-        "vwap": "above",
-        "max_extension_pct": 0.025,
-        "spy_block_pct": 0.0075,
-        "skip_first_minutes": 5,
-        "rs_exempt": {
-          "min_move_pct": 0.01,
-          "hard_block_pct": 0.015
-        }
-      },
-      "plan": "BLK long shares (XLF leader base breakout), trigger > 1236.93, stk stop 1190.00, target 1330.79",
-      "stock_stop": 1190.0,
-      "target_stock": 1330.79
-    },
-    {
-      "id": "20261116-scalp-NVDA-P:entry",
-      "play_id": "20261116-scalp-NVDA-P",
-      "symbol": "NVDA",
-      "kind": "entry",
-      "status": "active",
-      "expires": "2026-11-16",
-      "module": "scalp",
-      "setup": "pm_break",
-      "direction": "put",
-      "trigger": {
-        "type": "below",
-        "price": 155.6
-      },
-      "confirmation": {
-        "rvol_min": 1.0,
-        "vwap": "below",
-        "max_extension_pct": 0.01,
-        "spy_block_pct": 0.0,
-        "skip_first_minutes": 5
-      },
-      "contract_rule": {
-        "dte": [
-          0,
-          7
-        ],
-        "delta": [
-          0.4,
-          0.6
-        ],
-        "max_spread_pct": 0.05
-      },
-      "pair": "NVDA-20261116",
-      "stock_stop": 157.16,
-      "target_stock": 152.48,
-      "plan": "NVDA short shares pm_break, trigger < 155.6, stk stop 157.16, target 152.48 (pm -3.4%)"
-    },
-    {
-      "id": "20261116-scalp-NVDA-P-orb:entry",
-      "play_id": "20261116-scalp-NVDA-P-orb",
-      "symbol": "NVDA",
-      "kind": "entry",
-      "status": "active",
-      "expires": "2026-11-16",
-      "module": "scalp",
-      "setup": "orb",
-      "direction": "put",
-      "trigger": {
-        "type": "orb_low",
-        "minutes": 30
-      },
-      "confirmation": {
-        "rvol_min": 1.0,
-        "vwap": "below",
-        "max_extension_pct": 0.01,
-        "spy_block_pct": 0.0,
-        "skip_first_minutes": 5
-      },
-      "contract_rule": {
-        "dte": [
-          0,
-          7
-        ],
-        "delta": [
-          0.4,
-          0.6
-        ],
-        "max_spread_pct": 0.05
-      },
-      "pair": "NVDA-20261116",
-      "plan": "NVDA short shares orb, trigger < 30-min OR low, 1% stop / 2R target"
-    },
-    {
-      "id": "20261116-scalp-SMCI-P-orb:entry",
-      "play_id": "20261116-scalp-SMCI-P-orb",
-      "symbol": "SMCI",
-      "kind": "entry",
-      "status": "active",
-      "expires": "2026-11-16",
-      "module": "scalp",
-      "setup": "orb",
-      "direction": "put",
-      "trigger": {
-        "type": "orb_low",
-        "minutes": 30
-      },
-      "confirmation": {
-        "rvol_min": 1.0,
-        "vwap": "below",
-        "max_extension_pct": 0.01,
-        "spy_block_pct": 0.0,
-        "skip_first_minutes": 5
-      },
-      "contract_rule": {
-        "dte": [
-          0,
-          7
-        ],
-        "delta": [
-          0.4,
-          0.6
-        ],
-        "max_spread_pct": 0.05
-      },
-      "pair": "SMCI-20261116",
-      "plan": "SMCI short shares orb, trigger < 30-min OR low, 1% stop / 2R target"
-    },
-    {
-      "id": "20261116-scalp-AMD-P:entry",
-      "play_id": "20261116-scalp-AMD-P",
-      "symbol": "AMD",
-      "kind": "entry",
-      "status": "active",
-      "expires": "2026-11-16",
-      "module": "scalp",
-      "setup": "pm_break",
-      "direction": "put",
-      "trigger": {
-        "type": "below",
-        "price": 502.0
-      },
-      "confirmation": {
-        "rvol_min": 1.0,
-        "vwap": "below",
-        "max_extension_pct": 0.01,
-        "spy_block_pct": 0.0,
-        "skip_first_minutes": 5
-      },
-      "contract_rule": {
-        "dte": [
-          0,
-          7
-        ],
-        "delta": [
-          0.4,
-          0.6
-        ],
-        "max_spread_pct": 0.05
-      },
-      "pair": "AMD-20261116",
-      "stock_stop": 507.02,
-      "target_stock": 491.96,
-      "plan": "AMD short shares pm_break, trigger < 502.0, stk stop 507.02, target 491.96 (pm -6.1%)"
-    },
-    {
-      "id": "20261116-scalp-AMD-P-orb:entry",
-      "play_id": "20261116-scalp-AMD-P-orb",
-      "symbol": "AMD",
-      "kind": "entry",
-      "status": "active",
-      "expires": "2026-11-16",
-      "module": "scalp",
-      "setup": "orb",
-      "direction": "put",
-      "trigger": {
-        "type": "orb_low",
-        "minutes": 30
-      },
-      "confirmation": {
-        "rvol_min": 1.0,
-        "vwap": "below",
-        "max_extension_pct": 0.01,
-        "spy_block_pct": 0.0,
-        "skip_first_minutes": 5
-      },
-      "contract_rule": {
-        "dte": [
-          0,
-          7
-        ],
-        "delta": [
-          0.4,
-          0.6
-        ],
-        "max_spread_pct": 0.05
-      },
-      "pair": "AMD-20261116",
-      "plan": "AMD short shares orb, trigger < 30-min OR low, 1% stop / 2R target"
-    },
-    {
-      "id": "20261116-scalp-HOOD-P:entry",
-      "play_id": "20261116-scalp-HOOD-P",
-      "symbol": "HOOD",
-      "kind": "entry",
-      "status": "active",
-      "expires": "2026-11-16",
-      "module": "scalp",
-      "setup": "pm_break",
-      "direction": "put",
-      "trigger": {
-        "type": "below",
-        "price": 72.71
-      },
-      "confirmation": {
-        "rvol_min": 1.0,
-        "vwap": "below",
-        "max_extension_pct": 0.01,
-        "spy_block_pct": 0.0,
-        "skip_first_minutes": 5
-      },
-      "contract_rule": {
-        "dte": [
-          0,
-          7
-        ],
-        "delta": [
-          0.4,
-          0.6
-        ],
-        "max_spread_pct": 0.05
-      },
-      "pair": "HOOD-20261116",
-      "stock_stop": 73.44,
-      "target_stock": 71.25,
-      "plan": "HOOD short shares pm_break, trigger < 72.71, stk stop 73.44, target 71.25 (pm -5.6%) [track only: orb twin confirmed first]",
-      "track_only": true
-    },
-    {
-      "id": "20261116-scalp-TSM-P:entry",
-      "play_id": "20261116-scalp-TSM-P",
-      "symbol": "TSM",
-      "kind": "entry",
-      "status": "active",
-      "expires": "2026-11-16",
-      "armed_after": "2026-11-16T16:12:00Z",
-      "module": "scalp",
-      "setup": "intraday_break",
-      "direction": "put",
-      "trigger": {
-        "type": "below",
-        "price": 372.46
-      },
-      "confirmation": {
-        "rvol_min": 1.0,
-        "vwap": "below",
-        "max_extension_pct": 0.01,
-        "spy_block_pct": 0.0,
-        "skip_first_minutes": 5
-      },
-      "contract_rule": {
-        "dte": [
-          0,
-          7
-        ],
-        "delta": [
-          0.4,
-          0.6
-        ],
-        "max_spread_pct": 0.05
-      },
-      "stock_stop": 377.48,
-      "target_stock": 362.43,
-      "plan": "TSM short shares intraday_break, trigger < 372.46 (LOD), stk stop 377.48, target 362.43 (day -5.5%, RVOL 1.29)"
+  "swing": {
+   "option_stop_pct": 0.45,
+   "option_target_mult": 1.8,
+   "stock_stop_pct": 0.03,
+   "stock_target_r": 2.0
+  }
+ },
+ "watch": [
+  {
+   "id": "20261113-swing-AAPL-C:entry",
+   "play_id": "20261113-swing-AAPL-C",
+   "symbol": "AAPL",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-20",
+   "module": "swing",
+   "setup": "breakout",
+   "direction": "call",
+   "trigger": {
+    "type": "above",
+    "price": 359.37
+   },
+   "confirmation": {
+    "rvol_min": 1.0,
+    "vwap": "above",
+    "max_extension_pct": 0.025,
+    "spy_block_pct": 0.0075,
+    "skip_first_minutes": 5
+   },
+   "plan": "AAPL long shares (individual leader breakout), trigger > 359.37, stk stop 338.20, target 401.71",
+   "stock_stop": 338.2,
+   "target_stock": 401.71
+  },
+  {
+   "id": "20261113-swing-BLK-C:entry",
+   "play_id": "20261113-swing-BLK-C",
+   "symbol": "BLK",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-20",
+   "module": "swing",
+   "setup": "breakout",
+   "direction": "call",
+   "trigger": {
+    "type": "above",
+    "price": 1236.93
+   },
+   "confirmation": {
+    "rvol_min": 1.0,
+    "vwap": "above",
+    "max_extension_pct": 0.025,
+    "spy_block_pct": 0.0075,
+    "skip_first_minutes": 5,
+    "rs_exempt": {
+     "min_move_pct": 0.01,
+     "hard_block_pct": 0.015
     }
-  ]
+   },
+   "plan": "BLK long shares (XLF leader base breakout), trigger > 1236.93, stk stop 1190.00, target 1330.79",
+   "stock_stop": 1190.0,
+   "target_stock": 1330.79
+  },
+  {
+   "id": "20261116-scalp-NVDA-P:entry",
+   "play_id": "20261116-scalp-NVDA-P",
+   "symbol": "NVDA",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-16",
+   "module": "scalp",
+   "setup": "pm_break",
+   "direction": "put",
+   "trigger": {
+    "type": "below",
+    "price": 155.6
+   },
+   "confirmation": {
+    "rvol_min": 1.0,
+    "vwap": "below",
+    "max_extension_pct": 0.01,
+    "spy_block_pct": 0.0,
+    "skip_first_minutes": 5
+   },
+   "contract_rule": {
+    "dte": [
+     0,
+     7
+    ],
+    "delta": [
+     0.4,
+     0.6
+    ],
+    "max_spread_pct": 0.05
+   },
+   "pair": "NVDA-20261116",
+   "stock_stop": 157.16,
+   "target_stock": 152.48,
+   "plan": "NVDA short shares pm_break, trigger < 155.6, stk stop 157.16, target 152.48 (pm -3.4%)"
+  },
+  {
+   "id": "20261116-scalp-SMCI-P-orb:entry",
+   "play_id": "20261116-scalp-SMCI-P-orb",
+   "symbol": "SMCI",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-16",
+   "module": "scalp",
+   "setup": "orb",
+   "direction": "put",
+   "trigger": {
+    "type": "orb_low",
+    "minutes": 30
+   },
+   "confirmation": {
+    "rvol_min": 1.0,
+    "vwap": "below",
+    "max_extension_pct": 0.01,
+    "spy_block_pct": 0.0,
+    "skip_first_minutes": 5
+   },
+   "contract_rule": {
+    "dte": [
+     0,
+     7
+    ],
+    "delta": [
+     0.4,
+     0.6
+    ],
+    "max_spread_pct": 0.05
+   },
+   "pair": "SMCI-20261116",
+   "plan": "SMCI short shares orb, trigger < 30-min OR low, 1% stop / 2R target"
+  },
+  {
+   "id": "20261116-scalp-AMD-P:entry",
+   "play_id": "20261116-scalp-AMD-P",
+   "symbol": "AMD",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-16",
+   "module": "scalp",
+   "setup": "pm_break",
+   "direction": "put",
+   "trigger": {
+    "type": "below",
+    "price": 502.0
+   },
+   "confirmation": {
+    "rvol_min": 1.0,
+    "vwap": "below",
+    "max_extension_pct": 0.01,
+    "spy_block_pct": 0.0,
+    "skip_first_minutes": 5
+   },
+   "contract_rule": {
+    "dte": [
+     0,
+     7
+    ],
+    "delta": [
+     0.4,
+     0.6
+    ],
+    "max_spread_pct": 0.05
+   },
+   "pair": "AMD-20261116",
+   "stock_stop": 507.02,
+   "target_stock": 491.96,
+   "plan": "AMD short shares pm_break, trigger < 502.0, stk stop 507.02, target 491.96 (pm -6.1%)"
+  },
+  {
+   "id": "20261116-scalp-AMD-P-orb:entry",
+   "play_id": "20261116-scalp-AMD-P-orb",
+   "symbol": "AMD",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-16",
+   "module": "scalp",
+   "setup": "orb",
+   "direction": "put",
+   "trigger": {
+    "type": "orb_low",
+    "minutes": 30
+   },
+   "confirmation": {
+    "rvol_min": 1.0,
+    "vwap": "below",
+    "max_extension_pct": 0.01,
+    "spy_block_pct": 0.0,
+    "skip_first_minutes": 5
+   },
+   "contract_rule": {
+    "dte": [
+     0,
+     7
+    ],
+    "delta": [
+     0.4,
+     0.6
+    ],
+    "max_spread_pct": 0.05
+   },
+   "pair": "AMD-20261116",
+   "plan": "AMD short shares orb, trigger < 30-min OR low, 1% stop / 2R target"
+  },
+  {
+   "id": "20261116-scalp-TSM-P:entry",
+   "play_id": "20261116-scalp-TSM-P",
+   "symbol": "TSM",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-16",
+   "armed_after": "2026-11-16T16:12:00Z",
+   "module": "scalp",
+   "setup": "intraday_break",
+   "direction": "put",
+   "trigger": {
+    "type": "below",
+    "price": 372.46
+   },
+   "confirmation": {
+    "rvol_min": 1.0,
+    "vwap": "below",
+    "max_extension_pct": 0.01,
+    "spy_block_pct": 0.0,
+    "skip_first_minutes": 5
+   },
+   "contract_rule": {
+    "dte": [
+     0,
+     7
+    ],
+    "delta": [
+     0.4,
+     0.6
+    ],
+    "max_spread_pct": 0.05
+   },
+   "stock_stop": 377.48,
+   "target_stock": 362.43,
+   "plan": "TSM short shares intraday_break, trigger < 372.46 (LOD), stk stop 377.48, target 362.43 (day -5.5%, RVOL 1.29)"
+  }
+ ]
 }
