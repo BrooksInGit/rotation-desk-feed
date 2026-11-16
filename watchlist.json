@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-11-16T19:12:00Z",
- "source": "hourly check 2026-11-16 14:05 ET",
+ "updated_at": "2026-11-16T20:09:00Z",
+ "source": "hourly check 2026-11-16 15:05 ET",
  "slippage_frac": 0.25,
  "exit_rules": {
   "scalp": {
@@ -70,115 +70,6 @@
    "plan": "BLK long shares (XLF leader base breakout), trigger > 1236.93, stk stop 1190.00, target 1330.79",
    "stock_stop": 1190.0,
    "target_stock": 1330.79
-  },
-  {
-   "id": "20261116-scalp-AMD-P:entry",
-   "play_id": "20261116-scalp-AMD-P",
-   "symbol": "AMD",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-16",
-   "module": "scalp",
-   "setup": "pm_break",
-   "direction": "put",
-   "trigger": {
-    "type": "below",
-    "price": 502.0
-   },
-   "confirmation": {
-    "rvol_min": 1.0,
-    "vwap": "below",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0,
-    "skip_first_minutes": 5
-   },
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "AMD-20261116",
-   "stock_stop": 507.02,
-   "target_stock": 491.96,
-   "plan": "AMD short shares pm_break, trigger < 502.0, stk stop 507.02, target 491.96 (pm -6.1%)"
-  },
-  {
-   "id": "20261116-scalp-AMD-P-orb:entry",
-   "play_id": "20261116-scalp-AMD-P-orb",
-   "symbol": "AMD",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-16",
-   "module": "scalp",
-   "setup": "orb",
-   "direction": "put",
-   "trigger": {
-    "type": "orb_low",
-    "minutes": 30
-   },
-   "confirmation": {
-    "rvol_min": 1.0,
-    "vwap": "below",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0,
-    "skip_first_minutes": 5
-   },
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "AMD-20261116",
-   "plan": "AMD short shares orb, trigger < 30-min OR low, 1% stop / 2R target"
-  },
-  {
-   "id": "20261116-scalp-TSM-P:entry",
-   "play_id": "20261116-scalp-TSM-P",
-   "symbol": "TSM",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-16",
-   "armed_after": "2026-11-16T16:12:00Z",
-   "module": "scalp",
-   "setup": "intraday_break",
-   "direction": "put",
-   "trigger": {
-    "type": "below",
-    "price": 372.46
-   },
-   "confirmation": {
-    "rvol_min": 1.0,
-    "vwap": "below",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0,
-    "skip_first_minutes": 5
-   },
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "stock_stop": 377.48,
-   "target_stock": 362.43,
-   "plan": "TSM short shares intraday_break, trigger < 372.46 (LOD), stk stop 377.48, target 362.43 (day -5.5%, RVOL 1.29)"
   }
  ]
 }
