@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-11-16T18:12:00Z",
- "source": "hourly check 2026-11-16 13:05 ET",
+ "updated_at": "2026-11-16T19:12:00Z",
+ "source": "hourly check 2026-11-16 14:05 ET",
  "slippage_frac": 0.25,
  "exit_rules": {
   "scalp": {
@@ -70,78 +70,6 @@
    "plan": "BLK long shares (XLF leader base breakout), trigger > 1236.93, stk stop 1190.00, target 1330.79",
    "stock_stop": 1190.0,
    "target_stock": 1330.79
-  },
-  {
-   "id": "20261116-scalp-NVDA-P:entry",
-   "play_id": "20261116-scalp-NVDA-P",
-   "symbol": "NVDA",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-16",
-   "module": "scalp",
-   "setup": "pm_break",
-   "direction": "put",
-   "trigger": {
-    "type": "below",
-    "price": 155.6
-   },
-   "confirmation": {
-    "rvol_min": 1.0,
-    "vwap": "below",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0,
-    "skip_first_minutes": 5
-   },
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "NVDA-20261116",
-   "stock_stop": 157.16,
-   "target_stock": 152.48,
-   "plan": "NVDA short shares pm_break, trigger < 155.6, stk stop 157.16, target 152.48 (pm -3.4%)"
-  },
-  {
-   "id": "20261116-scalp-SMCI-P-orb:entry",
-   "play_id": "20261116-scalp-SMCI-P-orb",
-   "symbol": "SMCI",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-16",
-   "module": "scalp",
-   "setup": "orb",
-   "direction": "put",
-   "trigger": {
-    "type": "orb_low",
-    "minutes": 30
-   },
-   "confirmation": {
-    "rvol_min": 1.0,
-    "vwap": "below",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0,
-    "skip_first_minutes": 5
-   },
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "SMCI-20261116",
-   "plan": "SMCI short shares orb, trigger < 30-min OR low, 1% stop / 2R target"
   },
   {
    "id": "20261116-scalp-AMD-P:entry",
