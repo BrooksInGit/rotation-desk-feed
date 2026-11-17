@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-11-16T21:50:00Z",
- "source": "evening run 2026-11-16",
+ "updated_at": "2026-11-17T13:56:00Z",
+ "source": "pre-market brief 2026-11-17",
  "slippage_frac": 0.25,
  "exit_rules": {
   "scalp": {
@@ -18,6 +18,571 @@
  },
  "watch": [
   {
+   "symbol": "MRVL",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-17",
+   "module": "scalp",
+   "direction": "call",
+   "contract_rule": {
+    "dte": [
+     0,
+     7
+    ],
+    "delta": [
+     0.4,
+     0.6
+    ],
+    "max_spread_pct": 0.05
+   },
+   "id": "20261117-scalp-MRVL-C:entry",
+   "play_id": "20261117-scalp-MRVL-C",
+   "setup": "pm_break",
+   "pair": "MRVL-20261117",
+   "trigger": {
+    "type": "above",
+    "price": 155.68
+   },
+   "confirmation": {
+    "rvol_min": 1,
+    "vwap": "above",
+    "max_extension_pct": 0.01,
+    "spy_block_pct": 0.0,
+    "skip_first_minutes": 5
+   },
+   "plan": "MRVL long shares pm_break > 155.68 (+3.67% PM, lane list, radar neutral); 1% stop / 2R / 15:05 close"
+  },
+  {
+   "symbol": "MRVL",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-17",
+   "module": "scalp",
+   "direction": "call",
+   "contract_rule": {
+    "dte": [
+     0,
+     7
+    ],
+    "delta": [
+     0.4,
+     0.6
+    ],
+    "max_spread_pct": 0.05
+   },
+   "id": "20261117-scalp-MRVL-C-orb:entry",
+   "play_id": "20261117-scalp-MRVL-C-orb",
+   "setup": "orb",
+   "pair": "MRVL-20261117",
+   "trigger": {
+    "type": "orb_high",
+    "minutes": 30
+   },
+   "confirmation": {
+    "rvol_min": 1,
+    "vwap": "above",
+    "max_extension_pct": 0.01,
+    "spy_block_pct": 0.0,
+    "skip_first_minutes": 5
+   },
+   "plan": "MRVL long shares ORB30 high (twin of pm_break 155.68); 1% stop / 2R / 15:05 close"
+  },
+  {
+   "symbol": "MRVL",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-17",
+   "module": "scalp",
+   "direction": "call",
+   "contract_rule": {
+    "dte": [
+     0,
+     7
+    ],
+    "delta": [
+     0.4,
+     0.6
+    ],
+    "max_spread_pct": 0.05
+   },
+   "id": "20261117-scalp-MRVL-C-reclaim:entry",
+   "play_id": "20261117-scalp-MRVL-C-reclaim",
+   "setup": "level_reclaim",
+   "trigger": {
+    "type": "reclaim_above",
+    "zone": [
+     148.56,
+     149.76
+    ],
+    "window": [
+     "09:45",
+     "11:30"
+    ]
+   },
+   "confirmation": {
+    "rvol_min": 1,
+    "vwap": "above",
+    "max_extension_pct": 0.01,
+    "spy_block_pct": 0.0075
+   },
+   "stock_stop": 148.11,
+   "target_stock": 155.68,
+   "track_only": true,
+   "plan": "MRVL tracked reclaim prior-day high zone 148.56-149.76, stk stop 148.11, target 155.68"
+  },
+  {
+   "symbol": "AMD",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-17",
+   "module": "scalp",
+   "direction": "call",
+   "contract_rule": {
+    "dte": [
+     0,
+     7
+    ],
+    "delta": [
+     0.4,
+     0.6
+    ],
+    "max_spread_pct": 0.05
+   },
+   "id": "20261117-scalp-AMD-C:entry",
+   "play_id": "20261117-scalp-AMD-C",
+   "setup": "pm_break",
+   "pair": "AMD-20261117",
+   "trigger": {
+    "type": "above",
+    "price": 520.86
+   },
+   "confirmation": {
+    "rvol_min": 1,
+    "vwap": "above",
+    "max_extension_pct": 0.01,
+    "spy_block_pct": 0.0,
+    "skip_first_minutes": 5
+   },
+   "plan": "AMD long shares pm_break > 520.86 (+1.53% PM, lane list, radar neutral); 1% stop / 2R / 15:05 close"
+  },
+  {
+   "symbol": "AMD",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-17",
+   "module": "scalp",
+   "direction": "call",
+   "contract_rule": {
+    "dte": [
+     0,
+     7
+    ],
+    "delta": [
+     0.4,
+     0.6
+    ],
+    "max_spread_pct": 0.05
+   },
+   "id": "20261117-scalp-AMD-C-orb:entry",
+   "play_id": "20261117-scalp-AMD-C-orb",
+   "setup": "orb",
+   "pair": "AMD-20261117",
+   "trigger": {
+    "type": "orb_high",
+    "minutes": 30
+   },
+   "confirmation": {
+    "rvol_min": 1,
+    "vwap": "above",
+    "max_extension_pct": 0.01,
+    "spy_block_pct": 0.0,
+    "skip_first_minutes": 5
+   },
+   "plan": "AMD long shares ORB30 high (twin of pm_break 520.86); 1% stop / 2R / 15:05 close"
+  },
+  {
+   "symbol": "AMD",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-17",
+   "module": "scalp",
+   "direction": "call",
+   "contract_rule": {
+    "dte": [
+     0,
+     7
+    ],
+    "delta": [
+     0.4,
+     0.6
+    ],
+    "max_spread_pct": 0.05
+   },
+   "id": "20261117-scalp-AMD-C-reclaim:entry",
+   "play_id": "20261117-scalp-AMD-C-reclaim",
+   "setup": "level_reclaim",
+   "trigger": {
+    "type": "reclaim_above",
+    "zone": [
+     502.26,
+     506.3
+    ],
+    "window": [
+     "09:45",
+     "11:30"
+    ]
+   },
+   "confirmation": {
+    "rvol_min": 1,
+    "vwap": "above",
+    "max_extension_pct": 0.01,
+    "spy_block_pct": 0.0075
+   },
+   "stock_stop": 500.75,
+   "target_stock": 520.86,
+   "track_only": true,
+   "plan": "AMD tracked reclaim prior close / shelf 501.3-504.8 zone 502.26-506.3, stk stop 500.75, target 520.86"
+  },
+  {
+   "symbol": "UNH",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-17",
+   "module": "scalp",
+   "direction": "put",
+   "contract_rule": {
+    "dte": [
+     0,
+     7
+    ],
+    "delta": [
+     0.4,
+     0.6
+    ],
+    "max_spread_pct": 0.05
+   },
+   "id": "20261117-scalp-UNH-P:entry",
+   "play_id": "20261117-scalp-UNH-P",
+   "setup": "pm_break",
+   "pair": "UNH-20261117",
+   "trigger": {
+    "type": "below",
+    "price": 399.76
+   },
+   "confirmation": {
+    "rvol_min": 1,
+    "vwap": "below",
+    "max_extension_pct": 0.01,
+    "spy_block_pct": 0.0,
+    "skip_first_minutes": 5
+   },
+   "plan": "UNH short shares pm_break < 399.76 (-2.92% PM, lane list, radar against); 1% stop / 2R / 15:05 close"
+  },
+  {
+   "symbol": "UNH",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-17",
+   "module": "scalp",
+   "direction": "put",
+   "contract_rule": {
+    "dte": [
+     0,
+     7
+    ],
+    "delta": [
+     0.4,
+     0.6
+    ],
+    "max_spread_pct": 0.05
+   },
+   "id": "20261117-scalp-UNH-P-orb:entry",
+   "play_id": "20261117-scalp-UNH-P-orb",
+   "setup": "orb",
+   "pair": "UNH-20261117",
+   "trigger": {
+    "type": "orb_low",
+    "minutes": 30
+   },
+   "confirmation": {
+    "rvol_min": 1,
+    "vwap": "below",
+    "max_extension_pct": 0.01,
+    "spy_block_pct": 0.0,
+    "skip_first_minutes": 5
+   },
+   "plan": "UNH short shares ORB30 low (twin of pm_break 399.76); 1% stop / 2R / 15:05 close"
+  },
+  {
+   "symbol": "UNH",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-17",
+   "module": "scalp",
+   "direction": "put",
+   "contract_rule": {
+    "dte": [
+     0,
+     7
+    ],
+    "delta": [
+     0.4,
+     0.6
+    ],
+    "max_spread_pct": 0.05
+   },
+   "id": "20261117-scalp-UNH-P-reclaim:entry",
+   "play_id": "20261117-scalp-UNH-P-reclaim",
+   "setup": "level_reclaim",
+   "trigger": {
+    "type": "reclaim_below",
+    "zone": [
+     403.51,
+     406.75
+    ],
+    "window": [
+     "09:45",
+     "11:30"
+    ]
+   },
+   "confirmation": {
+    "rvol_min": 1,
+    "vwap": "below",
+    "max_extension_pct": 0.01,
+    "spy_block_pct": 0.0075
+   },
+   "stock_stop": 407.97,
+   "target_stock": 394.59,
+   "track_only": true,
+   "plan": "UNH tracked reclaim shelf ~405.1 zone 403.51-406.75, stk stop 407.97, target 394.59"
+  },
+  {
+   "symbol": "CSCO",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-17",
+   "module": "scalp",
+   "direction": "call",
+   "contract_rule": {
+    "dte": [
+     0,
+     7
+    ],
+    "delta": [
+     0.4,
+     0.6
+    ],
+    "max_spread_pct": 0.05
+   },
+   "id": "20261117-scalp-CSCO-C:entry",
+   "play_id": "20261117-scalp-CSCO-C",
+   "setup": "pm_break",
+   "pair": "CSCO-20261117",
+   "trigger": {
+    "type": "above",
+    "price": 96.5
+   },
+   "confirmation": {
+    "rvol_min": 1,
+    "vwap": "above",
+    "max_extension_pct": 0.01,
+    "spy_block_pct": 0.0,
+    "skip_first_minutes": 5
+   },
+   "plan": "CSCO long shares pm_break > 96.5 (+1.88% PM, lane list, radar neutral); 1% stop / 2R / 15:05 close"
+  },
+  {
+   "symbol": "CSCO",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-17",
+   "module": "scalp",
+   "direction": "call",
+   "contract_rule": {
+    "dte": [
+     0,
+     7
+    ],
+    "delta": [
+     0.4,
+     0.6
+    ],
+    "max_spread_pct": 0.05
+   },
+   "id": "20261117-scalp-CSCO-C-orb:entry",
+   "play_id": "20261117-scalp-CSCO-C-orb",
+   "setup": "orb",
+   "pair": "CSCO-20261117",
+   "trigger": {
+    "type": "orb_high",
+    "minutes": 30
+   },
+   "confirmation": {
+    "rvol_min": 1,
+    "vwap": "above",
+    "max_extension_pct": 0.01,
+    "spy_block_pct": 0.0,
+    "skip_first_minutes": 5
+   },
+   "plan": "CSCO long shares ORB30 high (twin of pm_break 96.5); 1% stop / 2R / 15:05 close"
+  },
+  {
+   "symbol": "CSCO",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-17",
+   "module": "scalp",
+   "direction": "call",
+   "contract_rule": {
+    "dte": [
+     0,
+     7
+    ],
+    "delta": [
+     0.4,
+     0.6
+    ],
+    "max_spread_pct": 0.05
+   },
+   "id": "20261117-scalp-CSCO-C-reclaim:entry",
+   "play_id": "20261117-scalp-CSCO-C-reclaim",
+   "setup": "level_reclaim",
+   "trigger": {
+    "type": "reclaim_above",
+    "zone": [
+     95.19,
+     95.95
+    ],
+    "window": [
+     "09:45",
+     "11:30"
+    ]
+   },
+   "confirmation": {
+    "rvol_min": 1,
+    "vwap": "above",
+    "max_extension_pct": 0.01,
+    "spy_block_pct": 0.0075
+   },
+   "stock_stop": 94.9,
+   "target_stock": 98.05,
+   "track_only": true,
+   "plan": "CSCO tracked reclaim shelf ~95.57 zone 95.19-95.95, stk stop 94.9, target 98.05"
+  },
+  {
+   "symbol": "CRM",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-17",
+   "module": "scalp",
+   "direction": "put",
+   "contract_rule": {
+    "dte": [
+     0,
+     7
+    ],
+    "delta": [
+     0.4,
+     0.6
+    ],
+    "max_spread_pct": 0.05
+   },
+   "id": "20261117-scalp-CRM-P:entry",
+   "play_id": "20261117-scalp-CRM-P",
+   "setup": "pm_break",
+   "pair": "CRM-20261117",
+   "trigger": {
+    "type": "below",
+    "price": 209.47
+   },
+   "confirmation": {
+    "rvol_min": 1,
+    "vwap": "below",
+    "max_extension_pct": 0.01,
+    "spy_block_pct": 0.0,
+    "skip_first_minutes": 5
+   },
+   "plan": "CRM short shares pm_break < 209.47 (-2.03% PM, lane list, radar neutral); 1% stop / 2R / 15:05 close"
+  },
+  {
+   "symbol": "CRM",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-17",
+   "module": "scalp",
+   "direction": "put",
+   "contract_rule": {
+    "dte": [
+     0,
+     7
+    ],
+    "delta": [
+     0.4,
+     0.6
+    ],
+    "max_spread_pct": 0.05
+   },
+   "id": "20261117-scalp-CRM-P-orb:entry",
+   "play_id": "20261117-scalp-CRM-P-orb",
+   "setup": "orb",
+   "pair": "CRM-20261117",
+   "trigger": {
+    "type": "orb_low",
+    "minutes": 30
+   },
+   "confirmation": {
+    "rvol_min": 1,
+    "vwap": "below",
+    "max_extension_pct": 0.01,
+    "spy_block_pct": 0.0,
+    "skip_first_minutes": 5
+   },
+   "plan": "CRM short shares ORB30 low (twin of pm_break 209.47); 1% stop / 2R / 15:05 close"
+  },
+  {
+   "symbol": "CRM",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-17",
+   "module": "scalp",
+   "direction": "put",
+   "contract_rule": {
+    "dte": [
+     0,
+     7
+    ],
+    "delta": [
+     0.4,
+     0.6
+    ],
+    "max_spread_pct": 0.05
+   },
+   "id": "20261117-scalp-CRM-P-reclaim:entry",
+   "play_id": "20261117-scalp-CRM-P-reclaim",
+   "setup": "level_reclaim",
+   "trigger": {
+    "type": "reclaim_below",
+    "zone": [
+     212.72,
+     214.42
+    ],
+    "window": [
+     "09:45",
+     "11:30"
+    ]
+   },
+   "confirmation": {
+    "rvol_min": 1,
+    "vwap": "below",
+    "max_extension_pct": 0.01,
+    "spy_block_pct": 0.0075
+   },
+   "stock_stop": 215.06,
+   "target_stock": 208.04,
+   "track_only": true,
+   "plan": "CRM tracked reclaim prior-day low / shelf 213.5-213.8 zone 212.72-214.42, stk stop 215.06, target 208.04"
+  },
+  {
    "id": "20261113-swing-AAPL-C:entry",
    "play_id": "20261113-swing-AAPL-C",
    "symbol": "AAPL",
@@ -32,13 +597,13 @@
     "price": 359.37
    },
    "confirmation": {
-    "rvol_min": 1.0,
+    "rvol_min": 1,
     "vwap": "above",
     "max_extension_pct": 0.025,
     "spy_block_pct": 0.0075,
     "skip_first_minutes": 5
    },
-   "plan": "AAPL long shares (individual leader breakout), trigger > 359.37, stk stop 338.20, target 401.71",
+   "plan": "AAPL long shares (breakout), trigger > 359.37, stk stop 338.2, target 401.71",
    "stock_stop": 338.2,
    "target_stock": 401.71
   },
@@ -57,7 +622,7 @@
     "price": 1236.93
    },
    "confirmation": {
-    "rvol_min": 1.0,
+    "rvol_min": 1,
     "vwap": "above",
     "max_extension_pct": 0.025,
     "spy_block_pct": 0.0075,
@@ -67,38 +632,9 @@
      "hard_block_pct": 0.015
     }
    },
-   "plan": "BLK long shares (XLF leader base breakout), trigger > 1236.93, stk stop 1190.00, target 1330.79",
-   "stock_stop": 1190.0,
+   "plan": "BLK long shares (breakout), trigger > 1236.93, stk stop 1190, target 1330.79",
+   "stock_stop": 1190,
    "target_stock": 1330.79
-  },
-  {
-   "id": "20261116-swing-PGR-C:entry",
-   "play_id": "20261116-swing-PGR-C",
-   "symbol": "PGR",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-23",
-   "module": "swing",
-   "setup": "breakout",
-   "direction": "call",
-   "trigger": {
-    "type": "above",
-    "price": 239.44
-   },
-   "confirmation": {
-    "rvol_min": 1.0,
-    "vwap": "above",
-    "max_extension_pct": 0.025,
-    "spy_block_pct": 0.0075,
-    "skip_first_minutes": 5,
-    "rs_exempt": {
-     "min_move_pct": 0.01,
-     "hard_block_pct": 0.015
-    }
-   },
-   "plan": "PGR long shares (XLF leader flag breakout), trigger > 239.44, stk stop 226.50, target 265.32",
-   "stock_stop": 226.5,
-   "target_stock": 265.32
   },
   {
    "id": "20261116-swing-CL-C:entry",
@@ -115,7 +651,7 @@
     "price": 101.81
    },
    "confirmation": {
-    "rvol_min": 1.0,
+    "rvol_min": 1,
     "vwap": "above",
     "max_extension_pct": 0.025,
     "spy_block_pct": 0.0075,
@@ -125,7 +661,7 @@
      "hard_block_pct": 0.015
     }
    },
-   "plan": "CL long shares (XLP leader new-high breakout), trigger > 101.81, stk stop 96.60, target 112.23",
+   "plan": "CL long shares (breakout), trigger > 101.81, stk stop 96.6, target 112.23",
    "stock_stop": 96.6,
    "target_stock": 112.23
   },
@@ -144,7 +680,7 @@
     "price": 521.48
    },
    "confirmation": {
-    "rvol_min": 1.0,
+    "rvol_min": 1,
     "vwap": "above",
     "max_extension_pct": 0.025,
     "spy_block_pct": 0.0075,
@@ -154,9 +690,38 @@
      "hard_block_pct": 0.015
     }
    },
-   "plan": "HCA long shares (XLV leader base breakout), trigger > 521.48, stk stop 493.00, target 578.44",
-   "stock_stop": 493.0,
+   "plan": "HCA long shares (breakout), trigger > 521.48, stk stop 493, target 578.44",
+   "stock_stop": 493,
    "target_stock": 578.44
+  },
+  {
+   "id": "20261116-swing-PGR-C:entry",
+   "play_id": "20261116-swing-PGR-C",
+   "symbol": "PGR",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-23",
+   "module": "swing",
+   "setup": "breakout",
+   "direction": "call",
+   "trigger": {
+    "type": "above",
+    "price": 239.44
+   },
+   "confirmation": {
+    "rvol_min": 1,
+    "vwap": "above",
+    "max_extension_pct": 0.025,
+    "spy_block_pct": 0.0075,
+    "skip_first_minutes": 5,
+    "rs_exempt": {
+     "min_move_pct": 0.01,
+     "hard_block_pct": 0.015
+    }
+   },
+   "plan": "PGR long shares (breakout), trigger > 239.44, stk stop 226.5, target 265.32",
+   "stock_stop": 226.5,
+   "target_stock": 265.32
   }
  ]
 }
