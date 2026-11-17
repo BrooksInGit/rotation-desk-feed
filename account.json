@@ -1,13 +1,13 @@
 {
- "as_of": "2026-11-17T10:20:21.689727-05:00",
+ "as_of": "2026-11-17T10:30:23.765244-05:00",
  "account": "alpaca-paper",
  "account_last4": "T9E4",
- "equity": 24923.9,
+ "equity": 24865.02,
  "last_equity": 25000.0,
- "cash": 37461.02,
- "buying_power": 37310.68,
+ "cash": 24865.02,
+ "buying_power": 49730.04,
  "long_market_value": 0.0,
- "short_market_value": -12537.12,
+ "short_market_value": 0.0,
  "halted": false,
  "daytrade_count": 0,
  "pattern_day_trader": false,
@@ -22,21 +22,7 @@
   "scalp_risk_pct": 0.005,
   "swing_risk_pct": 0.01
  },
- "positions": [
-  {
-   "symbol": "UNH",
-   "qty": "-32",
-   "side": "short",
-   "avg_entry_price": "389.406875",
-   "current_price": "391.99",
-   "market_value": "-12543.68",
-   "cost_basis": "-12461.02",
-   "unrealized_pl": "-82.66",
-   "unrealized_plpc": "-0.00663",
-   "unrealized_intraday_pl": "-82.66",
-   "change_today": "-0.04861"
-  }
- ],
+ "positions": [],
  "orders": [
   {
    "symbol": "UNH",
@@ -63,27 +49,27 @@
      "limit_price": "381.71",
      "stop_price": null,
      "type": "limit",
-     "status": "new",
+     "status": "canceled",
      "order_class": "bracket",
      "client_order_id": "397e1b0b-2051-402a-8f75-fec0d880a3ef",
      "submitted_at": "2026-11-17T15:02:28.537521Z",
      "filled_at": null,
-     "canceled_at": null
+     "canceled_at": "2026-11-17T15:22:10.455823Z"
     },
     {
      "symbol": "UNH",
      "side": "buy",
      "qty": "32",
-     "filled_qty": "0",
-     "filled_avg_price": null,
+     "filled_qty": "32",
+     "filled_avg_price": "393.624999",
      "limit_price": null,
      "stop_price": "393.39",
      "type": "stop",
-     "status": "held",
+     "status": "filled",
      "order_class": "bracket",
      "client_order_id": "8c266fc0-f845-4afa-851d-e6e93d2f7eec",
-     "submitted_at": "2026-11-17T15:02:24.148757Z",
-     "filled_at": null,
+     "submitted_at": "2026-11-17T15:22:10.488583Z",
+     "filled_at": "2026-11-17T15:22:16.225894Z",
      "canceled_at": null
     }
    ]
