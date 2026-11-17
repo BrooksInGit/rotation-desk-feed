@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-11-17T15:10:00Z",
- "source": "hourly check 2026-11-17 10:05 ET",
+ "updated_at": "2026-11-17T16:10:00Z",
+ "source": "hourly check 2026-11-17 11:05 ET",
  "slippage_frac": 0.25,
  "exit_rules": {
   "scalp": {
@@ -504,6 +504,36 @@
    "plan": "PGR long shares (breakout), trigger > 239.44, stk stop 226.5, target 265.32",
    "stock_stop": 226.5,
    "target_stock": 265.32
+  },
+  {
+   "id": "20261117-swing-GILD-C:entry",
+   "play_id": "20261117-swing-GILD-C",
+   "symbol": "GILD",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-24",
+   "armed_after": "2026-11-17T16:09:00Z",
+   "module": "swing",
+   "setup": "pullback",
+   "direction": "call",
+   "trigger": {
+    "type": "above",
+    "price": 171.8
+   },
+   "confirmation": {
+    "rvol_min": 1,
+    "vwap": "above",
+    "max_extension_pct": 0.025,
+    "spy_block_pct": 0.0075,
+    "skip_first_minutes": 5,
+    "rs_exempt": {
+     "min_move_pct": 0.01,
+     "hard_block_pct": 0.015
+    }
+   },
+   "plan": "GILD long shares (pullback, intraday find), trigger > 171.80, stk stop 163.9, target 187.6",
+   "stock_stop": 163.9,
+   "target_stock": 187.6
   }
  ]
 }
