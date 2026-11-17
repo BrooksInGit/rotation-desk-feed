@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-11-17T16:10:00Z",
- "source": "hourly check 2026-11-17 11:05 ET",
+ "updated_at": "2026-11-17T17:10:00Z",
+ "source": "hourly check 2026-11-17 12:05 ET",
  "slippage_frac": 0.25,
  "exit_rules": {
   "scalp": {
@@ -88,49 +88,6 @@
    "plan": "MRVL long shares ORB30 high (twin of pm_break 155.68); 1% stop / 2R / 15:05 close"
   },
   {
-   "symbol": "MRVL",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-17",
-   "module": "scalp",
-   "direction": "call",
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "id": "20261117-scalp-MRVL-C-reclaim:entry",
-   "play_id": "20261117-scalp-MRVL-C-reclaim",
-   "setup": "level_reclaim",
-   "trigger": {
-    "type": "reclaim_above",
-    "zone": [
-     148.56,
-     149.76
-    ],
-    "window": [
-     "09:45",
-     "11:30"
-    ]
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "above",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0075
-   },
-   "stock_stop": 148.11,
-   "target_stock": 155.68,
-   "track_only": true,
-   "plan": "MRVL tracked reclaim prior-day high zone 148.56-149.76, stk stop 148.11, target 155.68"
-  },
-  {
    "symbol": "AMD",
    "kind": "entry",
    "status": "active",
@@ -201,49 +158,6 @@
    "plan": "AMD long shares ORB30 high (twin of pm_break 520.86); 1% stop / 2R / 15:05 close"
   },
   {
-   "symbol": "UNH",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-17",
-   "module": "scalp",
-   "direction": "put",
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "id": "20261117-scalp-UNH-P-reclaim:entry",
-   "play_id": "20261117-scalp-UNH-P-reclaim",
-   "setup": "level_reclaim",
-   "trigger": {
-    "type": "reclaim_below",
-    "zone": [
-     403.51,
-     406.75
-    ],
-    "window": [
-     "09:45",
-     "11:30"
-    ]
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "below",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0075
-   },
-   "stock_stop": 407.97,
-   "target_stock": 394.59,
-   "track_only": true,
-   "plan": "UNH tracked reclaim shelf ~405.1 zone 403.51-406.75, stk stop 407.97, target 394.59"
-  },
-  {
    "symbol": "CSCO",
    "kind": "entry",
    "status": "active",
@@ -277,92 +191,6 @@
     "skip_first_minutes": 5
    },
    "plan": "CSCO long shares ORB30 high (twin of pm_break 96.5); 1% stop / 2R / 15:05 close"
-  },
-  {
-   "symbol": "CSCO",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-17",
-   "module": "scalp",
-   "direction": "call",
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "id": "20261117-scalp-CSCO-C-reclaim:entry",
-   "play_id": "20261117-scalp-CSCO-C-reclaim",
-   "setup": "level_reclaim",
-   "trigger": {
-    "type": "reclaim_above",
-    "zone": [
-     95.19,
-     95.95
-    ],
-    "window": [
-     "09:45",
-     "11:30"
-    ]
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "above",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0075
-   },
-   "stock_stop": 94.9,
-   "target_stock": 98.05,
-   "track_only": true,
-   "plan": "CSCO tracked reclaim shelf ~95.57 zone 95.19-95.95, stk stop 94.9, target 98.05"
-  },
-  {
-   "symbol": "CRM",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-17",
-   "module": "scalp",
-   "direction": "put",
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "id": "20261117-scalp-CRM-P-reclaim:entry",
-   "play_id": "20261117-scalp-CRM-P-reclaim",
-   "setup": "level_reclaim",
-   "trigger": {
-    "type": "reclaim_below",
-    "zone": [
-     212.72,
-     214.42
-    ],
-    "window": [
-     "09:45",
-     "11:30"
-    ]
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "below",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0075
-   },
-   "stock_stop": 215.06,
-   "target_stock": 208.04,
-   "track_only": true,
-   "plan": "CRM tracked reclaim prior-day low / shelf 213.5-213.8 zone 212.72-214.42, stk stop 215.06, target 208.04"
   },
   {
    "id": "20261113-swing-AAPL-C:entry",
