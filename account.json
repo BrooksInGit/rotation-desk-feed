@@ -1,19 +1,19 @@
 {
- "as_of": "2026-11-17T08:52:52.280092-05:00",
+ "as_of": "2026-11-17T09:05:07.930903-05:00",
  "account": "alpaca-paper",
- "account_last4": "Q90Z",
- "equity": 1972.76,
- "last_equity": 1972.76,
- "cash": 1972.76,
- "buying_power": 1972.76,
+ "account_last4": "T9E4",
+ "equity": 25000.0,
+ "last_equity": 25000.0,
+ "cash": 25000.0,
+ "buying_power": 50000.0,
  "long_market_value": 0.0,
  "short_market_value": 0.0,
  "halted": false,
  "daytrade_count": 0,
  "pattern_day_trader": false,
  "trading_blocked": false,
- "shorting_enabled": false,
- "multiplier": "1",
+ "shorting_enabled": true,
+ "multiplier": "2",
  "limits": {
   "max_notional_frac": 0.5,
   "max_positions": 3,
@@ -23,208 +23,7 @@
   "swing_risk_pct": 0.01
  },
  "positions": [],
- "orders": [
-  {
-   "symbol": "AMD",
-   "side": "buy",
-   "qty": "1",
-   "filled_qty": "1",
-   "filled_avg_price": "584.31",
-   "limit_price": "585.21",
-   "stop_price": null,
-   "type": "limit",
-   "status": "filled",
-   "order_class": "bracket",
-   "client_order_id": "rd-20261112-scalp-AMD-C-orb",
-   "submitted_at": "2026-11-12T16:01:24.01956Z",
-   "filled_at": "2026-11-12T16:01:25.765445Z",
-   "canceled_at": null,
-   "legs": [
-    {
-     "symbol": "AMD",
-     "side": "sell",
-     "qty": "1",
-     "filled_qty": "0",
-     "filled_avg_price": null,
-     "limit_price": "595.72",
-     "stop_price": null,
-     "type": "limit",
-     "status": "canceled",
-     "order_class": "bracket",
-     "client_order_id": "a05967bf-0906-4496-af23-aac6146faeb8",
-     "submitted_at": "2026-11-12T16:01:25.772991Z",
-     "filled_at": null,
-     "canceled_at": "2026-11-12T16:04:18.247415Z"
-    },
-    {
-     "symbol": "AMD",
-     "side": "sell",
-     "qty": "1",
-     "filled_qty": "1",
-     "filled_avg_price": "578",
-     "limit_price": null,
-     "stop_price": "578.2",
-     "type": "stop",
-     "status": "filled",
-     "order_class": "bracket",
-     "client_order_id": "9e6b2fda-f3ba-45ad-8b77-d89a23df28c1",
-     "submitted_at": "2026-11-12T16:04:18.257861Z",
-     "filled_at": "2026-11-12T16:04:18.821067Z",
-     "canceled_at": null
-    }
-   ]
-  },
-  {
-   "symbol": "MU",
-   "side": "sell",
-   "qty": "1",
-   "filled_qty": "1",
-   "filled_avg_price": "768.22",
-   "limit_price": "764.07",
-   "stop_price": null,
-   "type": "limit",
-   "status": "filled",
-   "order_class": "bracket",
-   "client_order_id": "rd-20261112-scalp-MU-P-orb",
-   "submitted_at": "2026-11-12T15:14:00.817865Z",
-   "filled_at": "2026-11-12T15:14:02.291457Z",
-   "canceled_at": null,
-   "legs": [
-    {
-     "symbol": "MU",
-     "side": "buy",
-     "qty": "1",
-     "filled_qty": "0",
-     "filled_avg_price": null,
-     "limit_price": "750.29",
-     "stop_price": null,
-     "type": "limit",
-     "status": "canceled",
-     "order_class": "bracket",
-     "client_order_id": "963ffd29-020a-4323-b8e1-e85696ebe91f",
-     "submitted_at": "2026-11-12T15:14:02.301492Z",
-     "filled_at": null,
-     "canceled_at": "2026-11-12T15:15:43.081151Z"
-    },
-    {
-     "symbol": "MU",
-     "side": "buy",
-     "qty": "1",
-     "filled_qty": "1",
-     "filled_avg_price": "773.28",
-     "limit_price": null,
-     "stop_price": "773.26",
-     "type": "stop",
-     "status": "filled",
-     "order_class": "bracket",
-     "client_order_id": "15f5281f-e793-4713-84bb-e81a4333eec4",
-     "submitted_at": "2026-11-12T15:15:43.127568Z",
-     "filled_at": "2026-11-12T15:15:43.948724Z",
-     "canceled_at": null
-    }
-   ]
-  },
-  {
-   "symbol": "BE",
-   "side": "sell",
-   "qty": "5",
-   "filled_qty": "5",
-   "filled_avg_price": "196.68",
-   "limit_price": "195.61",
-   "stop_price": null,
-   "type": "limit",
-   "status": "filled",
-   "order_class": "bracket",
-   "client_order_id": "rd-20261112-scalp-BE-P",
-   "submitted_at": "2026-11-12T15:03:48.680944Z",
-   "filled_at": "2026-11-12T15:03:51.66693Z",
-   "canceled_at": null,
-   "legs": [
-    {
-     "symbol": "BE",
-     "side": "buy",
-     "qty": "5",
-     "filled_qty": "0",
-     "filled_avg_price": null,
-     "limit_price": "192.08",
-     "stop_price": null,
-     "type": "limit",
-     "status": "canceled",
-     "order_class": "bracket",
-     "client_order_id": "6d4ea119-7d9a-4890-ae81-e3c3cc10e2b3",
-     "submitted_at": "2026-11-12T15:03:51.675389Z",
-     "filled_at": null,
-     "canceled_at": "2026-11-12T15:16:27.419257Z"
-    },
-    {
-     "symbol": "BE",
-     "side": "buy",
-     "qty": "5",
-     "filled_qty": "5",
-     "filled_avg_price": "198",
-     "limit_price": null,
-     "stop_price": "197.96",
-     "type": "stop",
-     "status": "filled",
-     "order_class": "bracket",
-     "client_order_id": "e5af2c5d-1af9-4301-b370-0ab6b538918b",
-     "submitted_at": "2026-11-12T15:16:27.455088Z",
-     "filled_at": "2026-11-12T15:16:33.086329Z",
-     "canceled_at": null
-    }
-   ]
-  },
-  {
-   "symbol": "MSTR",
-   "side": "sell",
-   "qty": "8",
-   "filled_qty": "8",
-   "filled_avg_price": "113.77125",
-   "limit_price": "113.46",
-   "stop_price": null,
-   "type": "limit",
-   "status": "filled",
-   "order_class": "bracket",
-   "client_order_id": "rd-20261112-scalp-MSTR-P",
-   "submitted_at": "2026-11-12T14:35:09.588116Z",
-   "filled_at": "2026-11-12T14:35:26.072946Z",
-   "canceled_at": null,
-   "legs": [
-    {
-     "symbol": "MSTR",
-     "side": "buy",
-     "qty": "8",
-     "filled_qty": "0",
-     "filled_avg_price": null,
-     "limit_price": "111.42",
-     "stop_price": null,
-     "type": "limit",
-     "status": "canceled",
-     "order_class": "bracket",
-     "client_order_id": "7539d7ab-2fbd-4fdd-b86f-206fa75bd22e",
-     "submitted_at": "2026-11-12T14:35:33.039405Z",
-     "filled_at": null,
-     "canceled_at": "2026-11-12T14:39:13.205823Z"
-    },
-    {
-     "symbol": "MSTR",
-     "side": "buy",
-     "qty": "8",
-     "filled_qty": "8",
-     "filled_avg_price": "114.92",
-     "limit_price": null,
-     "stop_price": "114.83",
-     "type": "stop",
-     "status": "filled",
-     "order_class": "bracket",
-     "client_order_id": "bf1afb2f-495e-47a3-8803-847d5ae79a57",
-     "submitted_at": "2026-11-12T14:39:13.347405Z",
-     "filled_at": "2026-11-12T14:39:15.538397Z",
-     "canceled_at": null
-    }
-   ]
-  }
- ],
+ "orders": [],
  "equity_curve": [
   {
    "t": "2026-08-17",
@@ -468,23 +267,23 @@
   },
   {
    "t": "2026-11-10",
-   "equity": 2000.0
+   "equity": 0.0
   },
   {
    "t": "2026-11-11",
-   "equity": 2000.0
+   "equity": 0.0
   },
   {
    "t": "2026-11-12",
-   "equity": 1972.76
+   "equity": 0.0
   },
   {
    "t": "2026-11-13",
-   "equity": 1972.76
+   "equity": 25000.0
   },
   {
    "t": "2026-11-16",
-   "equity": 1972.76
+   "equity": 25000.0
   }
  ]
 }
