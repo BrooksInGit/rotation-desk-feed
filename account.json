@@ -1,12 +1,12 @@
 {
- "as_of": "2026-11-18T10:31:23.646331-05:00",
+ "as_of": "2026-11-18T10:41:26.039387-05:00",
  "account": "alpaca-paper",
  "account_last4": "T9E4",
- "equity": 24732.11,
+ "equity": 24589.68,
  "last_equity": 24864.75,
- "cash": 542.41,
- "buying_power": 25274.52,
- "long_market_value": 24189.7,
+ "cash": 12351.67,
+ "buying_power": 36941.35,
+ "long_market_value": 12238.01,
  "short_market_value": 0.0,
  "halted": false,
  "daytrade_count": 0,
@@ -24,30 +24,17 @@
  },
  "positions": [
   {
-   "symbol": "QQQ",
-   "qty": "18",
-   "side": "long",
-   "avg_entry_price": "662.545556",
-   "current_price": "658.83",
-   "market_value": "11858.94",
-   "cost_basis": "11925.820008",
-   "unrealized_pl": "-66.880008",
-   "unrealized_plpc": "-0.00561",
-   "unrealized_intraday_pl": "-66.880008",
-   "change_today": "0.00286"
-  },
-  {
    "symbol": "VRTX",
    "qty": "23",
    "side": "long",
    "avg_entry_price": "538.97913",
-   "current_price": "536.12",
-   "market_value": "12330.76",
+   "current_price": "532.0875",
+   "market_value": "12238.0125",
    "cost_basis": "12396.51999",
-   "unrealized_pl": "-65.75999",
-   "unrealized_plpc": "-0.0053",
-   "unrealized_intraday_pl": "-65.75999",
-   "change_today": "0.00359"
+   "unrealized_pl": "-158.50749",
+   "unrealized_plpc": "-0.01279",
+   "unrealized_intraday_pl": "-158.50749",
+   "change_today": "-0.00395"
   }
  ],
  "orders": [
@@ -76,27 +63,27 @@
      "limit_price": "675.9",
      "stop_price": null,
      "type": "limit",
-     "status": "new",
+     "status": "canceled",
      "order_class": "bracket",
      "client_order_id": "3cc67cce-123d-46ff-9a38-0be983b4df35",
      "submitted_at": "2026-11-18T15:00:35.777664Z",
      "filled_at": null,
-     "canceled_at": null
+     "canceled_at": "2026-11-18T15:41:03.359943Z"
     },
     {
      "symbol": "QQQ",
      "side": "sell",
      "qty": "18",
-     "filled_qty": "0",
-     "filled_avg_price": null,
+     "filled_qty": "18",
+     "filled_avg_price": "656.07",
      "limit_price": null,
      "stop_price": "656.02",
      "type": "stop",
-     "status": "held",
+     "status": "filled",
      "order_class": "bracket",
      "client_order_id": "fb26830b-0ab8-4334-b2bb-1a4d1ecf69e4",
-     "submitted_at": "2026-11-18T15:00:21.615453Z",
-     "filled_at": null,
+     "submitted_at": "2026-11-18T15:41:03.377143Z",
+     "filled_at": "2026-11-18T15:41:04.35663Z",
      "canceled_at": null
     }
    ]
