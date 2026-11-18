@@ -1,11 +1,11 @@
 {
- "as_of": "2026-11-18T02:51:53.241812-05:00",
+ "as_of": "2026-11-18T03:51:55.430153-05:00",
  "account": "alpaca-paper",
  "account_last4": "T9E4",
- "equity": 24865.02,
- "last_equity": 25000.0,
- "cash": 24865.02,
- "buying_power": 49730.04,
+ "equity": 24864.75,
+ "last_equity": 24864.75,
+ "cash": 24864.75,
+ "buying_power": 49729.5,
  "long_market_value": 0.0,
  "short_market_value": 0.0,
  "halted": false,
@@ -385,6 +385,10 @@
   {
    "t": "2026-11-16",
    "equity": 25000.0
+  },
+  {
+   "t": "2026-11-17",
+   "equity": 24864.75
   }
  ]
 }
