@@ -2328,49 +2328,6 @@
     "skip_first_minutes": 5
    },
    "plan": "AVGO long shares ORB30 high (twin of pm_break 351.9745); 1% stop / 2R / 15:05 close"
-  },
-  {
-   "symbol": "AVGO",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-18",
-   "module": "scalp",
-   "direction": "call",
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "id": "20261118-scalp-AVGO-C-reclaim:entry",
-   "play_id": "20261118-scalp-AVGO-C-reclaim",
-   "setup": "level_reclaim",
-   "trigger": {
-    "type": "reclaim_above",
-    "zone": [
-     342.62,
-     345.38
-    ],
-    "window": [
-     "09:45",
-     "11:30"
-    ]
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "above",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0075
-   },
-   "stock_stop": 341.59,
-   "target_stock": 351.9745,
-   "track_only": true,
-   "plan": "AVGO tracked reclaim prior-day high zone 342.62-345.38, stk stop 341.59, target 351.9745"
   }
  ]
 }
