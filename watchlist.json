@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-11-18T13:56:00Z",
- "source": "pre-market brief 2026-11-18",
+ "updated_at": "2026-11-18T15:12:00Z",
+ "source": "hourly check 2026-11-18 10:05 ET",
  "slippage_frac": 0.25,
  "exit_rules": {
   "scalp": {
@@ -1273,35 +1273,6 @@
    "target_stock": 187.6
   },
   {
-   "id": "20261117-swing-VRTX-C:entry",
-   "play_id": "20261117-swing-VRTX-C",
-   "symbol": "VRTX",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-24",
-   "module": "swing",
-   "setup": "pullback",
-   "direction": "call",
-   "trigger": {
-    "type": "above",
-    "price": 538.56
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "above",
-    "max_extension_pct": 0.025,
-    "spy_block_pct": 0.0075,
-    "skip_first_minutes": 5,
-    "rs_exempt": {
-     "min_move_pct": 0.01,
-     "hard_block_pct": 0.015
-    }
-   },
-   "plan": "VRTX long shares (pullback to rising 21-EMA, XLV #1), trigger > 538.56, stk stop 528.40, target 558.88",
-   "stock_stop": 528.4,
-   "target_stock": 558.88
-  },
-  {
    "id": "20261117-swing-MA-C:entry",
    "play_id": "20261117-swing-MA-C",
    "symbol": "MA",
@@ -1329,31 +1300,6 @@
    "plan": "MA long shares (pullback to rising 21-EMA, XLF #3), trigger > 658.74, stk stop 637.90, target 700.42",
    "stock_stop": 637.9,
    "target_stock": 700.42
-  },
-  {
-   "id": "20261117-swing-BAC-P:entry",
-   "play_id": "20261117-swing-BAC-P",
-   "symbol": "BAC",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-24",
-   "module": "swing",
-   "setup": "breakdown",
-   "direction": "put",
-   "trigger": {
-    "type": "below",
-    "price": 49.07
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "below",
-    "max_extension_pct": 0.025,
-    "spy_block_pct": 0.0075,
-    "skip_first_minutes": 5
-   },
-   "plan": "BAC short shares (breakdown below 6-month low, individual laggard, radar against), trigger < 49.07, stk stop 51.15, target 44.91",
-   "stock_stop": 51.15,
-   "target_stock": 44.91
   },
   {
    "symbol": "QQQ",
@@ -1389,84 +1335,6 @@
     "skip_first_minutes": 5
    },
    "plan": "QQQ long shares pm_break > 665.18 (+0.78% PM, lane list, radar neutral); 1% stop / 2R / 15:05 close"
-  },
-  {
-   "symbol": "QQQ",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-18",
-   "module": "scalp",
-   "direction": "call",
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "id": "20261118-scalp-QQQ-C-orb:entry",
-   "play_id": "20261118-scalp-QQQ-C-orb",
-   "setup": "orb",
-   "pair": "QQQ-20261118",
-   "trigger": {
-    "type": "orb_high",
-    "minutes": 30
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "above",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0,
-    "skip_first_minutes": 5
-   },
-   "plan": "QQQ long shares ORB30 high (twin of pm_break 665.18); 1% stop / 2R / 15:05 close"
-  },
-  {
-   "symbol": "QQQ",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-18",
-   "module": "scalp",
-   "direction": "call",
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "id": "20261118-scalp-QQQ-C-reclaim:entry",
-   "play_id": "20261118-scalp-QQQ-C-reclaim",
-   "setup": "level_reclaim",
-   "trigger": {
-    "type": "reclaim_above",
-    "zone": [
-     654.32,
-     659.58
-    ],
-    "window": [
-     "09:45",
-     "11:30"
-    ]
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "above",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0075
-   },
-   "stock_stop": 652.36,
-   "target_stock": 674.02,
-   "track_only": true,
-   "plan": "QQQ tracked reclaim prior close / gap fill zone 654.32-659.58, stk stop 652.36, target 674.02"
   },
   {
    "symbol": "NVDA",
@@ -1652,49 +1520,6 @@
    "plan": "IONQ long shares ORB30 high (twin of pm_break 26.26); 1% stop / 2R / 15:05 close"
   },
   {
-   "symbol": "IONQ",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-18",
-   "module": "scalp",
-   "direction": "call",
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "id": "20261118-scalp-IONQ-C-reclaim:entry",
-   "play_id": "20261118-scalp-IONQ-C-reclaim",
-   "setup": "level_reclaim",
-   "trigger": {
-    "type": "reclaim_above",
-    "zone": [
-     24.74,
-     24.94
-    ],
-    "window": [
-     "09:45",
-     "11:30"
-    ]
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "above",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0075
-   },
-   "stock_stop": 24.67,
-   "target_stock": 26.26,
-   "track_only": true,
-   "plan": "IONQ tracked reclaim prior close / gap fill zone 24.74-24.94, stk stop 24.67, target 26.26"
-  },
-  {
    "symbol": "MU",
    "kind": "entry",
    "status": "active",
@@ -1765,49 +1590,6 @@
    "plan": "MU long shares ORB30 high (twin of pm_break 741.64); 1% stop / 2R / 15:05 close"
   },
   {
-   "symbol": "MU",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-18",
-   "module": "scalp",
-   "direction": "call",
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "id": "20261118-scalp-MU-C-reclaim:entry",
-   "play_id": "20261118-scalp-MU-C-reclaim",
-   "setup": "level_reclaim",
-   "trigger": {
-    "type": "reclaim_above",
-    "zone": [
-     709.57,
-     715.27
-    ],
-    "window": [
-     "09:45",
-     "11:30"
-    ]
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "above",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0075
-   },
-   "stock_stop": 707.44,
-   "target_stock": 741.64,
-   "track_only": true,
-   "plan": "MU tracked reclaim prior close / gap fill zone 709.57-715.27, stk stop 707.44, target 741.64"
-  },
-  {
    "symbol": "SMCI",
    "kind": "entry",
    "status": "active",
@@ -1841,197 +1623,6 @@
     "skip_first_minutes": 5
    },
    "plan": "SMCI long shares pm_break > 25.29 (+3.03% PM, lane list, radar neutral); 1% stop / 2R / 15:05 close"
-  },
-  {
-   "symbol": "SMCI",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-18",
-   "module": "scalp",
-   "direction": "call",
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "id": "20261118-scalp-SMCI-C-orb:entry",
-   "play_id": "20261118-scalp-SMCI-C-orb",
-   "setup": "orb",
-   "pair": "SMCI-20261118",
-   "trigger": {
-    "type": "orb_high",
-    "minutes": 30
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "above",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0,
-    "skip_first_minutes": 5
-   },
-   "plan": "SMCI long shares ORB30 high (twin of pm_break 25.29); 1% stop / 2R / 15:05 close"
-  },
-  {
-   "symbol": "SMCI",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-18",
-   "module": "scalp",
-   "direction": "call",
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "id": "20261118-scalp-SMCI-C-reclaim:entry",
-   "play_id": "20261118-scalp-SMCI-C-reclaim",
-   "setup": "level_reclaim",
-   "trigger": {
-    "type": "reclaim_above",
-    "zone": [
-     24.04,
-     24.24
-    ],
-    "window": [
-     "09:45",
-     "11:30"
-    ]
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "above",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0075
-   },
-   "stock_stop": 23.97,
-   "target_stock": 25.29,
-   "track_only": true,
-   "plan": "SMCI tracked reclaim prior close / gap fill zone 24.04-24.24, stk stop 23.97, target 25.29"
-  },
-  {
-   "symbol": "ARM",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-18",
-   "module": "scalp",
-   "direction": "call",
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "id": "20261118-scalp-ARM-C:entry",
-   "play_id": "20261118-scalp-ARM-C",
-   "setup": "pm_break",
-   "pair": "ARM-20261118",
-   "trigger": {
-    "type": "above",
-    "price": 190.7
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "above",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0,
-    "skip_first_minutes": 5
-   },
-   "plan": "ARM long shares pm_break > 190.7 (+2.44% PM, lane list, radar neutral); 1% stop / 2R / 15:05 close"
-  },
-  {
-   "symbol": "ARM",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-18",
-   "module": "scalp",
-   "direction": "call",
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "id": "20261118-scalp-ARM-C-orb:entry",
-   "play_id": "20261118-scalp-ARM-C-orb",
-   "setup": "orb",
-   "pair": "ARM-20261118",
-   "trigger": {
-    "type": "orb_high",
-    "minutes": 30
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "above",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0,
-    "skip_first_minutes": 5
-   },
-   "plan": "ARM long shares ORB30 high (twin of pm_break 190.7); 1% stop / 2R / 15:05 close"
-  },
-  {
-   "symbol": "ARM",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-18",
-   "module": "scalp",
-   "direction": "call",
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "id": "20261118-scalp-ARM-C-reclaim:entry",
-   "play_id": "20261118-scalp-ARM-C-reclaim",
-   "setup": "level_reclaim",
-   "trigger": {
-    "type": "reclaim_above",
-    "zone": [
-     184.19,
-     185.67
-    ],
-    "window": [
-     "09:45",
-     "11:30"
-    ]
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "above",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0075
-   },
-   "stock_stop": 183.64,
-   "target_stock": 190.7,
-   "track_only": true,
-   "plan": "ARM tracked reclaim prior-day high zone 184.19-185.67, stk stop 183.64, target 190.7"
   },
   {
    "symbol": "AMD",
@@ -2104,49 +1695,6 @@
    "plan": "AMD long shares ORB30 high (twin of pm_break 519.928); 1% stop / 2R / 15:05 close"
   },
   {
-   "symbol": "AMD",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-18",
-   "module": "scalp",
-   "direction": "call",
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "id": "20261118-scalp-AMD-C-reclaim:entry",
-   "play_id": "20261118-scalp-AMD-C-reclaim",
-   "setup": "level_reclaim",
-   "trigger": {
-    "type": "reclaim_above",
-    "zone": [
-     501.4,
-     505.42
-    ],
-    "window": [
-     "09:45",
-     "11:30"
-    ]
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "above",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0075
-   },
-   "stock_stop": 499.9,
-   "target_stock": 519.928,
-   "track_only": true,
-   "plan": "AMD tracked reclaim prior close / gap fill zone 501.4-505.42, stk stop 499.9, target 519.928"
-  },
-  {
    "symbol": "ORCL",
    "kind": "entry",
    "status": "active",
@@ -2215,49 +1763,6 @@
     "skip_first_minutes": 5
    },
    "plan": "ORCL long shares ORB30 high (twin of pm_break 118.6574); 1% stop / 2R / 15:05 close"
-  },
-  {
-   "symbol": "ORCL",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-18",
-   "module": "scalp",
-   "direction": "call",
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "id": "20261118-scalp-ORCL-C-reclaim:entry",
-   "play_id": "20261118-scalp-ORCL-C-reclaim",
-   "setup": "level_reclaim",
-   "trigger": {
-    "type": "reclaim_above",
-    "zone": [
-     114.54,
-     115.46
-    ],
-    "window": [
-     "09:45",
-     "11:30"
-    ]
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "above",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0075
-   },
-   "stock_stop": 114.2,
-   "target_stock": 118.6574,
-   "track_only": true,
-   "plan": "ORCL tracked reclaim prior close / gap fill zone 114.54-115.46, stk stop 114.2, target 118.6574"
   },
   {
    "symbol": "AVGO",
