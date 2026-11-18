@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-11-18T15:12:00Z",
- "source": "hourly check 2026-11-18 10:05 ET",
+ "updated_at": "2026-11-18T16:11:00Z",
+ "source": "hourly check 2026-11-18 11:05 ET",
  "slippage_frac": 0.25,
  "exit_rules": {
   "scalp": {
@@ -1763,76 +1763,6 @@
     "skip_first_minutes": 5
    },
    "plan": "ORCL long shares ORB30 high (twin of pm_break 118.6574); 1% stop / 2R / 15:05 close"
-  },
-  {
-   "symbol": "AVGO",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-18",
-   "module": "scalp",
-   "direction": "call",
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "id": "20261118-scalp-AVGO-C:entry",
-   "play_id": "20261118-scalp-AVGO-C",
-   "setup": "pm_break",
-   "pair": "AVGO-20261118",
-   "trigger": {
-    "type": "above",
-    "price": 351.9745
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "above",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0,
-    "skip_first_minutes": 5
-   },
-   "plan": "AVGO long shares pm_break > 351.9745 (+2.32% PM, lane list, radar neutral); 1% stop / 2R / 15:05 close"
-  },
-  {
-   "symbol": "AVGO",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-18",
-   "module": "scalp",
-   "direction": "call",
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "id": "20261118-scalp-AVGO-C-orb:entry",
-   "play_id": "20261118-scalp-AVGO-C-orb",
-   "setup": "orb",
-   "pair": "AVGO-20261118",
-   "trigger": {
-    "type": "orb_high",
-    "minutes": 30
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "above",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0,
-    "skip_first_minutes": 5
-   },
-   "plan": "AVGO long shares ORB30 high (twin of pm_break 351.9745); 1% stop / 2R / 15:05 close"
   }
  ]
 }
