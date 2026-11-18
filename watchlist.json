@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-11-18T17:12:00Z",
- "source": "hourly check 2026-11-18 12:05 ET",
+ "updated_at": "2026-11-18T18:10:00Z",
+ "source": "hourly check 2026-11-18 13:05 ET",
  "slippage_frac": 0.25,
  "exit_rules": {
   "scalp": {
@@ -1407,49 +1407,6 @@
    "plan": "NVDA long shares ORB30 high (twin of pm_break 161.68); 1% stop / 2R / 15:05 close"
   },
   {
-   "symbol": "NVDA",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-18",
-   "module": "scalp",
-   "direction": "call",
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "id": "20261118-scalp-NVDA-C-reclaim:entry",
-   "play_id": "20261118-scalp-NVDA-C-reclaim",
-   "setup": "level_reclaim",
-   "trigger": {
-    "type": "reclaim_above",
-    "zone": [
-     157.56,
-     158.82
-    ],
-    "window": [
-     "09:45",
-     "11:30"
-    ]
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "above",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0075
-   },
-   "stock_stop": 157.09,
-   "target_stock": 161.68,
-   "track_only": true,
-   "plan": "NVDA tracked reclaim prior-day high zone 157.56-158.82, stk stop 157.09, target 161.68"
-  },
-  {
    "symbol": "IONQ",
    "kind": "entry",
    "status": "active",
@@ -1623,76 +1580,6 @@
     "skip_first_minutes": 5
    },
    "plan": "SMCI long shares pm_break > 25.29 (+3.03% PM, lane list, radar neutral); 1% stop / 2R / 15:05 close"
-  },
-  {
-   "symbol": "AMD",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-18",
-   "module": "scalp",
-   "direction": "call",
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "id": "20261118-scalp-AMD-C:entry",
-   "play_id": "20261118-scalp-AMD-C",
-   "setup": "pm_break",
-   "pair": "AMD-20261118",
-   "trigger": {
-    "type": "above",
-    "price": 519.928
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "above",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0,
-    "skip_first_minutes": 5
-   },
-   "plan": "AMD long shares pm_break > 519.928 (+1.96% PM, lane list, radar neutral); 1% stop / 2R / 15:05 close"
-  },
-  {
-   "symbol": "AMD",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-18",
-   "module": "scalp",
-   "direction": "call",
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "id": "20261118-scalp-AMD-C-orb:entry",
-   "play_id": "20261118-scalp-AMD-C-orb",
-   "setup": "orb",
-   "pair": "AMD-20261118",
-   "trigger": {
-    "type": "orb_high",
-    "minutes": 30
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "above",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0,
-    "skip_first_minutes": 5
-   },
-   "plan": "AMD long shares ORB30 high (twin of pm_break 519.928); 1% stop / 2R / 15:05 close"
   },
   {
    "symbol": "ORCL",
