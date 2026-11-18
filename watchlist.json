@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-11-18T16:11:00Z",
- "source": "hourly check 2026-11-18 11:05 ET",
+ "updated_at": "2026-11-18T17:12:00Z",
+ "source": "hourly check 2026-11-18 12:05 ET",
  "slippage_frac": 0.25,
  "exit_rules": {
   "scalp": {
