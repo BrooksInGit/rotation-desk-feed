@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-11-18T20:08:00Z",
- "source": "hourly check 2026-11-18 15:05 ET",
+ "updated_at": "2026-11-18T21:50:00Z",
+ "source": "evening run 2026-11-18",
  "slippage_frac": 0.25,
  "exit_rules": {
   "scalp": {
@@ -1185,35 +1185,6 @@
    "target_stock": 112.23
   },
   {
-   "id": "20261116-swing-HCA-C:entry",
-   "play_id": "20261116-swing-HCA-C",
-   "symbol": "HCA",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-23",
-   "module": "swing",
-   "setup": "breakout",
-   "direction": "call",
-   "trigger": {
-    "type": "above",
-    "price": 521.48
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "above",
-    "max_extension_pct": 0.025,
-    "spy_block_pct": 0.0075,
-    "skip_first_minutes": 5,
-    "rs_exempt": {
-     "min_move_pct": 0.01,
-     "hard_block_pct": 0.015
-    }
-   },
-   "plan": "HCA long shares (breakout), trigger > 521.48, stk stop 493, target 578.44",
-   "stock_stop": 493,
-   "target_stock": 578.44
-  },
-  {
    "id": "20261116-swing-PGR-C:entry",
    "play_id": "20261116-swing-PGR-C",
    "symbol": "PGR",
@@ -1249,7 +1220,6 @@
    "kind": "entry",
    "status": "active",
    "expires": "2026-11-24",
-   "armed_after": "2026-11-17T16:09:00Z",
    "module": "swing",
    "setup": "pullback",
    "direction": "call",
@@ -1262,13 +1232,9 @@
     "vwap": "above",
     "max_extension_pct": 0.025,
     "spy_block_pct": 0.0075,
-    "skip_first_minutes": 5,
-    "rs_exempt": {
-     "min_move_pct": 0.01,
-     "hard_block_pct": 0.015
-    }
+    "skip_first_minutes": 5
    },
-   "plan": "GILD long shares (pullback, intraday find), trigger > 171.80, stk stop 163.9, target 187.6",
+   "plan": "GILD long shares (pullback), trigger > 171.8, stk stop 163.9, target 187.6",
    "stock_stop": 163.9,
    "target_stock": 187.6
   },
@@ -1297,9 +1263,96 @@
      "hard_block_pct": 0.015
     }
    },
-   "plan": "MA long shares (pullback to rising 21-EMA, XLF #3), trigger > 658.74, stk stop 637.90, target 700.42",
+   "plan": "MA long shares (pullback), trigger > 658.74, stk stop 637.9, target 700.42",
    "stock_stop": 637.9,
    "target_stock": 700.42
+  },
+  {
+   "id": "20261118-swing-MAR-C:entry",
+   "play_id": "20261118-swing-MAR-C",
+   "symbol": "MAR",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-25",
+   "module": "swing",
+   "setup": "breakout",
+   "direction": "call",
+   "trigger": {
+    "type": "above",
+    "price": 431.94
+   },
+   "confirmation": {
+    "rvol_min": 1,
+    "vwap": "above",
+    "max_extension_pct": 0.025,
+    "spy_block_pct": 0.0075,
+    "skip_first_minutes": 5,
+    "rs_exempt": {
+     "min_move_pct": 0.01,
+     "hard_block_pct": 0.015
+    }
+   },
+   "plan": "MAR long shares (breakout), trigger > 431.94, stk stop 416.9, target 462.02",
+   "stock_stop": 416.9,
+   "target_stock": 462.02
+  },
+  {
+   "id": "20261118-swing-PG-C:entry",
+   "play_id": "20261118-swing-PG-C",
+   "symbol": "PG",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-25",
+   "module": "swing",
+   "setup": "breakout",
+   "direction": "call",
+   "trigger": {
+    "type": "above",
+    "price": 173.6
+   },
+   "confirmation": {
+    "rvol_min": 1,
+    "vwap": "above",
+    "max_extension_pct": 0.025,
+    "spy_block_pct": 0.0075,
+    "skip_first_minutes": 5,
+    "rs_exempt": {
+     "min_move_pct": 0.01,
+     "hard_block_pct": 0.015
+    }
+   },
+   "plan": "PG long shares (breakout), trigger > 173.6, stk stop 166.9, target 187.0",
+   "stock_stop": 166.9,
+   "target_stock": 187.0
+  },
+  {
+   "id": "20261118-swing-COIN-P:entry",
+   "play_id": "20261118-swing-COIN-P",
+   "symbol": "COIN",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-25",
+   "module": "swing",
+   "setup": "breakdown",
+   "direction": "put",
+   "trigger": {
+    "type": "below",
+    "price": 109.93
+   },
+   "confirmation": {
+    "rvol_min": 1,
+    "vwap": "below",
+    "max_extension_pct": 0.025,
+    "spy_block_pct": 0.0075,
+    "skip_first_minutes": 5,
+    "rs_exempt": {
+     "min_move_pct": 0.01,
+     "hard_block_pct": 0.015
+    }
+   },
+   "plan": "COIN short shares (breakdown), trigger < 109.93, stk stop 121.7, target 86.39",
+   "stock_stop": 121.7,
+   "target_stock": 86.39
   }
  ]
 }
