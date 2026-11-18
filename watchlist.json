@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-11-17T21:50:00Z",
- "source": "evening run 2026-11-17",
+ "updated_at": "2026-11-18T13:56:00Z",
+ "source": "pre-market brief 2026-11-18",
  "slippage_frac": 0.25,
  "exit_rules": {
   "scalp": {
@@ -14,6 +14,1119 @@
    "option_target_mult": 1.8,
    "stock_stop_pct": 0.03,
    "stock_target_r": 2.0
+  }
+ },
+ "scan": {
+  "symbols": [
+   {
+    "symbol": "SPY",
+    "index": true
+   },
+   {
+    "symbol": "QQQ",
+    "index": true
+   },
+   {
+    "symbol": "ARKK",
+    "etf": true
+   },
+   {
+    "symbol": "CIBR",
+    "etf": true
+   },
+   {
+    "symbol": "GDX",
+    "etf": true
+   },
+   {
+    "symbol": "IGV",
+    "etf": true
+   },
+   {
+    "symbol": "IYT",
+    "etf": true
+   },
+   {
+    "symbol": "PAVE",
+    "etf": true
+   },
+   {
+    "symbol": "SMH",
+    "etf": true
+   },
+   {
+    "symbol": "XBI",
+    "etf": true
+   },
+   {
+    "symbol": "XLC",
+    "etf": true
+   },
+   {
+    "symbol": "XLE",
+    "etf": true
+   },
+   {
+    "symbol": "XLF",
+    "etf": true
+   },
+   {
+    "symbol": "XLK",
+    "etf": true
+   },
+   {
+    "symbol": "XLP",
+    "etf": true
+   },
+   {
+    "symbol": "XLU",
+    "etf": true
+   },
+   {
+    "symbol": "XLV",
+    "etf": true
+   },
+   {
+    "symbol": "XME",
+    "etf": true
+   },
+   {
+    "symbol": "XOP",
+    "etf": true
+   },
+   {
+    "symbol": "XRT",
+    "etf": true
+   },
+   {
+    "symbol": "TSLA",
+    "group": "ARKK",
+    "lane": true
+   },
+   {
+    "symbol": "COIN",
+    "group": "ARKK",
+    "lane": true
+   },
+   {
+    "symbol": "HOOD",
+    "group": "ARKK",
+    "lane": true
+   },
+   {
+    "symbol": "PLTR",
+    "group": "ARKK",
+    "lane": true
+   },
+   {
+    "symbol": "SHOP",
+    "group": "ARKK",
+    "lane": true
+   },
+   {
+    "symbol": "RBLX",
+    "group": "ARKK"
+   },
+   {
+    "symbol": "CRSP",
+    "group": "ARKK"
+   },
+   {
+    "symbol": "TEM",
+    "group": "ARKK"
+   },
+   {
+    "symbol": "AMD",
+    "group": "ARKK",
+    "lane": true
+   },
+   {
+    "symbol": "BEAM",
+    "group": "ARKK"
+   },
+   {
+    "symbol": "PATH",
+    "group": "ARKK"
+   },
+   {
+    "symbol": "DKNG",
+    "group": "ARKK"
+   },
+   {
+    "symbol": "TWLO",
+    "group": "ARKK"
+   },
+   {
+    "symbol": "PANW",
+    "group": "CIBR",
+    "lane": true
+   },
+   {
+    "symbol": "CRWD",
+    "group": "CIBR",
+    "lane": true
+   },
+   {
+    "symbol": "FTNT",
+    "group": "CIBR"
+   },
+   {
+    "symbol": "ZS",
+    "group": "CIBR"
+   },
+   {
+    "symbol": "NET",
+    "group": "CIBR"
+   },
+   {
+    "symbol": "OKTA",
+    "group": "CIBR"
+   },
+   {
+    "symbol": "CYBR",
+    "group": "CIBR"
+   },
+   {
+    "symbol": "S",
+    "group": "CIBR"
+   },
+   {
+    "symbol": "CHKP",
+    "group": "CIBR"
+   },
+   {
+    "symbol": "QLYS",
+    "group": "CIBR"
+   },
+   {
+    "symbol": "TENB",
+    "group": "CIBR"
+   },
+   {
+    "symbol": "RPD",
+    "group": "CIBR"
+   },
+   {
+    "symbol": "AKAM",
+    "group": "CIBR"
+   },
+   {
+    "symbol": "GEN",
+    "group": "CIBR"
+   },
+   {
+    "symbol": "VRNS",
+    "group": "CIBR"
+   },
+   {
+    "symbol": "NEM",
+    "group": "GDX"
+   },
+   {
+    "symbol": "AEM",
+    "group": "GDX"
+   },
+   {
+    "symbol": "B",
+    "group": "GDX"
+   },
+   {
+    "symbol": "WPM",
+    "group": "GDX"
+   },
+   {
+    "symbol": "FNV",
+    "group": "GDX"
+   },
+   {
+    "symbol": "KGC",
+    "group": "GDX"
+   },
+   {
+    "symbol": "AU",
+    "group": "GDX"
+   },
+   {
+    "symbol": "GFI",
+    "group": "GDX"
+   },
+   {
+    "symbol": "AGI",
+    "group": "GDX"
+   },
+   {
+    "symbol": "PAAS",
+    "group": "GDX"
+   },
+   {
+    "symbol": "RGLD",
+    "group": "GDX"
+   },
+   {
+    "symbol": "CDE",
+    "group": "GDX"
+   },
+   {
+    "symbol": "HL",
+    "group": "GDX"
+   },
+   {
+    "symbol": "EGO",
+    "group": "GDX"
+   },
+   {
+    "symbol": "IAG",
+    "group": "GDX"
+   },
+   {
+    "symbol": "MSFT",
+    "group": "IGV",
+    "lane": true
+   },
+   {
+    "symbol": "ORCL",
+    "group": "IGV",
+    "lane": true
+   },
+   {
+    "symbol": "CRM",
+    "group": "IGV",
+    "lane": true
+   },
+   {
+    "symbol": "NOW",
+    "group": "IGV"
+   },
+   {
+    "symbol": "ADBE",
+    "group": "IGV"
+   },
+   {
+    "symbol": "INTU",
+    "group": "IGV"
+   },
+   {
+    "symbol": "SNOW",
+    "group": "IGV",
+    "lane": true
+   },
+   {
+    "symbol": "DDOG",
+    "group": "IGV"
+   },
+   {
+    "symbol": "WDAY",
+    "group": "IGV"
+   },
+   {
+    "symbol": "TEAM",
+    "group": "IGV"
+   },
+   {
+    "symbol": "HUBS",
+    "group": "IGV"
+   },
+   {
+    "symbol": "APP",
+    "group": "IGV",
+    "lane": true
+   },
+   {
+    "symbol": "UNP",
+    "group": "IYT"
+   },
+   {
+    "symbol": "CSX",
+    "group": "IYT"
+   },
+   {
+    "symbol": "NSC",
+    "group": "IYT"
+   },
+   {
+    "symbol": "UPS",
+    "group": "IYT"
+   },
+   {
+    "symbol": "FDX",
+    "group": "IYT"
+   },
+   {
+    "symbol": "ODFL",
+    "group": "IYT"
+   },
+   {
+    "symbol": "JBHT",
+    "group": "IYT"
+   },
+   {
+    "symbol": "DAL",
+    "group": "IYT"
+   },
+   {
+    "symbol": "UAL",
+    "group": "IYT"
+   },
+   {
+    "symbol": "LUV",
+    "group": "IYT"
+   },
+   {
+    "symbol": "CHRW",
+    "group": "IYT"
+   },
+   {
+    "symbol": "XPO",
+    "group": "IYT"
+   },
+   {
+    "symbol": "SAIA",
+    "group": "IYT"
+   },
+   {
+    "symbol": "KNX",
+    "group": "IYT"
+   },
+   {
+    "symbol": "EXPD",
+    "group": "IYT"
+   },
+   {
+    "symbol": "PWR",
+    "group": "PAVE"
+   },
+   {
+    "symbol": "ETN",
+    "group": "PAVE"
+   },
+   {
+    "symbol": "VMC",
+    "group": "PAVE"
+   },
+   {
+    "symbol": "MLM",
+    "group": "PAVE"
+   },
+   {
+    "symbol": "URI",
+    "group": "PAVE"
+   },
+   {
+    "symbol": "PH",
+    "group": "PAVE"
+   },
+   {
+    "symbol": "TT",
+    "group": "PAVE"
+   },
+   {
+    "symbol": "HWM",
+    "group": "PAVE"
+   },
+   {
+    "symbol": "NUE",
+    "group": "PAVE"
+   },
+   {
+    "symbol": "STLD",
+    "group": "PAVE"
+   },
+   {
+    "symbol": "EMR",
+    "group": "PAVE"
+   },
+   {
+    "symbol": "DE",
+    "group": "PAVE"
+   },
+   {
+    "symbol": "FAST",
+    "group": "PAVE"
+   },
+   {
+    "symbol": "SRE",
+    "group": "PAVE"
+   },
+   {
+    "symbol": "NVDA",
+    "group": "SMH",
+    "lane": true
+   },
+   {
+    "symbol": "TSM",
+    "group": "SMH"
+   },
+   {
+    "symbol": "AVGO",
+    "group": "SMH",
+    "lane": true
+   },
+   {
+    "symbol": "ASML",
+    "group": "SMH"
+   },
+   {
+    "symbol": "MU",
+    "group": "SMH",
+    "lane": true
+   },
+   {
+    "symbol": "QCOM",
+    "group": "SMH"
+   },
+   {
+    "symbol": "AMAT",
+    "group": "SMH"
+   },
+   {
+    "symbol": "LRCX",
+    "group": "SMH"
+   },
+   {
+    "symbol": "KLAC",
+    "group": "SMH"
+   },
+   {
+    "symbol": "INTC",
+    "group": "SMH",
+    "lane": true
+   },
+   {
+    "symbol": "MRVL",
+    "group": "SMH"
+   },
+   {
+    "symbol": "ARM",
+    "group": "SMH",
+    "lane": true
+   },
+   {
+    "symbol": "ON",
+    "group": "SMH"
+   },
+   {
+    "symbol": "MCHP",
+    "group": "SMH"
+   },
+   {
+    "symbol": "EXEL",
+    "group": "XBI"
+   },
+   {
+    "symbol": "INCY",
+    "group": "XBI"
+   },
+   {
+    "symbol": "NBIX",
+    "group": "XBI"
+   },
+   {
+    "symbol": "SRPT",
+    "group": "XBI"
+   },
+   {
+    "symbol": "IONS",
+    "group": "XBI"
+   },
+   {
+    "symbol": "BMRN",
+    "group": "XBI"
+   },
+   {
+    "symbol": "ALNY",
+    "group": "XBI"
+   },
+   {
+    "symbol": "UTHR",
+    "group": "XBI"
+   },
+   {
+    "symbol": "INSM",
+    "group": "XBI"
+   },
+   {
+    "symbol": "ROIV",
+    "group": "XBI"
+   },
+   {
+    "symbol": "VKTX",
+    "group": "XBI"
+   },
+   {
+    "symbol": "NTLA",
+    "group": "XBI"
+   },
+   {
+    "symbol": "ACAD",
+    "group": "XBI"
+   },
+   {
+    "symbol": "META",
+    "group": "XLC",
+    "lane": true
+   },
+   {
+    "symbol": "GOOGL",
+    "group": "XLC",
+    "lane": true
+   },
+   {
+    "symbol": "NFLX",
+    "group": "XLC",
+    "lane": true
+   },
+   {
+    "symbol": "TMUS",
+    "group": "XLC"
+   },
+   {
+    "symbol": "DIS",
+    "group": "XLC"
+   },
+   {
+    "symbol": "VZ",
+    "group": "XLC"
+   },
+   {
+    "symbol": "T",
+    "group": "XLC"
+   },
+   {
+    "symbol": "CMCSA",
+    "group": "XLC"
+   },
+   {
+    "symbol": "CHTR",
+    "group": "XLC"
+   },
+   {
+    "symbol": "EA",
+    "group": "XLC"
+   },
+   {
+    "symbol": "TTWO",
+    "group": "XLC"
+   },
+   {
+    "symbol": "WBD",
+    "group": "XLC"
+   },
+   {
+    "symbol": "LYV",
+    "group": "XLC"
+   },
+   {
+    "symbol": "OMC",
+    "group": "XLC"
+   },
+   {
+    "symbol": "RDDT",
+    "group": "XLC",
+    "lane": true
+   },
+   {
+    "symbol": "XOM",
+    "group": "XLE"
+   },
+   {
+    "symbol": "CVX",
+    "group": "XLE"
+   },
+   {
+    "symbol": "COP",
+    "group": "XLE"
+   },
+   {
+    "symbol": "EOG",
+    "group": "XLE"
+   },
+   {
+    "symbol": "SLB",
+    "group": "XLE"
+   },
+   {
+    "symbol": "OXY",
+    "group": "XLE"
+   },
+   {
+    "symbol": "MPC",
+    "group": "XLE"
+   },
+   {
+    "symbol": "PSX",
+    "group": "XLE"
+   },
+   {
+    "symbol": "VLO",
+    "group": "XLE"
+   },
+   {
+    "symbol": "WMB",
+    "group": "XLE"
+   },
+   {
+    "symbol": "OKE",
+    "group": "XLE"
+   },
+   {
+    "symbol": "KMI",
+    "group": "XLE"
+   },
+   {
+    "symbol": "HAL",
+    "group": "XLE"
+   },
+   {
+    "symbol": "DVN",
+    "group": "XLE"
+   },
+   {
+    "symbol": "FANG",
+    "group": "XLE"
+   },
+   {
+    "symbol": "JPM",
+    "group": "XLF"
+   },
+   {
+    "symbol": "V",
+    "group": "XLF"
+   },
+   {
+    "symbol": "MA",
+    "group": "XLF"
+   },
+   {
+    "symbol": "BAC",
+    "group": "XLF"
+   },
+   {
+    "symbol": "WFC",
+    "group": "XLF"
+   },
+   {
+    "symbol": "GS",
+    "group": "XLF"
+   },
+   {
+    "symbol": "MS",
+    "group": "XLF"
+   },
+   {
+    "symbol": "AXP",
+    "group": "XLF"
+   },
+   {
+    "symbol": "C",
+    "group": "XLF"
+   },
+   {
+    "symbol": "SCHW",
+    "group": "XLF"
+   },
+   {
+    "symbol": "BLK",
+    "group": "XLF"
+   },
+   {
+    "symbol": "PGR",
+    "group": "XLF"
+   },
+   {
+    "symbol": "COF",
+    "group": "XLF"
+   },
+   {
+    "symbol": "SPGI",
+    "group": "XLF"
+   },
+   {
+    "symbol": "AAPL",
+    "group": "XLK",
+    "lane": true
+   },
+   {
+    "symbol": "CSCO",
+    "group": "XLK"
+   },
+   {
+    "symbol": "IBM",
+    "group": "XLK"
+   },
+   {
+    "symbol": "TXN",
+    "group": "XLK"
+   },
+   {
+    "symbol": "PG",
+    "group": "XLP"
+   },
+   {
+    "symbol": "COST",
+    "group": "XLP"
+   },
+   {
+    "symbol": "WMT",
+    "group": "XLP"
+   },
+   {
+    "symbol": "KO",
+    "group": "XLP"
+   },
+   {
+    "symbol": "PEP",
+    "group": "XLP"
+   },
+   {
+    "symbol": "PM",
+    "group": "XLP"
+   },
+   {
+    "symbol": "MO",
+    "group": "XLP"
+   },
+   {
+    "symbol": "MDLZ",
+    "group": "XLP"
+   },
+   {
+    "symbol": "CL",
+    "group": "XLP"
+   },
+   {
+    "symbol": "KMB",
+    "group": "XLP"
+   },
+   {
+    "symbol": "KDP",
+    "group": "XLP"
+   },
+   {
+    "symbol": "GIS",
+    "group": "XLP"
+   },
+   {
+    "symbol": "KR",
+    "group": "XLP"
+   },
+   {
+    "symbol": "TGT",
+    "group": "XLP"
+   },
+   {
+    "symbol": "MNST",
+    "group": "XLP"
+   },
+   {
+    "symbol": "NEE",
+    "group": "XLU"
+   },
+   {
+    "symbol": "SO",
+    "group": "XLU"
+   },
+   {
+    "symbol": "DUK",
+    "group": "XLU"
+   },
+   {
+    "symbol": "CEG",
+    "group": "XLU"
+   },
+   {
+    "symbol": "VST",
+    "group": "XLU"
+   },
+   {
+    "symbol": "AEP",
+    "group": "XLU"
+   },
+   {
+    "symbol": "D",
+    "group": "XLU"
+   },
+   {
+    "symbol": "EXC",
+    "group": "XLU"
+   },
+   {
+    "symbol": "XEL",
+    "group": "XLU"
+   },
+   {
+    "symbol": "PCG",
+    "group": "XLU"
+   },
+   {
+    "symbol": "PEG",
+    "group": "XLU"
+   },
+   {
+    "symbol": "ED",
+    "group": "XLU"
+   },
+   {
+    "symbol": "ETR",
+    "group": "XLU"
+   },
+   {
+    "symbol": "WEC",
+    "group": "XLU"
+   },
+   {
+    "symbol": "LLY",
+    "group": "XLV"
+   },
+   {
+    "symbol": "UNH",
+    "group": "XLV"
+   },
+   {
+    "symbol": "JNJ",
+    "group": "XLV"
+   },
+   {
+    "symbol": "ABBV",
+    "group": "XLV"
+   },
+   {
+    "symbol": "MRK",
+    "group": "XLV"
+   },
+   {
+    "symbol": "TMO",
+    "group": "XLV"
+   },
+   {
+    "symbol": "ABT",
+    "group": "XLV"
+   },
+   {
+    "symbol": "ISRG",
+    "group": "XLV"
+   },
+   {
+    "symbol": "AMGN",
+    "group": "XLV"
+   },
+   {
+    "symbol": "BSX",
+    "group": "XLV"
+   },
+   {
+    "symbol": "DHR",
+    "group": "XLV"
+   },
+   {
+    "symbol": "GILD",
+    "group": "XLV"
+   },
+   {
+    "symbol": "VRTX",
+    "group": "XLV"
+   },
+   {
+    "symbol": "SYK",
+    "group": "XLV"
+   },
+   {
+    "symbol": "HCA",
+    "group": "XLV"
+   },
+   {
+    "symbol": "FCX",
+    "group": "XME"
+   },
+   {
+    "symbol": "CLF",
+    "group": "XME"
+   },
+   {
+    "symbol": "AA",
+    "group": "XME"
+   },
+   {
+    "symbol": "MP",
+    "group": "XME"
+   },
+   {
+    "symbol": "CENX",
+    "group": "XME"
+   },
+   {
+    "symbol": "CMC",
+    "group": "XME"
+   },
+   {
+    "symbol": "RS",
+    "group": "XME"
+   },
+   {
+    "symbol": "ATI",
+    "group": "XME"
+   },
+   {
+    "symbol": "HCC",
+    "group": "XME"
+   },
+   {
+    "symbol": "UEC",
+    "group": "XME"
+   },
+   {
+    "symbol": "APA",
+    "group": "XOP"
+   },
+   {
+    "symbol": "OVV",
+    "group": "XOP"
+   },
+   {
+    "symbol": "AR",
+    "group": "XOP"
+   },
+   {
+    "symbol": "RRC",
+    "group": "XOP"
+   },
+   {
+    "symbol": "EQT",
+    "group": "XOP"
+   },
+   {
+    "symbol": "CTRA",
+    "group": "XOP"
+   },
+   {
+    "symbol": "MTDR",
+    "group": "XOP"
+   },
+   {
+    "symbol": "PR",
+    "group": "XOP"
+   },
+   {
+    "symbol": "CHRD",
+    "group": "XOP"
+   },
+   {
+    "symbol": "SM",
+    "group": "XOP"
+   },
+   {
+    "symbol": "CNX",
+    "group": "XOP"
+   },
+   {
+    "symbol": "MUR",
+    "group": "XOP"
+   },
+   {
+    "symbol": "NOG",
+    "group": "XOP"
+   },
+   {
+    "symbol": "AMZN",
+    "group": "XRT",
+    "lane": true
+   },
+   {
+    "symbol": "TJX",
+    "group": "XRT"
+   },
+   {
+    "symbol": "ROST",
+    "group": "XRT"
+   },
+   {
+    "symbol": "BURL",
+    "group": "XRT"
+   },
+   {
+    "symbol": "ULTA",
+    "group": "XRT"
+   },
+   {
+    "symbol": "DKS",
+    "group": "XRT"
+   },
+   {
+    "symbol": "BBY",
+    "group": "XRT"
+   },
+   {
+    "symbol": "CVNA",
+    "group": "XRT"
+   },
+   {
+    "symbol": "CHWY",
+    "group": "XRT"
+   },
+   {
+    "symbol": "ANF",
+    "group": "XRT"
+   },
+   {
+    "symbol": "GAP",
+    "group": "XRT"
+   },
+   {
+    "symbol": "EBAY",
+    "group": "XRT"
+   },
+   {
+    "symbol": "ORLY",
+    "group": "XRT"
+   },
+   {
+    "symbol": "TSCO",
+    "group": "XRT"
+   },
+   {
+    "symbol": "DG",
+    "group": "XRT"
+   },
+   {
+    "symbol": "MSTR",
+    "lane": true
+   },
+   {
+    "symbol": "SMCI",
+    "lane": true
+   },
+   {
+    "symbol": "UBER",
+    "lane": true
+   },
+   {
+    "symbol": "BA",
+    "lane": true
+   },
+   {
+    "symbol": "IONQ",
+    "lane": true
+   },
+   {
+    "symbol": "SOFI",
+    "lane": true
+   }
+  ],
+  "exclude": [
+   "TJX",
+   "TGT",
+   "PANW",
+   "LOW"
+  ],
+  "params": {
+   "rvol_min": 1,
+   "base_minutes": 30,
+   "max_base_depth_pct": 1.5,
+   "min_move_pct": 1,
+   "max_new_per_scan": 2,
+   "max_new_per_day": 6,
+   "cutoff": "14:30",
+   "execute": false,
+   "telegram": false
   }
  },
  "watch": [
@@ -241,6 +1354,1023 @@
    "plan": "BAC short shares (breakdown below 6-month low, individual laggard, radar against), trigger < 49.07, stk stop 51.15, target 44.91",
    "stock_stop": 51.15,
    "target_stock": 44.91
+  },
+  {
+   "symbol": "QQQ",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-18",
+   "module": "scalp",
+   "direction": "call",
+   "contract_rule": {
+    "dte": [
+     0,
+     7
+    ],
+    "delta": [
+     0.4,
+     0.6
+    ],
+    "max_spread_pct": 0.05
+   },
+   "id": "20261118-scalp-QQQ-C:entry",
+   "play_id": "20261118-scalp-QQQ-C",
+   "setup": "pm_break",
+   "pair": "QQQ-20261118",
+   "trigger": {
+    "type": "above",
+    "price": 665.18
+   },
+   "confirmation": {
+    "rvol_min": 1,
+    "vwap": "above",
+    "max_extension_pct": 0.01,
+    "spy_block_pct": 0.0,
+    "skip_first_minutes": 5
+   },
+   "plan": "QQQ long shares pm_break > 665.18 (+0.78% PM, lane list, radar neutral); 1% stop / 2R / 15:05 close"
+  },
+  {
+   "symbol": "QQQ",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-18",
+   "module": "scalp",
+   "direction": "call",
+   "contract_rule": {
+    "dte": [
+     0,
+     7
+    ],
+    "delta": [
+     0.4,
+     0.6
+    ],
+    "max_spread_pct": 0.05
+   },
+   "id": "20261118-scalp-QQQ-C-orb:entry",
+   "play_id": "20261118-scalp-QQQ-C-orb",
+   "setup": "orb",
+   "pair": "QQQ-20261118",
+   "trigger": {
+    "type": "orb_high",
+    "minutes": 30
+   },
+   "confirmation": {
+    "rvol_min": 1,
+    "vwap": "above",
+    "max_extension_pct": 0.01,
+    "spy_block_pct": 0.0,
+    "skip_first_minutes": 5
+   },
+   "plan": "QQQ long shares ORB30 high (twin of pm_break 665.18); 1% stop / 2R / 15:05 close"
+  },
+  {
+   "symbol": "QQQ",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-18",
+   "module": "scalp",
+   "direction": "call",
+   "contract_rule": {
+    "dte": [
+     0,
+     7
+    ],
+    "delta": [
+     0.4,
+     0.6
+    ],
+    "max_spread_pct": 0.05
+   },
+   "id": "20261118-scalp-QQQ-C-reclaim:entry",
+   "play_id": "20261118-scalp-QQQ-C-reclaim",
+   "setup": "level_reclaim",
+   "trigger": {
+    "type": "reclaim_above",
+    "zone": [
+     654.32,
+     659.58
+    ],
+    "window": [
+     "09:45",
+     "11:30"
+    ]
+   },
+   "confirmation": {
+    "rvol_min": 1,
+    "vwap": "above",
+    "max_extension_pct": 0.01,
+    "spy_block_pct": 0.0075
+   },
+   "stock_stop": 652.36,
+   "target_stock": 674.02,
+   "track_only": true,
+   "plan": "QQQ tracked reclaim prior close / gap fill zone 654.32-659.58, stk stop 652.36, target 674.02"
+  },
+  {
+   "symbol": "NVDA",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-18",
+   "module": "scalp",
+   "direction": "call",
+   "contract_rule": {
+    "dte": [
+     0,
+     7
+    ],
+    "delta": [
+     0.4,
+     0.6
+    ],
+    "max_spread_pct": 0.05
+   },
+   "id": "20261118-scalp-NVDA-C:entry",
+   "play_id": "20261118-scalp-NVDA-C",
+   "setup": "pm_break",
+   "pair": "NVDA-20261118",
+   "trigger": {
+    "type": "above",
+    "price": 161.68
+   },
+   "confirmation": {
+    "rvol_min": 1,
+    "vwap": "above",
+    "max_extension_pct": 0.01,
+    "spy_block_pct": 0.0,
+    "skip_first_minutes": 5
+   },
+   "plan": "NVDA long shares pm_break > 161.68 (+2.98% PM, lane list, radar neutral); 1% stop / 2R / 15:05 close"
+  },
+  {
+   "symbol": "NVDA",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-18",
+   "module": "scalp",
+   "direction": "call",
+   "contract_rule": {
+    "dte": [
+     0,
+     7
+    ],
+    "delta": [
+     0.4,
+     0.6
+    ],
+    "max_spread_pct": 0.05
+   },
+   "id": "20261118-scalp-NVDA-C-orb:entry",
+   "play_id": "20261118-scalp-NVDA-C-orb",
+   "setup": "orb",
+   "pair": "NVDA-20261118",
+   "trigger": {
+    "type": "orb_high",
+    "minutes": 30
+   },
+   "confirmation": {
+    "rvol_min": 1,
+    "vwap": "above",
+    "max_extension_pct": 0.01,
+    "spy_block_pct": 0.0,
+    "skip_first_minutes": 5
+   },
+   "plan": "NVDA long shares ORB30 high (twin of pm_break 161.68); 1% stop / 2R / 15:05 close"
+  },
+  {
+   "symbol": "NVDA",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-18",
+   "module": "scalp",
+   "direction": "call",
+   "contract_rule": {
+    "dte": [
+     0,
+     7
+    ],
+    "delta": [
+     0.4,
+     0.6
+    ],
+    "max_spread_pct": 0.05
+   },
+   "id": "20261118-scalp-NVDA-C-reclaim:entry",
+   "play_id": "20261118-scalp-NVDA-C-reclaim",
+   "setup": "level_reclaim",
+   "trigger": {
+    "type": "reclaim_above",
+    "zone": [
+     157.56,
+     158.82
+    ],
+    "window": [
+     "09:45",
+     "11:30"
+    ]
+   },
+   "confirmation": {
+    "rvol_min": 1,
+    "vwap": "above",
+    "max_extension_pct": 0.01,
+    "spy_block_pct": 0.0075
+   },
+   "stock_stop": 157.09,
+   "target_stock": 161.68,
+   "track_only": true,
+   "plan": "NVDA tracked reclaim prior-day high zone 157.56-158.82, stk stop 157.09, target 161.68"
+  },
+  {
+   "symbol": "IONQ",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-18",
+   "module": "scalp",
+   "direction": "call",
+   "contract_rule": {
+    "dte": [
+     0,
+     7
+    ],
+    "delta": [
+     0.4,
+     0.6
+    ],
+    "max_spread_pct": 0.05
+   },
+   "id": "20261118-scalp-IONQ-C:entry",
+   "play_id": "20261118-scalp-IONQ-C",
+   "setup": "pm_break",
+   "pair": "IONQ-20261118",
+   "trigger": {
+    "type": "above",
+    "price": 26.26
+   },
+   "confirmation": {
+    "rvol_min": 1,
+    "vwap": "above",
+    "max_extension_pct": 0.01,
+    "spy_block_pct": 0.0,
+    "skip_first_minutes": 5
+   },
+   "plan": "IONQ long shares pm_break > 26.26 (+2.86% PM, lane list, radar neutral); 1% stop / 2R / 15:05 close"
+  },
+  {
+   "symbol": "IONQ",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-18",
+   "module": "scalp",
+   "direction": "call",
+   "contract_rule": {
+    "dte": [
+     0,
+     7
+    ],
+    "delta": [
+     0.4,
+     0.6
+    ],
+    "max_spread_pct": 0.05
+   },
+   "id": "20261118-scalp-IONQ-C-orb:entry",
+   "play_id": "20261118-scalp-IONQ-C-orb",
+   "setup": "orb",
+   "pair": "IONQ-20261118",
+   "trigger": {
+    "type": "orb_high",
+    "minutes": 30
+   },
+   "confirmation": {
+    "rvol_min": 1,
+    "vwap": "above",
+    "max_extension_pct": 0.01,
+    "spy_block_pct": 0.0,
+    "skip_first_minutes": 5
+   },
+   "plan": "IONQ long shares ORB30 high (twin of pm_break 26.26); 1% stop / 2R / 15:05 close"
+  },
+  {
+   "symbol": "IONQ",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-18",
+   "module": "scalp",
+   "direction": "call",
+   "contract_rule": {
+    "dte": [
+     0,
+     7
+    ],
+    "delta": [
+     0.4,
+     0.6
+    ],
+    "max_spread_pct": 0.05
+   },
+   "id": "20261118-scalp-IONQ-C-reclaim:entry",
+   "play_id": "20261118-scalp-IONQ-C-reclaim",
+   "setup": "level_reclaim",
+   "trigger": {
+    "type": "reclaim_above",
+    "zone": [
+     24.74,
+     24.94
+    ],
+    "window": [
+     "09:45",
+     "11:30"
+    ]
+   },
+   "confirmation": {
+    "rvol_min": 1,
+    "vwap": "above",
+    "max_extension_pct": 0.01,
+    "spy_block_pct": 0.0075
+   },
+   "stock_stop": 24.67,
+   "target_stock": 26.26,
+   "track_only": true,
+   "plan": "IONQ tracked reclaim prior close / gap fill zone 24.74-24.94, stk stop 24.67, target 26.26"
+  },
+  {
+   "symbol": "MU",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-18",
+   "module": "scalp",
+   "direction": "call",
+   "contract_rule": {
+    "dte": [
+     0,
+     7
+    ],
+    "delta": [
+     0.4,
+     0.6
+    ],
+    "max_spread_pct": 0.05
+   },
+   "id": "20261118-scalp-MU-C:entry",
+   "play_id": "20261118-scalp-MU-C",
+   "setup": "pm_break",
+   "pair": "MU-20261118",
+   "trigger": {
+    "type": "above",
+    "price": 741.64
+   },
+   "confirmation": {
+    "rvol_min": 1,
+    "vwap": "above",
+    "max_extension_pct": 0.01,
+    "spy_block_pct": 0.0,
+    "skip_first_minutes": 5
+   },
+   "plan": "MU long shares pm_break > 741.64 (+1.91% PM, lane list, radar neutral); 1% stop / 2R / 15:05 close"
+  },
+  {
+   "symbol": "MU",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-18",
+   "module": "scalp",
+   "direction": "call",
+   "contract_rule": {
+    "dte": [
+     0,
+     7
+    ],
+    "delta": [
+     0.4,
+     0.6
+    ],
+    "max_spread_pct": 0.05
+   },
+   "id": "20261118-scalp-MU-C-orb:entry",
+   "play_id": "20261118-scalp-MU-C-orb",
+   "setup": "orb",
+   "pair": "MU-20261118",
+   "trigger": {
+    "type": "orb_high",
+    "minutes": 30
+   },
+   "confirmation": {
+    "rvol_min": 1,
+    "vwap": "above",
+    "max_extension_pct": 0.01,
+    "spy_block_pct": 0.0,
+    "skip_first_minutes": 5
+   },
+   "plan": "MU long shares ORB30 high (twin of pm_break 741.64); 1% stop / 2R / 15:05 close"
+  },
+  {
+   "symbol": "MU",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-18",
+   "module": "scalp",
+   "direction": "call",
+   "contract_rule": {
+    "dte": [
+     0,
+     7
+    ],
+    "delta": [
+     0.4,
+     0.6
+    ],
+    "max_spread_pct": 0.05
+   },
+   "id": "20261118-scalp-MU-C-reclaim:entry",
+   "play_id": "20261118-scalp-MU-C-reclaim",
+   "setup": "level_reclaim",
+   "trigger": {
+    "type": "reclaim_above",
+    "zone": [
+     709.57,
+     715.27
+    ],
+    "window": [
+     "09:45",
+     "11:30"
+    ]
+   },
+   "confirmation": {
+    "rvol_min": 1,
+    "vwap": "above",
+    "max_extension_pct": 0.01,
+    "spy_block_pct": 0.0075
+   },
+   "stock_stop": 707.44,
+   "target_stock": 741.64,
+   "track_only": true,
+   "plan": "MU tracked reclaim prior close / gap fill zone 709.57-715.27, stk stop 707.44, target 741.64"
+  },
+  {
+   "symbol": "SMCI",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-18",
+   "module": "scalp",
+   "direction": "call",
+   "contract_rule": {
+    "dte": [
+     0,
+     7
+    ],
+    "delta": [
+     0.4,
+     0.6
+    ],
+    "max_spread_pct": 0.05
+   },
+   "id": "20261118-scalp-SMCI-C:entry",
+   "play_id": "20261118-scalp-SMCI-C",
+   "setup": "pm_break",
+   "pair": "SMCI-20261118",
+   "trigger": {
+    "type": "above",
+    "price": 25.29
+   },
+   "confirmation": {
+    "rvol_min": 1,
+    "vwap": "above",
+    "max_extension_pct": 0.01,
+    "spy_block_pct": 0.0,
+    "skip_first_minutes": 5
+   },
+   "plan": "SMCI long shares pm_break > 25.29 (+3.03% PM, lane list, radar neutral); 1% stop / 2R / 15:05 close"
+  },
+  {
+   "symbol": "SMCI",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-18",
+   "module": "scalp",
+   "direction": "call",
+   "contract_rule": {
+    "dte": [
+     0,
+     7
+    ],
+    "delta": [
+     0.4,
+     0.6
+    ],
+    "max_spread_pct": 0.05
+   },
+   "id": "20261118-scalp-SMCI-C-orb:entry",
+   "play_id": "20261118-scalp-SMCI-C-orb",
+   "setup": "orb",
+   "pair": "SMCI-20261118",
+   "trigger": {
+    "type": "orb_high",
+    "minutes": 30
+   },
+   "confirmation": {
+    "rvol_min": 1,
+    "vwap": "above",
+    "max_extension_pct": 0.01,
+    "spy_block_pct": 0.0,
+    "skip_first_minutes": 5
+   },
+   "plan": "SMCI long shares ORB30 high (twin of pm_break 25.29); 1% stop / 2R / 15:05 close"
+  },
+  {
+   "symbol": "SMCI",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-18",
+   "module": "scalp",
+   "direction": "call",
+   "contract_rule": {
+    "dte": [
+     0,
+     7
+    ],
+    "delta": [
+     0.4,
+     0.6
+    ],
+    "max_spread_pct": 0.05
+   },
+   "id": "20261118-scalp-SMCI-C-reclaim:entry",
+   "play_id": "20261118-scalp-SMCI-C-reclaim",
+   "setup": "level_reclaim",
+   "trigger": {
+    "type": "reclaim_above",
+    "zone": [
+     24.04,
+     24.24
+    ],
+    "window": [
+     "09:45",
+     "11:30"
+    ]
+   },
+   "confirmation": {
+    "rvol_min": 1,
+    "vwap": "above",
+    "max_extension_pct": 0.01,
+    "spy_block_pct": 0.0075
+   },
+   "stock_stop": 23.97,
+   "target_stock": 25.29,
+   "track_only": true,
+   "plan": "SMCI tracked reclaim prior close / gap fill zone 24.04-24.24, stk stop 23.97, target 25.29"
+  },
+  {
+   "symbol": "ARM",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-18",
+   "module": "scalp",
+   "direction": "call",
+   "contract_rule": {
+    "dte": [
+     0,
+     7
+    ],
+    "delta": [
+     0.4,
+     0.6
+    ],
+    "max_spread_pct": 0.05
+   },
+   "id": "20261118-scalp-ARM-C:entry",
+   "play_id": "20261118-scalp-ARM-C",
+   "setup": "pm_break",
+   "pair": "ARM-20261118",
+   "trigger": {
+    "type": "above",
+    "price": 190.7
+   },
+   "confirmation": {
+    "rvol_min": 1,
+    "vwap": "above",
+    "max_extension_pct": 0.01,
+    "spy_block_pct": 0.0,
+    "skip_first_minutes": 5
+   },
+   "plan": "ARM long shares pm_break > 190.7 (+2.44% PM, lane list, radar neutral); 1% stop / 2R / 15:05 close"
+  },
+  {
+   "symbol": "ARM",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-18",
+   "module": "scalp",
+   "direction": "call",
+   "contract_rule": {
+    "dte": [
+     0,
+     7
+    ],
+    "delta": [
+     0.4,
+     0.6
+    ],
+    "max_spread_pct": 0.05
+   },
+   "id": "20261118-scalp-ARM-C-orb:entry",
+   "play_id": "20261118-scalp-ARM-C-orb",
+   "setup": "orb",
+   "pair": "ARM-20261118",
+   "trigger": {
+    "type": "orb_high",
+    "minutes": 30
+   },
+   "confirmation": {
+    "rvol_min": 1,
+    "vwap": "above",
+    "max_extension_pct": 0.01,
+    "spy_block_pct": 0.0,
+    "skip_first_minutes": 5
+   },
+   "plan": "ARM long shares ORB30 high (twin of pm_break 190.7); 1% stop / 2R / 15:05 close"
+  },
+  {
+   "symbol": "ARM",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-18",
+   "module": "scalp",
+   "direction": "call",
+   "contract_rule": {
+    "dte": [
+     0,
+     7
+    ],
+    "delta": [
+     0.4,
+     0.6
+    ],
+    "max_spread_pct": 0.05
+   },
+   "id": "20261118-scalp-ARM-C-reclaim:entry",
+   "play_id": "20261118-scalp-ARM-C-reclaim",
+   "setup": "level_reclaim",
+   "trigger": {
+    "type": "reclaim_above",
+    "zone": [
+     184.19,
+     185.67
+    ],
+    "window": [
+     "09:45",
+     "11:30"
+    ]
+   },
+   "confirmation": {
+    "rvol_min": 1,
+    "vwap": "above",
+    "max_extension_pct": 0.01,
+    "spy_block_pct": 0.0075
+   },
+   "stock_stop": 183.64,
+   "target_stock": 190.7,
+   "track_only": true,
+   "plan": "ARM tracked reclaim prior-day high zone 184.19-185.67, stk stop 183.64, target 190.7"
+  },
+  {
+   "symbol": "AMD",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-18",
+   "module": "scalp",
+   "direction": "call",
+   "contract_rule": {
+    "dte": [
+     0,
+     7
+    ],
+    "delta": [
+     0.4,
+     0.6
+    ],
+    "max_spread_pct": 0.05
+   },
+   "id": "20261118-scalp-AMD-C:entry",
+   "play_id": "20261118-scalp-AMD-C",
+   "setup": "pm_break",
+   "pair": "AMD-20261118",
+   "trigger": {
+    "type": "above",
+    "price": 519.928
+   },
+   "confirmation": {
+    "rvol_min": 1,
+    "vwap": "above",
+    "max_extension_pct": 0.01,
+    "spy_block_pct": 0.0,
+    "skip_first_minutes": 5
+   },
+   "plan": "AMD long shares pm_break > 519.928 (+1.96% PM, lane list, radar neutral); 1% stop / 2R / 15:05 close"
+  },
+  {
+   "symbol": "AMD",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-18",
+   "module": "scalp",
+   "direction": "call",
+   "contract_rule": {
+    "dte": [
+     0,
+     7
+    ],
+    "delta": [
+     0.4,
+     0.6
+    ],
+    "max_spread_pct": 0.05
+   },
+   "id": "20261118-scalp-AMD-C-orb:entry",
+   "play_id": "20261118-scalp-AMD-C-orb",
+   "setup": "orb",
+   "pair": "AMD-20261118",
+   "trigger": {
+    "type": "orb_high",
+    "minutes": 30
+   },
+   "confirmation": {
+    "rvol_min": 1,
+    "vwap": "above",
+    "max_extension_pct": 0.01,
+    "spy_block_pct": 0.0,
+    "skip_first_minutes": 5
+   },
+   "plan": "AMD long shares ORB30 high (twin of pm_break 519.928); 1% stop / 2R / 15:05 close"
+  },
+  {
+   "symbol": "AMD",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-18",
+   "module": "scalp",
+   "direction": "call",
+   "contract_rule": {
+    "dte": [
+     0,
+     7
+    ],
+    "delta": [
+     0.4,
+     0.6
+    ],
+    "max_spread_pct": 0.05
+   },
+   "id": "20261118-scalp-AMD-C-reclaim:entry",
+   "play_id": "20261118-scalp-AMD-C-reclaim",
+   "setup": "level_reclaim",
+   "trigger": {
+    "type": "reclaim_above",
+    "zone": [
+     501.4,
+     505.42
+    ],
+    "window": [
+     "09:45",
+     "11:30"
+    ]
+   },
+   "confirmation": {
+    "rvol_min": 1,
+    "vwap": "above",
+    "max_extension_pct": 0.01,
+    "spy_block_pct": 0.0075
+   },
+   "stock_stop": 499.9,
+   "target_stock": 519.928,
+   "track_only": true,
+   "plan": "AMD tracked reclaim prior close / gap fill zone 501.4-505.42, stk stop 499.9, target 519.928"
+  },
+  {
+   "symbol": "ORCL",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-18",
+   "module": "scalp",
+   "direction": "call",
+   "contract_rule": {
+    "dte": [
+     0,
+     7
+    ],
+    "delta": [
+     0.4,
+     0.6
+    ],
+    "max_spread_pct": 0.05
+   },
+   "id": "20261118-scalp-ORCL-C:entry",
+   "play_id": "20261118-scalp-ORCL-C",
+   "setup": "pm_break",
+   "pair": "ORCL-20261118",
+   "trigger": {
+    "type": "above",
+    "price": 118.6574
+   },
+   "confirmation": {
+    "rvol_min": 1,
+    "vwap": "above",
+    "max_extension_pct": 0.01,
+    "spy_block_pct": 0.0,
+    "skip_first_minutes": 5
+   },
+   "plan": "ORCL long shares pm_break > 118.6574 (+1.63% PM, lane list, radar against); 1% stop / 2R / 15:05 close"
+  },
+  {
+   "symbol": "ORCL",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-18",
+   "module": "scalp",
+   "direction": "call",
+   "contract_rule": {
+    "dte": [
+     0,
+     7
+    ],
+    "delta": [
+     0.4,
+     0.6
+    ],
+    "max_spread_pct": 0.05
+   },
+   "id": "20261118-scalp-ORCL-C-orb:entry",
+   "play_id": "20261118-scalp-ORCL-C-orb",
+   "setup": "orb",
+   "pair": "ORCL-20261118",
+   "trigger": {
+    "type": "orb_high",
+    "minutes": 30
+   },
+   "confirmation": {
+    "rvol_min": 1,
+    "vwap": "above",
+    "max_extension_pct": 0.01,
+    "spy_block_pct": 0.0,
+    "skip_first_minutes": 5
+   },
+   "plan": "ORCL long shares ORB30 high (twin of pm_break 118.6574); 1% stop / 2R / 15:05 close"
+  },
+  {
+   "symbol": "ORCL",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-18",
+   "module": "scalp",
+   "direction": "call",
+   "contract_rule": {
+    "dte": [
+     0,
+     7
+    ],
+    "delta": [
+     0.4,
+     0.6
+    ],
+    "max_spread_pct": 0.05
+   },
+   "id": "20261118-scalp-ORCL-C-reclaim:entry",
+   "play_id": "20261118-scalp-ORCL-C-reclaim",
+   "setup": "level_reclaim",
+   "trigger": {
+    "type": "reclaim_above",
+    "zone": [
+     114.54,
+     115.46
+    ],
+    "window": [
+     "09:45",
+     "11:30"
+    ]
+   },
+   "confirmation": {
+    "rvol_min": 1,
+    "vwap": "above",
+    "max_extension_pct": 0.01,
+    "spy_block_pct": 0.0075
+   },
+   "stock_stop": 114.2,
+   "target_stock": 118.6574,
+   "track_only": true,
+   "plan": "ORCL tracked reclaim prior close / gap fill zone 114.54-115.46, stk stop 114.2, target 118.6574"
+  },
+  {
+   "symbol": "AVGO",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-18",
+   "module": "scalp",
+   "direction": "call",
+   "contract_rule": {
+    "dte": [
+     0,
+     7
+    ],
+    "delta": [
+     0.4,
+     0.6
+    ],
+    "max_spread_pct": 0.05
+   },
+   "id": "20261118-scalp-AVGO-C:entry",
+   "play_id": "20261118-scalp-AVGO-C",
+   "setup": "pm_break",
+   "pair": "AVGO-20261118",
+   "trigger": {
+    "type": "above",
+    "price": 351.9745
+   },
+   "confirmation": {
+    "rvol_min": 1,
+    "vwap": "above",
+    "max_extension_pct": 0.01,
+    "spy_block_pct": 0.0,
+    "skip_first_minutes": 5
+   },
+   "plan": "AVGO long shares pm_break > 351.9745 (+2.32% PM, lane list, radar neutral); 1% stop / 2R / 15:05 close"
+  },
+  {
+   "symbol": "AVGO",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-18",
+   "module": "scalp",
+   "direction": "call",
+   "contract_rule": {
+    "dte": [
+     0,
+     7
+    ],
+    "delta": [
+     0.4,
+     0.6
+    ],
+    "max_spread_pct": 0.05
+   },
+   "id": "20261118-scalp-AVGO-C-orb:entry",
+   "play_id": "20261118-scalp-AVGO-C-orb",
+   "setup": "orb",
+   "pair": "AVGO-20261118",
+   "trigger": {
+    "type": "orb_high",
+    "minutes": 30
+   },
+   "confirmation": {
+    "rvol_min": 1,
+    "vwap": "above",
+    "max_extension_pct": 0.01,
+    "spy_block_pct": 0.0,
+    "skip_first_minutes": 5
+   },
+   "plan": "AVGO long shares ORB30 high (twin of pm_break 351.9745); 1% stop / 2R / 15:05 close"
+  },
+  {
+   "symbol": "AVGO",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-18",
+   "module": "scalp",
+   "direction": "call",
+   "contract_rule": {
+    "dte": [
+     0,
+     7
+    ],
+    "delta": [
+     0.4,
+     0.6
+    ],
+    "max_spread_pct": 0.05
+   },
+   "id": "20261118-scalp-AVGO-C-reclaim:entry",
+   "play_id": "20261118-scalp-AVGO-C-reclaim",
+   "setup": "level_reclaim",
+   "trigger": {
+    "type": "reclaim_above",
+    "zone": [
+     342.62,
+     345.38
+    ],
+    "window": [
+     "09:45",
+     "11:30"
+    ]
+   },
+   "confirmation": {
+    "rvol_min": 1,
+    "vwap": "above",
+    "max_extension_pct": 0.01,
+    "spy_block_pct": 0.0075
+   },
+   "stock_stop": 341.59,
+   "target_stock": 351.9745,
+   "track_only": true,
+   "plan": "AVGO tracked reclaim prior-day high zone 342.62-345.38, stk stop 341.59, target 351.9745"
   }
  ]
 }
