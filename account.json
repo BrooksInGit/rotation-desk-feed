@@ -1,12 +1,12 @@
 {
- "as_of": "2026-11-19T10:31:31.843234-05:00",
+ "as_of": "2026-11-19T10:41:35.073438-05:00",
  "account": "alpaca-paper",
  "account_last4": "T9E4",
- "equity": 24289.26,
+ "equity": 24237.39,
  "last_equity": 24689.76,
- "cash": 12092.93,
- "buying_power": 36382.19,
- "long_market_value": 12196.33,
+ "cash": 24237.39,
+ "buying_power": 48474.78,
+ "long_market_value": 0.0,
  "short_market_value": 0.0,
  "halted": false,
  "daytrade_count": 0,
@@ -22,21 +22,7 @@
   "scalp_risk_pct": 0.005,
   "swing_risk_pct": 0.01
  },
- "positions": [
-  {
-   "symbol": "VRTX",
-   "qty": "23",
-   "side": "long",
-   "avg_entry_price": "538.97913",
-   "current_price": "530.275",
-   "market_value": "12196.325",
-   "cost_basis": "12396.51999",
-   "unrealized_pl": "-200.19499",
-   "unrealized_plpc": "-0.01615",
-   "unrealized_intraday_pl": "-142.025",
-   "change_today": "-0.01151"
-  }
- ],
+ "positions": [],
  "orders": [
   {
    "symbol": "CRWD",
@@ -213,27 +199,27 @@
      "limit_price": "558.88",
      "stop_price": null,
      "type": "limit",
-     "status": "new",
+     "status": "canceled",
      "order_class": "bracket",
      "client_order_id": "40769e98-8e4b-4051-b97a-0d69341e7fe3",
      "submitted_at": "2026-11-18T14:51:42.939478Z",
      "filled_at": null,
-     "canceled_at": null
+     "canceled_at": "2026-11-19T15:36:32.845141Z"
     },
     {
      "symbol": "VRTX",
      "side": "sell",
      "qty": "23",
-     "filled_qty": "0",
-     "filled_avg_price": null,
+     "filled_qty": "23",
+     "filled_avg_price": "528.02",
      "limit_price": null,
      "stop_price": "528.4",
      "type": "stop",
-     "status": "held",
+     "status": "filled",
      "order_class": "bracket",
      "client_order_id": "212fb277-6bc6-4910-98f2-e91d18525edb",
-     "submitted_at": "2026-11-18T14:51:39.680789Z",
-     "filled_at": null,
+     "submitted_at": "2026-11-19T15:36:32.850364Z",
+     "filled_at": "2026-11-19T15:36:33.723521Z",
      "canceled_at": null
     }
    ]
