@@ -1,5 +1,5 @@
 {
- "as_of": "2026-11-18T21:52:49.113363-05:00",
+ "as_of": "2026-11-18T22:52:51.084846-05:00",
  "account": "alpaca-paper",
  "account_last4": "T9E4",
  "equity": 24747.29,
@@ -33,8 +33,8 @@
    "cost_basis": "12396.51999",
    "unrealized_pl": "-0.89999",
    "unrealized_plpc": "-0.00007",
-   "unrealized_intraday_pl": "109.02",
-   "change_today": "0.00887"
+   "unrealized_intraday_pl": "57.27",
+   "change_today": "0.00464"
   }
  ],
  "orders": [
