@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-11-19T17:12:00Z",
- "source": "hourly check 2026-11-19 12:05 ET",
+ "updated_at": "2026-11-19T21:50:00Z",
+ "source": "evening run 2026-11-19",
  "slippage_frac": 0.25,
  "exit_rules": {
   "scalp": {
@@ -1251,11 +1251,7 @@
     "vwap": "above",
     "max_extension_pct": 0.025,
     "spy_block_pct": 0.0075,
-    "skip_first_minutes": 5,
-    "rs_exempt": {
-     "min_move_pct": 0.01,
-     "hard_block_pct": 0.015
-    }
+    "skip_first_minutes": 5
    },
    "plan": "PGR long shares (breakout), trigger > 239.44, stk stop 226.5, target 265.32",
    "stock_stop": 226.5,
@@ -1287,64 +1283,6 @@
    "target_stock": 187.6
   },
   {
-   "id": "20261117-swing-MA-C:entry",
-   "play_id": "20261117-swing-MA-C",
-   "symbol": "MA",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-24",
-   "module": "swing",
-   "setup": "pullback",
-   "direction": "call",
-   "trigger": {
-    "type": "above",
-    "price": 658.74
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "above",
-    "max_extension_pct": 0.025,
-    "spy_block_pct": 0.0075,
-    "skip_first_minutes": 5,
-    "rs_exempt": {
-     "min_move_pct": 0.01,
-     "hard_block_pct": 0.015
-    }
-   },
-   "plan": "MA long shares (pullback), trigger > 658.74, stk stop 637.9, target 700.42",
-   "stock_stop": 637.9,
-   "target_stock": 700.42
-  },
-  {
-   "id": "20261118-swing-MAR-C:entry",
-   "play_id": "20261118-swing-MAR-C",
-   "symbol": "MAR",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-25",
-   "module": "swing",
-   "setup": "breakout",
-   "direction": "call",
-   "trigger": {
-    "type": "above",
-    "price": 431.94
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "above",
-    "max_extension_pct": 0.025,
-    "spy_block_pct": 0.0075,
-    "skip_first_minutes": 5,
-    "rs_exempt": {
-     "min_move_pct": 0.01,
-     "hard_block_pct": 0.015
-    }
-   },
-   "plan": "MAR long shares (breakout), trigger > 431.94, stk stop 416.9, target 462.02",
-   "stock_stop": 416.9,
-   "target_stock": 462.02
-  },
-  {
    "id": "20261118-swing-PG-C:entry",
    "play_id": "20261118-swing-PG-C",
    "symbol": "PG",
@@ -1374,472 +1312,91 @@
    "target_stock": 187
   },
   {
-   "id": "20261119-scalp-SPY-C:entry",
-   "play_id": "20261119-scalp-SPY-C",
-   "symbol": "SPY",
+   "id": "20261119-swing-ED-C:entry",
+   "play_id": "20261119-swing-ED-C",
+   "symbol": "ED",
    "kind": "entry",
    "status": "active",
-   "expires": "2026-11-19",
-   "module": "scalp",
-   "setup": "pm_break",
+   "expires": "2026-11-27",
+   "module": "swing",
+   "setup": "breakout",
    "direction": "call",
    "trigger": {
     "type": "above",
-    "price": 740.26
+    "price": 122.62
    },
    "confirmation": {
     "rvol_min": 1,
     "vwap": "above",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0,
-    "skip_first_minutes": 5
+    "max_extension_pct": 0.025,
+    "spy_block_pct": 0.0075,
+    "skip_first_minutes": 5,
+    "rs_exempt": {
+     "min_move_pct": 0.01,
+     "hard_block_pct": 0.015
+    }
    },
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "SPY-20261119",
-   "plan": "SPY long shares (pm_break), trigger > 740.26 (PM high), +1.01% PM; exits 1% stop / 2R / 15:05 [TRACK ONLY: desk scalp stop after 2 consecutive losses]",
-   "track_only": true
+   "plan": "ED long shares (breakout), trigger > 122.62, stk stop 116.9, target 134.06",
+   "stock_stop": 116.9,
+   "target_stock": 134.06
   },
   {
-   "id": "20261119-scalp-SPY-C-orb:entry",
-   "play_id": "20261119-scalp-SPY-C-orb",
-   "symbol": "SPY",
+   "id": "20261119-swing-WMT-C:entry",
+   "play_id": "20261119-swing-WMT-C",
+   "symbol": "WMT",
    "kind": "entry",
    "status": "active",
-   "expires": "2026-11-19",
-   "module": "scalp",
-   "setup": "orb",
+   "expires": "2026-11-27",
+   "module": "swing",
+   "setup": "breakout",
    "direction": "call",
    "trigger": {
     "type": "above",
-    "price": 739.9
+    "price": 129.86
    },
    "confirmation": {
     "rvol_min": 1,
     "vwap": "above",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0,
-    "skip_first_minutes": 5
+    "max_extension_pct": 0.025,
+    "spy_block_pct": 0.0075,
+    "skip_first_minutes": 5,
+    "rs_exempt": {
+     "min_move_pct": 0.01,
+     "hard_block_pct": 0.015
+    }
    },
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "SPY-20261119",
-   "plan": "SPY long shares (orb), trigger > 30-min opening-range high; twin of pm_break; exits 1% stop / 2R / 15:05 [TRACK ONLY: desk scalp stop after 2 consecutive losses]",
-   "track_only": true
+   "plan": "WMT long shares (breakout), trigger > 129.86, stk stop 122.9, target 143.78",
+   "stock_stop": 122.9,
+   "target_stock": 143.78
   },
   {
-   "id": "20261119-scalp-IWM-C:entry",
-   "play_id": "20261119-scalp-IWM-C",
-   "symbol": "IWM",
+   "id": "20261119-swing-DVN-P:entry",
+   "play_id": "20261119-swing-DVN-P",
+   "symbol": "DVN",
    "kind": "entry",
    "status": "active",
-   "expires": "2026-11-19",
-   "module": "scalp",
-   "setup": "pm_break",
-   "direction": "call",
+   "expires": "2026-11-27",
+   "module": "swing",
+   "setup": "breakdown",
+   "direction": "put",
    "trigger": {
-    "type": "above",
-    "price": 272.27
+    "type": "below",
+    "price": 41.71
    },
    "confirmation": {
     "rvol_min": 1,
-    "vwap": "above",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0,
-    "skip_first_minutes": 5
+    "vwap": "below",
+    "max_extension_pct": 0.025,
+    "spy_block_pct": 0.0075,
+    "skip_first_minutes": 5,
+    "rs_exempt": {
+     "min_move_pct": 0.01,
+     "hard_block_pct": 0.015
+    }
    },
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "IWM-20261119",
-   "plan": "IWM long shares (pm_break), trigger > 272.27 (PM high), +0.53% PM; exits 1% stop / 2R / 15:05 [TRACK ONLY: desk scalp stop after 2 consecutive losses]",
-   "track_only": true
-  },
-  {
-   "id": "20261119-scalp-IWM-C-orb:entry",
-   "play_id": "20261119-scalp-IWM-C-orb",
-   "symbol": "IWM",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-19",
-   "module": "scalp",
-   "setup": "orb",
-   "direction": "call",
-   "trigger": {
-    "type": "above",
-    "price": 271.8
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "above",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0,
-    "skip_first_minutes": 5
-   },
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "IWM-20261119",
-   "plan": "IWM long shares (orb), trigger > 30-min opening-range high; twin of pm_break; exits 1% stop / 2R / 15:05 [TRACK ONLY: desk scalp stop after 2 consecutive losses]",
-   "track_only": true
-  },
-  {
-   "id": "20261119-scalp-PANW-C:entry",
-   "play_id": "20261119-scalp-PANW-C",
-   "symbol": "PANW",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-19",
-   "module": "scalp",
-   "setup": "pm_break",
-   "direction": "call",
-   "trigger": {
-    "type": "above",
-    "price": 376.75
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "above",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0,
-    "skip_first_minutes": 5
-   },
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "PANW-20261119",
-   "plan": "PANW long shares (pm_break), trigger > 376.75 (PM high), +8.88% PM; exits 1% stop / 2R / 15:05 [TRACK ONLY: desk scalp stop after 2 consecutive losses]",
-   "track_only": true
-  },
-  {
-   "id": "20261119-scalp-PANW-C-orb:entry",
-   "play_id": "20261119-scalp-PANW-C-orb",
-   "symbol": "PANW",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-19",
-   "module": "scalp",
-   "setup": "orb",
-   "direction": "call",
-   "trigger": {
-    "type": "above",
-    "price": 370.0
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "above",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0,
-    "skip_first_minutes": 5
-   },
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "PANW-20261119",
-   "plan": "PANW long shares (orb), trigger > 30-min opening-range high; twin of pm_break; exits 1% stop / 2R / 15:05 [TRACK ONLY: desk scalp stop after 2 consecutive losses]",
-   "track_only": true
-  },
-  {
-   "id": "20261119-scalp-CRWD-C-orb:entry",
-   "play_id": "20261119-scalp-CRWD-C-orb",
-   "symbol": "CRWD",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-19",
-   "module": "scalp",
-   "setup": "orb",
-   "direction": "call",
-   "trigger": {
-    "type": "above",
-    "price": 256.73
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "above",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0,
-    "skip_first_minutes": 5
-   },
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "CRWD-20261119",
-   "plan": "CRWD long shares (orb), trigger > 30-min opening-range high; twin of pm_break; exits 1% stop / 2R / 15:05",
-   "track_only": true
-  },
-  {
-   "id": "20261119-scalp-HOOD-C-orb:entry",
-   "play_id": "20261119-scalp-HOOD-C-orb",
-   "symbol": "HOOD",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-19",
-   "module": "scalp",
-   "setup": "orb",
-   "direction": "call",
-   "trigger": {
-    "type": "above",
-    "price": 74.04
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "above",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0,
-    "skip_first_minutes": 5
-   },
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "HOOD-20261119",
-   "plan": "HOOD long shares (orb), trigger > 30-min opening-range high; twin of pm_break; exits 1% stop / 2R / 15:05 [TRACK ONLY: desk scalp stop after 2 consecutive losses]",
-   "track_only": true
-  },
-  {
-   "id": "20261119-scalp-ARM-C:entry",
-   "play_id": "20261119-scalp-ARM-C",
-   "symbol": "ARM",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-19",
-   "module": "scalp",
-   "setup": "pm_break",
-   "direction": "call",
-   "trigger": {
-    "type": "above",
-    "price": 192.3
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "above",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0,
-    "skip_first_minutes": 5
-   },
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "ARM-20261119",
-   "plan": "ARM long shares (pm_break), trigger > 192.3 (PM high), +3.96% PM; exits 1% stop / 2R / 15:05 [TRACK ONLY: desk scalp stop after 2 consecutive losses]",
-   "track_only": true
-  },
-  {
-   "id": "20261119-scalp-ARM-C-orb:entry",
-   "play_id": "20261119-scalp-ARM-C-orb",
-   "symbol": "ARM",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-19",
-   "module": "scalp",
-   "setup": "orb",
-   "direction": "call",
-   "trigger": {
-    "type": "above",
-    "price": 190.65
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "above",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0,
-    "skip_first_minutes": 5
-   },
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "ARM-20261119",
-   "plan": "ARM long shares (orb), trigger > 30-min opening-range high; twin of pm_break; exits 1% stop / 2R / 15:05 [TRACK ONLY: desk scalp stop after 2 consecutive losses]",
-   "track_only": true
-  },
-  {
-   "id": "20261119-scalp-GOOGL-C:entry",
-   "play_id": "20261119-scalp-GOOGL-C",
-   "symbol": "GOOGL",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-19",
-   "module": "scalp",
-   "setup": "pm_break",
-   "direction": "call",
-   "trigger": {
-    "type": "above",
-    "price": 294.75
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "above",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0,
-    "skip_first_minutes": 5
-   },
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "GOOGL-20261119",
-   "plan": "GOOGL long shares (pm_break), trigger > 294.75 (PM high), +3.88% PM; exits 1% stop / 2R / 15:05 [TRACK ONLY: desk scalp stop after 2 consecutive losses]",
-   "track_only": true
-  },
-  {
-   "id": "20261119-scalp-GOOGL-C-orb:entry",
-   "play_id": "20261119-scalp-GOOGL-C-orb",
-   "symbol": "GOOGL",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-19",
-   "module": "scalp",
-   "setup": "orb",
-   "direction": "call",
-   "trigger": {
-    "type": "above",
-    "price": 295.43
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "above",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0,
-    "skip_first_minutes": 5
-   },
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "GOOGL-20261119",
-   "plan": "GOOGL long shares (orb), trigger > 30-min opening-range high; twin of pm_break; exits 1% stop / 2R / 15:05 [TRACK ONLY: desk scalp stop after 2 consecutive losses]",
-   "track_only": true
-  },
-  {
-   "id": "20261119-scalp-SMCI-C-orb:entry",
-   "play_id": "20261119-scalp-SMCI-C-orb",
-   "symbol": "SMCI",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-19",
-   "module": "scalp",
-   "setup": "orb",
-   "direction": "call",
-   "trigger": {
-    "type": "above",
-    "price": 25.815
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "above",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0,
-    "skip_first_minutes": 5
-   },
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "SMCI-20261119",
-   "plan": "SMCI long shares (orb), trigger > 30-min opening-range high; twin of pm_break; exits 1% stop / 2R / 15:05 [TRACK ONLY: desk scalp stop after 2 consecutive losses]",
-   "track_only": true
+   "plan": "DVN short shares (breakdown), trigger < 41.71, stk stop 43.81, target 37.51",
+   "stock_stop": 43.81,
+   "target_stock": 37.51
   },
   {
    "play_id": "20261118-swing-COIN-P-no_rvol",
