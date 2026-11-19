@@ -1,12 +1,12 @@
 {
- "as_of": "2026-11-19T10:11:26.176372-05:00",
+ "as_of": "2026-11-19T10:21:28.662323-05:00",
  "account": "alpaca-paper",
  "account_last4": "T9E4",
- "equity": 24441.09,
+ "equity": 24364.81,
  "last_equity": 24689.76,
- "cash": 68.93,
- "buying_power": 24510.02,
- "long_market_value": 24372.16,
+ "cash": 12092.93,
+ "buying_power": 36457.74,
+ "long_market_value": 12271.88,
  "short_market_value": 0.0,
  "halted": false,
  "daytrade_count": 0,
@@ -24,30 +24,17 @@
  },
  "positions": [
   {
-   "symbol": "QQQ",
-   "qty": "18",
-   "side": "long",
-   "avg_entry_price": "674.84",
-   "current_price": "671.765",
-   "market_value": "12091.77",
-   "cost_basis": "12147.12",
-   "unrealized_pl": "-55.35",
-   "unrealized_plpc": "-0.00456",
-   "unrealized_intraday_pl": "-55.35",
-   "change_today": "0.01858"
-  },
-  {
    "symbol": "VRTX",
    "qty": "23",
    "side": "long",
    "avg_entry_price": "538.97913",
-   "current_price": "533.93",
-   "market_value": "12280.39",
+   "current_price": "533.56",
+   "market_value": "12271.88",
    "cost_basis": "12396.51999",
-   "unrealized_pl": "-116.12999",
-   "unrealized_plpc": "-0.00937",
-   "unrealized_intraday_pl": "-57.96",
-   "change_today": "-0.0047"
+   "unrealized_pl": "-124.63999",
+   "unrealized_plpc": "-0.01005",
+   "unrealized_intraday_pl": "-66.47",
+   "change_today": "-0.00539"
   }
  ],
  "orders": [
@@ -126,27 +113,27 @@
      "limit_price": "688.6",
      "stop_price": null,
      "type": "limit",
-     "status": "new",
+     "status": "canceled",
      "order_class": "bracket",
      "client_order_id": "61a3eb3e-91ee-4454-a4b3-812cbe19d958",
      "submitted_at": "2026-11-19T14:36:44.586923Z",
      "filled_at": null,
-     "canceled_at": null
+     "canceled_at": "2026-11-19T15:15:03.159504Z"
     },
     {
      "symbol": "QQQ",
      "side": "sell",
      "qty": "18",
-     "filled_qty": "0",
-     "filled_avg_price": null,
+     "filled_qty": "18",
+     "filled_avg_price": "668",
      "limit_price": null,
      "stop_price": "668.35",
      "type": "stop",
-     "status": "held",
+     "status": "filled",
      "order_class": "bracket",
      "client_order_id": "426cd5ec-3e63-4b94-ae1d-37fd24d7447f",
-     "submitted_at": "2026-11-19T14:36:29.276925Z",
-     "filled_at": null,
+     "submitted_at": "2026-11-19T15:15:05.294463Z",
+     "filled_at": "2026-11-19T15:15:07.727997Z",
      "canceled_at": null
     }
    ]
