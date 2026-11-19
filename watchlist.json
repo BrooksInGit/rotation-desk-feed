@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-11-19T15:12:00Z",
- "source": "hourly check 2026-11-19 10:05 ET",
+ "updated_at": "2026-11-19T16:12:00Z",
+ "source": "hourly check 2026-11-19 11:05 ET",
  "slippage_frac": 0.25,
  "exit_rules": {
   "scalp": {
@@ -1171,7 +1171,7 @@
    "max_base_depth_pct": 1.5,
    "min_move_pct": 1,
    "max_new_per_scan": 2,
-   "max_new_per_day": 6,
+   "max_new_per_day": 0,
    "cutoff": "14:30",
    "execute": false,
    "telegram": false
@@ -1435,7 +1435,8 @@
     "max_spread_pct": 0.05
    },
    "pair": "SPY-20261119",
-   "plan": "SPY long shares (pm_break), trigger > 740.26 (PM high), +1.01% PM; exits 1% stop / 2R / 15:05"
+   "plan": "SPY long shares (pm_break), trigger > 740.26 (PM high), +1.01% PM; exits 1% stop / 2R / 15:05 [TRACK ONLY: desk scalp stop after 2 consecutive losses]",
+   "track_only": true
   },
   {
    "id": "20261119-scalp-SPY-C-orb:entry",
@@ -1448,8 +1449,8 @@
    "setup": "orb",
    "direction": "call",
    "trigger": {
-    "type": "orb_high",
-    "minutes": 30
+    "type": "above",
+    "price": 739.9
    },
    "confirmation": {
     "rvol_min": 1,
@@ -1470,7 +1471,8 @@
     "max_spread_pct": 0.05
    },
    "pair": "SPY-20261119",
-   "plan": "SPY long shares (orb), trigger > 30-min opening-range high; twin of pm_break; exits 1% stop / 2R / 15:05"
+   "plan": "SPY long shares (orb), trigger > 30-min opening-range high; twin of pm_break; exits 1% stop / 2R / 15:05 [TRACK ONLY: desk scalp stop after 2 consecutive losses]",
+   "track_only": true
   },
   {
    "id": "20261119-scalp-SPY-C-reclaim:entry",
@@ -1526,8 +1528,8 @@
    "setup": "orb",
    "direction": "call",
    "trigger": {
-    "type": "orb_high",
-    "minutes": 30
+    "type": "above",
+    "price": 675.3
    },
    "confirmation": {
     "rvol_min": 1,
@@ -1627,7 +1629,8 @@
     "max_spread_pct": 0.05
    },
    "pair": "IWM-20261119",
-   "plan": "IWM long shares (pm_break), trigger > 272.27 (PM high), +0.53% PM; exits 1% stop / 2R / 15:05"
+   "plan": "IWM long shares (pm_break), trigger > 272.27 (PM high), +0.53% PM; exits 1% stop / 2R / 15:05 [TRACK ONLY: desk scalp stop after 2 consecutive losses]",
+   "track_only": true
   },
   {
    "id": "20261119-scalp-IWM-C-orb:entry",
@@ -1640,8 +1643,8 @@
    "setup": "orb",
    "direction": "call",
    "trigger": {
-    "type": "orb_high",
-    "minutes": 30
+    "type": "above",
+    "price": 271.8
    },
    "confirmation": {
     "rvol_min": 1,
@@ -1662,7 +1665,8 @@
     "max_spread_pct": 0.05
    },
    "pair": "IWM-20261119",
-   "plan": "IWM long shares (orb), trigger > 30-min opening-range high; twin of pm_break; exits 1% stop / 2R / 15:05"
+   "plan": "IWM long shares (orb), trigger > 30-min opening-range high; twin of pm_break; exits 1% stop / 2R / 15:05 [TRACK ONLY: desk scalp stop after 2 consecutive losses]",
+   "track_only": true
   },
   {
    "id": "20261119-scalp-PANW-C:entry",
@@ -1697,7 +1701,8 @@
     "max_spread_pct": 0.05
    },
    "pair": "PANW-20261119",
-   "plan": "PANW long shares (pm_break), trigger > 376.75 (PM high), +8.88% PM; exits 1% stop / 2R / 15:05"
+   "plan": "PANW long shares (pm_break), trigger > 376.75 (PM high), +8.88% PM; exits 1% stop / 2R / 15:05 [TRACK ONLY: desk scalp stop after 2 consecutive losses]",
+   "track_only": true
   },
   {
    "id": "20261119-scalp-PANW-C-orb:entry",
@@ -1710,8 +1715,8 @@
    "setup": "orb",
    "direction": "call",
    "trigger": {
-    "type": "orb_high",
-    "minutes": 30
+    "type": "above",
+    "price": 370.0
    },
    "confirmation": {
     "rvol_min": 1,
@@ -1732,7 +1737,8 @@
     "max_spread_pct": 0.05
    },
    "pair": "PANW-20261119",
-   "plan": "PANW long shares (orb), trigger > 30-min opening-range high; twin of pm_break; exits 1% stop / 2R / 15:05"
+   "plan": "PANW long shares (orb), trigger > 30-min opening-range high; twin of pm_break; exits 1% stop / 2R / 15:05 [TRACK ONLY: desk scalp stop after 2 consecutive losses]",
+   "track_only": true
   },
   {
    "id": "20261119-scalp-CRWD-C-orb:entry",
@@ -1745,8 +1751,8 @@
    "setup": "orb",
    "direction": "call",
    "trigger": {
-    "type": "orb_high",
-    "minutes": 30
+    "type": "above",
+    "price": 256.73
    },
    "confirmation": {
     "rvol_min": 1,
@@ -1824,8 +1830,8 @@
    "setup": "orb",
    "direction": "call",
    "trigger": {
-    "type": "orb_high",
-    "minutes": 30
+    "type": "above",
+    "price": 74.04
    },
    "confirmation": {
     "rvol_min": 1,
@@ -1846,7 +1852,8 @@
     "max_spread_pct": 0.05
    },
    "pair": "HOOD-20261119",
-   "plan": "HOOD long shares (orb), trigger > 30-min opening-range high; twin of pm_break; exits 1% stop / 2R / 15:05"
+   "plan": "HOOD long shares (orb), trigger > 30-min opening-range high; twin of pm_break; exits 1% stop / 2R / 15:05 [TRACK ONLY: desk scalp stop after 2 consecutive losses]",
+   "track_only": true
   },
   {
    "id": "20261119-scalp-HOOD-C-reclaim:entry",
@@ -1967,7 +1974,8 @@
     "max_spread_pct": 0.05
    },
    "pair": "ARM-20261119",
-   "plan": "ARM long shares (pm_break), trigger > 192.3 (PM high), +3.96% PM; exits 1% stop / 2R / 15:05"
+   "plan": "ARM long shares (pm_break), trigger > 192.3 (PM high), +3.96% PM; exits 1% stop / 2R / 15:05 [TRACK ONLY: desk scalp stop after 2 consecutive losses]",
+   "track_only": true
   },
   {
    "id": "20261119-scalp-ARM-C-orb:entry",
@@ -1980,8 +1988,8 @@
    "setup": "orb",
    "direction": "call",
    "trigger": {
-    "type": "orb_high",
-    "minutes": 30
+    "type": "above",
+    "price": 190.65
    },
    "confirmation": {
     "rvol_min": 1,
@@ -2002,7 +2010,8 @@
     "max_spread_pct": 0.05
    },
    "pair": "ARM-20261119",
-   "plan": "ARM long shares (orb), trigger > 30-min opening-range high; twin of pm_break; exits 1% stop / 2R / 15:05"
+   "plan": "ARM long shares (orb), trigger > 30-min opening-range high; twin of pm_break; exits 1% stop / 2R / 15:05 [TRACK ONLY: desk scalp stop after 2 consecutive losses]",
+   "track_only": true
   },
   {
    "id": "20261119-scalp-ARM-C-reclaim:entry",
@@ -2080,7 +2089,8 @@
     "max_spread_pct": 0.05
    },
    "pair": "GOOGL-20261119",
-   "plan": "GOOGL long shares (pm_break), trigger > 294.75 (PM high), +3.88% PM; exits 1% stop / 2R / 15:05"
+   "plan": "GOOGL long shares (pm_break), trigger > 294.75 (PM high), +3.88% PM; exits 1% stop / 2R / 15:05 [TRACK ONLY: desk scalp stop after 2 consecutive losses]",
+   "track_only": true
   },
   {
    "id": "20261119-scalp-GOOGL-C-orb:entry",
@@ -2093,8 +2103,8 @@
    "setup": "orb",
    "direction": "call",
    "trigger": {
-    "type": "orb_high",
-    "minutes": 30
+    "type": "above",
+    "price": 295.43
    },
    "confirmation": {
     "rvol_min": 1,
@@ -2115,7 +2125,8 @@
     "max_spread_pct": 0.05
    },
    "pair": "GOOGL-20261119",
-   "plan": "GOOGL long shares (orb), trigger > 30-min opening-range high; twin of pm_break; exits 1% stop / 2R / 15:05"
+   "plan": "GOOGL long shares (orb), trigger > 30-min opening-range high; twin of pm_break; exits 1% stop / 2R / 15:05 [TRACK ONLY: desk scalp stop after 2 consecutive losses]",
+   "track_only": true
   },
   {
    "id": "20261119-scalp-GOOGL-C-reclaim:entry",
@@ -2171,8 +2182,8 @@
    "setup": "orb",
    "direction": "call",
    "trigger": {
-    "type": "orb_high",
-    "minutes": 30
+    "type": "above",
+    "price": 25.815
    },
    "confirmation": {
     "rvol_min": 1,
@@ -2193,7 +2204,8 @@
     "max_spread_pct": 0.05
    },
    "pair": "SMCI-20261119",
-   "plan": "SMCI long shares (orb), trigger > 30-min opening-range high; twin of pm_break; exits 1% stop / 2R / 15:05"
+   "plan": "SMCI long shares (orb), trigger > 30-min opening-range high; twin of pm_break; exits 1% stop / 2R / 15:05 [TRACK ONLY: desk scalp stop after 2 consecutive losses]",
+   "track_only": true
   },
   {
    "id": "20261119-scalp-SMCI-C-reclaim:entry",
