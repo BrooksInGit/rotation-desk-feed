@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-11-19T13:55:00Z",
- "source": "pre-market brief 2026-11-19",
+ "updated_at": "2026-11-19T15:12:00Z",
+ "source": "hourly check 2026-11-19 10:05 ET",
  "slippage_frac": 0.25,
  "exit_rules": {
   "scalp": {
@@ -1516,41 +1516,6 @@
    "plan": "SPY TRACKED level_reclaim at prior close (gap fill) 730.2 zone 727.28-733.12, stk stop 725.1, target 749.16"
   },
   {
-   "id": "20261119-scalp-QQQ-C:entry",
-   "play_id": "20261119-scalp-QQQ-C",
-   "symbol": "QQQ",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-19",
-   "module": "scalp",
-   "setup": "pm_break",
-   "direction": "call",
-   "trigger": {
-    "type": "above",
-    "price": 675.07
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "above",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0,
-    "skip_first_minutes": 5
-   },
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "QQQ-20261119",
-   "plan": "QQQ long shares (pm_break), trigger > 675.07 (PM high), +1.75% PM; exits 1% stop / 2R / 15:05"
-  },
-  {
    "id": "20261119-scalp-QQQ-C-orb:entry",
    "play_id": "20261119-scalp-QQQ-C-orb",
    "symbol": "QQQ",
@@ -1583,7 +1548,8 @@
     "max_spread_pct": 0.05
    },
    "pair": "QQQ-20261119",
-   "plan": "QQQ long shares (orb), trigger > 30-min opening-range high; twin of pm_break; exits 1% stop / 2R / 15:05"
+   "plan": "QQQ long shares (orb), trigger > 30-min opening-range high; twin of pm_break; exits 1% stop / 2R / 15:05",
+   "track_only": true
   },
   {
    "id": "20261119-scalp-QQQ-C-reclaim:entry",
@@ -1769,41 +1735,6 @@
    "plan": "PANW long shares (orb), trigger > 30-min opening-range high; twin of pm_break; exits 1% stop / 2R / 15:05"
   },
   {
-   "id": "20261119-scalp-CRWD-C:entry",
-   "play_id": "20261119-scalp-CRWD-C",
-   "symbol": "CRWD",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-19",
-   "module": "scalp",
-   "setup": "pm_break",
-   "direction": "call",
-   "trigger": {
-    "type": "above",
-    "price": 253.79
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "above",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0,
-    "skip_first_minutes": 5
-   },
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "CRWD-20261119",
-   "plan": "CRWD long shares (pm_break), trigger > 253.79 (PM high), +5.69% PM; exits 1% stop / 2R / 15:05"
-  },
-  {
    "id": "20261119-scalp-CRWD-C-orb:entry",
    "play_id": "20261119-scalp-CRWD-C-orb",
    "symbol": "CRWD",
@@ -1836,77 +1767,8 @@
     "max_spread_pct": 0.05
    },
    "pair": "CRWD-20261119",
-   "plan": "CRWD long shares (orb), trigger > 30-min opening-range high; twin of pm_break; exits 1% stop / 2R / 15:05"
-  },
-  {
-   "id": "20261119-scalp-MU-C:entry",
-   "play_id": "20261119-scalp-MU-C",
-   "symbol": "MU",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-19",
-   "module": "scalp",
-   "setup": "pm_break",
-   "direction": "call",
-   "trigger": {
-    "type": "above",
-    "price": 749.2
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "above",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0,
-    "skip_first_minutes": 5
-   },
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "MU-20261119",
-   "plan": "MU long shares (pm_break), trigger > 749.2 (PM high), +4.25% PM; exits 1% stop / 2R / 15:05"
-  },
-  {
-   "id": "20261119-scalp-MU-C-orb:entry",
-   "play_id": "20261119-scalp-MU-C-orb",
-   "symbol": "MU",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-19",
-   "module": "scalp",
-   "setup": "orb",
-   "direction": "call",
-   "trigger": {
-    "type": "orb_high",
-    "minutes": 30
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "above",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0,
-    "skip_first_minutes": 5
-   },
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "MU-20261119",
-   "plan": "MU long shares (orb), trigger > 30-min opening-range high; twin of pm_break; exits 1% stop / 2R / 15:05"
+   "plan": "CRWD long shares (orb), trigger > 30-min opening-range high; twin of pm_break; exits 1% stop / 2R / 15:05",
+   "track_only": true
   },
   {
    "id": "20261119-scalp-MU-C-reclaim:entry",
@@ -1950,41 +1812,6 @@
    "stock_stop": 717.91,
    "target_stock": 749.2,
    "plan": "MU TRACKED level_reclaim at prior-day high 722.96 zone 720.07-725.85, stk stop 717.91, target 749.2"
-  },
-  {
-   "id": "20261119-scalp-HOOD-C:entry",
-   "play_id": "20261119-scalp-HOOD-C",
-   "symbol": "HOOD",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-19",
-   "module": "scalp",
-   "setup": "pm_break",
-   "direction": "call",
-   "trigger": {
-    "type": "above",
-    "price": 72.58
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "above",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0,
-    "skip_first_minutes": 5
-   },
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "HOOD-20261119",
-   "plan": "HOOD long shares (pm_break), trigger > 72.58 (PM high), +4.06% PM; exits 1% stop / 2R / 15:05"
   },
   {
    "id": "20261119-scalp-HOOD-C-orb:entry",
@@ -2063,76 +1890,6 @@
    "stock_stop": 69.47,
    "target_stock": 72.5738,
    "plan": "HOOD TRACKED level_reclaim at prior-day high 69.96 zone 69.68-70.24, stk stop 69.47, target 72.5738"
-  },
-  {
-   "id": "20261119-scalp-INTC-C:entry",
-   "play_id": "20261119-scalp-INTC-C",
-   "symbol": "INTC",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-19",
-   "module": "scalp",
-   "setup": "pm_break",
-   "direction": "call",
-   "trigger": {
-    "type": "above",
-    "price": 57.55
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "above",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0,
-    "skip_first_minutes": 5
-   },
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "INTC-20261119",
-   "plan": "INTC long shares (pm_break), trigger > 57.55 (PM high), +4.08% PM; exits 1% stop / 2R / 15:05"
-  },
-  {
-   "id": "20261119-scalp-INTC-C-orb:entry",
-   "play_id": "20261119-scalp-INTC-C-orb",
-   "symbol": "INTC",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-19",
-   "module": "scalp",
-   "setup": "orb",
-   "direction": "call",
-   "trigger": {
-    "type": "orb_high",
-    "minutes": 30
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "above",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0,
-    "skip_first_minutes": 5
-   },
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "INTC-20261119",
-   "plan": "INTC long shares (orb), trigger > 30-min opening-range high; twin of pm_break; exits 1% stop / 2R / 15:05"
   },
   {
    "id": "20261119-scalp-INTC-C-reclaim:entry",
@@ -2402,41 +2159,6 @@
    "stock_stop": 282.98,
    "target_stock": 294.75,
    "plan": "GOOGL TRACKED level_reclaim at prior-day high 284.97 zone 283.83-286.11, stk stop 282.98, target 294.75"
-  },
-  {
-   "id": "20261119-scalp-SMCI-C:entry",
-   "play_id": "20261119-scalp-SMCI-C",
-   "symbol": "SMCI",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-19",
-   "module": "scalp",
-   "setup": "pm_break",
-   "direction": "call",
-   "trigger": {
-    "type": "above",
-    "price": 25.58
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "above",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0,
-    "skip_first_minutes": 5
-   },
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "SMCI-20261119",
-   "plan": "SMCI long shares (pm_break), trigger > 25.58 (PM high), +3.82% PM; exits 1% stop / 2R / 15:05"
   },
   {
    "id": "20261119-scalp-SMCI-C-orb:entry",
