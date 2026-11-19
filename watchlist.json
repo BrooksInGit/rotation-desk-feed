@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-11-19T16:12:00Z",
- "source": "hourly check 2026-11-19 11:05 ET",
+ "updated_at": "2026-11-19T17:12:00Z",
+ "source": "hourly check 2026-11-19 12:05 ET",
  "slippage_frac": 0.25,
  "exit_rules": {
   "scalp": {
@@ -1316,35 +1316,6 @@
    "target_stock": 700.42
   },
   {
-   "id": "20261118-swing-COIN-P:entry",
-   "play_id": "20261118-swing-COIN-P",
-   "symbol": "COIN",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-25",
-   "module": "swing",
-   "setup": "breakdown",
-   "direction": "put",
-   "trigger": {
-    "type": "below",
-    "price": 109.93
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "below",
-    "max_extension_pct": 0.025,
-    "spy_block_pct": 0.0075,
-    "skip_first_minutes": 5,
-    "rs_exempt": {
-     "min_move_pct": 0.01,
-     "hard_block_pct": 0.015
-    }
-   },
-   "plan": "COIN short shares (breakdown), trigger < 109.93, stk stop 121.7, target 86.39",
-   "stock_stop": 121.7,
-   "target_stock": 86.39
-  },
-  {
    "id": "20261118-swing-MAR-C:entry",
    "play_id": "20261118-swing-MAR-C",
    "symbol": "MAR",
@@ -1473,128 +1444,6 @@
    "pair": "SPY-20261119",
    "plan": "SPY long shares (orb), trigger > 30-min opening-range high; twin of pm_break; exits 1% stop / 2R / 15:05 [TRACK ONLY: desk scalp stop after 2 consecutive losses]",
    "track_only": true
-  },
-  {
-   "id": "20261119-scalp-SPY-C-reclaim:entry",
-   "play_id": "20261119-scalp-SPY-C-reclaim",
-   "symbol": "SPY",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-19",
-   "module": "scalp",
-   "setup": "level_reclaim",
-   "direction": "call",
-   "trigger": {
-    "type": "reclaim_above",
-    "zone": [
-     727.28,
-     733.12
-    ],
-    "window": [
-     "09:45",
-     "11:30"
-    ]
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "above",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0075
-   },
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "track_only": true,
-   "stock_stop": 725.1,
-   "target_stock": 749.16,
-   "plan": "SPY TRACKED level_reclaim at prior close (gap fill) 730.2 zone 727.28-733.12, stk stop 725.1, target 749.16"
-  },
-  {
-   "id": "20261119-scalp-QQQ-C-orb:entry",
-   "play_id": "20261119-scalp-QQQ-C-orb",
-   "symbol": "QQQ",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-19",
-   "module": "scalp",
-   "setup": "orb",
-   "direction": "call",
-   "trigger": {
-    "type": "above",
-    "price": 675.3
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "above",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0,
-    "skip_first_minutes": 5
-   },
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "QQQ-20261119",
-   "plan": "QQQ long shares (orb), trigger > 30-min opening-range high; twin of pm_break; exits 1% stop / 2R / 15:05",
-   "track_only": true
-  },
-  {
-   "id": "20261119-scalp-QQQ-C-reclaim:entry",
-   "play_id": "20261119-scalp-QQQ-C-reclaim",
-   "symbol": "QQQ",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-19",
-   "module": "scalp",
-   "setup": "level_reclaim",
-   "direction": "call",
-   "trigger": {
-    "type": "reclaim_above",
-    "zone": [
-     660.15,
-     665.45
-    ],
-    "window": [
-     "09:45",
-     "11:30"
-    ]
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "above",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0075
-   },
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "track_only": true,
-   "stock_stop": 658.17,
-   "target_stock": 680.01,
-   "plan": "QQQ TRACKED level_reclaim at prior-day high 662.8 zone 660.15-665.45, stk stop 658.17, target 680.01"
   },
   {
    "id": "20261119-scalp-IWM-C:entry",
@@ -1777,49 +1626,6 @@
    "track_only": true
   },
   {
-   "id": "20261119-scalp-MU-C-reclaim:entry",
-   "play_id": "20261119-scalp-MU-C-reclaim",
-   "symbol": "MU",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-19",
-   "module": "scalp",
-   "setup": "level_reclaim",
-   "direction": "call",
-   "trigger": {
-    "type": "reclaim_above",
-    "zone": [
-     720.07,
-     725.85
-    ],
-    "window": [
-     "09:45",
-     "11:30"
-    ]
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "above",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0075
-   },
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "track_only": true,
-   "stock_stop": 717.91,
-   "target_stock": 749.2,
-   "plan": "MU TRACKED level_reclaim at prior-day high 722.96 zone 720.07-725.85, stk stop 717.91, target 749.2"
-  },
-  {
    "id": "20261119-scalp-HOOD-C-orb:entry",
    "play_id": "20261119-scalp-HOOD-C-orb",
    "symbol": "HOOD",
@@ -1854,92 +1660,6 @@
    "pair": "HOOD-20261119",
    "plan": "HOOD long shares (orb), trigger > 30-min opening-range high; twin of pm_break; exits 1% stop / 2R / 15:05 [TRACK ONLY: desk scalp stop after 2 consecutive losses]",
    "track_only": true
-  },
-  {
-   "id": "20261119-scalp-HOOD-C-reclaim:entry",
-   "play_id": "20261119-scalp-HOOD-C-reclaim",
-   "symbol": "HOOD",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-19",
-   "module": "scalp",
-   "setup": "level_reclaim",
-   "direction": "call",
-   "trigger": {
-    "type": "reclaim_above",
-    "zone": [
-     69.68,
-     70.24
-    ],
-    "window": [
-     "09:45",
-     "11:30"
-    ]
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "above",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0075
-   },
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "track_only": true,
-   "stock_stop": 69.47,
-   "target_stock": 72.5738,
-   "plan": "HOOD TRACKED level_reclaim at prior-day high 69.96 zone 69.68-70.24, stk stop 69.47, target 72.5738"
-  },
-  {
-   "id": "20261119-scalp-INTC-C-reclaim:entry",
-   "play_id": "20261119-scalp-INTC-C-reclaim",
-   "symbol": "INTC",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-19",
-   "module": "scalp",
-   "setup": "level_reclaim",
-   "direction": "call",
-   "trigger": {
-    "type": "reclaim_above",
-    "zone": [
-     55.78,
-     56.22
-    ],
-    "window": [
-     "09:45",
-     "11:30"
-    ]
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "above",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0075
-   },
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "track_only": true,
-   "stock_stop": 55.61,
-   "target_stock": 57.55,
-   "plan": "INTC TRACKED level_reclaim at prior-day high 56.0 zone 55.78-56.22, stk stop 55.61, target 57.55"
   },
   {
    "id": "20261119-scalp-ARM-C:entry",
@@ -2014,49 +1734,6 @@
    "track_only": true
   },
   {
-   "id": "20261119-scalp-ARM-C-reclaim:entry",
-   "play_id": "20261119-scalp-ARM-C-reclaim",
-   "symbol": "ARM",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-19",
-   "module": "scalp",
-   "setup": "level_reclaim",
-   "direction": "call",
-   "trigger": {
-    "type": "reclaim_above",
-    "zone": [
-     182.03,
-     183.49
-    ],
-    "window": [
-     "09:45",
-     "11:30"
-    ]
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "above",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0075
-   },
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "track_only": true,
-   "stock_stop": 181.48,
-   "target_stock": 192.3,
-   "plan": "ARM TRACKED level_reclaim at prior close (gap fill) 182.76 zone 182.03-183.49, stk stop 181.48, target 192.3"
-  },
-  {
    "id": "20261119-scalp-GOOGL-C:entry",
    "play_id": "20261119-scalp-GOOGL-C",
    "symbol": "GOOGL",
@@ -2129,49 +1806,6 @@
    "track_only": true
   },
   {
-   "id": "20261119-scalp-GOOGL-C-reclaim:entry",
-   "play_id": "20261119-scalp-GOOGL-C-reclaim",
-   "symbol": "GOOGL",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-19",
-   "module": "scalp",
-   "setup": "level_reclaim",
-   "direction": "call",
-   "trigger": {
-    "type": "reclaim_above",
-    "zone": [
-     283.83,
-     286.11
-    ],
-    "window": [
-     "09:45",
-     "11:30"
-    ]
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "above",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0075
-   },
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "track_only": true,
-   "stock_stop": 282.98,
-   "target_stock": 294.75,
-   "plan": "GOOGL TRACKED level_reclaim at prior-day high 284.97 zone 283.83-286.11, stk stop 282.98, target 294.75"
-  },
-  {
    "id": "20261119-scalp-SMCI-C-orb:entry",
    "play_id": "20261119-scalp-SMCI-C-orb",
    "symbol": "SMCI",
@@ -2208,47 +1842,36 @@
    "track_only": true
   },
   {
-   "id": "20261119-scalp-SMCI-C-reclaim:entry",
-   "play_id": "20261119-scalp-SMCI-C-reclaim",
-   "symbol": "SMCI",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-19",
-   "module": "scalp",
-   "setup": "level_reclaim",
-   "direction": "call",
-   "trigger": {
-    "type": "reclaim_above",
-    "zone": [
-     24.88,
-     25.08
-    ],
-    "window": [
-     "09:45",
-     "11:30"
-    ]
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "above",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0075
-   },
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
+   "play_id": "20261118-swing-COIN-P-no_rvol",
+   "symbol": "COIN",
+   "module": "swing",
+   "setup": "breakdown",
+   "direction": "put",
+   "expires": "2026-11-25",
    "track_only": true,
-   "stock_stop": 24.81,
-   "target_stock": 25.58,
-   "plan": "SMCI TRACKED level_reclaim at prior-day high 24.98 zone 24.88-25.08, stk stop 24.81, target 25.58"
+   "plan": "TRACKED no_rvol twin (desk fallback entry 109.92 short, 20 sh): stop 121.70 / target 86.39",
+   "id": "20261118-swing-COIN-P-no_rvol:stop",
+   "kind": "stop",
+   "trigger": {
+    "type": "above",
+    "price": 121.7
+   }
+  },
+  {
+   "play_id": "20261118-swing-COIN-P-no_rvol",
+   "symbol": "COIN",
+   "module": "swing",
+   "setup": "breakdown",
+   "direction": "put",
+   "expires": "2026-11-25",
+   "track_only": true,
+   "plan": "TRACKED no_rvol twin (desk fallback entry 109.92 short, 20 sh): stop 121.70 / target 86.39",
+   "id": "20261118-swing-COIN-P-no_rvol:target",
+   "kind": "target",
+   "trigger": {
+    "type": "below",
+    "price": 86.39
+   }
   }
  ]
 }
