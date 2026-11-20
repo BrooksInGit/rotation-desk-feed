@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-11-20T16:12:00Z",
- "source": "hourly check 2026-11-20 11:05",
+ "updated_at": "2026-11-20T17:12:00Z",
+ "source": "hourly check 2026-11-20 12:05",
  "slippage_frac": 0.25,
  "exit_rules": {
   "scalp": {
@@ -53,49 +53,6 @@
    "track_only": true
   },
   {
-   "id": "20261120-scalp-SMCI-P-reclaim:entry",
-   "play_id": "20261120-scalp-SMCI-P-reclaim",
-   "symbol": "SMCI",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-20",
-   "module": "scalp",
-   "setup": "level_reclaim",
-   "direction": "put",
-   "trigger": {
-    "type": "reclaim_below",
-    "zone": [
-     23.62,
-     23.8
-    ],
-    "window": [
-     "09:45",
-     "11:30"
-    ]
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "below",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0075
-   },
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "track_only": true,
-   "stock_stop": 23.87,
-   "target_stock": 23.12,
-   "plan": "SMCI TRACKED level_reclaim at prior-day low (11/18 low 23.76 shelf) 23.71 zone 23.62-23.8, stk stop 23.87, target 23.12"
-  },
-  {
    "id": "20261120-scalp-META-P:entry",
    "play_id": "20261120-scalp-META-P",
    "symbol": "META",
@@ -129,49 +86,6 @@
    },
    "plan": "META short shares (pm_break), trigger < 568.68 (PM low), -3.96% PM; exits 1% stop / 2R / 15:05 | TRACKED twin (orb confirmed first, 12 A)",
    "track_only": true
-  },
-  {
-   "id": "20261120-scalp-ORCL-P-reclaim:entry",
-   "play_id": "20261120-scalp-ORCL-P-reclaim",
-   "symbol": "ORCL",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-20",
-   "module": "scalp",
-   "setup": "level_reclaim",
-   "direction": "put",
-   "trigger": {
-    "type": "reclaim_below",
-    "zone": [
-     109.8,
-     110.68
-    ],
-    "window": [
-     "09:45",
-     "11:30"
-    ]
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "below",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0075
-   },
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "track_only": true,
-   "stock_stop": 111.01,
-   "target_stock": 107.38,
-   "plan": "ORCL TRACKED level_reclaim at prior-day low 110.24 zone 109.8-110.68, stk stop 111.01, target 107.38"
   },
   {
    "id": "20261113-swing-AAPL-C:entry",
@@ -429,38 +343,6 @@
    "trigger": {
     "type": "below",
     "price": 618.29
-   }
-  },
-  {
-   "play_id": "20261120-scalp-PLTR-P",
-   "symbol": "PLTR",
-   "module": "scalp",
-   "setup": "pm_break",
-   "direction": "put",
-   "expires": "2026-11-20",
-   "track_only": true,
-   "plan": "TRACKED twin (desk fallback entry 148.04 short): stop 149.52 / target 145.08; 15:05 close",
-   "id": "20261120-scalp-PLTR-P:stop",
-   "kind": "stop",
-   "trigger": {
-    "type": "above",
-    "price": 149.52
-   }
-  },
-  {
-   "play_id": "20261120-scalp-PLTR-P",
-   "symbol": "PLTR",
-   "module": "scalp",
-   "setup": "pm_break",
-   "direction": "put",
-   "expires": "2026-11-20",
-   "track_only": true,
-   "plan": "TRACKED twin (desk fallback entry 148.04 short): stop 149.52 / target 145.08; 15:05 close",
-   "id": "20261120-scalp-PLTR-P:target",
-   "kind": "target",
-   "trigger": {
-    "type": "below",
-    "price": 145.08
    }
   }
  ],
