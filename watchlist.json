@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-11-20T19:10:00Z",
- "source": "hourly check 2026-11-20 14:05",
+ "updated_at": "2026-11-20T20:10:00Z",
+ "source": "hourly check 2026-11-20 15:05",
  "slippage_frac": 0.25,
  "exit_rules": {
   "scalp": {
@@ -17,43 +17,6 @@
   }
  },
  "watch": [
-  {
-   "id": "20261120-scalp-NVDA-P:entry",
-   "play_id": "20261120-scalp-NVDA-P",
-   "symbol": "NVDA",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-20",
-   "armed_after": "2026-11-20T18:10:00Z",
-   "module": "scalp",
-   "setup": "intraday_break",
-   "direction": "put",
-   "trigger": {
-    "type": "below",
-    "price": 134.82
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "below",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0,
-    "skip_first_minutes": 5
-   },
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "plan": "NVDA short shares (intraday_break), trigger < 134.82 (LOD), stk stop 136.10 (base high), target 132.26 (2R); 15:05 close | intraday find 1:05",
-   "stock_stop": 136.1,
-   "target_stock": 132.26
-  },
   {
    "id": "20261113-swing-AAPL-C:entry",
    "play_id": "20261113-swing-AAPL-C",
@@ -246,102 +209,6 @@
    "trigger": {
     "type": "below",
     "price": 86.39
-   }
-  },
-  {
-   "play_id": "20261120-scalp-SPY-P",
-   "symbol": "SPY",
-   "module": "scalp",
-   "setup": "pm_break",
-   "direction": "put",
-   "expires": "2026-11-20",
-   "track_only": true,
-   "plan": "TRACKED twin (desk fallback entry 709.62 short): stop 716.72 / target 695.42; 15:05 close",
-   "id": "20261120-scalp-SPY-P:stop",
-   "kind": "stop",
-   "trigger": {
-    "type": "above",
-    "price": 716.72
-   }
-  },
-  {
-   "play_id": "20261120-scalp-SPY-P",
-   "symbol": "SPY",
-   "module": "scalp",
-   "setup": "pm_break",
-   "direction": "put",
-   "expires": "2026-11-20",
-   "track_only": true,
-   "plan": "TRACKED twin (desk fallback entry 709.62 short): stop 716.72 / target 695.42; 15:05 close",
-   "id": "20261120-scalp-SPY-P:target",
-   "kind": "target",
-   "trigger": {
-    "type": "below",
-    "price": 695.42
-   }
-  },
-  {
-   "play_id": "20261120-scalp-QQQ-P",
-   "symbol": "QQQ",
-   "module": "scalp",
-   "setup": "pm_break",
-   "direction": "put",
-   "expires": "2026-11-20",
-   "track_only": true,
-   "plan": "TRACKED twin (desk fallback entry 630.91 short): stop 637.22 / target 618.29; 15:05 close",
-   "id": "20261120-scalp-QQQ-P:stop",
-   "kind": "stop",
-   "trigger": {
-    "type": "above",
-    "price": 637.22
-   }
-  },
-  {
-   "play_id": "20261120-scalp-QQQ-P",
-   "symbol": "QQQ",
-   "module": "scalp",
-   "setup": "pm_break",
-   "direction": "put",
-   "expires": "2026-11-20",
-   "track_only": true,
-   "plan": "TRACKED twin (desk fallback entry 630.91 short): stop 637.22 / target 618.29; 15:05 close",
-   "id": "20261120-scalp-QQQ-P:target",
-   "kind": "target",
-   "trigger": {
-    "type": "below",
-    "price": 618.29
-   }
-  },
-  {
-   "play_id": "20261120-scalp-META-P",
-   "symbol": "META",
-   "module": "scalp",
-   "setup": "pm_break",
-   "direction": "put",
-   "expires": "2026-11-20",
-   "track_only": true,
-   "plan": "TRACKED twin (desk fallback entry 569.66 short): stop 575.36 / target 558.27; 15:05 close",
-   "id": "20261120-scalp-META-P:stop",
-   "kind": "stop",
-   "trigger": {
-    "type": "above",
-    "price": 575.36
-   }
-  },
-  {
-   "play_id": "20261120-scalp-META-P",
-   "symbol": "META",
-   "module": "scalp",
-   "setup": "pm_break",
-   "direction": "put",
-   "expires": "2026-11-20",
-   "track_only": true,
-   "plan": "TRACKED twin (desk fallback entry 569.66 short): stop 575.36 / target 558.27; 15:05 close",
-   "id": "20261120-scalp-META-P:target",
-   "kind": "target",
-   "trigger": {
-    "type": "below",
-    "price": 558.27
    }
   }
  ],
