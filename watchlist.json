@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-11-20T13:58:00Z",
- "source": "pre-market brief 2026-11-20",
+ "updated_at": "2026-11-20T15:14:00Z",
+ "source": "hourly check 2026-11-20 10:05",
  "slippage_frac": 0.25,
  "exit_rules": {
   "scalp": {
@@ -63,8 +63,8 @@
    "setup": "orb",
    "direction": "put",
    "trigger": {
-    "type": "orb_low",
-    "minutes": 30
+    "type": "below",
+    "price": 711.74
    },
    "confirmation": {
     "rvol_min": 1,
@@ -86,49 +86,6 @@
    },
    "pair": "SPY-20261120",
    "plan": "SPY short shares (orb), trigger < 30-min opening-range low; twin of pm_break; exits 1% stop / 2R / 15:05"
-  },
-  {
-   "id": "20261120-scalp-SPY-P-reclaim:entry",
-   "play_id": "20261120-scalp-SPY-P-reclaim",
-   "symbol": "SPY",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-20",
-   "module": "scalp",
-   "setup": "level_reclaim",
-   "direction": "put",
-   "trigger": {
-    "type": "reclaim_below",
-    "zone": [
-     712.79,
-     718.51
-    ],
-    "window": [
-     "09:45",
-     "11:30"
-    ]
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "below",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0075
-   },
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "track_only": true,
-   "stock_stop": 720.67,
-   "target_stock": 697.03,
-   "plan": "SPY TRACKED level_reclaim at prior-day low (gap-fill 715.87 just above) 715.65 zone 712.79-718.51, stk stop 720.67, target 697.03"
   },
   {
    "id": "20261120-scalp-QQQ-P:entry",
@@ -176,8 +133,8 @@
    "setup": "orb",
    "direction": "put",
    "trigger": {
-    "type": "orb_low",
-    "minutes": 30
+    "type": "below",
+    "price": 633.86
    },
    "confirmation": {
     "rvol_min": 1,
@@ -289,8 +246,8 @@
    "setup": "orb",
    "direction": "put",
    "trigger": {
-    "type": "orb_low",
-    "minutes": 30
+    "type": "below",
+    "price": 453.7286
    },
    "confirmation": {
     "rvol_min": 1,
@@ -357,41 +314,6 @@
    "plan": "AMD TRACKED level_reclaim at prior-day low 470.56 zone 468.68-472.44, stk stop 473.86, target 458.32"
   },
   {
-   "id": "20261120-scalp-ARM-P:entry",
-   "play_id": "20261120-scalp-ARM-P",
-   "symbol": "ARM",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-20",
-   "module": "scalp",
-   "setup": "pm_break",
-   "direction": "put",
-   "trigger": {
-    "type": "below",
-    "price": 165.24
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "below",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0,
-    "skip_first_minutes": 5
-   },
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "ARM-20261120",
-   "plan": "ARM short shares (pm_break), trigger < 165.24 (PM low), -6.15% PM; exits 1% stop / 2R / 15:05"
-  },
-  {
    "id": "20261120-scalp-ARM-P-orb:entry",
    "play_id": "20261120-scalp-ARM-P-orb",
    "symbol": "ARM",
@@ -402,8 +324,8 @@
    "setup": "orb",
    "direction": "put",
    "trigger": {
-    "type": "orb_low",
-    "minutes": 30
+    "type": "below",
+    "price": 164.5753
    },
    "confirmation": {
     "rvol_min": 1,
@@ -424,7 +346,8 @@
     "max_spread_pct": 0.05
    },
    "pair": "ARM-20261120",
-   "plan": "ARM short shares (orb), trigger < 30-min opening-range low; twin of pm_break; exits 1% stop / 2R / 15:05"
+   "plan": "ARM short shares (orb), trigger < 30-min opening-range low; twin of pm_break; exits 1% stop / 2R / 15:05",
+   "track_only": true
   },
   {
    "id": "20261120-scalp-INTC-P:entry",
@@ -472,8 +395,8 @@
    "setup": "orb",
    "direction": "put",
    "trigger": {
-    "type": "orb_low",
-    "minutes": 30
+    "type": "below",
+    "price": 53.48
    },
    "confirmation": {
     "rvol_min": 1,
@@ -585,8 +508,8 @@
    "setup": "orb",
    "direction": "put",
    "trigger": {
-    "type": "orb_low",
-    "minutes": 30
+    "type": "below",
+    "price": 147.55
    },
    "confirmation": {
     "rvol_min": 1,
@@ -655,8 +578,8 @@
    "setup": "orb",
    "direction": "put",
    "trigger": {
-    "type": "orb_low",
-    "minutes": 30
+    "type": "below",
+    "price": 22.74
    },
    "confirmation": {
     "rvol_min": 1,
@@ -723,41 +646,6 @@
    "plan": "SMCI TRACKED level_reclaim at prior-day low (11/18 low 23.76 shelf) 23.71 zone 23.62-23.8, stk stop 23.87, target 23.12"
   },
   {
-   "id": "20261120-scalp-MU-P:entry",
-   "play_id": "20261120-scalp-MU-P",
-   "symbol": "MU",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-20",
-   "module": "scalp",
-   "setup": "pm_break",
-   "direction": "put",
-   "trigger": {
-    "type": "below",
-    "price": 651.05
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "below",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0,
-    "skip_first_minutes": 5
-   },
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "MU-20261120",
-   "plan": "MU short shares (pm_break), trigger < 651.05 (PM low), -4.26% PM; exits 1% stop / 2R / 15:05"
-  },
-  {
    "id": "20261120-scalp-MU-P-orb:entry",
    "play_id": "20261120-scalp-MU-P-orb",
    "symbol": "MU",
@@ -768,8 +656,8 @@
    "setup": "orb",
    "direction": "put",
    "trigger": {
-    "type": "orb_low",
-    "minutes": 30
+    "type": "below",
+    "price": 634.3
    },
    "confirmation": {
     "rvol_min": 1,
@@ -838,8 +726,8 @@
    "setup": "orb",
    "direction": "put",
    "trigger": {
-    "type": "orb_low",
-    "minutes": 30
+    "type": "below",
+    "price": 573.48
    },
    "confirmation": {
     "rvol_min": 1,
@@ -908,8 +796,8 @@
    "setup": "orb",
    "direction": "put",
    "trigger": {
-    "type": "orb_low",
-    "minutes": 30
+    "type": "below",
+    "price": 106.3
    },
    "confirmation": {
     "rvol_min": 1,
@@ -1165,35 +1053,6 @@
    "plan": "WMT long shares (breakout), trigger > 129.86, stk stop 122.9, target 143.78",
    "stock_stop": 122.9,
    "target_stock": 143.78
-  },
-  {
-   "id": "20261119-swing-DVN-P:entry",
-   "play_id": "20261119-swing-DVN-P",
-   "symbol": "DVN",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-27",
-   "module": "swing",
-   "setup": "breakdown",
-   "direction": "put",
-   "trigger": {
-    "type": "below",
-    "price": 41.71
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "below",
-    "max_extension_pct": 0.025,
-    "spy_block_pct": 0.0075,
-    "skip_first_minutes": 5,
-    "rs_exempt": {
-     "min_move_pct": 0.01,
-     "hard_block_pct": 0.015
-    }
-   },
-   "plan": "DVN short shares (breakdown), trigger < 41.71, stk stop 43.81, target 37.51",
-   "stock_stop": 43.81,
-   "target_stock": 37.51
   },
   {
    "play_id": "20261118-swing-COIN-P-no_rvol",
