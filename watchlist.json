@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-11-20T15:14:00Z",
- "source": "hourly check 2026-11-20 10:05",
+ "updated_at": "2026-11-20T16:12:00Z",
+ "source": "hourly check 2026-11-20 11:05",
  "slippage_frac": 0.25,
  "exit_rules": {
   "scalp": {
@@ -17,338 +17,6 @@
   }
  },
  "watch": [
-  {
-   "id": "20261120-scalp-SPY-P:entry",
-   "play_id": "20261120-scalp-SPY-P",
-   "symbol": "SPY",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-20",
-   "module": "scalp",
-   "setup": "pm_break",
-   "direction": "put",
-   "trigger": {
-    "type": "below",
-    "price": 707.32
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "below",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0,
-    "skip_first_minutes": 5
-   },
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "SPY-20261120",
-   "plan": "SPY short shares (pm_break), trigger < 707.32 (PM low), -0.99% PM; exits 1% stop / 2R / 15:05"
-  },
-  {
-   "id": "20261120-scalp-SPY-P-orb:entry",
-   "play_id": "20261120-scalp-SPY-P-orb",
-   "symbol": "SPY",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-20",
-   "module": "scalp",
-   "setup": "orb",
-   "direction": "put",
-   "trigger": {
-    "type": "below",
-    "price": 711.74
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "below",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0,
-    "skip_first_minutes": 5
-   },
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "SPY-20261120",
-   "plan": "SPY short shares (orb), trigger < 30-min opening-range low; twin of pm_break; exits 1% stop / 2R / 15:05"
-  },
-  {
-   "id": "20261120-scalp-QQQ-P:entry",
-   "play_id": "20261120-scalp-QQQ-P",
-   "symbol": "QQQ",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-20",
-   "module": "scalp",
-   "setup": "pm_break",
-   "direction": "put",
-   "trigger": {
-    "type": "below",
-    "price": 631.06
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "below",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0,
-    "skip_first_minutes": 5
-   },
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "QQQ-20261120",
-   "plan": "QQQ short shares (pm_break), trigger < 631.06 (PM low), -1.88% PM; exits 1% stop / 2R / 15:05"
-  },
-  {
-   "id": "20261120-scalp-QQQ-P-orb:entry",
-   "play_id": "20261120-scalp-QQQ-P-orb",
-   "symbol": "QQQ",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-20",
-   "module": "scalp",
-   "setup": "orb",
-   "direction": "put",
-   "trigger": {
-    "type": "below",
-    "price": 633.86
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "below",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0,
-    "skip_first_minutes": 5
-   },
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "QQQ-20261120",
-   "plan": "QQQ short shares (orb), trigger < 30-min opening-range low; twin of pm_break; exits 1% stop / 2R / 15:05"
-  },
-  {
-   "id": "20261120-scalp-QQQ-P-reclaim:entry",
-   "play_id": "20261120-scalp-QQQ-P-reclaim",
-   "symbol": "QQQ",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-20",
-   "module": "scalp",
-   "setup": "level_reclaim",
-   "direction": "put",
-   "trigger": {
-    "type": "reclaim_below",
-    "zone": [
-     641.76,
-     646.92
-    ],
-    "window": [
-     "09:45",
-     "11:30"
-    ]
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "below",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0075
-   },
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "track_only": true,
-   "stock_stop": 648.86,
-   "target_stock": 627.56,
-   "plan": "QQQ TRACKED level_reclaim at prior-day low 644.34 zone 641.76-646.92, stk stop 648.86, target 627.56"
-  },
-  {
-   "id": "20261120-scalp-AMD-P:entry",
-   "play_id": "20261120-scalp-AMD-P",
-   "symbol": "AMD",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-20",
-   "module": "scalp",
-   "setup": "pm_break",
-   "direction": "put",
-   "trigger": {
-    "type": "below",
-    "price": 451.02
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "below",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0,
-    "skip_first_minutes": 5
-   },
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "AMD-20261120",
-   "plan": "AMD short shares (pm_break), trigger < 451.02 (PM low), -6.17% PM; exits 1% stop / 2R / 15:05"
-  },
-  {
-   "id": "20261120-scalp-AMD-P-orb:entry",
-   "play_id": "20261120-scalp-AMD-P-orb",
-   "symbol": "AMD",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-20",
-   "module": "scalp",
-   "setup": "orb",
-   "direction": "put",
-   "trigger": {
-    "type": "below",
-    "price": 453.7286
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "below",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0,
-    "skip_first_minutes": 5
-   },
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "AMD-20261120",
-   "plan": "AMD short shares (orb), trigger < 30-min opening-range low; twin of pm_break; exits 1% stop / 2R / 15:05"
-  },
-  {
-   "id": "20261120-scalp-AMD-P-reclaim:entry",
-   "play_id": "20261120-scalp-AMD-P-reclaim",
-   "symbol": "AMD",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-20",
-   "module": "scalp",
-   "setup": "level_reclaim",
-   "direction": "put",
-   "trigger": {
-    "type": "reclaim_below",
-    "zone": [
-     468.68,
-     472.44
-    ],
-    "window": [
-     "09:45",
-     "11:30"
-    ]
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "below",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0075
-   },
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "track_only": true,
-   "stock_stop": 473.86,
-   "target_stock": 458.32,
-   "plan": "AMD TRACKED level_reclaim at prior-day low 470.56 zone 468.68-472.44, stk stop 473.86, target 458.32"
-  },
-  {
-   "id": "20261120-scalp-ARM-P-orb:entry",
-   "play_id": "20261120-scalp-ARM-P-orb",
-   "symbol": "ARM",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-20",
-   "module": "scalp",
-   "setup": "orb",
-   "direction": "put",
-   "trigger": {
-    "type": "below",
-    "price": 164.5753
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "below",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0,
-    "skip_first_minutes": 5
-   },
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "ARM-20261120",
-   "plan": "ARM short shares (orb), trigger < 30-min opening-range low; twin of pm_break; exits 1% stop / 2R / 15:05",
-   "track_only": true
-  },
   {
    "id": "20261120-scalp-INTC-P:entry",
    "play_id": "20261120-scalp-INTC-P",
@@ -381,226 +49,8 @@
     ],
     "max_spread_pct": 0.05
    },
-   "pair": "INTC-20261120",
-   "plan": "INTC short shares (pm_break), trigger < 52.42 (PM low), -4.94% PM; exits 1% stop / 2R / 15:05"
-  },
-  {
-   "id": "20261120-scalp-INTC-P-orb:entry",
-   "play_id": "20261120-scalp-INTC-P-orb",
-   "symbol": "INTC",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-20",
-   "module": "scalp",
-   "setup": "orb",
-   "direction": "put",
-   "trigger": {
-    "type": "below",
-    "price": 53.48
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "below",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0,
-    "skip_first_minutes": 5
-   },
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "INTC-20261120",
-   "plan": "INTC short shares (orb), trigger < 30-min opening-range low; twin of pm_break; exits 1% stop / 2R / 15:05"
-  },
-  {
-   "id": "20261120-scalp-INTC-P-reclaim:entry",
-   "play_id": "20261120-scalp-INTC-P-reclaim",
-   "symbol": "INTC",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-20",
-   "module": "scalp",
-   "setup": "level_reclaim",
-   "direction": "put",
-   "trigger": {
-    "type": "reclaim_below",
-    "zone": [
-     54.63,
-     55.07
-    ],
-    "window": [
-     "09:45",
-     "11:30"
-    ]
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "below",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0075
-   },
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "track_only": true,
-   "stock_stop": 55.24,
-   "target_stock": 53.41,
-   "plan": "INTC TRACKED level_reclaim at shelf: 11/19 low 54.85 / 11/16 low 54.89 54.85 zone 54.63-55.07, stk stop 55.24, target 53.41"
-  },
-  {
-   "id": "20261120-scalp-PLTR-P:entry",
-   "play_id": "20261120-scalp-PLTR-P",
-   "symbol": "PLTR",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-20",
-   "module": "scalp",
-   "setup": "pm_break",
-   "direction": "put",
-   "trigger": {
-    "type": "below",
-    "price": 146.52
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "below",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0,
-    "skip_first_minutes": 5
-   },
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "PLTR-20261120",
-   "plan": "PLTR short shares (pm_break), trigger < 146.52 (PM low), -4.48% PM; exits 1% stop / 2R / 15:05"
-  },
-  {
-   "id": "20261120-scalp-PLTR-P-orb:entry",
-   "play_id": "20261120-scalp-PLTR-P-orb",
-   "symbol": "PLTR",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-20",
-   "module": "scalp",
-   "setup": "orb",
-   "direction": "put",
-   "trigger": {
-    "type": "below",
-    "price": 147.55
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "below",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0,
-    "skip_first_minutes": 5
-   },
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "PLTR-20261120",
-   "plan": "PLTR short shares (orb), trigger < 30-min opening-range low; twin of pm_break; exits 1% stop / 2R / 15:05"
-  },
-  {
-   "id": "20261120-scalp-SMCI-P:entry",
-   "play_id": "20261120-scalp-SMCI-P",
-   "symbol": "SMCI",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-20",
-   "module": "scalp",
-   "setup": "pm_break",
-   "direction": "put",
-   "trigger": {
-    "type": "below",
-    "price": 22.6
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "below",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0,
-    "skip_first_minutes": 5
-   },
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "SMCI-20261120",
-   "plan": "SMCI short shares (pm_break), trigger < 22.6 (PM low), -4.36% PM; exits 1% stop / 2R / 15:05"
-  },
-  {
-   "id": "20261120-scalp-SMCI-P-orb:entry",
-   "play_id": "20261120-scalp-SMCI-P-orb",
-   "symbol": "SMCI",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-20",
-   "module": "scalp",
-   "setup": "orb",
-   "direction": "put",
-   "trigger": {
-    "type": "below",
-    "price": 22.74
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "below",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0,
-    "skip_first_minutes": 5
-   },
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "SMCI-20261120",
-   "plan": "SMCI short shares (orb), trigger < 30-min opening-range low; twin of pm_break; exits 1% stop / 2R / 15:05"
+   "plan": "INTC short shares (pm_break), trigger < 52.42 (PM low), -4.94% PM; exits 1% stop / 2R / 15:05 | TRACKED twin (orb confirmed first, 12 A)",
+   "track_only": true
   },
   {
    "id": "20261120-scalp-SMCI-P-reclaim:entry",
@@ -646,41 +96,6 @@
    "plan": "SMCI TRACKED level_reclaim at prior-day low (11/18 low 23.76 shelf) 23.71 zone 23.62-23.8, stk stop 23.87, target 23.12"
   },
   {
-   "id": "20261120-scalp-MU-P-orb:entry",
-   "play_id": "20261120-scalp-MU-P-orb",
-   "symbol": "MU",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-20",
-   "module": "scalp",
-   "setup": "orb",
-   "direction": "put",
-   "trigger": {
-    "type": "below",
-    "price": 634.3
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "below",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0,
-    "skip_first_minutes": 5
-   },
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "MU-20261120",
-   "plan": "MU short shares (orb), trigger < 30-min opening-range low; twin of pm_break; exits 1% stop / 2R / 15:05"
-  },
-  {
    "id": "20261120-scalp-META-P:entry",
    "play_id": "20261120-scalp-META-P",
    "symbol": "META",
@@ -712,113 +127,8 @@
     ],
     "max_spread_pct": 0.05
    },
-   "pair": "META-20261120",
-   "plan": "META short shares (pm_break), trigger < 568.68 (PM low), -3.96% PM; exits 1% stop / 2R / 15:05"
-  },
-  {
-   "id": "20261120-scalp-META-P-orb:entry",
-   "play_id": "20261120-scalp-META-P-orb",
-   "symbol": "META",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-20",
-   "module": "scalp",
-   "setup": "orb",
-   "direction": "put",
-   "trigger": {
-    "type": "below",
-    "price": 573.48
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "below",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0,
-    "skip_first_minutes": 5
-   },
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "META-20261120",
-   "plan": "META short shares (orb), trigger < 30-min opening-range low; twin of pm_break; exits 1% stop / 2R / 15:05"
-  },
-  {
-   "id": "20261120-scalp-ORCL-P:entry",
-   "play_id": "20261120-scalp-ORCL-P",
-   "symbol": "ORCL",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-20",
-   "module": "scalp",
-   "setup": "pm_break",
-   "direction": "put",
-   "trigger": {
-    "type": "below",
-    "price": 105.8
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "below",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0,
-    "skip_first_minutes": 5
-   },
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "ORCL-20261120",
-   "plan": "ORCL short shares (pm_break), trigger < 105.8 (PM low), -3.75% PM; exits 1% stop / 2R / 15:05"
-  },
-  {
-   "id": "20261120-scalp-ORCL-P-orb:entry",
-   "play_id": "20261120-scalp-ORCL-P-orb",
-   "symbol": "ORCL",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-20",
-   "module": "scalp",
-   "setup": "orb",
-   "direction": "put",
-   "trigger": {
-    "type": "below",
-    "price": 106.3
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "below",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0,
-    "skip_first_minutes": 5
-   },
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "ORCL-20261120",
-   "plan": "ORCL short shares (orb), trigger < 30-min opening-range low; twin of pm_break; exits 1% stop / 2R / 15:05"
+   "plan": "META short shares (pm_break), trigger < 568.68 (PM low), -3.96% PM; exits 1% stop / 2R / 15:05 | TRACKED twin (orb confirmed first, 12 A)",
+   "track_only": true
   },
   {
    "id": "20261120-scalp-ORCL-P-reclaim:entry",
@@ -1026,35 +336,6 @@
    "target_stock": 134.06
   },
   {
-   "id": "20261119-swing-WMT-C:entry",
-   "play_id": "20261119-swing-WMT-C",
-   "symbol": "WMT",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-27",
-   "module": "swing",
-   "setup": "breakout",
-   "direction": "call",
-   "trigger": {
-    "type": "above",
-    "price": 129.86
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "above",
-    "max_extension_pct": 0.025,
-    "spy_block_pct": 0.0075,
-    "skip_first_minutes": 5,
-    "rs_exempt": {
-     "min_move_pct": 0.01,
-     "hard_block_pct": 0.015
-    }
-   },
-   "plan": "WMT long shares (breakout), trigger > 129.86, stk stop 122.9, target 143.78",
-   "stock_stop": 122.9,
-   "target_stock": 143.78
-  },
-  {
    "play_id": "20261118-swing-COIN-P-no_rvol",
    "symbol": "COIN",
    "module": "swing",
@@ -1084,6 +365,102 @@
    "trigger": {
     "type": "below",
     "price": 86.39
+   }
+  },
+  {
+   "play_id": "20261120-scalp-SPY-P",
+   "symbol": "SPY",
+   "module": "scalp",
+   "setup": "pm_break",
+   "direction": "put",
+   "expires": "2026-11-20",
+   "track_only": true,
+   "plan": "TRACKED twin (desk fallback entry 709.62 short): stop 716.72 / target 695.42; 15:05 close",
+   "id": "20261120-scalp-SPY-P:stop",
+   "kind": "stop",
+   "trigger": {
+    "type": "above",
+    "price": 716.72
+   }
+  },
+  {
+   "play_id": "20261120-scalp-SPY-P",
+   "symbol": "SPY",
+   "module": "scalp",
+   "setup": "pm_break",
+   "direction": "put",
+   "expires": "2026-11-20",
+   "track_only": true,
+   "plan": "TRACKED twin (desk fallback entry 709.62 short): stop 716.72 / target 695.42; 15:05 close",
+   "id": "20261120-scalp-SPY-P:target",
+   "kind": "target",
+   "trigger": {
+    "type": "below",
+    "price": 695.42
+   }
+  },
+  {
+   "play_id": "20261120-scalp-QQQ-P",
+   "symbol": "QQQ",
+   "module": "scalp",
+   "setup": "pm_break",
+   "direction": "put",
+   "expires": "2026-11-20",
+   "track_only": true,
+   "plan": "TRACKED twin (desk fallback entry 630.91 short): stop 637.22 / target 618.29; 15:05 close",
+   "id": "20261120-scalp-QQQ-P:stop",
+   "kind": "stop",
+   "trigger": {
+    "type": "above",
+    "price": 637.22
+   }
+  },
+  {
+   "play_id": "20261120-scalp-QQQ-P",
+   "symbol": "QQQ",
+   "module": "scalp",
+   "setup": "pm_break",
+   "direction": "put",
+   "expires": "2026-11-20",
+   "track_only": true,
+   "plan": "TRACKED twin (desk fallback entry 630.91 short): stop 637.22 / target 618.29; 15:05 close",
+   "id": "20261120-scalp-QQQ-P:target",
+   "kind": "target",
+   "trigger": {
+    "type": "below",
+    "price": 618.29
+   }
+  },
+  {
+   "play_id": "20261120-scalp-PLTR-P",
+   "symbol": "PLTR",
+   "module": "scalp",
+   "setup": "pm_break",
+   "direction": "put",
+   "expires": "2026-11-20",
+   "track_only": true,
+   "plan": "TRACKED twin (desk fallback entry 148.04 short): stop 149.52 / target 145.08; 15:05 close",
+   "id": "20261120-scalp-PLTR-P:stop",
+   "kind": "stop",
+   "trigger": {
+    "type": "above",
+    "price": 149.52
+   }
+  },
+  {
+   "play_id": "20261120-scalp-PLTR-P",
+   "symbol": "PLTR",
+   "module": "scalp",
+   "setup": "pm_break",
+   "direction": "put",
+   "expires": "2026-11-20",
+   "track_only": true,
+   "plan": "TRACKED twin (desk fallback entry 148.04 short): stop 149.52 / target 145.08; 15:05 close",
+   "id": "20261120-scalp-PLTR-P:target",
+   "kind": "target",
+   "trigger": {
+    "type": "below",
+    "price": 145.08
    }
   }
  ],
