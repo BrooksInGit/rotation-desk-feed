@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-11-20T18:12:00Z",
- "source": "hourly check 2026-11-20 13:05",
+ "updated_at": "2026-11-20T19:10:00Z",
+ "source": "hourly check 2026-11-20 14:05",
  "slippage_frac": 0.25,
  "exit_rules": {
   "scalp": {
@@ -17,41 +17,6 @@
   }
  },
  "watch": [
-  {
-   "id": "20261120-scalp-INTC-P:entry",
-   "play_id": "20261120-scalp-INTC-P",
-   "symbol": "INTC",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-20",
-   "module": "scalp",
-   "setup": "pm_break",
-   "direction": "put",
-   "trigger": {
-    "type": "below",
-    "price": 52.42
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "below",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0,
-    "skip_first_minutes": 5
-   },
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "plan": "INTC short shares (pm_break), trigger < 52.42 (PM low), -4.94% PM; exits 1% stop / 2R / 15:05 | TRACKED twin (orb confirmed first, 12 A)",
-   "track_only": true
-  },
   {
    "id": "20261120-scalp-NVDA-P:entry",
    "play_id": "20261120-scalp-NVDA-P",
