@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-11-20T17:12:00Z",
- "source": "hourly check 2026-11-20 12:05",
+ "updated_at": "2026-11-20T18:12:00Z",
+ "source": "hourly check 2026-11-20 13:05",
  "slippage_frac": 0.25,
  "exit_rules": {
   "scalp": {
@@ -53,18 +53,19 @@
    "track_only": true
   },
   {
-   "id": "20261120-scalp-META-P:entry",
-   "play_id": "20261120-scalp-META-P",
-   "symbol": "META",
+   "id": "20261120-scalp-NVDA-P:entry",
+   "play_id": "20261120-scalp-NVDA-P",
+   "symbol": "NVDA",
    "kind": "entry",
    "status": "active",
    "expires": "2026-11-20",
+   "armed_after": "2026-11-20T18:10:00Z",
    "module": "scalp",
-   "setup": "pm_break",
+   "setup": "intraday_break",
    "direction": "put",
    "trigger": {
     "type": "below",
-    "price": 568.68
+    "price": 134.82
    },
    "confirmation": {
     "rvol_min": 1,
@@ -84,8 +85,9 @@
     ],
     "max_spread_pct": 0.05
    },
-   "plan": "META short shares (pm_break), trigger < 568.68 (PM low), -3.96% PM; exits 1% stop / 2R / 15:05 | TRACKED twin (orb confirmed first, 12 A)",
-   "track_only": true
+   "plan": "NVDA short shares (intraday_break), trigger < 134.82 (LOD), stk stop 136.10 (base high), target 132.26 (2R); 15:05 close | intraday find 1:05",
+   "stock_stop": 136.1,
+   "target_stock": 132.26
   },
   {
    "id": "20261113-swing-AAPL-C:entry",
@@ -343,6 +345,38 @@
    "trigger": {
     "type": "below",
     "price": 618.29
+   }
+  },
+  {
+   "play_id": "20261120-scalp-META-P",
+   "symbol": "META",
+   "module": "scalp",
+   "setup": "pm_break",
+   "direction": "put",
+   "expires": "2026-11-20",
+   "track_only": true,
+   "plan": "TRACKED twin (desk fallback entry 569.66 short): stop 575.36 / target 558.27; 15:05 close",
+   "id": "20261120-scalp-META-P:stop",
+   "kind": "stop",
+   "trigger": {
+    "type": "above",
+    "price": 575.36
+   }
+  },
+  {
+   "play_id": "20261120-scalp-META-P",
+   "symbol": "META",
+   "module": "scalp",
+   "setup": "pm_break",
+   "direction": "put",
+   "expires": "2026-11-20",
+   "track_only": true,
+   "plan": "TRACKED twin (desk fallback entry 569.66 short): stop 575.36 / target 558.27; 15:05 close",
+   "id": "20261120-scalp-META-P:target",
+   "kind": "target",
+   "trigger": {
+    "type": "below",
+    "price": 558.27
    }
   }
  ],
