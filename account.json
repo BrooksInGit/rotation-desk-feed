@@ -1,13 +1,13 @@
 {
- "as_of": "2026-11-23T15:01:44.789175-05:00",
+ "as_of": "2026-11-23T15:11:46.774415-05:00",
  "account": "alpaca-paper",
  "account_last4": "T9E4",
- "equity": 24039.76,
+ "equity": 24023.89,
  "last_equity": 24339.17,
  "cash": 13940.8,
- "buying_power": 34290.67,
- "long_market_value": 11943.9,
- "short_market_value": -1844.94,
+ "buying_power": 34297.96,
+ "long_market_value": 11916.45,
+ "short_market_value": -1833.37,
  "halted": false,
  "daytrade_count": 0,
  "pattern_day_trader": false,
@@ -28,26 +28,26 @@
    "qty": "-17",
    "side": "short",
    "avg_entry_price": "108.004706",
-   "current_price": "108.526",
-   "market_value": "-1844.942",
+   "current_price": "107.845",
+   "market_value": "-1833.365",
    "cost_basis": "-1836.080002",
-   "unrealized_pl": "-8.861998",
-   "unrealized_plpc": "-0.00483",
-   "unrealized_intraday_pl": "-111.452",
-   "change_today": "0.06429"
+   "unrealized_pl": "2.715002",
+   "unrealized_plpc": "0.00148",
+   "unrealized_intraday_pl": "-99.875",
+   "change_today": "0.05761"
   },
   {
    "symbol": "IWM",
    "qty": "45",
    "side": "long",
    "avg_entry_price": "264.454445",
-   "current_price": "265.43",
-   "market_value": "11944.35",
+   "current_price": "264.81",
+   "market_value": "11916.45",
    "cost_basis": "11900.450025",
-   "unrealized_pl": "43.899975",
-   "unrealized_plpc": "0.00369",
-   "unrealized_intraday_pl": "43.899975",
-   "change_today": "0.03437"
+   "unrealized_pl": "15.999975",
+   "unrealized_plpc": "0.00134",
+   "unrealized_intraday_pl": "15.999975",
+   "change_today": "0.03196"
   }
  ],
  "orders": [
@@ -76,12 +76,12 @@
      "limit_price": "269.86",
      "stop_price": null,
      "type": "limit",
-     "status": "new",
+     "status": "canceled",
      "order_class": "bracket",
      "client_order_id": "c6c2e4b2-85c0-46a6-8f21-e671da7a785b",
      "submitted_at": "2026-11-23T15:05:44.747158Z",
      "filled_at": null,
-     "canceled_at": null
+     "canceled_at": "2026-11-23T20:05:06.119367Z"
     },
     {
      "symbol": "IWM",
@@ -92,12 +92,12 @@
      "limit_price": null,
      "stop_price": "261.92",
      "type": "stop",
-     "status": "held",
+     "status": "canceled",
      "order_class": "bracket",
      "client_order_id": "3215e310-4589-4042-97e5-ca3894dd8f2b",
      "submitted_at": "2026-11-23T15:05:41.924468Z",
      "filled_at": null,
-     "canceled_at": null
+     "canceled_at": "2026-11-23T20:05:05.969666Z"
     }
    ]
   },
