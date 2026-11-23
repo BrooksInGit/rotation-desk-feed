@@ -1,1806 +1,1677 @@
 {
- "updated_at": "2026-11-23T16:12:00Z",
- "source": "hourly check 2026-11-23 11:05 ET",
- "slippage_frac": 0.25,
- "exit_rules": {
-  "scalp": {
-   "option_stop_pct": 0.28,
-   "option_target_mult": 1.4,
-   "stock_stop_pct": 0.01,
-   "stock_target_r": 2.0
-  },
-  "swing": {
-   "option_stop_pct": 0.45,
-   "option_target_mult": 1.8,
-   "stock_stop_pct": 0.03,
-   "stock_target_r": 2.0
-  }
- },
- "watch": [
-  {
-   "id": "20261123-scalp-SPY-C-reclaim:entry",
-   "play_id": "20261123-scalp-SPY-C-reclaim",
-   "symbol": "SPY",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-23",
-   "module": "scalp",
-   "setup": "level_reclaim",
-   "direction": "call",
-   "trigger": {
-    "type": "reclaim_above",
-    "zone": [
-     687.05,
-     692.57
-    ],
-    "window": [
-     "09:45",
-     "11:30"
-    ]
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "above",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0075
-   },
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "track_only": true,
-   "stock_stop": 684.99,
-   "target_stock": 711.01,
-   "plan": "SPY TRACKED level_reclaim at prior close / gap fill (prior-day low 686.75 0.45% below: shelf) 689.81 zone 687.05-692.57, stk stop 684.99, target 711.01"
-  },
-  {
-   "id": "20261123-scalp-QQQ-C-reclaim:entry",
-   "play_id": "20261123-scalp-QQQ-C-reclaim",
-   "symbol": "QQQ",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-23",
-   "module": "scalp",
-   "setup": "level_reclaim",
-   "direction": "call",
-   "trigger": {
-    "type": "reclaim_above",
-    "zone": [
-     606.02,
-     610.88
-    ],
-    "window": [
-     "09:45",
-     "11:30"
-    ]
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "above",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0075
-   },
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "track_only": true,
-   "stock_stop": 604.2,
-   "target_stock": 633.49,
-   "plan": "QQQ TRACKED level_reclaim at prior close / gap fill (prior-day low 606.23 just below) 608.45 zone 606.02-610.88, stk stop 604.2, target 633.49"
-  },
-  {
-   "id": "20261123-scalp-IWM-C-orb:entry",
-   "play_id": "20261123-scalp-IWM-C-orb",
-   "symbol": "IWM",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-23",
-   "module": "scalp",
-   "setup": "orb",
-   "direction": "call",
-   "trigger": {
-    "type": "orb_high",
-    "minutes": 30
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "above",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0,
-    "skip_first_minutes": 5
-   },
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "IWM-20261123",
-   "plan": "IWM TRACKED orb (twin of the pm_break that confirmed first, 12 A); trigger > 30-min OR high; exits 1% stop / 2R / 15:05",
-   "track_only": true
-  },
-  {
-   "id": "20261123-scalp-IWM-C-reclaim:entry",
-   "play_id": "20261123-scalp-IWM-C-reclaim",
-   "symbol": "IWM",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-23",
-   "module": "scalp",
-   "setup": "level_reclaim",
-   "direction": "call",
-   "trigger": {
-    "type": "reclaim_above",
-    "zone": [
-     255.58,
-     257.64
-    ],
-    "window": [
-     "09:45",
-     "11:30"
-    ]
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "above",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0075
-   },
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "track_only": true,
-   "stock_stop": 254.81,
-   "target_stock": 263.45,
-   "plan": "IWM TRACKED level_reclaim at prior close / gap fill (prior-day low 256.32 just below) 256.61 zone 255.58-257.64, stk stop 254.81, target 263.45"
-  },
-  {
-   "id": "20261123-scalp-ARM-C-orb:entry",
-   "play_id": "20261123-scalp-ARM-C-orb",
-   "symbol": "ARM",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-23",
-   "module": "scalp",
-   "setup": "orb",
-   "direction": "call",
-   "trigger": {
-    "type": "orb_high",
-    "minutes": 30
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "above",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0,
-    "skip_first_minutes": 5
-   },
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "ARM-20261123",
-   "plan": "ARM TRACKED orb: desk scalps stopped for the day (2 consecutive scalp losses); trigger > 30-min OR high; exits 1% stop / 2R / 15:05",
-   "track_only": true
-  },
-  {
-   "id": "20261123-scalp-MSTR-C-orb:entry",
-   "play_id": "20261123-scalp-MSTR-C-orb",
-   "symbol": "MSTR",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-23",
-   "module": "scalp",
-   "setup": "orb",
-   "direction": "call",
-   "trigger": {
-    "type": "orb_high",
-    "minutes": 30
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "above",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0,
-    "skip_first_minutes": 5
-   },
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "MSTR-20261123",
-   "plan": "MSTR TRACKED orb: desk scalps stopped for the day (2 consecutive scalp losses); trigger > 30-min OR high; exits 1% stop / 2R / 15:05",
-   "track_only": true
-  },
-  {
-   "id": "20261123-scalp-IONQ-C-orb:entry",
-   "play_id": "20261123-scalp-IONQ-C-orb",
-   "symbol": "IONQ",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-23",
-   "module": "scalp",
-   "setup": "orb",
-   "direction": "call",
-   "trigger": {
-    "type": "orb_high",
-    "minutes": 30
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "above",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0,
-    "skip_first_minutes": 5
-   },
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "IONQ-20261123",
-   "plan": "IONQ TRACKED orb: desk scalps stopped for the day (2 consecutive scalp losses); trigger > 30-min OR high; exits 1% stop / 2R / 15:05",
-   "track_only": true
-  },
-  {
-   "id": "20261123-scalp-LRCX-C-orb:entry",
-   "play_id": "20261123-scalp-LRCX-C-orb",
-   "symbol": "LRCX",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-23",
-   "module": "scalp",
-   "setup": "orb",
-   "direction": "call",
-   "trigger": {
-    "type": "orb_high",
-    "minutes": 30
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "above",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0,
-    "skip_first_minutes": 5
-   },
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "LRCX-20261123",
-   "plan": "LRCX TRACKED orb: desk scalps stopped for the day (2 consecutive scalp losses); trigger > 30-min OR high; exits 1% stop / 2R / 15:05",
-   "track_only": true
-  },
-  {
-   "id": "20261123-scalp-AMAT-C-orb:entry",
-   "play_id": "20261123-scalp-AMAT-C-orb",
-   "symbol": "AMAT",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-23",
-   "module": "scalp",
-   "setup": "orb",
-   "direction": "call",
-   "trigger": {
-    "type": "orb_high",
-    "minutes": 30
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "above",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0,
-    "skip_first_minutes": 5
-   },
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "AMAT-20261123",
-   "plan": "AMAT TRACKED orb: desk scalps stopped for the day (2 consecutive scalp losses); trigger > 30-min OR high; exits 1% stop / 2R / 15:05",
-   "track_only": true
-  },
-  {
-   "id": "20261116-swing-CL-C:entry",
-   "play_id": "20261116-swing-CL-C",
-   "symbol": "CL",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-23",
-   "module": "swing",
-   "setup": "breakout",
-   "direction": "call",
-   "trigger": {
-    "type": "above",
-    "price": 101.81
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "above",
-    "max_extension_pct": 0.025,
-    "spy_block_pct": 0.0075,
-    "skip_first_minutes": 5,
-    "rs_exempt": {
-     "min_move_pct": 0.01,
-     "hard_block_pct": 0.015
+  "updated_at": "2026-11-23T17:10:00Z",
+  "source": "hourly check 2026-11-23 12:05 ET",
+  "slippage_frac": 0.25,
+  "exit_rules": {
+    "scalp": {
+      "option_stop_pct": 0.28,
+      "option_target_mult": 1.4,
+      "stock_stop_pct": 0.01,
+      "stock_target_r": 2.0
+    },
+    "swing": {
+      "option_stop_pct": 0.45,
+      "option_target_mult": 1.8,
+      "stock_stop_pct": 0.03,
+      "stock_target_r": 2.0
     }
-   },
-   "plan": "CL long shares (breakout), trigger > 101.81, stk stop 96.6, target 112.23",
-   "stock_stop": 96.6,
-   "target_stock": 112.23
   },
-  {
-   "id": "20261116-swing-PGR-C:entry",
-   "play_id": "20261116-swing-PGR-C",
-   "symbol": "PGR",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-23",
-   "module": "swing",
-   "setup": "breakout",
-   "direction": "call",
-   "trigger": {
-    "type": "above",
-    "price": 239.44
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "above",
-    "max_extension_pct": 0.025,
-    "spy_block_pct": 0.0075,
-    "skip_first_minutes": 5
-   },
-   "plan": "PGR long shares (breakout), trigger > 239.44, stk stop 226.5, target 265.32",
-   "stock_stop": 226.5,
-   "target_stock": 265.32
-  },
-  {
-   "id": "20261117-swing-GILD-C:entry",
-   "play_id": "20261117-swing-GILD-C",
-   "symbol": "GILD",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-24",
-   "module": "swing",
-   "setup": "pullback",
-   "direction": "call",
-   "trigger": {
-    "type": "above",
-    "price": 171.8
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "above",
-    "max_extension_pct": 0.025,
-    "spy_block_pct": 0.0075,
-    "skip_first_minutes": 5,
-    "rs_exempt": {
-     "min_move_pct": 0.01,
-     "hard_block_pct": 0.015
+  "watch": [
+    {
+      "id": "20261123-scalp-IWM-C-orb:entry",
+      "play_id": "20261123-scalp-IWM-C-orb",
+      "symbol": "IWM",
+      "kind": "entry",
+      "status": "active",
+      "expires": "2026-11-23",
+      "module": "scalp",
+      "setup": "orb",
+      "direction": "call",
+      "trigger": {
+        "type": "orb_high",
+        "minutes": 30
+      },
+      "confirmation": {
+        "rvol_min": 1,
+        "vwap": "above",
+        "max_extension_pct": 0.01,
+        "spy_block_pct": 0.0,
+        "skip_first_minutes": 5
+      },
+      "contract_rule": {
+        "dte": [
+          0,
+          7
+        ],
+        "delta": [
+          0.4,
+          0.6
+        ],
+        "max_spread_pct": 0.05
+      },
+      "pair": "IWM-20261123",
+      "plan": "IWM TRACKED orb (twin of the pm_break that confirmed first, 12 A); trigger > 30-min OR high; exits 1% stop / 2R / 15:05",
+      "track_only": true
+    },
+    {
+      "id": "20261123-scalp-ARM-C-orb:entry",
+      "play_id": "20261123-scalp-ARM-C-orb",
+      "symbol": "ARM",
+      "kind": "entry",
+      "status": "active",
+      "expires": "2026-11-23",
+      "module": "scalp",
+      "setup": "orb",
+      "direction": "call",
+      "trigger": {
+        "type": "orb_high",
+        "minutes": 30
+      },
+      "confirmation": {
+        "rvol_min": 1,
+        "vwap": "above",
+        "max_extension_pct": 0.01,
+        "spy_block_pct": 0.0,
+        "skip_first_minutes": 5
+      },
+      "contract_rule": {
+        "dte": [
+          0,
+          7
+        ],
+        "delta": [
+          0.4,
+          0.6
+        ],
+        "max_spread_pct": 0.05
+      },
+      "pair": "ARM-20261123",
+      "plan": "ARM TRACKED orb: desk scalps stopped for the day (2 consecutive scalp losses); trigger > 30-min OR high; exits 1% stop / 2R / 15:05",
+      "track_only": true
+    },
+    {
+      "id": "20261123-scalp-MSTR-C-orb:entry",
+      "play_id": "20261123-scalp-MSTR-C-orb",
+      "symbol": "MSTR",
+      "kind": "entry",
+      "status": "active",
+      "expires": "2026-11-23",
+      "module": "scalp",
+      "setup": "orb",
+      "direction": "call",
+      "trigger": {
+        "type": "orb_high",
+        "minutes": 30
+      },
+      "confirmation": {
+        "rvol_min": 1,
+        "vwap": "above",
+        "max_extension_pct": 0.01,
+        "spy_block_pct": 0.0,
+        "skip_first_minutes": 5
+      },
+      "contract_rule": {
+        "dte": [
+          0,
+          7
+        ],
+        "delta": [
+          0.4,
+          0.6
+        ],
+        "max_spread_pct": 0.05
+      },
+      "pair": "MSTR-20261123",
+      "plan": "MSTR TRACKED orb: desk scalps stopped for the day (2 consecutive scalp losses); trigger > 30-min OR high; exits 1% stop / 2R / 15:05",
+      "track_only": true
+    },
+    {
+      "id": "20261123-scalp-IONQ-C-orb:entry",
+      "play_id": "20261123-scalp-IONQ-C-orb",
+      "symbol": "IONQ",
+      "kind": "entry",
+      "status": "active",
+      "expires": "2026-11-23",
+      "module": "scalp",
+      "setup": "orb",
+      "direction": "call",
+      "trigger": {
+        "type": "orb_high",
+        "minutes": 30
+      },
+      "confirmation": {
+        "rvol_min": 1,
+        "vwap": "above",
+        "max_extension_pct": 0.01,
+        "spy_block_pct": 0.0,
+        "skip_first_minutes": 5
+      },
+      "contract_rule": {
+        "dte": [
+          0,
+          7
+        ],
+        "delta": [
+          0.4,
+          0.6
+        ],
+        "max_spread_pct": 0.05
+      },
+      "pair": "IONQ-20261123",
+      "plan": "IONQ TRACKED orb: desk scalps stopped for the day (2 consecutive scalp losses); trigger > 30-min OR high; exits 1% stop / 2R / 15:05",
+      "track_only": true
+    },
+    {
+      "id": "20261123-scalp-LRCX-C-orb:entry",
+      "play_id": "20261123-scalp-LRCX-C-orb",
+      "symbol": "LRCX",
+      "kind": "entry",
+      "status": "active",
+      "expires": "2026-11-23",
+      "module": "scalp",
+      "setup": "orb",
+      "direction": "call",
+      "trigger": {
+        "type": "orb_high",
+        "minutes": 30
+      },
+      "confirmation": {
+        "rvol_min": 1,
+        "vwap": "above",
+        "max_extension_pct": 0.01,
+        "spy_block_pct": 0.0,
+        "skip_first_minutes": 5
+      },
+      "contract_rule": {
+        "dte": [
+          0,
+          7
+        ],
+        "delta": [
+          0.4,
+          0.6
+        ],
+        "max_spread_pct": 0.05
+      },
+      "pair": "LRCX-20261123",
+      "plan": "LRCX TRACKED orb: desk scalps stopped for the day (2 consecutive scalp losses); trigger > 30-min OR high; exits 1% stop / 2R / 15:05",
+      "track_only": true
+    },
+    {
+      "id": "20261123-scalp-AMAT-C-orb:entry",
+      "play_id": "20261123-scalp-AMAT-C-orb",
+      "symbol": "AMAT",
+      "kind": "entry",
+      "status": "active",
+      "expires": "2026-11-23",
+      "module": "scalp",
+      "setup": "orb",
+      "direction": "call",
+      "trigger": {
+        "type": "orb_high",
+        "minutes": 30
+      },
+      "confirmation": {
+        "rvol_min": 1,
+        "vwap": "above",
+        "max_extension_pct": 0.01,
+        "spy_block_pct": 0.0,
+        "skip_first_minutes": 5
+      },
+      "contract_rule": {
+        "dte": [
+          0,
+          7
+        ],
+        "delta": [
+          0.4,
+          0.6
+        ],
+        "max_spread_pct": 0.05
+      },
+      "pair": "AMAT-20261123",
+      "plan": "AMAT TRACKED orb: desk scalps stopped for the day (2 consecutive scalp losses); trigger > 30-min OR high; exits 1% stop / 2R / 15:05",
+      "track_only": true
+    },
+    {
+      "id": "20261116-swing-CL-C:entry",
+      "play_id": "20261116-swing-CL-C",
+      "symbol": "CL",
+      "kind": "entry",
+      "status": "active",
+      "expires": "2026-11-23",
+      "module": "swing",
+      "setup": "breakout",
+      "direction": "call",
+      "trigger": {
+        "type": "above",
+        "price": 101.81
+      },
+      "confirmation": {
+        "rvol_min": 1,
+        "vwap": "above",
+        "max_extension_pct": 0.025,
+        "spy_block_pct": 0.0075,
+        "skip_first_minutes": 5,
+        "rs_exempt": {
+          "min_move_pct": 0.01,
+          "hard_block_pct": 0.015
+        }
+      },
+      "plan": "CL long shares (breakout), trigger > 101.81, stk stop 96.6, target 112.23",
+      "stock_stop": 96.6,
+      "target_stock": 112.23
+    },
+    {
+      "id": "20261116-swing-PGR-C:entry",
+      "play_id": "20261116-swing-PGR-C",
+      "symbol": "PGR",
+      "kind": "entry",
+      "status": "active",
+      "expires": "2026-11-23",
+      "module": "swing",
+      "setup": "breakout",
+      "direction": "call",
+      "trigger": {
+        "type": "above",
+        "price": 239.44
+      },
+      "confirmation": {
+        "rvol_min": 1,
+        "vwap": "above",
+        "max_extension_pct": 0.025,
+        "spy_block_pct": 0.0075,
+        "skip_first_minutes": 5
+      },
+      "plan": "PGR long shares (breakout), trigger > 239.44, stk stop 226.5, target 265.32",
+      "stock_stop": 226.5,
+      "target_stock": 265.32
+    },
+    {
+      "id": "20261117-swing-GILD-C:entry",
+      "play_id": "20261117-swing-GILD-C",
+      "symbol": "GILD",
+      "kind": "entry",
+      "status": "active",
+      "expires": "2026-11-24",
+      "module": "swing",
+      "setup": "pullback",
+      "direction": "call",
+      "trigger": {
+        "type": "above",
+        "price": 171.8
+      },
+      "confirmation": {
+        "rvol_min": 1,
+        "vwap": "above",
+        "max_extension_pct": 0.025,
+        "spy_block_pct": 0.0075,
+        "skip_first_minutes": 5,
+        "rs_exempt": {
+          "min_move_pct": 0.01,
+          "hard_block_pct": 0.015
+        }
+      },
+      "plan": "GILD long shares (pullback), trigger > 171.8, stk stop 163.9, target 187.6",
+      "stock_stop": 163.9,
+      "target_stock": 187.6
+    },
+    {
+      "id": "20261118-swing-PG-C:entry",
+      "play_id": "20261118-swing-PG-C",
+      "symbol": "PG",
+      "kind": "entry",
+      "status": "active",
+      "expires": "2026-11-25",
+      "module": "swing",
+      "setup": "breakout",
+      "direction": "call",
+      "trigger": {
+        "type": "above",
+        "price": 173.6
+      },
+      "confirmation": {
+        "rvol_min": 1,
+        "vwap": "above",
+        "max_extension_pct": 0.025,
+        "spy_block_pct": 0.0075,
+        "skip_first_minutes": 5,
+        "rs_exempt": {
+          "min_move_pct": 0.01,
+          "hard_block_pct": 0.015
+        }
+      },
+      "plan": "PG long shares (breakout), trigger > 173.6, stk stop 166.9, target 187",
+      "stock_stop": 166.9,
+      "target_stock": 187
+    },
+    {
+      "id": "20261119-swing-ED-C:entry",
+      "play_id": "20261119-swing-ED-C",
+      "symbol": "ED",
+      "kind": "entry",
+      "status": "active",
+      "expires": "2026-11-27",
+      "module": "swing",
+      "setup": "breakout",
+      "direction": "call",
+      "trigger": {
+        "type": "above",
+        "price": 122.62
+      },
+      "confirmation": {
+        "rvol_min": 1,
+        "vwap": "above",
+        "max_extension_pct": 0.025,
+        "spy_block_pct": 0.0075,
+        "skip_first_minutes": 5,
+        "rs_exempt": {
+          "min_move_pct": 0.01,
+          "hard_block_pct": 0.015
+        }
+      },
+      "plan": "ED long shares (breakout), trigger > 122.62, stk stop 116.9, target 134.06",
+      "stock_stop": 116.9,
+      "target_stock": 134.06
+    },
+    {
+      "play_id": "20261118-swing-COIN-P-no_rvol",
+      "symbol": "COIN",
+      "module": "swing",
+      "setup": "breakdown",
+      "direction": "put",
+      "expires": "2026-11-25",
+      "track_only": true,
+      "plan": "TRACKED no_rvol twin (desk fallback entry 109.92 short, 20 sh): stop 121.70 / target 86.39",
+      "id": "20261118-swing-COIN-P-no_rvol:stop",
+      "kind": "stop",
+      "trigger": {
+        "type": "above",
+        "price": 121.7
+      }
+    },
+    {
+      "play_id": "20261118-swing-COIN-P-no_rvol",
+      "symbol": "COIN",
+      "module": "swing",
+      "setup": "breakdown",
+      "direction": "put",
+      "expires": "2026-11-25",
+      "track_only": true,
+      "plan": "TRACKED no_rvol twin (desk fallback entry 109.92 short, 20 sh): stop 121.70 / target 86.39",
+      "id": "20261118-swing-COIN-P-no_rvol:target",
+      "kind": "target",
+      "trigger": {
+        "type": "below",
+        "price": 86.39
+      }
+    },
+    {
+      "id": "20261120-swing-DUK-C:entry",
+      "play_id": "20261120-swing-DUK-C",
+      "symbol": "DUK",
+      "kind": "entry",
+      "status": "active",
+      "expires": "2026-11-30",
+      "module": "swing",
+      "setup": "breakout",
+      "direction": "call",
+      "trigger": {
+        "type": "above",
+        "price": 131.42
+      },
+      "confirmation": {
+        "rvol_min": 1,
+        "vwap": "above",
+        "max_extension_pct": 0.025,
+        "spy_block_pct": 0.0075,
+        "skip_first_minutes": 5,
+        "rs_exempt": {
+          "min_move_pct": 0.01,
+          "hard_block_pct": 0.015
+        }
+      },
+      "plan": "DUK long shares (breakout), trigger > 131.42, stk stop 127.2, target 139.86",
+      "stock_stop": 127.2,
+      "target_stock": 139.86
+    },
+    {
+      "id": "20261120-swing-WEC-C:entry",
+      "play_id": "20261120-swing-WEC-C",
+      "symbol": "WEC",
+      "kind": "entry",
+      "status": "active",
+      "expires": "2026-11-30",
+      "module": "swing",
+      "setup": "breakout",
+      "direction": "call",
+      "trigger": {
+        "type": "above",
+        "price": 118.94
+      },
+      "confirmation": {
+        "rvol_min": 1,
+        "vwap": "above",
+        "max_extension_pct": 0.025,
+        "spy_block_pct": 0.0075,
+        "skip_first_minutes": 5,
+        "rs_exempt": {
+          "min_move_pct": 0.01,
+          "hard_block_pct": 0.015
+        }
+      },
+      "plan": "WEC long shares (breakout), trigger > 118.94, stk stop 115.3, target 126.22",
+      "stock_stop": 115.3,
+      "target_stock": 126.22
     }
-   },
-   "plan": "GILD long shares (pullback), trigger > 171.8, stk stop 163.9, target 187.6",
-   "stock_stop": 163.9,
-   "target_stock": 187.6
-  },
-  {
-   "id": "20261118-swing-PG-C:entry",
-   "play_id": "20261118-swing-PG-C",
-   "symbol": "PG",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-25",
-   "module": "swing",
-   "setup": "breakout",
-   "direction": "call",
-   "trigger": {
-    "type": "above",
-    "price": 173.6
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "above",
-    "max_extension_pct": 0.025,
-    "spy_block_pct": 0.0075,
-    "skip_first_minutes": 5,
-    "rs_exempt": {
-     "min_move_pct": 0.01,
-     "hard_block_pct": 0.015
-    }
-   },
-   "plan": "PG long shares (breakout), trigger > 173.6, stk stop 166.9, target 187",
-   "stock_stop": 166.9,
-   "target_stock": 187
-  },
-  {
-   "id": "20261119-swing-ED-C:entry",
-   "play_id": "20261119-swing-ED-C",
-   "symbol": "ED",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-27",
-   "module": "swing",
-   "setup": "breakout",
-   "direction": "call",
-   "trigger": {
-    "type": "above",
-    "price": 122.62
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "above",
-    "max_extension_pct": 0.025,
-    "spy_block_pct": 0.0075,
-    "skip_first_minutes": 5,
-    "rs_exempt": {
-     "min_move_pct": 0.01,
-     "hard_block_pct": 0.015
-    }
-   },
-   "plan": "ED long shares (breakout), trigger > 122.62, stk stop 116.9, target 134.06",
-   "stock_stop": 116.9,
-   "target_stock": 134.06
-  },
-  {
-   "play_id": "20261118-swing-COIN-P-no_rvol",
-   "symbol": "COIN",
-   "module": "swing",
-   "setup": "breakdown",
-   "direction": "put",
-   "expires": "2026-11-25",
-   "track_only": true,
-   "plan": "TRACKED no_rvol twin (desk fallback entry 109.92 short, 20 sh): stop 121.70 / target 86.39",
-   "id": "20261118-swing-COIN-P-no_rvol:stop",
-   "kind": "stop",
-   "trigger": {
-    "type": "above",
-    "price": 121.7
-   }
-  },
-  {
-   "play_id": "20261118-swing-COIN-P-no_rvol",
-   "symbol": "COIN",
-   "module": "swing",
-   "setup": "breakdown",
-   "direction": "put",
-   "expires": "2026-11-25",
-   "track_only": true,
-   "plan": "TRACKED no_rvol twin (desk fallback entry 109.92 short, 20 sh): stop 121.70 / target 86.39",
-   "id": "20261118-swing-COIN-P-no_rvol:target",
-   "kind": "target",
-   "trigger": {
-    "type": "below",
-    "price": 86.39
-   }
-  },
-  {
-   "id": "20261120-swing-DUK-C:entry",
-   "play_id": "20261120-swing-DUK-C",
-   "symbol": "DUK",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-30",
-   "module": "swing",
-   "setup": "breakout",
-   "direction": "call",
-   "trigger": {
-    "type": "above",
-    "price": 131.42
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "above",
-    "max_extension_pct": 0.025,
-    "spy_block_pct": 0.0075,
-    "skip_first_minutes": 5,
-    "rs_exempt": {
-     "min_move_pct": 0.01,
-     "hard_block_pct": 0.015
-    }
-   },
-   "plan": "DUK long shares (breakout), trigger > 131.42, stk stop 127.2, target 139.86",
-   "stock_stop": 127.2,
-   "target_stock": 139.86
-  },
-  {
-   "id": "20261120-swing-WEC-C:entry",
-   "play_id": "20261120-swing-WEC-C",
-   "symbol": "WEC",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-30",
-   "module": "swing",
-   "setup": "breakout",
-   "direction": "call",
-   "trigger": {
-    "type": "above",
-    "price": 118.94
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "above",
-    "max_extension_pct": 0.025,
-    "spy_block_pct": 0.0075,
-    "skip_first_minutes": 5,
-    "rs_exempt": {
-     "min_move_pct": 0.01,
-     "hard_block_pct": 0.015
-    }
-   },
-   "plan": "WEC long shares (breakout), trigger > 118.94, stk stop 115.3, target 126.22",
-   "stock_stop": 115.3,
-   "target_stock": 126.22
-  }
- ],
- "scan": {
-  "symbols": [
-   {
-    "symbol": "SPY",
-    "index": true
-   },
-   {
-    "symbol": "QQQ",
-    "index": true
-   },
-   {
-    "symbol": "ARKK",
-    "etf": true
-   },
-   {
-    "symbol": "CIBR",
-    "etf": true
-   },
-   {
-    "symbol": "GDX",
-    "etf": true
-   },
-   {
-    "symbol": "IGV",
-    "etf": true
-   },
-   {
-    "symbol": "IYT",
-    "etf": true
-   },
-   {
-    "symbol": "PAVE",
-    "etf": true
-   },
-   {
-    "symbol": "SMH",
-    "etf": true
-   },
-   {
-    "symbol": "TAN",
-    "etf": true
-   },
-   {
-    "symbol": "XBI",
-    "etf": true
-   },
-   {
-    "symbol": "XLC",
-    "etf": true
-   },
-   {
-    "symbol": "XLE",
-    "etf": true
-   },
-   {
-    "symbol": "XLF",
-    "etf": true
-   },
-   {
-    "symbol": "XLK",
-    "etf": true
-   },
-   {
-    "symbol": "XLP",
-    "etf": true
-   },
-   {
-    "symbol": "XLU",
-    "etf": true
-   },
-   {
-    "symbol": "XLV",
-    "etf": true
-   },
-   {
-    "symbol": "XLY",
-    "etf": true
-   },
-   {
-    "symbol": "XME",
-    "etf": true
-   },
-   {
-    "symbol": "XOP",
-    "etf": true
-   },
-   {
-    "symbol": "XRT",
-    "etf": true
-   },
-   {
-    "symbol": "TSLA",
-    "group": "ARKK"
-   },
-   {
-    "symbol": "COIN",
-    "group": "ARKK"
-   },
-   {
-    "symbol": "HOOD",
-    "group": "ARKK"
-   },
-   {
-    "symbol": "PLTR",
-    "group": "ARKK"
-   },
-   {
-    "symbol": "SHOP",
-    "group": "ARKK"
-   },
-   {
-    "symbol": "RBLX",
-    "group": "ARKK"
-   },
-   {
-    "symbol": "CRSP",
-    "group": "ARKK"
-   },
-   {
-    "symbol": "TEM",
-    "group": "ARKK"
-   },
-   {
-    "symbol": "AMD",
-    "group": "ARKK"
-   },
-   {
-    "symbol": "BEAM",
-    "group": "ARKK"
-   },
-   {
-    "symbol": "PATH",
-    "group": "ARKK"
-   },
-   {
-    "symbol": "DKNG",
-    "group": "ARKK"
-   },
-   {
-    "symbol": "TWLO",
-    "group": "ARKK"
-   },
-   {
-    "symbol": "PANW",
-    "group": "CIBR"
-   },
-   {
-    "symbol": "CRWD",
-    "group": "CIBR"
-   },
-   {
-    "symbol": "FTNT",
-    "group": "CIBR"
-   },
-   {
-    "symbol": "ZS",
-    "group": "CIBR"
-   },
-   {
-    "symbol": "NET",
-    "group": "CIBR"
-   },
-   {
-    "symbol": "OKTA",
-    "group": "CIBR"
-   },
-   {
-    "symbol": "CYBR",
-    "group": "CIBR"
-   },
-   {
-    "symbol": "S",
-    "group": "CIBR"
-   },
-   {
-    "symbol": "CHKP",
-    "group": "CIBR"
-   },
-   {
-    "symbol": "QLYS",
-    "group": "CIBR"
-   },
-   {
-    "symbol": "TENB",
-    "group": "CIBR"
-   },
-   {
-    "symbol": "RPD",
-    "group": "CIBR"
-   },
-   {
-    "symbol": "AKAM",
-    "group": "CIBR"
-   },
-   {
-    "symbol": "GEN",
-    "group": "CIBR"
-   },
-   {
-    "symbol": "VRNS",
-    "group": "CIBR"
-   },
-   {
-    "symbol": "NEM",
-    "group": "GDX"
-   },
-   {
-    "symbol": "AEM",
-    "group": "GDX"
-   },
-   {
-    "symbol": "B",
-    "group": "GDX"
-   },
-   {
-    "symbol": "WPM",
-    "group": "GDX"
-   },
-   {
-    "symbol": "FNV",
-    "group": "GDX"
-   },
-   {
-    "symbol": "KGC",
-    "group": "GDX"
-   },
-   {
-    "symbol": "AU",
-    "group": "GDX"
-   },
-   {
-    "symbol": "GFI",
-    "group": "GDX"
-   },
-   {
-    "symbol": "AGI",
-    "group": "GDX"
-   },
-   {
-    "symbol": "PAAS",
-    "group": "GDX"
-   },
-   {
-    "symbol": "RGLD",
-    "group": "GDX"
-   },
-   {
-    "symbol": "CDE",
-    "group": "GDX"
-   },
-   {
-    "symbol": "HL",
-    "group": "GDX"
-   },
-   {
-    "symbol": "EGO",
-    "group": "GDX"
-   },
-   {
-    "symbol": "IAG",
-    "group": "GDX"
-   },
-   {
-    "symbol": "MSFT",
-    "group": "IGV"
-   },
-   {
-    "symbol": "ORCL",
-    "group": "IGV"
-   },
-   {
-    "symbol": "CRM",
-    "group": "IGV"
-   },
-   {
-    "symbol": "NOW",
-    "group": "IGV"
-   },
-   {
-    "symbol": "ADBE",
-    "group": "IGV"
-   },
-   {
-    "symbol": "INTU",
-    "group": "IGV"
-   },
-   {
-    "symbol": "SNOW",
-    "group": "IGV"
-   },
-   {
-    "symbol": "DDOG",
-    "group": "IGV"
-   },
-   {
-    "symbol": "WDAY",
-    "group": "IGV"
-   },
-   {
-    "symbol": "TEAM",
-    "group": "IGV"
-   },
-   {
-    "symbol": "HUBS",
-    "group": "IGV"
-   },
-   {
-    "symbol": "APP",
-    "group": "IGV"
-   },
-   {
-    "symbol": "UNP",
-    "group": "IYT"
-   },
-   {
-    "symbol": "CSX",
-    "group": "IYT"
-   },
-   {
-    "symbol": "NSC",
-    "group": "IYT"
-   },
-   {
-    "symbol": "UPS",
-    "group": "IYT"
-   },
-   {
-    "symbol": "FDX",
-    "group": "IYT"
-   },
-   {
-    "symbol": "ODFL",
-    "group": "IYT"
-   },
-   {
-    "symbol": "JBHT",
-    "group": "IYT"
-   },
-   {
-    "symbol": "DAL",
-    "group": "IYT"
-   },
-   {
-    "symbol": "UAL",
-    "group": "IYT"
-   },
-   {
-    "symbol": "LUV",
-    "group": "IYT"
-   },
-   {
-    "symbol": "CHRW",
-    "group": "IYT"
-   },
-   {
-    "symbol": "XPO",
-    "group": "IYT"
-   },
-   {
-    "symbol": "SAIA",
-    "group": "IYT"
-   },
-   {
-    "symbol": "KNX",
-    "group": "IYT"
-   },
-   {
-    "symbol": "EXPD",
-    "group": "IYT"
-   },
-   {
-    "symbol": "PWR",
-    "group": "PAVE"
-   },
-   {
-    "symbol": "ETN",
-    "group": "PAVE"
-   },
-   {
-    "symbol": "VMC",
-    "group": "PAVE"
-   },
-   {
-    "symbol": "MLM",
-    "group": "PAVE"
-   },
-   {
-    "symbol": "URI",
-    "group": "PAVE"
-   },
-   {
-    "symbol": "PH",
-    "group": "PAVE"
-   },
-   {
-    "symbol": "TT",
-    "group": "PAVE"
-   },
-   {
-    "symbol": "HWM",
-    "group": "PAVE"
-   },
-   {
-    "symbol": "NUE",
-    "group": "PAVE"
-   },
-   {
-    "symbol": "STLD",
-    "group": "PAVE"
-   },
-   {
-    "symbol": "EMR",
-    "group": "PAVE"
-   },
-   {
-    "symbol": "DE",
-    "group": "PAVE"
-   },
-   {
-    "symbol": "FAST",
-    "group": "PAVE"
-   },
-   {
-    "symbol": "SRE",
-    "group": "PAVE"
-   },
-   {
-    "symbol": "NVDA",
-    "group": "SMH"
-   },
-   {
-    "symbol": "TSM",
-    "group": "SMH"
-   },
-   {
-    "symbol": "AVGO",
-    "group": "SMH"
-   },
-   {
-    "symbol": "ASML",
-    "group": "SMH"
-   },
-   {
-    "symbol": "MU",
-    "group": "SMH"
-   },
-   {
-    "symbol": "QCOM",
-    "group": "SMH"
-   },
-   {
-    "symbol": "AMAT",
-    "group": "SMH"
-   },
-   {
-    "symbol": "LRCX",
-    "group": "SMH"
-   },
-   {
-    "symbol": "KLAC",
-    "group": "SMH"
-   },
-   {
-    "symbol": "INTC",
-    "group": "SMH"
-   },
-   {
-    "symbol": "MRVL",
-    "group": "SMH"
-   },
-   {
-    "symbol": "ARM",
-    "group": "SMH"
-   },
-   {
-    "symbol": "ON",
-    "group": "SMH"
-   },
-   {
-    "symbol": "MCHP",
-    "group": "SMH"
-   },
-   {
-    "symbol": "FSLR",
-    "group": "TAN"
-   },
-   {
-    "symbol": "ENPH",
-    "group": "TAN"
-   },
-   {
-    "symbol": "NXT",
-    "group": "TAN"
-   },
-   {
-    "symbol": "RUN",
-    "group": "TAN"
-   },
-   {
-    "symbol": "SEDG",
-    "group": "TAN"
-   },
-   {
-    "symbol": "ARRY",
-    "group": "TAN"
-   },
-   {
-    "symbol": "CSIQ",
-    "group": "TAN"
-   },
-   {
-    "symbol": "SHLS",
-    "group": "TAN"
-   },
-   {
-    "symbol": "JKS",
-    "group": "TAN"
-   },
-   {
-    "symbol": "EXEL",
-    "group": "XBI"
-   },
-   {
-    "symbol": "INCY",
-    "group": "XBI"
-   },
-   {
-    "symbol": "NBIX",
-    "group": "XBI"
-   },
-   {
-    "symbol": "SRPT",
-    "group": "XBI"
-   },
-   {
-    "symbol": "IONS",
-    "group": "XBI"
-   },
-   {
-    "symbol": "BMRN",
-    "group": "XBI"
-   },
-   {
-    "symbol": "ALNY",
-    "group": "XBI"
-   },
-   {
-    "symbol": "UTHR",
-    "group": "XBI"
-   },
-   {
-    "symbol": "INSM",
-    "group": "XBI"
-   },
-   {
-    "symbol": "ROIV",
-    "group": "XBI"
-   },
-   {
-    "symbol": "VKTX",
-    "group": "XBI"
-   },
-   {
-    "symbol": "NTLA",
-    "group": "XBI"
-   },
-   {
-    "symbol": "ACAD",
-    "group": "XBI"
-   },
-   {
-    "symbol": "META",
-    "group": "XLC"
-   },
-   {
-    "symbol": "GOOGL",
-    "group": "XLC"
-   },
-   {
-    "symbol": "NFLX",
-    "group": "XLC"
-   },
-   {
-    "symbol": "TMUS",
-    "group": "XLC"
-   },
-   {
-    "symbol": "DIS",
-    "group": "XLC"
-   },
-   {
-    "symbol": "VZ",
-    "group": "XLC"
-   },
-   {
-    "symbol": "T",
-    "group": "XLC"
-   },
-   {
-    "symbol": "CMCSA",
-    "group": "XLC"
-   },
-   {
-    "symbol": "CHTR",
-    "group": "XLC"
-   },
-   {
-    "symbol": "EA",
-    "group": "XLC"
-   },
-   {
-    "symbol": "TTWO",
-    "group": "XLC"
-   },
-   {
-    "symbol": "WBD",
-    "group": "XLC"
-   },
-   {
-    "symbol": "LYV",
-    "group": "XLC"
-   },
-   {
-    "symbol": "OMC",
-    "group": "XLC"
-   },
-   {
-    "symbol": "RDDT",
-    "group": "XLC"
-   },
-   {
-    "symbol": "XOM",
-    "group": "XLE"
-   },
-   {
-    "symbol": "CVX",
-    "group": "XLE"
-   },
-   {
-    "symbol": "COP",
-    "group": "XLE"
-   },
-   {
-    "symbol": "EOG",
-    "group": "XLE"
-   },
-   {
-    "symbol": "SLB",
-    "group": "XLE"
-   },
-   {
-    "symbol": "OXY",
-    "group": "XLE"
-   },
-   {
-    "symbol": "MPC",
-    "group": "XLE"
-   },
-   {
-    "symbol": "PSX",
-    "group": "XLE"
-   },
-   {
-    "symbol": "VLO",
-    "group": "XLE"
-   },
-   {
-    "symbol": "WMB",
-    "group": "XLE"
-   },
-   {
-    "symbol": "OKE",
-    "group": "XLE"
-   },
-   {
-    "symbol": "KMI",
-    "group": "XLE"
-   },
-   {
-    "symbol": "HAL",
-    "group": "XLE"
-   },
-   {
-    "symbol": "DVN",
-    "group": "XLE"
-   },
-   {
-    "symbol": "FANG",
-    "group": "XLE"
-   },
-   {
-    "symbol": "JPM",
-    "group": "XLF"
-   },
-   {
-    "symbol": "V",
-    "group": "XLF"
-   },
-   {
-    "symbol": "MA",
-    "group": "XLF"
-   },
-   {
-    "symbol": "BAC",
-    "group": "XLF"
-   },
-   {
-    "symbol": "WFC",
-    "group": "XLF"
-   },
-   {
-    "symbol": "GS",
-    "group": "XLF"
-   },
-   {
-    "symbol": "MS",
-    "group": "XLF"
-   },
-   {
-    "symbol": "AXP",
-    "group": "XLF"
-   },
-   {
-    "symbol": "C",
-    "group": "XLF"
-   },
-   {
-    "symbol": "SCHW",
-    "group": "XLF"
-   },
-   {
-    "symbol": "BLK",
-    "group": "XLF"
-   },
-   {
-    "symbol": "PGR",
-    "group": "XLF"
-   },
-   {
-    "symbol": "COF",
-    "group": "XLF"
-   },
-   {
-    "symbol": "SPGI",
-    "group": "XLF"
-   },
-   {
-    "symbol": "AAPL",
-    "group": "XLK"
-   },
-   {
-    "symbol": "CSCO",
-    "group": "XLK"
-   },
-   {
-    "symbol": "IBM",
-    "group": "XLK"
-   },
-   {
-    "symbol": "TXN",
-    "group": "XLK"
-   },
-   {
-    "symbol": "PG",
-    "group": "XLP"
-   },
-   {
-    "symbol": "COST",
-    "group": "XLP"
-   },
-   {
-    "symbol": "WMT",
-    "group": "XLP"
-   },
-   {
-    "symbol": "KO",
-    "group": "XLP"
-   },
-   {
-    "symbol": "PEP",
-    "group": "XLP"
-   },
-   {
-    "symbol": "PM",
-    "group": "XLP"
-   },
-   {
-    "symbol": "MO",
-    "group": "XLP"
-   },
-   {
-    "symbol": "MDLZ",
-    "group": "XLP"
-   },
-   {
-    "symbol": "CL",
-    "group": "XLP"
-   },
-   {
-    "symbol": "KMB",
-    "group": "XLP"
-   },
-   {
-    "symbol": "KDP",
-    "group": "XLP"
-   },
-   {
-    "symbol": "GIS",
-    "group": "XLP"
-   },
-   {
-    "symbol": "KR",
-    "group": "XLP"
-   },
-   {
-    "symbol": "TGT",
-    "group": "XLP"
-   },
-   {
-    "symbol": "MNST",
-    "group": "XLP"
-   },
-   {
-    "symbol": "NEE",
-    "group": "XLU"
-   },
-   {
-    "symbol": "SO",
-    "group": "XLU"
-   },
-   {
-    "symbol": "DUK",
-    "group": "XLU"
-   },
-   {
-    "symbol": "CEG",
-    "group": "XLU"
-   },
-   {
-    "symbol": "VST",
-    "group": "XLU"
-   },
-   {
-    "symbol": "AEP",
-    "group": "XLU"
-   },
-   {
-    "symbol": "D",
-    "group": "XLU"
-   },
-   {
-    "symbol": "EXC",
-    "group": "XLU"
-   },
-   {
-    "symbol": "XEL",
-    "group": "XLU"
-   },
-   {
-    "symbol": "PCG",
-    "group": "XLU"
-   },
-   {
-    "symbol": "PEG",
-    "group": "XLU"
-   },
-   {
-    "symbol": "ED",
-    "group": "XLU"
-   },
-   {
-    "symbol": "ETR",
-    "group": "XLU"
-   },
-   {
-    "symbol": "WEC",
-    "group": "XLU"
-   },
-   {
-    "symbol": "LLY",
-    "group": "XLV"
-   },
-   {
-    "symbol": "UNH",
-    "group": "XLV"
-   },
-   {
-    "symbol": "JNJ",
-    "group": "XLV"
-   },
-   {
-    "symbol": "ABBV",
-    "group": "XLV"
-   },
-   {
-    "symbol": "MRK",
-    "group": "XLV"
-   },
-   {
-    "symbol": "TMO",
-    "group": "XLV"
-   },
-   {
-    "symbol": "ABT",
-    "group": "XLV"
-   },
-   {
-    "symbol": "ISRG",
-    "group": "XLV"
-   },
-   {
-    "symbol": "AMGN",
-    "group": "XLV"
-   },
-   {
-    "symbol": "BSX",
-    "group": "XLV"
-   },
-   {
-    "symbol": "DHR",
-    "group": "XLV"
-   },
-   {
-    "symbol": "GILD",
-    "group": "XLV"
-   },
-   {
-    "symbol": "VRTX",
-    "group": "XLV"
-   },
-   {
-    "symbol": "SYK",
-    "group": "XLV"
-   },
-   {
-    "symbol": "HCA",
-    "group": "XLV"
-   },
-   {
-    "symbol": "AMZN",
-    "group": "XLY"
-   },
-   {
-    "symbol": "HD",
-    "group": "XLY"
-   },
-   {
-    "symbol": "MCD",
-    "group": "XLY"
-   },
-   {
-    "symbol": "BKNG",
-    "group": "XLY"
-   },
-   {
-    "symbol": "LOW",
-    "group": "XLY"
-   },
-   {
-    "symbol": "TJX",
-    "group": "XLY"
-   },
-   {
-    "symbol": "SBUX",
-    "group": "XLY"
-   },
-   {
-    "symbol": "NKE",
-    "group": "XLY"
-   },
-   {
-    "symbol": "ORLY",
-    "group": "XLY"
-   },
-   {
-    "symbol": "CMG",
-    "group": "XLY"
-   },
-   {
-    "symbol": "ABNB",
-    "group": "XLY"
-   },
-   {
-    "symbol": "RCL",
-    "group": "XLY"
-   },
-   {
-    "symbol": "GM",
-    "group": "XLY"
-   },
-   {
-    "symbol": "MAR",
-    "group": "XLY"
-   },
-   {
-    "symbol": "FCX",
-    "group": "XME"
-   },
-   {
-    "symbol": "CLF",
-    "group": "XME"
-   },
-   {
-    "symbol": "AA",
-    "group": "XME"
-   },
-   {
-    "symbol": "MP",
-    "group": "XME"
-   },
-   {
-    "symbol": "CENX",
-    "group": "XME"
-   },
-   {
-    "symbol": "CMC",
-    "group": "XME"
-   },
-   {
-    "symbol": "RS",
-    "group": "XME"
-   },
-   {
-    "symbol": "ATI",
-    "group": "XME"
-   },
-   {
-    "symbol": "HCC",
-    "group": "XME"
-   },
-   {
-    "symbol": "UEC",
-    "group": "XME"
-   },
-   {
-    "symbol": "APA",
-    "group": "XOP"
-   },
-   {
-    "symbol": "OVV",
-    "group": "XOP"
-   },
-   {
-    "symbol": "AR",
-    "group": "XOP"
-   },
-   {
-    "symbol": "RRC",
-    "group": "XOP"
-   },
-   {
-    "symbol": "EQT",
-    "group": "XOP"
-   },
-   {
-    "symbol": "CTRA",
-    "group": "XOP"
-   },
-   {
-    "symbol": "MTDR",
-    "group": "XOP"
-   },
-   {
-    "symbol": "PR",
-    "group": "XOP"
-   },
-   {
-    "symbol": "CHRD",
-    "group": "XOP"
-   },
-   {
-    "symbol": "SM",
-    "group": "XOP"
-   },
-   {
-    "symbol": "CNX",
-    "group": "XOP"
-   },
-   {
-    "symbol": "MUR",
-    "group": "XOP"
-   },
-   {
-    "symbol": "NOG",
-    "group": "XOP"
-   },
-   {
-    "symbol": "ROST",
-    "group": "XRT"
-   },
-   {
-    "symbol": "BURL",
-    "group": "XRT"
-   },
-   {
-    "symbol": "ULTA",
-    "group": "XRT"
-   },
-   {
-    "symbol": "DKS",
-    "group": "XRT"
-   },
-   {
-    "symbol": "BBY",
-    "group": "XRT"
-   },
-   {
-    "symbol": "CVNA",
-    "group": "XRT"
-   },
-   {
-    "symbol": "CHWY",
-    "group": "XRT"
-   },
-   {
-    "symbol": "ANF",
-    "group": "XRT"
-   },
-   {
-    "symbol": "GAP",
-    "group": "XRT"
-   },
-   {
-    "symbol": "EBAY",
-    "group": "XRT"
-   },
-   {
-    "symbol": "TSCO",
-    "group": "XRT"
-   },
-   {
-    "symbol": "DG",
-    "group": "XRT"
-   },
-   {
-    "symbol": "MSTR",
-    "lane": true
-   },
-   {
-    "symbol": "SMCI",
-    "lane": true
-   },
-   {
-    "symbol": "UBER",
-    "lane": true
-   },
-   {
-    "symbol": "BA",
-    "lane": true
-   },
-   {
-    "symbol": "IONQ",
-    "lane": true
-   },
-   {
-    "symbol": "SOFI",
-    "lane": true
-   }
   ],
-  "exclude": [
-   "A",
-   "ALCO",
-   "AMTM",
-   "BLRX",
-   "BNAI",
-   "CBAT",
-   "CDLR",
-   "CENT",
-   "CENTA",
-   "CMP",
-   "CRGO",
-   "CRWD",
-   "CTY",
-   "CVAC",
-   "DAC",
-   "EPSN",
-   "FLNC",
-   "FSCO",
-   "GWHTQ",
-   "HPE",
-   "J",
-   "LOCL",
-   "PFLT",
-   "PNNT",
-   "PRPH",
-   "PSNY",
-   "SMTC",
-   "SOAR",
-   "SOBR",
-   "SYM",
-   "THCH",
-   "TUYA",
-   "VIVO",
-   "VNET",
-   "ZM",
-   "ZS"
-  ],
-  "params": {
-   "rvol_min": 1,
-   "base_minutes": 30,
-   "max_base_depth_pct": 1.5,
-   "min_move_pct": 1,
-   "max_new_per_scan": 2,
-   "max_new_per_day": 0,
-   "cutoff": "14:30",
-   "execute": false,
-   "telegram": false
+  "scan": {
+    "symbols": [
+      {
+        "symbol": "SPY",
+        "index": true
+      },
+      {
+        "symbol": "QQQ",
+        "index": true
+      },
+      {
+        "symbol": "ARKK",
+        "etf": true
+      },
+      {
+        "symbol": "CIBR",
+        "etf": true
+      },
+      {
+        "symbol": "GDX",
+        "etf": true
+      },
+      {
+        "symbol": "IGV",
+        "etf": true
+      },
+      {
+        "symbol": "IYT",
+        "etf": true
+      },
+      {
+        "symbol": "PAVE",
+        "etf": true
+      },
+      {
+        "symbol": "SMH",
+        "etf": true
+      },
+      {
+        "symbol": "TAN",
+        "etf": true
+      },
+      {
+        "symbol": "XBI",
+        "etf": true
+      },
+      {
+        "symbol": "XLC",
+        "etf": true
+      },
+      {
+        "symbol": "XLE",
+        "etf": true
+      },
+      {
+        "symbol": "XLF",
+        "etf": true
+      },
+      {
+        "symbol": "XLK",
+        "etf": true
+      },
+      {
+        "symbol": "XLP",
+        "etf": true
+      },
+      {
+        "symbol": "XLU",
+        "etf": true
+      },
+      {
+        "symbol": "XLV",
+        "etf": true
+      },
+      {
+        "symbol": "XLY",
+        "etf": true
+      },
+      {
+        "symbol": "XME",
+        "etf": true
+      },
+      {
+        "symbol": "XOP",
+        "etf": true
+      },
+      {
+        "symbol": "XRT",
+        "etf": true
+      },
+      {
+        "symbol": "TSLA",
+        "group": "ARKK"
+      },
+      {
+        "symbol": "COIN",
+        "group": "ARKK"
+      },
+      {
+        "symbol": "HOOD",
+        "group": "ARKK"
+      },
+      {
+        "symbol": "PLTR",
+        "group": "ARKK"
+      },
+      {
+        "symbol": "SHOP",
+        "group": "ARKK"
+      },
+      {
+        "symbol": "RBLX",
+        "group": "ARKK"
+      },
+      {
+        "symbol": "CRSP",
+        "group": "ARKK"
+      },
+      {
+        "symbol": "TEM",
+        "group": "ARKK"
+      },
+      {
+        "symbol": "AMD",
+        "group": "ARKK"
+      },
+      {
+        "symbol": "BEAM",
+        "group": "ARKK"
+      },
+      {
+        "symbol": "PATH",
+        "group": "ARKK"
+      },
+      {
+        "symbol": "DKNG",
+        "group": "ARKK"
+      },
+      {
+        "symbol": "TWLO",
+        "group": "ARKK"
+      },
+      {
+        "symbol": "PANW",
+        "group": "CIBR"
+      },
+      {
+        "symbol": "CRWD",
+        "group": "CIBR"
+      },
+      {
+        "symbol": "FTNT",
+        "group": "CIBR"
+      },
+      {
+        "symbol": "ZS",
+        "group": "CIBR"
+      },
+      {
+        "symbol": "NET",
+        "group": "CIBR"
+      },
+      {
+        "symbol": "OKTA",
+        "group": "CIBR"
+      },
+      {
+        "symbol": "CYBR",
+        "group": "CIBR"
+      },
+      {
+        "symbol": "S",
+        "group": "CIBR"
+      },
+      {
+        "symbol": "CHKP",
+        "group": "CIBR"
+      },
+      {
+        "symbol": "QLYS",
+        "group": "CIBR"
+      },
+      {
+        "symbol": "TENB",
+        "group": "CIBR"
+      },
+      {
+        "symbol": "RPD",
+        "group": "CIBR"
+      },
+      {
+        "symbol": "AKAM",
+        "group": "CIBR"
+      },
+      {
+        "symbol": "GEN",
+        "group": "CIBR"
+      },
+      {
+        "symbol": "VRNS",
+        "group": "CIBR"
+      },
+      {
+        "symbol": "NEM",
+        "group": "GDX"
+      },
+      {
+        "symbol": "AEM",
+        "group": "GDX"
+      },
+      {
+        "symbol": "B",
+        "group": "GDX"
+      },
+      {
+        "symbol": "WPM",
+        "group": "GDX"
+      },
+      {
+        "symbol": "FNV",
+        "group": "GDX"
+      },
+      {
+        "symbol": "KGC",
+        "group": "GDX"
+      },
+      {
+        "symbol": "AU",
+        "group": "GDX"
+      },
+      {
+        "symbol": "GFI",
+        "group": "GDX"
+      },
+      {
+        "symbol": "AGI",
+        "group": "GDX"
+      },
+      {
+        "symbol": "PAAS",
+        "group": "GDX"
+      },
+      {
+        "symbol": "RGLD",
+        "group": "GDX"
+      },
+      {
+        "symbol": "CDE",
+        "group": "GDX"
+      },
+      {
+        "symbol": "HL",
+        "group": "GDX"
+      },
+      {
+        "symbol": "EGO",
+        "group": "GDX"
+      },
+      {
+        "symbol": "IAG",
+        "group": "GDX"
+      },
+      {
+        "symbol": "MSFT",
+        "group": "IGV"
+      },
+      {
+        "symbol": "ORCL",
+        "group": "IGV"
+      },
+      {
+        "symbol": "CRM",
+        "group": "IGV"
+      },
+      {
+        "symbol": "NOW",
+        "group": "IGV"
+      },
+      {
+        "symbol": "ADBE",
+        "group": "IGV"
+      },
+      {
+        "symbol": "INTU",
+        "group": "IGV"
+      },
+      {
+        "symbol": "SNOW",
+        "group": "IGV"
+      },
+      {
+        "symbol": "DDOG",
+        "group": "IGV"
+      },
+      {
+        "symbol": "WDAY",
+        "group": "IGV"
+      },
+      {
+        "symbol": "TEAM",
+        "group": "IGV"
+      },
+      {
+        "symbol": "HUBS",
+        "group": "IGV"
+      },
+      {
+        "symbol": "APP",
+        "group": "IGV"
+      },
+      {
+        "symbol": "UNP",
+        "group": "IYT"
+      },
+      {
+        "symbol": "CSX",
+        "group": "IYT"
+      },
+      {
+        "symbol": "NSC",
+        "group": "IYT"
+      },
+      {
+        "symbol": "UPS",
+        "group": "IYT"
+      },
+      {
+        "symbol": "FDX",
+        "group": "IYT"
+      },
+      {
+        "symbol": "ODFL",
+        "group": "IYT"
+      },
+      {
+        "symbol": "JBHT",
+        "group": "IYT"
+      },
+      {
+        "symbol": "DAL",
+        "group": "IYT"
+      },
+      {
+        "symbol": "UAL",
+        "group": "IYT"
+      },
+      {
+        "symbol": "LUV",
+        "group": "IYT"
+      },
+      {
+        "symbol": "CHRW",
+        "group": "IYT"
+      },
+      {
+        "symbol": "XPO",
+        "group": "IYT"
+      },
+      {
+        "symbol": "SAIA",
+        "group": "IYT"
+      },
+      {
+        "symbol": "KNX",
+        "group": "IYT"
+      },
+      {
+        "symbol": "EXPD",
+        "group": "IYT"
+      },
+      {
+        "symbol": "PWR",
+        "group": "PAVE"
+      },
+      {
+        "symbol": "ETN",
+        "group": "PAVE"
+      },
+      {
+        "symbol": "VMC",
+        "group": "PAVE"
+      },
+      {
+        "symbol": "MLM",
+        "group": "PAVE"
+      },
+      {
+        "symbol": "URI",
+        "group": "PAVE"
+      },
+      {
+        "symbol": "PH",
+        "group": "PAVE"
+      },
+      {
+        "symbol": "TT",
+        "group": "PAVE"
+      },
+      {
+        "symbol": "HWM",
+        "group": "PAVE"
+      },
+      {
+        "symbol": "NUE",
+        "group": "PAVE"
+      },
+      {
+        "symbol": "STLD",
+        "group": "PAVE"
+      },
+      {
+        "symbol": "EMR",
+        "group": "PAVE"
+      },
+      {
+        "symbol": "DE",
+        "group": "PAVE"
+      },
+      {
+        "symbol": "FAST",
+        "group": "PAVE"
+      },
+      {
+        "symbol": "SRE",
+        "group": "PAVE"
+      },
+      {
+        "symbol": "NVDA",
+        "group": "SMH"
+      },
+      {
+        "symbol": "TSM",
+        "group": "SMH"
+      },
+      {
+        "symbol": "AVGO",
+        "group": "SMH"
+      },
+      {
+        "symbol": "ASML",
+        "group": "SMH"
+      },
+      {
+        "symbol": "MU",
+        "group": "SMH"
+      },
+      {
+        "symbol": "QCOM",
+        "group": "SMH"
+      },
+      {
+        "symbol": "AMAT",
+        "group": "SMH"
+      },
+      {
+        "symbol": "LRCX",
+        "group": "SMH"
+      },
+      {
+        "symbol": "KLAC",
+        "group": "SMH"
+      },
+      {
+        "symbol": "INTC",
+        "group": "SMH"
+      },
+      {
+        "symbol": "MRVL",
+        "group": "SMH"
+      },
+      {
+        "symbol": "ARM",
+        "group": "SMH"
+      },
+      {
+        "symbol": "ON",
+        "group": "SMH"
+      },
+      {
+        "symbol": "MCHP",
+        "group": "SMH"
+      },
+      {
+        "symbol": "FSLR",
+        "group": "TAN"
+      },
+      {
+        "symbol": "ENPH",
+        "group": "TAN"
+      },
+      {
+        "symbol": "NXT",
+        "group": "TAN"
+      },
+      {
+        "symbol": "RUN",
+        "group": "TAN"
+      },
+      {
+        "symbol": "SEDG",
+        "group": "TAN"
+      },
+      {
+        "symbol": "ARRY",
+        "group": "TAN"
+      },
+      {
+        "symbol": "CSIQ",
+        "group": "TAN"
+      },
+      {
+        "symbol": "SHLS",
+        "group": "TAN"
+      },
+      {
+        "symbol": "JKS",
+        "group": "TAN"
+      },
+      {
+        "symbol": "EXEL",
+        "group": "XBI"
+      },
+      {
+        "symbol": "INCY",
+        "group": "XBI"
+      },
+      {
+        "symbol": "NBIX",
+        "group": "XBI"
+      },
+      {
+        "symbol": "SRPT",
+        "group": "XBI"
+      },
+      {
+        "symbol": "IONS",
+        "group": "XBI"
+      },
+      {
+        "symbol": "BMRN",
+        "group": "XBI"
+      },
+      {
+        "symbol": "ALNY",
+        "group": "XBI"
+      },
+      {
+        "symbol": "UTHR",
+        "group": "XBI"
+      },
+      {
+        "symbol": "INSM",
+        "group": "XBI"
+      },
+      {
+        "symbol": "ROIV",
+        "group": "XBI"
+      },
+      {
+        "symbol": "VKTX",
+        "group": "XBI"
+      },
+      {
+        "symbol": "NTLA",
+        "group": "XBI"
+      },
+      {
+        "symbol": "ACAD",
+        "group": "XBI"
+      },
+      {
+        "symbol": "META",
+        "group": "XLC"
+      },
+      {
+        "symbol": "GOOGL",
+        "group": "XLC"
+      },
+      {
+        "symbol": "NFLX",
+        "group": "XLC"
+      },
+      {
+        "symbol": "TMUS",
+        "group": "XLC"
+      },
+      {
+        "symbol": "DIS",
+        "group": "XLC"
+      },
+      {
+        "symbol": "VZ",
+        "group": "XLC"
+      },
+      {
+        "symbol": "T",
+        "group": "XLC"
+      },
+      {
+        "symbol": "CMCSA",
+        "group": "XLC"
+      },
+      {
+        "symbol": "CHTR",
+        "group": "XLC"
+      },
+      {
+        "symbol": "EA",
+        "group": "XLC"
+      },
+      {
+        "symbol": "TTWO",
+        "group": "XLC"
+      },
+      {
+        "symbol": "WBD",
+        "group": "XLC"
+      },
+      {
+        "symbol": "LYV",
+        "group": "XLC"
+      },
+      {
+        "symbol": "OMC",
+        "group": "XLC"
+      },
+      {
+        "symbol": "RDDT",
+        "group": "XLC"
+      },
+      {
+        "symbol": "XOM",
+        "group": "XLE"
+      },
+      {
+        "symbol": "CVX",
+        "group": "XLE"
+      },
+      {
+        "symbol": "COP",
+        "group": "XLE"
+      },
+      {
+        "symbol": "EOG",
+        "group": "XLE"
+      },
+      {
+        "symbol": "SLB",
+        "group": "XLE"
+      },
+      {
+        "symbol": "OXY",
+        "group": "XLE"
+      },
+      {
+        "symbol": "MPC",
+        "group": "XLE"
+      },
+      {
+        "symbol": "PSX",
+        "group": "XLE"
+      },
+      {
+        "symbol": "VLO",
+        "group": "XLE"
+      },
+      {
+        "symbol": "WMB",
+        "group": "XLE"
+      },
+      {
+        "symbol": "OKE",
+        "group": "XLE"
+      },
+      {
+        "symbol": "KMI",
+        "group": "XLE"
+      },
+      {
+        "symbol": "HAL",
+        "group": "XLE"
+      },
+      {
+        "symbol": "DVN",
+        "group": "XLE"
+      },
+      {
+        "symbol": "FANG",
+        "group": "XLE"
+      },
+      {
+        "symbol": "JPM",
+        "group": "XLF"
+      },
+      {
+        "symbol": "V",
+        "group": "XLF"
+      },
+      {
+        "symbol": "MA",
+        "group": "XLF"
+      },
+      {
+        "symbol": "BAC",
+        "group": "XLF"
+      },
+      {
+        "symbol": "WFC",
+        "group": "XLF"
+      },
+      {
+        "symbol": "GS",
+        "group": "XLF"
+      },
+      {
+        "symbol": "MS",
+        "group": "XLF"
+      },
+      {
+        "symbol": "AXP",
+        "group": "XLF"
+      },
+      {
+        "symbol": "C",
+        "group": "XLF"
+      },
+      {
+        "symbol": "SCHW",
+        "group": "XLF"
+      },
+      {
+        "symbol": "BLK",
+        "group": "XLF"
+      },
+      {
+        "symbol": "PGR",
+        "group": "XLF"
+      },
+      {
+        "symbol": "COF",
+        "group": "XLF"
+      },
+      {
+        "symbol": "SPGI",
+        "group": "XLF"
+      },
+      {
+        "symbol": "AAPL",
+        "group": "XLK"
+      },
+      {
+        "symbol": "CSCO",
+        "group": "XLK"
+      },
+      {
+        "symbol": "IBM",
+        "group": "XLK"
+      },
+      {
+        "symbol": "TXN",
+        "group": "XLK"
+      },
+      {
+        "symbol": "PG",
+        "group": "XLP"
+      },
+      {
+        "symbol": "COST",
+        "group": "XLP"
+      },
+      {
+        "symbol": "WMT",
+        "group": "XLP"
+      },
+      {
+        "symbol": "KO",
+        "group": "XLP"
+      },
+      {
+        "symbol": "PEP",
+        "group": "XLP"
+      },
+      {
+        "symbol": "PM",
+        "group": "XLP"
+      },
+      {
+        "symbol": "MO",
+        "group": "XLP"
+      },
+      {
+        "symbol": "MDLZ",
+        "group": "XLP"
+      },
+      {
+        "symbol": "CL",
+        "group": "XLP"
+      },
+      {
+        "symbol": "KMB",
+        "group": "XLP"
+      },
+      {
+        "symbol": "KDP",
+        "group": "XLP"
+      },
+      {
+        "symbol": "GIS",
+        "group": "XLP"
+      },
+      {
+        "symbol": "KR",
+        "group": "XLP"
+      },
+      {
+        "symbol": "TGT",
+        "group": "XLP"
+      },
+      {
+        "symbol": "MNST",
+        "group": "XLP"
+      },
+      {
+        "symbol": "NEE",
+        "group": "XLU"
+      },
+      {
+        "symbol": "SO",
+        "group": "XLU"
+      },
+      {
+        "symbol": "DUK",
+        "group": "XLU"
+      },
+      {
+        "symbol": "CEG",
+        "group": "XLU"
+      },
+      {
+        "symbol": "VST",
+        "group": "XLU"
+      },
+      {
+        "symbol": "AEP",
+        "group": "XLU"
+      },
+      {
+        "symbol": "D",
+        "group": "XLU"
+      },
+      {
+        "symbol": "EXC",
+        "group": "XLU"
+      },
+      {
+        "symbol": "XEL",
+        "group": "XLU"
+      },
+      {
+        "symbol": "PCG",
+        "group": "XLU"
+      },
+      {
+        "symbol": "PEG",
+        "group": "XLU"
+      },
+      {
+        "symbol": "ED",
+        "group": "XLU"
+      },
+      {
+        "symbol": "ETR",
+        "group": "XLU"
+      },
+      {
+        "symbol": "WEC",
+        "group": "XLU"
+      },
+      {
+        "symbol": "LLY",
+        "group": "XLV"
+      },
+      {
+        "symbol": "UNH",
+        "group": "XLV"
+      },
+      {
+        "symbol": "JNJ",
+        "group": "XLV"
+      },
+      {
+        "symbol": "ABBV",
+        "group": "XLV"
+      },
+      {
+        "symbol": "MRK",
+        "group": "XLV"
+      },
+      {
+        "symbol": "TMO",
+        "group": "XLV"
+      },
+      {
+        "symbol": "ABT",
+        "group": "XLV"
+      },
+      {
+        "symbol": "ISRG",
+        "group": "XLV"
+      },
+      {
+        "symbol": "AMGN",
+        "group": "XLV"
+      },
+      {
+        "symbol": "BSX",
+        "group": "XLV"
+      },
+      {
+        "symbol": "DHR",
+        "group": "XLV"
+      },
+      {
+        "symbol": "GILD",
+        "group": "XLV"
+      },
+      {
+        "symbol": "VRTX",
+        "group": "XLV"
+      },
+      {
+        "symbol": "SYK",
+        "group": "XLV"
+      },
+      {
+        "symbol": "HCA",
+        "group": "XLV"
+      },
+      {
+        "symbol": "AMZN",
+        "group": "XLY"
+      },
+      {
+        "symbol": "HD",
+        "group": "XLY"
+      },
+      {
+        "symbol": "MCD",
+        "group": "XLY"
+      },
+      {
+        "symbol": "BKNG",
+        "group": "XLY"
+      },
+      {
+        "symbol": "LOW",
+        "group": "XLY"
+      },
+      {
+        "symbol": "TJX",
+        "group": "XLY"
+      },
+      {
+        "symbol": "SBUX",
+        "group": "XLY"
+      },
+      {
+        "symbol": "NKE",
+        "group": "XLY"
+      },
+      {
+        "symbol": "ORLY",
+        "group": "XLY"
+      },
+      {
+        "symbol": "CMG",
+        "group": "XLY"
+      },
+      {
+        "symbol": "ABNB",
+        "group": "XLY"
+      },
+      {
+        "symbol": "RCL",
+        "group": "XLY"
+      },
+      {
+        "symbol": "GM",
+        "group": "XLY"
+      },
+      {
+        "symbol": "MAR",
+        "group": "XLY"
+      },
+      {
+        "symbol": "FCX",
+        "group": "XME"
+      },
+      {
+        "symbol": "CLF",
+        "group": "XME"
+      },
+      {
+        "symbol": "AA",
+        "group": "XME"
+      },
+      {
+        "symbol": "MP",
+        "group": "XME"
+      },
+      {
+        "symbol": "CENX",
+        "group": "XME"
+      },
+      {
+        "symbol": "CMC",
+        "group": "XME"
+      },
+      {
+        "symbol": "RS",
+        "group": "XME"
+      },
+      {
+        "symbol": "ATI",
+        "group": "XME"
+      },
+      {
+        "symbol": "HCC",
+        "group": "XME"
+      },
+      {
+        "symbol": "UEC",
+        "group": "XME"
+      },
+      {
+        "symbol": "APA",
+        "group": "XOP"
+      },
+      {
+        "symbol": "OVV",
+        "group": "XOP"
+      },
+      {
+        "symbol": "AR",
+        "group": "XOP"
+      },
+      {
+        "symbol": "RRC",
+        "group": "XOP"
+      },
+      {
+        "symbol": "EQT",
+        "group": "XOP"
+      },
+      {
+        "symbol": "CTRA",
+        "group": "XOP"
+      },
+      {
+        "symbol": "MTDR",
+        "group": "XOP"
+      },
+      {
+        "symbol": "PR",
+        "group": "XOP"
+      },
+      {
+        "symbol": "CHRD",
+        "group": "XOP"
+      },
+      {
+        "symbol": "SM",
+        "group": "XOP"
+      },
+      {
+        "symbol": "CNX",
+        "group": "XOP"
+      },
+      {
+        "symbol": "MUR",
+        "group": "XOP"
+      },
+      {
+        "symbol": "NOG",
+        "group": "XOP"
+      },
+      {
+        "symbol": "ROST",
+        "group": "XRT"
+      },
+      {
+        "symbol": "BURL",
+        "group": "XRT"
+      },
+      {
+        "symbol": "ULTA",
+        "group": "XRT"
+      },
+      {
+        "symbol": "DKS",
+        "group": "XRT"
+      },
+      {
+        "symbol": "BBY",
+        "group": "XRT"
+      },
+      {
+        "symbol": "CVNA",
+        "group": "XRT"
+      },
+      {
+        "symbol": "CHWY",
+        "group": "XRT"
+      },
+      {
+        "symbol": "ANF",
+        "group": "XRT"
+      },
+      {
+        "symbol": "GAP",
+        "group": "XRT"
+      },
+      {
+        "symbol": "EBAY",
+        "group": "XRT"
+      },
+      {
+        "symbol": "TSCO",
+        "group": "XRT"
+      },
+      {
+        "symbol": "DG",
+        "group": "XRT"
+      },
+      {
+        "symbol": "MSTR",
+        "lane": true
+      },
+      {
+        "symbol": "SMCI",
+        "lane": true
+      },
+      {
+        "symbol": "UBER",
+        "lane": true
+      },
+      {
+        "symbol": "BA",
+        "lane": true
+      },
+      {
+        "symbol": "IONQ",
+        "lane": true
+      },
+      {
+        "symbol": "SOFI",
+        "lane": true
+      }
+    ],
+    "exclude": [
+      "A",
+      "ALCO",
+      "AMTM",
+      "BLRX",
+      "BNAI",
+      "CBAT",
+      "CDLR",
+      "CENT",
+      "CENTA",
+      "CMP",
+      "CRGO",
+      "CRWD",
+      "CTY",
+      "CVAC",
+      "DAC",
+      "EPSN",
+      "FLNC",
+      "FSCO",
+      "GWHTQ",
+      "HPE",
+      "J",
+      "LOCL",
+      "PFLT",
+      "PNNT",
+      "PRPH",
+      "PSNY",
+      "SMTC",
+      "SOAR",
+      "SOBR",
+      "SYM",
+      "THCH",
+      "TUYA",
+      "VIVO",
+      "VNET",
+      "ZM",
+      "ZS"
+    ],
+    "params": {
+      "rvol_min": 1,
+      "base_minutes": 30,
+      "max_base_depth_pct": 1.5,
+      "min_move_pct": 1,
+      "max_new_per_scan": 2,
+      "max_new_per_day": 0,
+      "cutoff": "14:30",
+      "execute": false,
+      "telegram": false
+    }
   }
- }
 }
