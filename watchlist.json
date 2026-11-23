@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-11-23T15:20:00Z",
- "source": "hourly check 2026-11-23 10:05",
+ "updated_at": "2026-11-23T16:12:00Z",
+ "source": "hourly check 2026-11-23 11:05 ET",
  "slippage_frac": 0.25,
  "exit_rules": {
   "scalp": {
@@ -17,42 +17,6 @@
   }
  },
  "watch": [
-  {
-   "id": "20261123-scalp-SPY-C-orb:entry",
-   "play_id": "20261123-scalp-SPY-C-orb",
-   "symbol": "SPY",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-23",
-   "module": "scalp",
-   "setup": "orb",
-   "direction": "call",
-   "trigger": {
-    "type": "orb_high",
-    "minutes": 30
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "above",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0,
-    "skip_first_minutes": 5
-   },
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "SPY-20261123",
-   "plan": "SPY TRACKED orb: desk scalps stopped for the day (2 consecutive scalp losses); trigger > 30-min OR high; exits 1% stop / 2R / 15:05",
-   "track_only": true
-  },
   {
    "id": "20261123-scalp-SPY-C-reclaim:entry",
    "play_id": "20261123-scalp-SPY-C-reclaim",
@@ -95,42 +59,6 @@
    "stock_stop": 684.99,
    "target_stock": 711.01,
    "plan": "SPY TRACKED level_reclaim at prior close / gap fill (prior-day low 686.75 0.45% below: shelf) 689.81 zone 687.05-692.57, stk stop 684.99, target 711.01"
-  },
-  {
-   "id": "20261123-scalp-QQQ-C-orb:entry",
-   "play_id": "20261123-scalp-QQQ-C-orb",
-   "symbol": "QQQ",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-23",
-   "module": "scalp",
-   "setup": "orb",
-   "direction": "call",
-   "trigger": {
-    "type": "orb_high",
-    "minutes": 30
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "above",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0,
-    "skip_first_minutes": 5
-   },
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "QQQ-20261123",
-   "plan": "QQQ TRACKED orb: desk scalps stopped for the day (2 consecutive scalp losses); trigger > 30-min OR high; exits 1% stop / 2R / 15:05",
-   "track_only": true
   },
   {
    "id": "20261123-scalp-QQQ-C-reclaim:entry",
@@ -327,42 +255,6 @@
    "track_only": true
   },
   {
-   "id": "20261123-scalp-SMCI-C-orb:entry",
-   "play_id": "20261123-scalp-SMCI-C-orb",
-   "symbol": "SMCI",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-23",
-   "module": "scalp",
-   "setup": "orb",
-   "direction": "call",
-   "trigger": {
-    "type": "orb_high",
-    "minutes": 30
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "above",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0,
-    "skip_first_minutes": 5
-   },
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "SMCI-20261123",
-   "plan": "SMCI TRACKED orb: desk scalps stopped for the day (2 consecutive scalp losses); trigger > 30-min OR high; exits 1% stop / 2R / 15:05",
-   "track_only": true
-  },
-  {
    "id": "20261123-scalp-IONQ-C-orb:entry",
    "play_id": "20261123-scalp-IONQ-C-orb",
    "symbol": "IONQ",
@@ -468,42 +360,6 @@
    },
    "pair": "AMAT-20261123",
    "plan": "AMAT TRACKED orb: desk scalps stopped for the day (2 consecutive scalp losses); trigger > 30-min OR high; exits 1% stop / 2R / 15:05",
-   "track_only": true
-  },
-  {
-   "id": "20261123-scalp-SHOP-C-orb:entry",
-   "play_id": "20261123-scalp-SHOP-C-orb",
-   "symbol": "SHOP",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-23",
-   "module": "scalp",
-   "setup": "orb",
-   "direction": "call",
-   "trigger": {
-    "type": "orb_high",
-    "minutes": 30
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "above",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0,
-    "skip_first_minutes": 5
-   },
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "SHOP-20261123",
-   "plan": "SHOP TRACKED orb (twin of the pm_break that confirmed first, 12 A); trigger > 30-min OR high; exits 1% stop / 2R / 15:05",
    "track_only": true
   },
   {
