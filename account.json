@@ -1,13 +1,13 @@
 {
- "as_of": "2026-11-23T04:57:00.124761-05:00",
+ "as_of": "2026-11-23T05:57:03.667919-05:00",
  "account": "alpaca-paper",
  "account_last4": "T9E4",
- "equity": 24249.92,
+ "equity": 24246.86,
  "last_equity": 24339.17,
  "cash": 26072.66,
- "buying_power": 46677.1,
+ "buying_power": 46667.92,
  "long_market_value": 0.0,
- "short_market_value": -1822.74,
+ "short_market_value": -1825.8,
  "halted": false,
  "daytrade_count": 0,
  "pattern_day_trader": false,
@@ -28,13 +28,13 @@
    "qty": "-17",
    "side": "short",
    "avg_entry_price": "108.004706",
-   "current_price": "107.22",
-   "market_value": "-1822.74",
+   "current_price": "107.4",
+   "market_value": "-1825.8",
    "cost_basis": "-1836.080002",
-   "unrealized_pl": "13.340002",
-   "unrealized_plpc": "0.00727",
-   "unrealized_intraday_pl": "-89.25",
-   "change_today": "0.05149"
+   "unrealized_pl": "10.280002",
+   "unrealized_plpc": "0.0056",
+   "unrealized_intraday_pl": "-92.31",
+   "change_today": "0.05325"
   }
  ],
  "orders": [
