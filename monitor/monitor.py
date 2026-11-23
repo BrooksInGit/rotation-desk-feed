@@ -182,14 +182,39 @@ class Repo:
         self.lock = threading.Lock()
 
     def _git(self, *args: str, check: bool = True) -> subprocess.CompletedProcess:
-        return subprocess.run(["git", "-C", str(self.s.repo), *args], check=check,
+        return subprocess.run(["git", "-C", str(self.s.repo), "-c", "user.name=desk-monitor",
+                               "-c", "user.email=desk-monitor@localhost", *args], check=check,
                               capture_output=True, text=True, timeout=60)
 
+    def _heal(self) -> None:
+        """Recover from an interrupted rebase or a detached HEAD (Nov 19-23 2026 the monitor sat in a half-finished
+        rebase for four days, unable to pull watchlists or push events). Call with self.lock held."""
+        g = self.s.repo / ".git"
+        if (g / "rebase-merge").exists() or (g / "rebase-apply").exists():
+            # --quit (not --abort) keeps HEAD where it is, so commits made since the rebase stalled are kept
+            log.warning("git: interrupted rebase found; leaving it and keeping current commits")
+            self._git("rebase", "--quit", check=False)
+        if self._git("symbolic-ref", "-q", "HEAD", check=False).returncode != 0:
+            log.warning("git: detached HEAD; moving main to it")
+            self._git("branch", "-f", "main", "HEAD", check=False)
+            self._git("checkout", "-q", "main", check=False)
+
+    def _sync(self) -> bool:
+        """Bring in the desk's commits by merge (never a long rebase replay). Call with self.lock held."""
+        self._heal()
+        r = self._git("pull", "--no-rebase", "--no-edit", "--quiet", check=False)
+        if r.returncode != 0:
+            self._git("merge", "--abort", check=False)
+            log.warning("git pull failed, keeping the last watchlist: %s", r.stderr.strip()[:300])
+            return False
+        return True
+
     def pull(self) -> None:
-        try:
-            self._git("pull", "--rebase", "--autostash", "--quiet")
-        except Exception as e:
-            log.warning("git pull failed, keeping the last watchlist: %s", getattr(e, "stderr", e))
+        with self.lock:
+            try:
+                self._sync()
+            except Exception as e:
+                log.warning("git pull failed, keeping the last watchlist: %s", getattr(e, "stderr", e))
 
     def code_rev(self) -> str | None:
         try:
@@ -252,15 +277,15 @@ class Repo:
         if not changed or not self.s.git_push:
             return
         try:
+            self._heal()
             self._git("add", *[x for x in ("events", "status.json", "account.json") if (self.s.repo / x).exists()])
             if self._git("diff", "--cached", "--quiet", check=False).returncode == 0:
                 return
-            self._git("-c", "user.name=desk-monitor", "-c", "user.email=desk-monitor@localhost",
-                      "commit", "--quiet", "-m", f"monitor: events/status {now:%Y-%m-%d %H:%M} ET")
+            self._git("commit", "--quiet", "-m", f"monitor: events/status {now:%Y-%m-%d %H:%M} ET")
             for attempt in range(3):
                 if self._git("push", "--quiet", check=False).returncode == 0:
                     return
-                self._git("pull", "--rebase", "--quiet", check=False)
+                self._sync()
             log.error("git push failed three times; will retry next cycle.")
         except Exception as e:
             log.error("git commit/push failed: %s", getattr(e, "stderr", e))
