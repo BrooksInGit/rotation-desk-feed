@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-11-20T21:50:00Z",
- "source": "evening run 2026-11-20",
+ "updated_at": "2026-11-23T13:55:00Z",
+ "source": "pre-market brief 2026-11-23",
  "slippage_frac": 0.25,
  "exit_rules": {
   "scalp": {
@@ -17,6 +17,905 @@
   }
  },
  "watch": [
+  {
+   "id": "20261123-scalp-SPY-C:entry",
+   "play_id": "20261123-scalp-SPY-C",
+   "symbol": "SPY",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-23",
+   "module": "scalp",
+   "setup": "pm_break",
+   "direction": "call",
+   "trigger": {
+    "type": "above",
+    "price": 711.01
+   },
+   "confirmation": {
+    "rvol_min": 1,
+    "vwap": "above",
+    "max_extension_pct": 0.01,
+    "spy_block_pct": 0.0,
+    "skip_first_minutes": 5
+   },
+   "contract_rule": {
+    "dte": [
+     0,
+     7
+    ],
+    "delta": [
+     0.4,
+     0.6
+    ],
+    "max_spread_pct": 0.05
+   },
+   "pair": "SPY-20261123",
+   "plan": "SPY long shares (pm_break), trigger > 711.01 (PM high), +2.42% PM; exits 1% stop / 2R / 15:05"
+  },
+  {
+   "id": "20261123-scalp-SPY-C-orb:entry",
+   "play_id": "20261123-scalp-SPY-C-orb",
+   "symbol": "SPY",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-23",
+   "module": "scalp",
+   "setup": "orb",
+   "direction": "call",
+   "trigger": {
+    "type": "orb_high",
+    "minutes": 30
+   },
+   "confirmation": {
+    "rvol_min": 1,
+    "vwap": "above",
+    "max_extension_pct": 0.01,
+    "spy_block_pct": 0.0,
+    "skip_first_minutes": 5
+   },
+   "contract_rule": {
+    "dte": [
+     0,
+     7
+    ],
+    "delta": [
+     0.4,
+     0.6
+    ],
+    "max_spread_pct": 0.05
+   },
+   "pair": "SPY-20261123",
+   "plan": "SPY long shares (orb), trigger > 30-min opening-range high; twin of pm_break; exits 1% stop / 2R / 15:05"
+  },
+  {
+   "id": "20261123-scalp-SPY-C-reclaim:entry",
+   "play_id": "20261123-scalp-SPY-C-reclaim",
+   "symbol": "SPY",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-23",
+   "module": "scalp",
+   "setup": "level_reclaim",
+   "direction": "call",
+   "trigger": {
+    "type": "reclaim_above",
+    "zone": [
+     687.05,
+     692.57
+    ],
+    "window": [
+     "09:45",
+     "11:30"
+    ]
+   },
+   "confirmation": {
+    "rvol_min": 1,
+    "vwap": "above",
+    "max_extension_pct": 0.01,
+    "spy_block_pct": 0.0075
+   },
+   "contract_rule": {
+    "dte": [
+     0,
+     7
+    ],
+    "delta": [
+     0.4,
+     0.6
+    ],
+    "max_spread_pct": 0.05
+   },
+   "track_only": true,
+   "stock_stop": 684.99,
+   "target_stock": 711.01,
+   "plan": "SPY TRACKED level_reclaim at prior close / gap fill (prior-day low 686.75 0.45% below: shelf) 689.81 zone 687.05-692.57, stk stop 684.99, target 711.01"
+  },
+  {
+   "id": "20261123-scalp-QQQ-C:entry",
+   "play_id": "20261123-scalp-QQQ-C",
+   "symbol": "QQQ",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-23",
+   "module": "scalp",
+   "setup": "pm_break",
+   "direction": "call",
+   "trigger": {
+    "type": "above",
+    "price": 633.49
+   },
+   "confirmation": {
+    "rvol_min": 1,
+    "vwap": "above",
+    "max_extension_pct": 0.01,
+    "spy_block_pct": 0.0,
+    "skip_first_minutes": 5
+   },
+   "contract_rule": {
+    "dte": [
+     0,
+     7
+    ],
+    "delta": [
+     0.4,
+     0.6
+    ],
+    "max_spread_pct": 0.05
+   },
+   "pair": "QQQ-20261123",
+   "plan": "QQQ long shares (pm_break), trigger > 633.49 (PM high), +3.38% PM; exits 1% stop / 2R / 15:05"
+  },
+  {
+   "id": "20261123-scalp-QQQ-C-orb:entry",
+   "play_id": "20261123-scalp-QQQ-C-orb",
+   "symbol": "QQQ",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-23",
+   "module": "scalp",
+   "setup": "orb",
+   "direction": "call",
+   "trigger": {
+    "type": "orb_high",
+    "minutes": 30
+   },
+   "confirmation": {
+    "rvol_min": 1,
+    "vwap": "above",
+    "max_extension_pct": 0.01,
+    "spy_block_pct": 0.0,
+    "skip_first_minutes": 5
+   },
+   "contract_rule": {
+    "dte": [
+     0,
+     7
+    ],
+    "delta": [
+     0.4,
+     0.6
+    ],
+    "max_spread_pct": 0.05
+   },
+   "pair": "QQQ-20261123",
+   "plan": "QQQ long shares (orb), trigger > 30-min opening-range high; twin of pm_break; exits 1% stop / 2R / 15:05"
+  },
+  {
+   "id": "20261123-scalp-QQQ-C-reclaim:entry",
+   "play_id": "20261123-scalp-QQQ-C-reclaim",
+   "symbol": "QQQ",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-23",
+   "module": "scalp",
+   "setup": "level_reclaim",
+   "direction": "call",
+   "trigger": {
+    "type": "reclaim_above",
+    "zone": [
+     606.02,
+     610.88
+    ],
+    "window": [
+     "09:45",
+     "11:30"
+    ]
+   },
+   "confirmation": {
+    "rvol_min": 1,
+    "vwap": "above",
+    "max_extension_pct": 0.01,
+    "spy_block_pct": 0.0075
+   },
+   "contract_rule": {
+    "dte": [
+     0,
+     7
+    ],
+    "delta": [
+     0.4,
+     0.6
+    ],
+    "max_spread_pct": 0.05
+   },
+   "track_only": true,
+   "stock_stop": 604.2,
+   "target_stock": 633.49,
+   "plan": "QQQ TRACKED level_reclaim at prior close / gap fill (prior-day low 606.23 just below) 608.45 zone 606.02-610.88, stk stop 604.2, target 633.49"
+  },
+  {
+   "id": "20261123-scalp-IWM-C:entry",
+   "play_id": "20261123-scalp-IWM-C",
+   "symbol": "IWM",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-23",
+   "module": "scalp",
+   "setup": "pm_break",
+   "direction": "call",
+   "trigger": {
+    "type": "above",
+    "price": 263.45
+   },
+   "confirmation": {
+    "rvol_min": 1,
+    "vwap": "above",
+    "max_extension_pct": 0.01,
+    "spy_block_pct": 0.0,
+    "skip_first_minutes": 5
+   },
+   "contract_rule": {
+    "dte": [
+     0,
+     7
+    ],
+    "delta": [
+     0.4,
+     0.6
+    ],
+    "max_spread_pct": 0.05
+   },
+   "pair": "IWM-20261123",
+   "plan": "IWM long shares (pm_break), trigger > 263.45 (PM high), +2.25% PM; exits 1% stop / 2R / 15:05"
+  },
+  {
+   "id": "20261123-scalp-IWM-C-orb:entry",
+   "play_id": "20261123-scalp-IWM-C-orb",
+   "symbol": "IWM",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-23",
+   "module": "scalp",
+   "setup": "orb",
+   "direction": "call",
+   "trigger": {
+    "type": "orb_high",
+    "minutes": 30
+   },
+   "confirmation": {
+    "rvol_min": 1,
+    "vwap": "above",
+    "max_extension_pct": 0.01,
+    "spy_block_pct": 0.0,
+    "skip_first_minutes": 5
+   },
+   "contract_rule": {
+    "dte": [
+     0,
+     7
+    ],
+    "delta": [
+     0.4,
+     0.6
+    ],
+    "max_spread_pct": 0.05
+   },
+   "pair": "IWM-20261123",
+   "plan": "IWM long shares (orb), trigger > 30-min opening-range high; twin of pm_break; exits 1% stop / 2R / 15:05"
+  },
+  {
+   "id": "20261123-scalp-IWM-C-reclaim:entry",
+   "play_id": "20261123-scalp-IWM-C-reclaim",
+   "symbol": "IWM",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-23",
+   "module": "scalp",
+   "setup": "level_reclaim",
+   "direction": "call",
+   "trigger": {
+    "type": "reclaim_above",
+    "zone": [
+     255.58,
+     257.64
+    ],
+    "window": [
+     "09:45",
+     "11:30"
+    ]
+   },
+   "confirmation": {
+    "rvol_min": 1,
+    "vwap": "above",
+    "max_extension_pct": 0.01,
+    "spy_block_pct": 0.0075
+   },
+   "contract_rule": {
+    "dte": [
+     0,
+     7
+    ],
+    "delta": [
+     0.4,
+     0.6
+    ],
+    "max_spread_pct": 0.05
+   },
+   "track_only": true,
+   "stock_stop": 254.81,
+   "target_stock": 263.45,
+   "plan": "IWM TRACKED level_reclaim at prior close / gap fill (prior-day low 256.32 just below) 256.61 zone 255.58-257.64, stk stop 254.81, target 263.45"
+  },
+  {
+   "id": "20261123-scalp-NVDA-C:entry",
+   "play_id": "20261123-scalp-NVDA-C",
+   "symbol": "NVDA",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-23",
+   "module": "scalp",
+   "setup": "pm_break",
+   "direction": "call",
+   "trigger": {
+    "type": "above",
+    "price": 138.0
+   },
+   "confirmation": {
+    "rvol_min": 1,
+    "vwap": "above",
+    "max_extension_pct": 0.01,
+    "spy_block_pct": 0.0,
+    "skip_first_minutes": 5
+   },
+   "contract_rule": {
+    "dte": [
+     0,
+     7
+    ],
+    "delta": [
+     0.4,
+     0.6
+    ],
+    "max_spread_pct": 0.05
+   },
+   "pair": "NVDA-20261123",
+   "plan": "NVDA long shares (pm_break), trigger > 138.0 (PM high), +8.63% PM; exits 1% stop / 2R / 15:05"
+  },
+  {
+   "id": "20261123-scalp-NVDA-C-orb:entry",
+   "play_id": "20261123-scalp-NVDA-C-orb",
+   "symbol": "NVDA",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-23",
+   "module": "scalp",
+   "setup": "orb",
+   "direction": "call",
+   "trigger": {
+    "type": "orb_high",
+    "minutes": 30
+   },
+   "confirmation": {
+    "rvol_min": 1,
+    "vwap": "above",
+    "max_extension_pct": 0.01,
+    "spy_block_pct": 0.0,
+    "skip_first_minutes": 5
+   },
+   "contract_rule": {
+    "dte": [
+     0,
+     7
+    ],
+    "delta": [
+     0.4,
+     0.6
+    ],
+    "max_spread_pct": 0.05
+   },
+   "pair": "NVDA-20261123",
+   "plan": "NVDA long shares (orb), trigger > 30-min opening-range high; twin of pm_break; exits 1% stop / 2R / 15:05"
+  },
+  {
+   "id": "20261123-scalp-ARM-C:entry",
+   "play_id": "20261123-scalp-ARM-C",
+   "symbol": "ARM",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-23",
+   "module": "scalp",
+   "setup": "pm_break",
+   "direction": "call",
+   "trigger": {
+    "type": "above",
+    "price": 169.94
+   },
+   "confirmation": {
+    "rvol_min": 1,
+    "vwap": "above",
+    "max_extension_pct": 0.01,
+    "spy_block_pct": 0.0,
+    "skip_first_minutes": 5
+   },
+   "contract_rule": {
+    "dte": [
+     0,
+     7
+    ],
+    "delta": [
+     0.4,
+     0.6
+    ],
+    "max_spread_pct": 0.05
+   },
+   "pair": "ARM-20261123",
+   "plan": "ARM long shares (pm_break), trigger > 169.94 (PM high), +9.26% PM; exits 1% stop / 2R / 15:05"
+  },
+  {
+   "id": "20261123-scalp-ARM-C-orb:entry",
+   "play_id": "20261123-scalp-ARM-C-orb",
+   "symbol": "ARM",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-23",
+   "module": "scalp",
+   "setup": "orb",
+   "direction": "call",
+   "trigger": {
+    "type": "orb_high",
+    "minutes": 30
+   },
+   "confirmation": {
+    "rvol_min": 1,
+    "vwap": "above",
+    "max_extension_pct": 0.01,
+    "spy_block_pct": 0.0,
+    "skip_first_minutes": 5
+   },
+   "contract_rule": {
+    "dte": [
+     0,
+     7
+    ],
+    "delta": [
+     0.4,
+     0.6
+    ],
+    "max_spread_pct": 0.05
+   },
+   "pair": "ARM-20261123",
+   "plan": "ARM long shares (orb), trigger > 30-min opening-range high; twin of pm_break; exits 1% stop / 2R / 15:05"
+  },
+  {
+   "id": "20261123-scalp-MSTR-C:entry",
+   "play_id": "20261123-scalp-MSTR-C",
+   "symbol": "MSTR",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-23",
+   "module": "scalp",
+   "setup": "pm_break",
+   "direction": "call",
+   "trigger": {
+    "type": "above",
+    "price": 86.0
+   },
+   "confirmation": {
+    "rvol_min": 1,
+    "vwap": "above",
+    "max_extension_pct": 0.01,
+    "spy_block_pct": 0.0,
+    "skip_first_minutes": 5
+   },
+   "contract_rule": {
+    "dte": [
+     0,
+     7
+    ],
+    "delta": [
+     0.4,
+     0.6
+    ],
+    "max_spread_pct": 0.05
+   },
+   "pair": "MSTR-20261123",
+   "plan": "MSTR long shares (pm_break), trigger > 86.0 (PM high), +7.67% PM; exits 1% stop / 2R / 15:05"
+  },
+  {
+   "id": "20261123-scalp-MSTR-C-orb:entry",
+   "play_id": "20261123-scalp-MSTR-C-orb",
+   "symbol": "MSTR",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-23",
+   "module": "scalp",
+   "setup": "orb",
+   "direction": "call",
+   "trigger": {
+    "type": "orb_high",
+    "minutes": 30
+   },
+   "confirmation": {
+    "rvol_min": 1,
+    "vwap": "above",
+    "max_extension_pct": 0.01,
+    "spy_block_pct": 0.0,
+    "skip_first_minutes": 5
+   },
+   "contract_rule": {
+    "dte": [
+     0,
+     7
+    ],
+    "delta": [
+     0.4,
+     0.6
+    ],
+    "max_spread_pct": 0.05
+   },
+   "pair": "MSTR-20261123",
+   "plan": "MSTR long shares (orb), trigger > 30-min opening-range high; twin of pm_break; exits 1% stop / 2R / 15:05"
+  },
+  {
+   "id": "20261123-scalp-SMCI-C:entry",
+   "play_id": "20261123-scalp-SMCI-C",
+   "symbol": "SMCI",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-23",
+   "module": "scalp",
+   "setup": "pm_break",
+   "direction": "call",
+   "trigger": {
+    "type": "above",
+    "price": 23.46
+   },
+   "confirmation": {
+    "rvol_min": 1,
+    "vwap": "above",
+    "max_extension_pct": 0.01,
+    "spy_block_pct": 0.0,
+    "skip_first_minutes": 5
+   },
+   "contract_rule": {
+    "dte": [
+     0,
+     7
+    ],
+    "delta": [
+     0.4,
+     0.6
+    ],
+    "max_spread_pct": 0.05
+   },
+   "pair": "SMCI-20261123",
+   "plan": "SMCI long shares (pm_break), trigger > 23.46 (PM high), +6.19% PM; exits 1% stop / 2R / 15:05"
+  },
+  {
+   "id": "20261123-scalp-SMCI-C-orb:entry",
+   "play_id": "20261123-scalp-SMCI-C-orb",
+   "symbol": "SMCI",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-23",
+   "module": "scalp",
+   "setup": "orb",
+   "direction": "call",
+   "trigger": {
+    "type": "orb_high",
+    "minutes": 30
+   },
+   "confirmation": {
+    "rvol_min": 1,
+    "vwap": "above",
+    "max_extension_pct": 0.01,
+    "spy_block_pct": 0.0,
+    "skip_first_minutes": 5
+   },
+   "contract_rule": {
+    "dte": [
+     0,
+     7
+    ],
+    "delta": [
+     0.4,
+     0.6
+    ],
+    "max_spread_pct": 0.05
+   },
+   "pair": "SMCI-20261123",
+   "plan": "SMCI long shares (orb), trigger > 30-min opening-range high; twin of pm_break; exits 1% stop / 2R / 15:05"
+  },
+  {
+   "id": "20261123-scalp-IONQ-C:entry",
+   "play_id": "20261123-scalp-IONQ-C",
+   "symbol": "IONQ",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-23",
+   "module": "scalp",
+   "setup": "pm_break",
+   "direction": "call",
+   "trigger": {
+    "type": "above",
+    "price": 22.68
+   },
+   "confirmation": {
+    "rvol_min": 1,
+    "vwap": "above",
+    "max_extension_pct": 0.01,
+    "spy_block_pct": 0.0,
+    "skip_first_minutes": 5
+   },
+   "contract_rule": {
+    "dte": [
+     0,
+     7
+    ],
+    "delta": [
+     0.4,
+     0.6
+    ],
+    "max_spread_pct": 0.05
+   },
+   "pair": "IONQ-20261123",
+   "plan": "IONQ long shares (pm_break), trigger > 22.68 (PM high), +6.66% PM; exits 1% stop / 2R / 15:05"
+  },
+  {
+   "id": "20261123-scalp-IONQ-C-orb:entry",
+   "play_id": "20261123-scalp-IONQ-C-orb",
+   "symbol": "IONQ",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-23",
+   "module": "scalp",
+   "setup": "orb",
+   "direction": "call",
+   "trigger": {
+    "type": "orb_high",
+    "minutes": 30
+   },
+   "confirmation": {
+    "rvol_min": 1,
+    "vwap": "above",
+    "max_extension_pct": 0.01,
+    "spy_block_pct": 0.0,
+    "skip_first_minutes": 5
+   },
+   "contract_rule": {
+    "dte": [
+     0,
+     7
+    ],
+    "delta": [
+     0.4,
+     0.6
+    ],
+    "max_spread_pct": 0.05
+   },
+   "pair": "IONQ-20261123",
+   "plan": "IONQ long shares (orb), trigger > 30-min opening-range high; twin of pm_break; exits 1% stop / 2R / 15:05"
+  },
+  {
+   "id": "20261123-scalp-LRCX-C:entry",
+   "play_id": "20261123-scalp-LRCX-C",
+   "symbol": "LRCX",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-23",
+   "module": "scalp",
+   "setup": "pm_break",
+   "direction": "call",
+   "trigger": {
+    "type": "above",
+    "price": 198.96
+   },
+   "confirmation": {
+    "rvol_min": 1,
+    "vwap": "above",
+    "max_extension_pct": 0.01,
+    "spy_block_pct": 0.0,
+    "skip_first_minutes": 5
+   },
+   "contract_rule": {
+    "dte": [
+     0,
+     7
+    ],
+    "delta": [
+     0.4,
+     0.6
+    ],
+    "max_spread_pct": 0.05
+   },
+   "pair": "LRCX-20261123",
+   "plan": "LRCX long shares (pm_break), trigger > 198.96 (PM high), +6.78% PM; exits 1% stop / 2R / 15:05"
+  },
+  {
+   "id": "20261123-scalp-LRCX-C-orb:entry",
+   "play_id": "20261123-scalp-LRCX-C-orb",
+   "symbol": "LRCX",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-23",
+   "module": "scalp",
+   "setup": "orb",
+   "direction": "call",
+   "trigger": {
+    "type": "orb_high",
+    "minutes": 30
+   },
+   "confirmation": {
+    "rvol_min": 1,
+    "vwap": "above",
+    "max_extension_pct": 0.01,
+    "spy_block_pct": 0.0,
+    "skip_first_minutes": 5
+   },
+   "contract_rule": {
+    "dte": [
+     0,
+     7
+    ],
+    "delta": [
+     0.4,
+     0.6
+    ],
+    "max_spread_pct": 0.05
+   },
+   "pair": "LRCX-20261123",
+   "plan": "LRCX long shares (orb), trigger > 30-min opening-range high; twin of pm_break; exits 1% stop / 2R / 15:05"
+  },
+  {
+   "id": "20261123-scalp-AMAT-C:entry",
+   "play_id": "20261123-scalp-AMAT-C",
+   "symbol": "AMAT",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-23",
+   "module": "scalp",
+   "setup": "pm_break",
+   "direction": "call",
+   "trigger": {
+    "type": "above",
+    "price": 326.5
+   },
+   "confirmation": {
+    "rvol_min": 1,
+    "vwap": "above",
+    "max_extension_pct": 0.01,
+    "spy_block_pct": 0.0,
+    "skip_first_minutes": 5
+   },
+   "contract_rule": {
+    "dte": [
+     0,
+     7
+    ],
+    "delta": [
+     0.4,
+     0.6
+    ],
+    "max_spread_pct": 0.05
+   },
+   "pair": "AMAT-20261123",
+   "plan": "AMAT long shares (pm_break), trigger > 326.5 (PM high), +6.23% PM; exits 1% stop / 2R / 15:05"
+  },
+  {
+   "id": "20261123-scalp-AMAT-C-orb:entry",
+   "play_id": "20261123-scalp-AMAT-C-orb",
+   "symbol": "AMAT",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-23",
+   "module": "scalp",
+   "setup": "orb",
+   "direction": "call",
+   "trigger": {
+    "type": "orb_high",
+    "minutes": 30
+   },
+   "confirmation": {
+    "rvol_min": 1,
+    "vwap": "above",
+    "max_extension_pct": 0.01,
+    "spy_block_pct": 0.0,
+    "skip_first_minutes": 5
+   },
+   "contract_rule": {
+    "dte": [
+     0,
+     7
+    ],
+    "delta": [
+     0.4,
+     0.6
+    ],
+    "max_spread_pct": 0.05
+   },
+   "pair": "AMAT-20261123",
+   "plan": "AMAT long shares (orb), trigger > 30-min opening-range high; twin of pm_break; exits 1% stop / 2R / 15:05"
+  },
+  {
+   "id": "20261123-scalp-SHOP-C:entry",
+   "play_id": "20261123-scalp-SHOP-C",
+   "symbol": "SHOP",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-23",
+   "module": "scalp",
+   "setup": "pm_break",
+   "direction": "call",
+   "trigger": {
+    "type": "above",
+    "price": 133.25
+   },
+   "confirmation": {
+    "rvol_min": 1,
+    "vwap": "above",
+    "max_extension_pct": 0.01,
+    "spy_block_pct": 0.0,
+    "skip_first_minutes": 5
+   },
+   "contract_rule": {
+    "dte": [
+     0,
+     7
+    ],
+    "delta": [
+     0.4,
+     0.6
+    ],
+    "max_spread_pct": 0.05
+   },
+   "pair": "SHOP-20261123",
+   "plan": "SHOP long shares (pm_break), trigger > 133.25 (PM high), +6.13% PM; exits 1% stop / 2R / 15:05"
+  },
+  {
+   "id": "20261123-scalp-SHOP-C-orb:entry",
+   "play_id": "20261123-scalp-SHOP-C-orb",
+   "symbol": "SHOP",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-23",
+   "module": "scalp",
+   "setup": "orb",
+   "direction": "call",
+   "trigger": {
+    "type": "orb_high",
+    "minutes": 30
+   },
+   "confirmation": {
+    "rvol_min": 1,
+    "vwap": "above",
+    "max_extension_pct": 0.01,
+    "spy_block_pct": 0.0,
+    "skip_first_minutes": 5
+   },
+   "contract_rule": {
+    "dte": [
+     0,
+     7
+    ],
+    "delta": [
+     0.4,
+     0.6
+    ],
+    "max_spread_pct": 0.05
+   },
+   "pair": "SHOP-20261123",
+   "plan": "SHOP long shares (orb), trigger > 30-min opening-range high; twin of pm_break; exits 1% stop / 2R / 15:05"
+  },
   {
    "id": "20261116-swing-CL-C:entry",
    "play_id": "20261116-swing-CL-C",
@@ -288,6 +1187,10 @@
     "etf": true
    },
    {
+    "symbol": "TAN",
+    "etf": true
+   },
+   {
     "symbol": "XBI",
     "etf": true
    },
@@ -337,28 +1240,23 @@
    },
    {
     "symbol": "TSLA",
-    "group": "ARKK",
-    "lane": true
+    "group": "ARKK"
    },
    {
     "symbol": "COIN",
-    "group": "ARKK",
-    "lane": true
+    "group": "ARKK"
    },
    {
     "symbol": "HOOD",
-    "group": "ARKK",
-    "lane": true
+    "group": "ARKK"
    },
    {
     "symbol": "PLTR",
-    "group": "ARKK",
-    "lane": true
+    "group": "ARKK"
    },
    {
     "symbol": "SHOP",
-    "group": "ARKK",
-    "lane": true
+    "group": "ARKK"
    },
    {
     "symbol": "RBLX",
@@ -374,8 +1272,7 @@
    },
    {
     "symbol": "AMD",
-    "group": "ARKK",
-    "lane": true
+    "group": "ARKK"
    },
    {
     "symbol": "BEAM",
@@ -395,13 +1292,11 @@
    },
    {
     "symbol": "PANW",
-    "group": "CIBR",
-    "lane": true
+    "group": "CIBR"
    },
    {
     "symbol": "CRWD",
-    "group": "CIBR",
-    "lane": true
+    "group": "CIBR"
    },
    {
     "symbol": "FTNT",
@@ -517,18 +1412,15 @@
    },
    {
     "symbol": "MSFT",
-    "group": "IGV",
-    "lane": true
+    "group": "IGV"
    },
    {
     "symbol": "ORCL",
-    "group": "IGV",
-    "lane": true
+    "group": "IGV"
    },
    {
     "symbol": "CRM",
-    "group": "IGV",
-    "lane": true
+    "group": "IGV"
    },
    {
     "symbol": "NOW",
@@ -544,8 +1436,7 @@
    },
    {
     "symbol": "SNOW",
-    "group": "IGV",
-    "lane": true
+    "group": "IGV"
    },
    {
     "symbol": "DDOG",
@@ -565,8 +1456,7 @@
    },
    {
     "symbol": "APP",
-    "group": "IGV",
-    "lane": true
+    "group": "IGV"
    },
    {
     "symbol": "UNP",
@@ -686,8 +1576,7 @@
    },
    {
     "symbol": "NVDA",
-    "group": "SMH",
-    "lane": true
+    "group": "SMH"
    },
    {
     "symbol": "TSM",
@@ -695,8 +1584,7 @@
    },
    {
     "symbol": "AVGO",
-    "group": "SMH",
-    "lane": true
+    "group": "SMH"
    },
    {
     "symbol": "ASML",
@@ -704,8 +1592,7 @@
    },
    {
     "symbol": "MU",
-    "group": "SMH",
-    "lane": true
+    "group": "SMH"
    },
    {
     "symbol": "QCOM",
@@ -725,8 +1612,7 @@
    },
    {
     "symbol": "INTC",
-    "group": "SMH",
-    "lane": true
+    "group": "SMH"
    },
    {
     "symbol": "MRVL",
@@ -734,8 +1620,7 @@
    },
    {
     "symbol": "ARM",
-    "group": "SMH",
-    "lane": true
+    "group": "SMH"
    },
    {
     "symbol": "ON",
@@ -744,6 +1629,42 @@
    {
     "symbol": "MCHP",
     "group": "SMH"
+   },
+   {
+    "symbol": "FSLR",
+    "group": "TAN"
+   },
+   {
+    "symbol": "ENPH",
+    "group": "TAN"
+   },
+   {
+    "symbol": "NXT",
+    "group": "TAN"
+   },
+   {
+    "symbol": "RUN",
+    "group": "TAN"
+   },
+   {
+    "symbol": "SEDG",
+    "group": "TAN"
+   },
+   {
+    "symbol": "ARRY",
+    "group": "TAN"
+   },
+   {
+    "symbol": "CSIQ",
+    "group": "TAN"
+   },
+   {
+    "symbol": "SHLS",
+    "group": "TAN"
+   },
+   {
+    "symbol": "JKS",
+    "group": "TAN"
    },
    {
     "symbol": "EXEL",
@@ -799,18 +1720,15 @@
    },
    {
     "symbol": "META",
-    "group": "XLC",
-    "lane": true
+    "group": "XLC"
    },
    {
     "symbol": "GOOGL",
-    "group": "XLC",
-    "lane": true
+    "group": "XLC"
    },
    {
     "symbol": "NFLX",
-    "group": "XLC",
-    "lane": true
+    "group": "XLC"
    },
    {
     "symbol": "TMUS",
@@ -858,8 +1776,7 @@
    },
    {
     "symbol": "RDDT",
-    "group": "XLC",
-    "lane": true
+    "group": "XLC"
    },
    {
     "symbol": "XOM",
@@ -979,8 +1896,7 @@
    },
    {
     "symbol": "AAPL",
-    "group": "XLK",
-    "lane": true
+    "group": "XLK"
    },
    {
     "symbol": "CSCO",
@@ -1172,8 +2088,7 @@
    },
    {
     "symbol": "AMZN",
-    "group": "XLY",
-    "lane": true
+    "group": "XLY"
    },
    {
     "symbol": "HD",
@@ -1393,13 +2308,42 @@
    }
   ],
   "exclude": [
-   "FRO",
-   "BJ",
-   "BKE",
-   "RLX",
-   "WRD",
-   "IESC",
-   "MOG.A"
+   "A",
+   "ALCO",
+   "AMTM",
+   "BLRX",
+   "BNAI",
+   "CBAT",
+   "CDLR",
+   "CENT",
+   "CENTA",
+   "CMP",
+   "CRGO",
+   "CRWD",
+   "CTY",
+   "CVAC",
+   "DAC",
+   "EPSN",
+   "FLNC",
+   "FSCO",
+   "GWHTQ",
+   "HPE",
+   "J",
+   "LOCL",
+   "PFLT",
+   "PNNT",
+   "PRPH",
+   "PSNY",
+   "SMTC",
+   "SOAR",
+   "SOBR",
+   "SYM",
+   "THCH",
+   "TUYA",
+   "VIVO",
+   "VNET",
+   "ZM",
+   "ZS"
   ],
   "params": {
    "rvol_min": 1,
