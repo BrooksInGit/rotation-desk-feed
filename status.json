@@ -2,8 +2,8 @@
  "feed": "sip",
  "market_open": true,
  "options_feed": "opra",
- "stream_connected": false,
- "updated_at": "2026-11-23T14:30:34.282114+00:00",
+ "stream_connected": true,
+ "updated_at": "2026-11-23T14:31:08.489247+00:00",
  "watching": 34,
  "watchlist_updated_at": "2026-11-23T13:55:00Z"
 }
