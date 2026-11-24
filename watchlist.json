@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-11-24T15:10:00Z",
- "source": "hourly check 2026-11-24 10:05",
+ "updated_at": "2026-11-24T16:10:00Z",
+ "source": "hourly check 2026-11-24 11:05",
  "slippage_frac": 0.25,
  "exit_rules": {
   "scalp": {
@@ -102,35 +102,6 @@
     "type": "below",
     "price": 86.39
    }
-  },
-  {
-   "id": "20261120-swing-DUK-C:entry",
-   "play_id": "20261120-swing-DUK-C",
-   "symbol": "DUK",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-30",
-   "module": "swing",
-   "setup": "breakout",
-   "direction": "call",
-   "trigger": {
-    "type": "above",
-    "price": 131.42
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "above",
-    "max_extension_pct": 0.025,
-    "spy_block_pct": 0.0075,
-    "skip_first_minutes": 5,
-    "rs_exempt": {
-     "min_move_pct": 0.01,
-     "hard_block_pct": 0.015
-    }
-   },
-   "plan": "DUK long shares (breakout), trigger > 131.42, stk stop 127.2, target 139.86",
-   "stock_stop": 127.2,
-   "target_stock": 139.86
   },
   {
    "id": "20261120-swing-WEC-C:entry",
