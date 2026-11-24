@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-11-24T16:10:00Z",
- "source": "hourly check 2026-11-24 11:05",
+ "updated_at": "2026-11-24T17:10:00Z",
+ "source": "hourly check 2026-11-24 12:05",
  "slippage_frac": 0.25,
  "exit_rules": {
   "scalp": {
@@ -250,6 +250,36 @@
     "price": 269.86
    },
    "plan": "IWM long 45 @ 264.45 still open in Alpaca after the 15:05 time_exit; bracket legs canceled, no protective orders. Alert only."
+  },
+  {
+   "id": "20261124-swing-TSCO-C:entry",
+   "play_id": "20261124-swing-TSCO-C",
+   "symbol": "TSCO",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-12-01",
+   "armed_after": "2026-11-24T17:10:00Z",
+   "module": "swing",
+   "setup": "breakout",
+   "direction": "call",
+   "trigger": {
+    "type": "above",
+    "price": 39.72
+   },
+   "confirmation": {
+    "rvol_min": 1,
+    "vwap": "above",
+    "max_extension_pct": 0.025,
+    "spy_block_pct": 0.0075,
+    "skip_first_minutes": 5,
+    "rs_exempt": {
+     "min_move_pct": 0.01,
+     "hard_block_pct": 0.015
+    }
+   },
+   "plan": "TSCO long shares (breakout/flag, XRT leader, found intraday), trigger > 39.72, stk stop 37.20, target 44.76",
+   "stock_stop": 37.2,
+   "target_stock": 44.76
   }
  ],
  "scan": {
