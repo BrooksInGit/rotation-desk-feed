@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-11-24T19:10:00Z",
- "source": "hourly check 2026-11-24 14:05",
+ "updated_at": "2026-11-24T21:50:00Z",
+ "source": "evening scan 2026-11-24",
  "slippage_frac": 0.25,
  "exit_rules": {
   "scalp": {
@@ -36,7 +36,11 @@
     "vwap": "above",
     "max_extension_pct": 0.025,
     "spy_block_pct": 0.0075,
-    "skip_first_minutes": 5
+    "skip_first_minutes": 5,
+    "rs_exempt": {
+     "min_move_pct": 0.01,
+     "hard_block_pct": 0.015
+    }
    },
    "plan": "PG long shares (breakout), trigger > 173.6, stk stop 166.9, target 187",
    "stock_stop": 166.9,
@@ -61,11 +65,7 @@
     "vwap": "above",
     "max_extension_pct": 0.025,
     "spy_block_pct": 0.0075,
-    "skip_first_minutes": 5,
-    "rs_exempt": {
-     "min_move_pct": 0.01,
-     "hard_block_pct": 0.015
-    }
+    "skip_first_minutes": 5
    },
    "plan": "ED long shares (breakout), trigger > 122.62, stk stop 116.9, target 134.06",
    "stock_stop": 116.9,
@@ -77,7 +77,7 @@
    "module": "swing",
    "setup": "breakdown",
    "direction": "put",
-   "expires": "2026-11-25",
+   "expires": "2026-12-03",
    "track_only": true,
    "plan": "TRACKED no_rvol twin (desk fallback entry 109.92 short, 20 sh): stop 121.70 / target 86.39",
    "id": "20261118-swing-COIN-P-no_rvol:stop",
@@ -93,7 +93,7 @@
    "module": "swing",
    "setup": "breakdown",
    "direction": "put",
-   "expires": "2026-11-25",
+   "expires": "2026-12-03",
    "track_only": true,
    "plan": "TRACKED no_rvol twin (desk fallback entry 109.92 short, 20 sh): stop 121.70 / target 86.39",
    "id": "20261118-swing-COIN-P-no_rvol:target",
@@ -122,11 +122,7 @@
     "vwap": "above",
     "max_extension_pct": 0.025,
     "spy_block_pct": 0.0075,
-    "skip_first_minutes": 5,
-    "rs_exempt": {
-     "min_move_pct": 0.01,
-     "hard_block_pct": 0.015
-    }
+    "skip_first_minutes": 5
    },
    "plan": "WEC long shares (breakout), trigger > 118.94, stk stop 115.3, target 126.22",
    "stock_stop": 115.3,
@@ -151,11 +147,7 @@
     "vwap": "below",
     "max_extension_pct": 0.025,
     "spy_block_pct": 0.0075,
-    "skip_first_minutes": 5,
-    "rs_exempt": {
-     "min_move_pct": 0.01,
-     "hard_block_pct": 0.015
-    }
+    "skip_first_minutes": 5
    },
    "plan": "FANG short shares (breakdown, XOP laggard), trigger < 172.07, stk stop 180.2, target 155.81",
    "stock_stop": 180.2,
@@ -167,7 +159,7 @@
    "symbol": "IWM",
    "kind": "stop",
    "status": "active",
-   "expires": "2026-11-24",
+   "expires": "2026-11-25",
    "module": "scalp",
    "setup": "pm_break",
    "direction": "call",
@@ -175,7 +167,7 @@
     "type": "below",
     "price": 261.92
    },
-   "plan": "IWM long 45 @ 264.45 still open in Alpaca after the 15:05 time_exit; bracket legs canceled, no protective orders. Alert only."
+   "plan": "IWM long 45 @ 264.45 still open (2nd night) in Alpaca after the 15:05 time_exit; bracket legs canceled, no protective orders. Alert only."
   },
   {
    "id": "20261123-scalp-IWM-C:target",
@@ -183,7 +175,7 @@
    "symbol": "IWM",
    "kind": "target",
    "status": "active",
-   "expires": "2026-11-24",
+   "expires": "2026-11-25",
    "module": "scalp",
    "setup": "pm_break",
    "direction": "call",
@@ -191,7 +183,7 @@
     "type": "above",
     "price": 269.86
    },
-   "plan": "IWM long 45 @ 264.45 still open in Alpaca after the 15:05 time_exit; bracket legs canceled, no protective orders. Alert only."
+   "plan": "IWM long 45 @ 264.45 still open (2nd night) in Alpaca after the 15:05 time_exit; bracket legs canceled, no protective orders. Alert only."
   },
   {
    "id": "20261124-swing-TSCO-C:entry",
@@ -282,6 +274,89 @@
    "plan": "PAAS short shares (breakdown, GDX laggard, found intraday), trigger < 30.36, stk stop 33.24, target 24.6",
    "stock_stop": 33.24,
    "target_stock": 24.6
+  },
+  {
+   "id": "20261124-swing-ROIV-C:entry",
+   "play_id": "20261124-swing-ROIV-C",
+   "symbol": "ROIV",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-12-02",
+   "module": "swing",
+   "setup": "breakout",
+   "direction": "call",
+   "trigger": {
+    "type": "above",
+    "price": 42.7
+   },
+   "confirmation": {
+    "rvol_min": 1,
+    "vwap": "above",
+    "max_extension_pct": 0.025,
+    "spy_block_pct": 0.0075,
+    "skip_first_minutes": 5,
+    "rs_exempt": {
+     "min_move_pct": 0.01,
+     "hard_block_pct": 0.015
+    }
+   },
+   "plan": "ROIV long shares (breakout, XBI leader), trigger > 42.70, stk stop 37.30, target 53.50",
+   "stock_stop": 37.3,
+   "target_stock": 53.5
+  },
+  {
+   "id": "20261124-swing-SYK-C:entry",
+   "play_id": "20261124-swing-SYK-C",
+   "symbol": "SYK",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-12-02",
+   "module": "swing",
+   "setup": "breakout",
+   "direction": "call",
+   "trigger": {
+    "type": "above",
+    "price": 326.71
+   },
+   "confirmation": {
+    "rvol_min": 1,
+    "vwap": "above",
+    "max_extension_pct": 0.025,
+    "spy_block_pct": 0.0075,
+    "skip_first_minutes": 5,
+    "rs_exempt": {
+     "min_move_pct": 0.01,
+     "hard_block_pct": 0.015
+    }
+   },
+   "plan": "SYK long shares (breakout, XLV leader), trigger > 326.71, stk stop 306.40, target 367.33",
+   "stock_stop": 306.4,
+   "target_stock": 367.33
+  },
+  {
+   "id": "20261124-swing-NFLX-P:entry",
+   "play_id": "20261124-swing-NFLX-P",
+   "symbol": "NFLX",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-12-02",
+   "module": "swing",
+   "setup": "breakdown",
+   "direction": "put",
+   "trigger": {
+    "type": "below",
+    "price": 56.55
+   },
+   "confirmation": {
+    "rvol_min": 1,
+    "vwap": "below",
+    "max_extension_pct": 0.025,
+    "spy_block_pct": 0.0075,
+    "skip_first_minutes": 5
+   },
+   "plan": "NFLX short shares (breakdown, individual laggard), trigger < 56.55, stk stop 59.75, target 50.15",
+   "stock_stop": 59.75,
+   "target_stock": 50.15
   }
  ],
  "scan": {
