@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-11-23T21:50:00Z",
- "source": "evening run 2026-11-23",
+ "updated_at": "2026-11-24T15:10:00Z",
+ "source": "hourly check 2026-11-24 10:05",
  "slippage_frac": 0.25,
  "exit_rules": {
   "scalp": {
@@ -17,31 +17,6 @@
   }
  },
  "watch": [
-  {
-   "id": "20261117-swing-GILD-C:entry",
-   "play_id": "20261117-swing-GILD-C",
-   "symbol": "GILD",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-24",
-   "module": "swing",
-   "setup": "pullback",
-   "direction": "call",
-   "trigger": {
-    "type": "above",
-    "price": 171.8
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "above",
-    "max_extension_pct": 0.025,
-    "spy_block_pct": 0.0075,
-    "skip_first_minutes": 5
-   },
-   "plan": "GILD long shares (pullback), trigger > 171.8, stk stop 163.9, target 187.6",
-   "stock_stop": 163.9,
-   "target_stock": 187.6
-  },
   {
    "id": "20261118-swing-PG-C:entry",
    "play_id": "20261118-swing-PG-C",
