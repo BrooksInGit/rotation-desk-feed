@@ -1,13 +1,13 @@
 {
- "as_of": "2026-11-24T02:52:19.126879-05:00",
+ "as_of": "2026-11-24T03:52:21.283365-05:00",
  "account": "alpaca-paper",
  "account_last4": "T9E4",
- "equity": 24104.45,
- "last_equity": 24339.17,
- "cash": 13940.8,
- "buying_power": 34405.55,
- "long_market_value": 11983.5,
- "short_market_value": -1819.85,
+ "equity": 24068.87,
+ "last_equity": 24049.34,
+ "cash": 13940.3,
+ "buying_power": 34374.91,
+ "long_market_value": 11945.7,
+ "short_market_value": -1817.13,
  "halted": false,
  "daytrade_count": 0,
  "pattern_day_trader": false,
@@ -28,26 +28,26 @@
    "qty": "-17",
    "side": "short",
    "avg_entry_price": "108.004706",
-   "current_price": "107.05",
-   "market_value": "-1819.85",
+   "current_price": "106.89",
+   "market_value": "-1817.13",
    "cost_basis": "-1836.080002",
-   "unrealized_pl": "16.230002",
-   "unrealized_plpc": "0.00884",
-   "unrealized_intraday_pl": "29.41",
-   "change_today": "-0.0159"
+   "unrealized_pl": "18.950002",
+   "unrealized_plpc": "0.01032",
+   "unrealized_intraday_pl": "32.13",
+   "change_today": "-0.01737"
   },
   {
    "symbol": "IWM",
    "qty": "45",
    "side": "long",
-   "avg_entry_price": "264.454445",
-   "current_price": "266.3",
-   "market_value": "11983.5",
-   "cost_basis": "11900.450025",
-   "unrealized_pl": "83.049975",
-   "unrealized_plpc": "0.00698",
-   "unrealized_intraday_pl": "25.2",
-   "change_today": "0.00211"
+   "avg_entry_price": "264.454444",
+   "current_price": "265.46",
+   "market_value": "11945.7",
+   "cost_basis": "11900.44998",
+   "unrealized_pl": "45.25002",
+   "unrealized_plpc": "0.0038",
+   "unrealized_intraday_pl": "-12.6",
+   "change_today": "-0.00105"
   }
  ],
  "orders": [
@@ -808,6 +808,10 @@
   {
    "t": "2026-11-20",
    "equity": 24339.17
+  },
+  {
+   "t": "2026-11-23",
+   "equity": 24049.34
   }
  ]
 }
