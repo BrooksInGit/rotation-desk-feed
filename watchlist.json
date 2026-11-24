@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-11-24T18:10:00Z",
- "source": "hourly check 2026-11-24 13:05",
+ "updated_at": "2026-11-24T19:10:00Z",
+ "source": "hourly check 2026-11-24 14:05",
  "slippage_frac": 0.25,
  "exit_rules": {
   "scalp": {
@@ -222,6 +222,66 @@
    "plan": "TSCO long shares (breakout/flag, XRT leader, found intraday), trigger > 39.72, stk stop 37.20, target 44.76",
    "stock_stop": 37.2,
    "target_stock": 44.76
+  },
+  {
+   "id": "20261124-swing-HL-P:entry",
+   "play_id": "20261124-swing-HL-P",
+   "symbol": "HL",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-12-02",
+   "armed_after": "2026-11-24T19:10:00Z",
+   "module": "swing",
+   "setup": "breakdown",
+   "direction": "put",
+   "trigger": {
+    "type": "below",
+    "price": 10.37
+   },
+   "confirmation": {
+    "rvol_min": 1,
+    "vwap": "below",
+    "max_extension_pct": 0.025,
+    "spy_block_pct": 0.0075,
+    "skip_first_minutes": 5,
+    "rs_exempt": {
+     "min_move_pct": 0.01,
+     "hard_block_pct": 0.015
+    }
+   },
+   "plan": "HL short shares (breakdown, GDX laggard, found intraday), trigger < 10.37, stk stop 11.67, target 7.77",
+   "stock_stop": 11.67,
+   "target_stock": 7.77
+  },
+  {
+   "id": "20261124-swing-PAAS-P:entry",
+   "play_id": "20261124-swing-PAAS-P",
+   "symbol": "PAAS",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-12-02",
+   "armed_after": "2026-11-24T19:10:00Z",
+   "module": "swing",
+   "setup": "breakdown",
+   "direction": "put",
+   "trigger": {
+    "type": "below",
+    "price": 30.36
+   },
+   "confirmation": {
+    "rvol_min": 1,
+    "vwap": "below",
+    "max_extension_pct": 0.025,
+    "spy_block_pct": 0.0075,
+    "skip_first_minutes": 5,
+    "rs_exempt": {
+     "min_move_pct": 0.01,
+     "hard_block_pct": 0.015
+    }
+   },
+   "plan": "PAAS short shares (breakdown, GDX laggard, found intraday), trigger < 30.36, stk stop 33.24, target 24.6",
+   "stock_stop": 33.24,
+   "target_stock": 24.6
   }
  ],
  "scan": {
