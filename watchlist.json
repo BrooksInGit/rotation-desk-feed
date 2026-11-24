@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-11-24T17:10:00Z",
- "source": "hourly check 2026-11-24 12:05",
+ "updated_at": "2026-11-24T18:10:00Z",
+ "source": "hourly check 2026-11-24 13:05",
  "slippage_frac": 0.25,
  "exit_rules": {
   "scalp": {
@@ -131,64 +131,6 @@
    "plan": "WEC long shares (breakout), trigger > 118.94, stk stop 115.3, target 126.22",
    "stock_stop": 115.3,
    "target_stock": 126.22
-  },
-  {
-   "id": "20261123-swing-MAS-C:entry",
-   "play_id": "20261123-swing-MAS-C",
-   "symbol": "MAS",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-12-01",
-   "module": "swing",
-   "setup": "breakout",
-   "direction": "call",
-   "trigger": {
-    "type": "above",
-    "price": 85.86
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "above",
-    "max_extension_pct": 0.025,
-    "spy_block_pct": 0.0075,
-    "skip_first_minutes": 5,
-    "rs_exempt": {
-     "min_move_pct": 0.01,
-     "hard_block_pct": 0.015
-    }
-   },
-   "plan": "MAS long shares (breakout, XHB leader), trigger > 85.86, stk stop 82.0, target 93.58",
-   "stock_stop": 82.0,
-   "target_stock": 93.58
-  },
-  {
-   "id": "20261123-swing-ORLY-C:entry",
-   "play_id": "20261123-swing-ORLY-C",
-   "symbol": "ORLY",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-12-01",
-   "module": "swing",
-   "setup": "breakout",
-   "direction": "call",
-   "trigger": {
-    "type": "above",
-    "price": 95.23
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "above",
-    "max_extension_pct": 0.025,
-    "spy_block_pct": 0.0075,
-    "skip_first_minutes": 5,
-    "rs_exempt": {
-     "min_move_pct": 0.01,
-     "hard_block_pct": 0.015
-    }
-   },
-   "plan": "ORLY long shares (breakout, XRT leader), trigger > 95.23, stk stop 90.9, target 103.89",
-   "stock_stop": 90.9,
-   "target_stock": 103.89
   },
   {
    "id": "20261123-swing-FANG-P:entry",
