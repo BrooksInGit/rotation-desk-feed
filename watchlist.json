@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-11-25T15:12:00Z",
- "source": "hourly check 2026-11-25 10:05 ET",
+ "updated_at": "2026-11-25T16:14:00Z",
+ "source": "hourly check 2026-11-25 11:05 ET",
  "slippage_frac": 0.25,
  "exit_rules": {
   "scalp": {
@@ -250,76 +250,6 @@
    },
    "track_only": true,
    "plan": "TRACKED NVDA level_reclaim put: rally into 149.9-151.1 (prior-day low) then back below VWAP/zone; stop 151.55, target 145.83"
-  },
-  {
-   "status": "active",
-   "expires": "2026-11-25",
-   "module": "scalp",
-   "direction": "put",
-   "symbol": "MU",
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "MU-20261125",
-   "id": "20261125-scalp-MU-P-orb:entry",
-   "play_id": "20261125-scalp-MU-P-orb",
-   "kind": "entry",
-   "setup": "orb",
-   "trigger": {
-    "type": "orb_low",
-    "minutes": 30
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "below",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0,
-    "skip_first_minutes": 5
-   },
-   "plan": "MU short shares (orb), trigger < 30-min opening-range low; 1% stop, 2R target, 15:05 close"
-  },
-  {
-   "status": "active",
-   "expires": "2026-11-25",
-   "module": "scalp",
-   "direction": "put",
-   "symbol": "INTC",
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "INTC-20261125",
-   "id": "20261125-scalp-INTC-P-orb:entry",
-   "play_id": "20261125-scalp-INTC-P-orb",
-   "kind": "entry",
-   "setup": "orb",
-   "trigger": {
-    "type": "orb_low",
-    "minutes": 30
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "below",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0,
-    "skip_first_minutes": 5
-   },
-   "plan": "INTC short shares (orb), trigger < 30-min opening-range low; 1% stop, 2R target, 15:05 close"
   },
   {
    "id": "20261125-scalp-INTC-P-reclaim:entry",
@@ -632,41 +562,6 @@
    },
    "track_only": true,
    "plan": "TRACKED SMCI level_reclaim put: rally into 22.06-22.24 (prior-day low) then back below VWAP/zone; stop 22.31, target 21.4"
-  },
-  {
-   "status": "active",
-   "expires": "2026-11-25",
-   "module": "scalp",
-   "direction": "put",
-   "symbol": "AMZN",
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "AMZN-20261125",
-   "id": "20261125-scalp-AMZN-P-orb:entry",
-   "play_id": "20261125-scalp-AMZN-P-orb",
-   "kind": "entry",
-   "setup": "orb",
-   "trigger": {
-    "type": "orb_low",
-    "minutes": 30
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "below",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0,
-    "skip_first_minutes": 5
-   },
-   "plan": "AMZN short shares (orb), trigger < 30-min opening-range low; 1% stop, 2R target, 15:05 close"
   },
   {
    "id": "20261125-scalp-AMZN-P-reclaim:entry",
