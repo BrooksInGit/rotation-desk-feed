@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-11-25T20:09:00Z",
- "source": "hourly check 2026-11-25 15:05 ET",
+ "updated_at": "2026-11-25T21:50:00Z",
+ "source": "evening run 2026-11-25",
  "slippage_frac": 0.25,
  "exit_rules": {
   "scalp": {
@@ -105,7 +105,7 @@
    "symbol": "IWM",
    "kind": "stop",
    "status": "active",
-   "expires": "2026-11-25",
+   "expires": "2026-11-27",
    "module": "scalp",
    "setup": "pm_break",
    "direction": "call",
@@ -113,7 +113,7 @@
     "type": "below",
     "price": 261.92
    },
-   "plan": "IWM long 45 @ 264.45 still open (2nd night) in Alpaca after the 15:05 time_exit; bracket legs canceled, no protective orders. Alert only."
+   "plan": "IWM long 45 @ 264.45 still open (3rd night) in Alpaca after the 11/23 15:05 time_exit; bracket legs canceled, no protective orders. Alert only."
   },
   {
    "id": "20261123-scalp-IWM-C:target",
@@ -121,7 +121,7 @@
    "symbol": "IWM",
    "kind": "target",
    "status": "active",
-   "expires": "2026-11-25",
+   "expires": "2026-11-27",
    "module": "scalp",
    "setup": "pm_break",
    "direction": "call",
@@ -129,7 +129,7 @@
     "type": "above",
     "price": 269.86
    },
-   "plan": "IWM long 45 @ 264.45 still open (2nd night) in Alpaca after the 15:05 time_exit; bracket legs canceled, no protective orders. Alert only."
+   "plan": "IWM long 45 @ 264.45 still open (3rd night) in Alpaca after the 11/23 15:05 time_exit; bracket legs canceled, no protective orders. Alert only."
   },
   {
    "id": "20261124-swing-ROIV-C:entry",
@@ -150,11 +150,7 @@
     "vwap": "above",
     "max_extension_pct": 0.025,
     "spy_block_pct": 0.0075,
-    "skip_first_minutes": 5,
-    "rs_exempt": {
-     "min_move_pct": 0.01,
-     "hard_block_pct": 0.015
-    }
+    "skip_first_minutes": 5
    },
    "plan": "ROIV long shares (breakout, XBI leader), trigger > 42.70, stk stop 37.30, target 53.50",
    "stock_stop": 37.3,
@@ -184,6 +180,89 @@
    "plan": "NFLX short shares (breakdown, individual laggard), trigger < 56.55, stk stop 59.75, target 50.15",
    "stock_stop": 59.75,
    "target_stock": 50.15
+  },
+  {
+   "id": "20261125-swing-PGR-C:entry",
+   "play_id": "20261125-swing-PGR-C",
+   "symbol": "PGR",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-12-03",
+   "module": "swing",
+   "setup": "breakout",
+   "direction": "call",
+   "trigger": {
+    "type": "above",
+    "price": 241.03
+   },
+   "confirmation": {
+    "rvol_min": 1,
+    "vwap": "above",
+    "max_extension_pct": 0.025,
+    "spy_block_pct": 0.0075,
+    "skip_first_minutes": 5,
+    "rs_exempt": {
+     "min_move_pct": 0.01,
+     "hard_block_pct": 0.015
+    }
+   },
+   "plan": "PGR long shares (breakout, XLF leader), trigger > 241.03, stk stop 224.00, target 275.09",
+   "stock_stop": 224.0,
+   "target_stock": 275.09
+  },
+  {
+   "id": "20261125-swing-WMT-C:entry",
+   "play_id": "20261125-swing-WMT-C",
+   "symbol": "WMT",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-12-03",
+   "module": "swing",
+   "setup": "breakout",
+   "direction": "call",
+   "trigger": {
+    "type": "above",
+    "price": 132.89
+   },
+   "confirmation": {
+    "rvol_min": 1,
+    "vwap": "above",
+    "max_extension_pct": 0.025,
+    "spy_block_pct": 0.0075,
+    "skip_first_minutes": 5,
+    "rs_exempt": {
+     "min_move_pct": 0.01,
+     "hard_block_pct": 0.015
+    }
+   },
+   "plan": "WMT long shares (breakout, XLP leader), trigger > 132.89, stk stop 123.00, target 152.67",
+   "stock_stop": 123.0,
+   "target_stock": 152.67
+  },
+  {
+   "id": "20261125-swing-AAPL-C:entry",
+   "play_id": "20261125-swing-AAPL-C",
+   "symbol": "AAPL",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-12-03",
+   "module": "swing",
+   "setup": "breakout",
+   "direction": "call",
+   "trigger": {
+    "type": "above",
+    "price": 360.84
+   },
+   "confirmation": {
+    "rvol_min": 1,
+    "vwap": "above",
+    "max_extension_pct": 0.025,
+    "spy_block_pct": 0.0075,
+    "skip_first_minutes": 5
+   },
+   "plan": "AAPL long shares (breakout, individual leader), trigger > 360.84, stk stop 340.30, target 401.92",
+   "stock_stop": 340.3,
+   "target_stock": 401.92
   }
  ],
  "scan": {
