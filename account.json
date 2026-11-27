@@ -1,13 +1,13 @@
 {
- "as_of": "2026-11-26T21:12:40.340971-05:00",
+ "as_of": "2026-11-26T22:12:42.579527-05:00",
  "account": "alpaca-paper",
  "account_last4": "T9E4",
- "equity": 24351.71,
+ "equity": 24360.69,
  "last_equity": 24298.18,
  "cash": 10427.47,
- "buying_power": 31141.86,
- "long_market_value": 15742.9,
- "short_market_value": -1818.66,
+ "buying_power": 31145.4,
+ "long_market_value": 15754.6,
+ "short_market_value": -1821.38,
  "halted": false,
  "daytrade_count": 0,
  "pattern_day_trader": false,
@@ -28,13 +28,13 @@
    "qty": "-17",
    "side": "short",
    "avg_entry_price": "108.004706",
-   "current_price": "106.98",
-   "market_value": "-1818.66",
+   "current_price": "107.14",
+   "market_value": "-1821.38",
    "cost_basis": "-1836.080002",
-   "unrealized_pl": "17.420002",
-   "unrealized_plpc": "0.00949",
-   "unrealized_intraday_pl": "-55.42",
-   "change_today": "0.03143"
+   "unrealized_pl": "14.700002",
+   "unrealized_plpc": "0.00801",
+   "unrealized_intraday_pl": "-58.14",
+   "change_today": "0.03297"
   },
   {
    "symbol": "GILD",
@@ -54,13 +54,13 @@
    "qty": "45",
    "side": "long",
    "avg_entry_price": "264.454444",
-   "current_price": "271.42",
-   "market_value": "12213.9",
+   "current_price": "271.68",
+   "market_value": "12225.6",
    "cost_basis": "11900.44998",
-   "unrealized_pl": "313.45002",
-   "unrealized_plpc": "0.02634",
-   "unrealized_intraday_pl": "114.75",
-   "change_today": "0.00948"
+   "unrealized_pl": "325.15002",
+   "unrealized_plpc": "0.02732",
+   "unrealized_intraday_pl": "126.45",
+   "change_today": "0.01045"
   }
  ],
  "orders": [
