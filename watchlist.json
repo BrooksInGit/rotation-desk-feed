@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-11-27T14:05:00Z",
- "source": "pre-market brief 2026-11-27",
+ "updated_at": "2026-11-27T15:13:00Z",
+ "source": "hourly check 2026-11-27 10:05",
  "slippage_frac": 0.25,
  "exit_rules": {
   "scalp": {
@@ -130,31 +130,6 @@
     "price": 269.86
    },
    "plan": "IWM long 45 @ 264.45 still open (4th day; Alpaca 08:13 ET shows still long 45) in Alpaca after the 11/23 15:05 time_exit; bracket legs canceled, no protective orders. Alert only."
-  },
-  {
-   "id": "20261124-swing-ROIV-C:entry",
-   "play_id": "20261124-swing-ROIV-C",
-   "symbol": "ROIV",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-12-02",
-   "module": "swing",
-   "setup": "breakout",
-   "direction": "call",
-   "trigger": {
-    "type": "above",
-    "price": 42.7
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "above",
-    "max_extension_pct": 0.025,
-    "spy_block_pct": 0.0075,
-    "skip_first_minutes": 5
-   },
-   "plan": "ROIV long shares (breakout, XBI leader), trigger > 42.70, stk stop 37.30, target 53.50",
-   "stock_stop": 37.3,
-   "target_stock": 53.5
   },
   {
    "id": "20261124-swing-NFLX-P:entry",
@@ -716,42 +691,8 @@
    "pair": "DELL-20261127",
    "plan": "DELL long shares (pm_break), trigger > 319.51, stk stop 316.31, target 325.91",
    "stock_stop": 316.31,
-   "target_stock": 325.91
-  },
-  {
-   "id": "20261127-scalp-DELL-C-orb:entry",
-   "play_id": "20261127-scalp-DELL-C-orb",
-   "symbol": "DELL",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-27",
-   "module": "scalp",
-   "setup": "orb",
-   "direction": "call",
-   "trigger": {
-    "type": "orb_high",
-    "minutes": 30
-   },
-   "confirmation": {
-    "rvol_min": 1.0,
-    "vwap": "above",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0,
-    "skip_first_minutes": 5
-   },
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "DELL-20261127",
-   "plan": "DELL long shares (orb 30m high), stop 1% / 2R target"
+   "target_stock": 325.91,
+   "track_only": true
   },
   {
    "id": "20261127-scalp-DELL-C-reclaim:entry",
@@ -867,49 +808,6 @@
    },
    "pair": "RKLB-20261127",
    "plan": "RKLB long shares (orb 30m high), stop 1% / 2R target"
-  },
-  {
-   "id": "20261127-scalp-RKLB-C-reclaim:entry",
-   "play_id": "20261127-scalp-RKLB-C-reclaim",
-   "symbol": "RKLB",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-27",
-   "module": "scalp",
-   "setup": "level_reclaim",
-   "direction": "call",
-   "trigger": {
-    "type": "reclaim_above",
-    "zone": [
-     48.07,
-     48.45
-    ],
-    "window": [
-     "09:45",
-     "11:30"
-    ]
-   },
-   "confirmation": {
-    "rvol_min": 1.0,
-    "vwap": "above",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0075
-   },
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "stock_stop": 47.93,
-   "target_stock": 50.9,
-   "track_only": true,
-   "plan": "TRACKED RKLB reclaim of shelf(n4) 48.07-48.45, stop 47.93, target 50.9"
   },
   {
    "id": "20261127-scalp-BE-C:entry",
