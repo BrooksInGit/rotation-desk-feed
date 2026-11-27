@@ -1,13 +1,13 @@
 {
- "as_of": "2026-11-27T09:13:08.147943-05:00",
+ "as_of": "2026-11-27T09:30:10.910708-05:00",
  "account": "alpaca-paper",
  "account_last4": "T9E4",
- "equity": 24356.92,
+ "equity": 24318.13,
  "last_equity": 24298.18,
  "cash": 10427.47,
- "buying_power": 31098.79,
- "long_market_value": 15772.25,
- "short_market_value": -1842.8,
+ "buying_power": 31054.22,
+ "long_market_value": 15736.35,
+ "short_market_value": -1845.69,
  "halted": false,
  "daytrade_count": 0,
  "pattern_day_trader": false,
@@ -28,39 +28,39 @@
    "qty": "-17",
    "side": "short",
    "avg_entry_price": "108.004706",
-   "current_price": "108.4",
-   "market_value": "-1842.8",
+   "current_price": "108.57",
+   "market_value": "-1845.69",
    "cost_basis": "-1836.080002",
-   "unrealized_pl": "-6.719998",
-   "unrealized_plpc": "-0.00366",
-   "unrealized_intraday_pl": "-79.56",
-   "change_today": "0.04512"
+   "unrealized_pl": "-9.609998",
+   "unrealized_plpc": "-0.00523",
+   "unrealized_intraday_pl": "-82.45",
+   "change_today": "0.04676"
   },
   {
    "symbol": "GILD",
    "qty": "20",
    "side": "long",
    "avg_entry_price": "175.641",
-   "current_price": "175.96",
-   "market_value": "3519.2",
+   "current_price": "175.0651",
+   "market_value": "3501.302",
    "cost_basis": "3512.82",
-   "unrealized_pl": "6.38",
-   "unrealized_plpc": "0.00182",
-   "unrealized_intraday_pl": "-15.6",
-   "change_today": "-0.00441"
+   "unrealized_pl": "-11.518",
+   "unrealized_plpc": "-0.00328",
+   "unrealized_intraday_pl": "-33.498",
+   "change_today": "-0.00948"
   },
   {
    "symbol": "IWM",
    "qty": "45",
    "side": "long",
    "avg_entry_price": "264.454444",
-   "current_price": "272.29",
-   "market_value": "12253.05",
+   "current_price": "271.89",
+   "market_value": "12235.05",
    "cost_basis": "11900.44998",
-   "unrealized_pl": "352.60002",
-   "unrealized_plpc": "0.02963",
-   "unrealized_intraday_pl": "153.9",
-   "change_today": "0.01272"
+   "unrealized_pl": "334.60002",
+   "unrealized_plpc": "0.02812",
+   "unrealized_intraday_pl": "135.9",
+   "change_today": "0.01123"
   }
  ],
  "orders": [
@@ -616,14 +616,6 @@
   }
  ],
  "equity_curve": [
-  {
-   "t": "2026-08-25",
-   "equity": 0.0
-  },
-  {
-   "t": "2026-08-26",
-   "equity": 0.0
-  },
   {
    "t": "2026-08-27",
    "equity": 0.0
