@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-11-27T15:13:00Z",
- "source": "hourly check 2026-11-27 10:05",
+ "updated_at": "2026-11-27T16:22:00Z",
+ "source": "hourly check 2026-11-27 11:05 ET",
  "slippage_frac": 0.25,
  "exit_rules": {
   "scalp": {
@@ -277,84 +277,6 @@
    "target_stock": 745.88
   },
   {
-   "id": "20261127-scalp-SPY-C-orb:entry",
-   "play_id": "20261127-scalp-SPY-C-orb",
-   "symbol": "SPY",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-27",
-   "module": "scalp",
-   "setup": "orb",
-   "direction": "call",
-   "trigger": {
-    "type": "orb_high",
-    "minutes": 30
-   },
-   "confirmation": {
-    "rvol_min": 1.0,
-    "vwap": "above",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0,
-    "skip_first_minutes": 5
-   },
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "SPY-20261127",
-   "plan": "SPY long shares (orb 30m high), stop 1% / 2R target"
-  },
-  {
-   "id": "20261127-scalp-SPY-C-reclaim:entry",
-   "play_id": "20261127-scalp-SPY-C-reclaim",
-   "symbol": "SPY",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-27",
-   "module": "scalp",
-   "setup": "level_reclaim",
-   "direction": "call",
-   "trigger": {
-    "type": "reclaim_above",
-    "zone": [
-     717.61,
-     723.37
-    ],
-    "window": [
-     "09:45",
-     "11:30"
-    ]
-   },
-   "confirmation": {
-    "rvol_min": 1.0,
-    "vwap": "above",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0075
-   },
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "stock_stop": 715.46,
-   "target_stock": 739.19,
-   "track_only": true,
-   "plan": "TRACKED SPY reclaim of shelf(n4) 717.61-723.37, stop 715.46, target 739.19"
-  },
-  {
    "id": "20261127-scalp-QQQ-C:entry",
    "play_id": "20261127-scalp-QQQ-C",
    "symbol": "QQQ",
@@ -390,41 +312,6 @@
    "plan": "QQQ long shares (pm_break), trigger > 652.35, stk stop 645.83, target 665.39",
    "stock_stop": 645.83,
    "target_stock": 665.39
-  },
-  {
-   "id": "20261127-scalp-QQQ-C-orb:entry",
-   "play_id": "20261127-scalp-QQQ-C-orb",
-   "symbol": "QQQ",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-27",
-   "module": "scalp",
-   "setup": "orb",
-   "direction": "call",
-   "trigger": {
-    "type": "orb_high",
-    "minutes": 30
-   },
-   "confirmation": {
-    "rvol_min": 1.0,
-    "vwap": "above",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0,
-    "skip_first_minutes": 5
-   },
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "QQQ-20261127",
-   "plan": "QQQ long shares (orb 30m high), stop 1% / 2R target"
   },
   {
    "id": "20261127-scalp-QQQ-C-reclaim:entry",
@@ -505,41 +392,6 @@
    "plan": "MU long shares (pm_break), trigger > 650.41, stk stop 643.91, target 663.41",
    "stock_stop": 643.91,
    "target_stock": 663.41
-  },
-  {
-   "id": "20261127-scalp-MU-C-orb:entry",
-   "play_id": "20261127-scalp-MU-C-orb",
-   "symbol": "MU",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-27",
-   "module": "scalp",
-   "setup": "orb",
-   "direction": "call",
-   "trigger": {
-    "type": "orb_high",
-    "minutes": 30
-   },
-   "confirmation": {
-    "rvol_min": 1.0,
-    "vwap": "above",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0,
-    "skip_first_minutes": 5
-   },
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "MU-20261127",
-   "plan": "MU long shares (orb 30m high), stop 1% / 2R target"
   },
   {
    "id": "20261127-scalp-BABA-C:entry",
@@ -775,41 +627,6 @@
    "target_stock": 51.93
   },
   {
-   "id": "20261127-scalp-RKLB-C-orb:entry",
-   "play_id": "20261127-scalp-RKLB-C-orb",
-   "symbol": "RKLB",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-27",
-   "module": "scalp",
-   "setup": "orb",
-   "direction": "call",
-   "trigger": {
-    "type": "orb_high",
-    "minutes": 30
-   },
-   "confirmation": {
-    "rvol_min": 1.0,
-    "vwap": "above",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0,
-    "skip_first_minutes": 5
-   },
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "RKLB-20261127",
-   "plan": "RKLB long shares (orb 30m high), stop 1% / 2R target"
-  },
-  {
    "id": "20261127-scalp-BE-C:entry",
    "play_id": "20261127-scalp-BE-C",
    "symbol": "BE",
@@ -997,49 +814,6 @@
    "plan": "MSTR long shares (orb 30m high), stop 1% / 2R target"
   },
   {
-   "id": "20261127-scalp-MSTR-C-reclaim:entry",
-   "play_id": "20261127-scalp-MSTR-C-reclaim",
-   "symbol": "MSTR",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-27",
-   "module": "scalp",
-   "setup": "level_reclaim",
-   "direction": "call",
-   "trigger": {
-    "type": "reclaim_above",
-    "zone": [
-     80.7,
-     81.34
-    ],
-    "window": [
-     "09:45",
-     "11:30"
-    ]
-   },
-   "confirmation": {
-    "rvol_min": 1.0,
-    "vwap": "above",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0075
-   },
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "stock_stop": 80.46,
-   "target_stock": 85.67,
-   "track_only": true,
-   "plan": "TRACKED MSTR reclaim of pdh 80.7-81.34, stop 80.46, target 85.67"
-  },
-  {
    "id": "20261127-scalp-CRWV-C:entry",
    "play_id": "20261127-scalp-CRWV-C",
    "symbol": "CRWV",
@@ -1190,41 +964,6 @@
    "plan": "IONQ long shares (pm_break), trigger > 25.31, stk stop 25.06, target 25.81",
    "stock_stop": 25.06,
    "target_stock": 25.81
-  },
-  {
-   "id": "20261127-scalp-IONQ-C-orb:entry",
-   "play_id": "20261127-scalp-IONQ-C-orb",
-   "symbol": "IONQ",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-27",
-   "module": "scalp",
-   "setup": "orb",
-   "direction": "call",
-   "trigger": {
-    "type": "orb_high",
-    "minutes": 30
-   },
-   "confirmation": {
-    "rvol_min": 1.0,
-    "vwap": "above",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0,
-    "skip_first_minutes": 5
-   },
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "IONQ-20261127",
-   "plan": "IONQ long shares (orb 30m high), stop 1% / 2R target"
   }
  ],
  "scan": {
