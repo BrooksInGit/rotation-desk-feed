@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-11-27T18:15:00Z",
- "source": "hourly check 2026-11-27 13:05 ET",
+ "updated_at": "2026-11-27T21:50:00Z",
+ "source": "evening run 2026-11-27",
  "slippage_frac": 0.25,
  "exit_rules": {
   "scalp": {
@@ -18,18 +18,68 @@
  },
  "watch": [
   {
-   "id": "20261119-swing-ED-C:entry",
-   "play_id": "20261119-swing-ED-C",
-   "symbol": "ED",
+   "id": "20261123-swing-FANG-P:entry",
+   "play_id": "20261123-swing-FANG-P",
+   "symbol": "FANG",
    "kind": "entry",
    "status": "active",
-   "expires": "2026-11-27",
+   "expires": "2026-12-01",
+   "module": "swing",
+   "setup": "breakdown",
+   "direction": "put",
+   "trigger": {
+    "type": "below",
+    "price": 172.07
+   },
+   "confirmation": {
+    "rvol_min": 1,
+    "vwap": "below",
+    "max_extension_pct": 0.025,
+    "spy_block_pct": 0.0075,
+    "skip_first_minutes": 5
+   },
+   "plan": "FANG short shares (breakdown, XOP laggard), trigger < 172.07, stk stop 180.2, target 155.81",
+   "stock_stop": 180.2,
+   "target_stock": 155.81
+  },
+  {
+   "id": "20261124-swing-NFLX-P:entry",
+   "play_id": "20261124-swing-NFLX-P",
+   "symbol": "NFLX",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-12-02",
+   "module": "swing",
+   "setup": "breakdown",
+   "direction": "put",
+   "trigger": {
+    "type": "below",
+    "price": 56.55
+   },
+   "confirmation": {
+    "rvol_min": 1,
+    "vwap": "below",
+    "max_extension_pct": 0.025,
+    "spy_block_pct": 0.0075,
+    "skip_first_minutes": 5
+   },
+   "plan": "NFLX short shares (breakdown, individual laggard), trigger < 56.55, stk stop 59.75, target 50.15",
+   "stock_stop": 59.75,
+   "target_stock": 50.15
+  },
+  {
+   "id": "20261125-swing-AAPL-C:entry",
+   "play_id": "20261125-swing-AAPL-C",
+   "symbol": "AAPL",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-12-03",
    "module": "swing",
    "setup": "breakout",
    "direction": "call",
    "trigger": {
     "type": "above",
-    "price": 122.62
+    "price": 360.84
    },
    "confirmation": {
     "rvol_min": 1,
@@ -38,9 +88,34 @@
     "spy_block_pct": 0.0075,
     "skip_first_minutes": 5
    },
-   "plan": "ED long shares (breakout), trigger > 122.62, stk stop 116.9, target 134.06",
-   "stock_stop": 116.9,
-   "target_stock": 134.06
+   "plan": "AAPL long shares (breakout, individual leader), trigger > 360.84, stk stop 340.30, target 401.92",
+   "stock_stop": 340.3,
+   "target_stock": 401.92
+  },
+  {
+   "id": "20261125-swing-PGR-C:entry",
+   "play_id": "20261125-swing-PGR-C",
+   "symbol": "PGR",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-12-03",
+   "module": "swing",
+   "setup": "breakout",
+   "direction": "call",
+   "trigger": {
+    "type": "above",
+    "price": 241.03
+   },
+   "confirmation": {
+    "rvol_min": 1,
+    "vwap": "above",
+    "max_extension_pct": 0.025,
+    "spy_block_pct": 0.0075,
+    "skip_first_minutes": 5
+   },
+   "plan": "PGR long shares (breakout, XLF), trigger > 241.03, stk stop 224.00, target 275.09",
+   "stock_stop": 224.0,
+   "target_stock": 275.09
   },
   {
    "play_id": "20261118-swing-COIN-P-no_rvol",
@@ -75,37 +150,12 @@
    }
   },
   {
-   "id": "20261123-swing-FANG-P:entry",
-   "play_id": "20261123-swing-FANG-P",
-   "symbol": "FANG",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-12-01",
-   "module": "swing",
-   "setup": "breakdown",
-   "direction": "put",
-   "trigger": {
-    "type": "below",
-    "price": 172.07
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "below",
-    "max_extension_pct": 0.025,
-    "spy_block_pct": 0.0075,
-    "skip_first_minutes": 5
-   },
-   "plan": "FANG short shares (breakdown, XOP laggard), trigger < 172.07, stk stop 180.2, target 155.81",
-   "stock_stop": 180.2,
-   "target_stock": 155.81
-  },
-  {
    "id": "20261123-scalp-IWM-C:stop",
    "play_id": "20261123-scalp-IWM-C",
    "symbol": "IWM",
    "kind": "stop",
    "status": "active",
-   "expires": "2026-11-27",
+   "expires": "2026-12-04",
    "module": "scalp",
    "setup": "pm_break",
    "direction": "call",
@@ -113,7 +163,7 @@
     "type": "below",
     "price": 261.92
    },
-   "plan": "IWM long 45 @ 264.45 still open (4th day; Alpaca 08:13 ET shows still long 45) in Alpaca after the 11/23 15:05 time_exit; bracket legs canceled, no protective orders. Alert only."
+   "plan": "IWM long 45 @ 264.45 still open in Alpaca since 11/23 (bracket legs canceled, no protective orders; held over the weekend). Alert only."
   },
   {
    "id": "20261123-scalp-IWM-C:target",
@@ -121,7 +171,7 @@
    "symbol": "IWM",
    "kind": "target",
    "status": "active",
-   "expires": "2026-11-27",
+   "expires": "2026-12-04",
    "module": "scalp",
    "setup": "pm_break",
    "direction": "call",
@@ -129,46 +179,21 @@
     "type": "above",
     "price": 269.86
    },
-   "plan": "IWM long 45 @ 264.45 still open (4th day; Alpaca 08:13 ET shows still long 45) in Alpaca after the 11/23 15:05 time_exit; bracket legs canceled, no protective orders. Alert only."
+   "plan": "IWM long 45 @ 264.45 still open in Alpaca since 11/23 (bracket legs canceled, no protective orders; held over the weekend). Alert only."
   },
   {
-   "id": "20261124-swing-NFLX-P:entry",
-   "play_id": "20261124-swing-NFLX-P",
-   "symbol": "NFLX",
+   "id": "20261127-swing-LLY-C:entry",
+   "play_id": "20261127-swing-LLY-C",
+   "symbol": "LLY",
    "kind": "entry",
    "status": "active",
-   "expires": "2026-12-02",
+   "expires": "2026-12-04",
    "module": "swing",
-   "setup": "breakdown",
-   "direction": "put",
-   "trigger": {
-    "type": "below",
-    "price": 56.55
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "below",
-    "max_extension_pct": 0.025,
-    "spy_block_pct": 0.0075,
-    "skip_first_minutes": 5
-   },
-   "plan": "NFLX short shares (breakdown, individual laggard), trigger < 56.55, stk stop 59.75, target 50.15",
-   "stock_stop": 59.75,
-   "target_stock": 50.15
-  },
-  {
-   "id": "20261125-swing-PGR-C:entry",
-   "play_id": "20261125-swing-PGR-C",
-   "symbol": "PGR",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-12-03",
-   "module": "swing",
-   "setup": "breakout",
+   "setup": "pullback",
    "direction": "call",
    "trigger": {
     "type": "above",
-    "price": 241.03
+    "price": 1404.29
    },
    "confirmation": {
     "rvol_min": 1,
@@ -181,364 +206,67 @@
      "hard_block_pct": 0.015
     }
    },
-   "plan": "PGR long shares (breakout, XLF leader), trigger > 241.03, stk stop 224.00, target 275.09",
-   "stock_stop": 224.0,
-   "target_stock": 275.09
+   "plan": "LLY long shares (pullback, XLV leader), trigger > 1404.29, stk stop 1341.00, target 1530.87",
+   "stock_stop": 1341.0,
+   "target_stock": 1530.87
   },
   {
-   "id": "20261125-swing-AAPL-C:entry",
-   "play_id": "20261125-swing-AAPL-C",
-   "symbol": "AAPL",
+   "id": "20261127-swing-WMB-P:entry",
+   "play_id": "20261127-swing-WMB-P",
+   "symbol": "WMB",
    "kind": "entry",
    "status": "active",
-   "expires": "2026-12-03",
+   "expires": "2026-12-04",
    "module": "swing",
-   "setup": "breakout",
-   "direction": "call",
+   "setup": "failed_rally",
+   "direction": "put",
    "trigger": {
-    "type": "above",
-    "price": 360.84
+    "type": "below",
+    "price": 66.78
    },
    "confirmation": {
     "rvol_min": 1,
-    "vwap": "above",
+    "vwap": "below",
     "max_extension_pct": 0.025,
     "spy_block_pct": 0.0075,
-    "skip_first_minutes": 5
+    "skip_first_minutes": 5,
+    "rs_exempt": {
+     "min_move_pct": 0.01,
+     "hard_block_pct": 0.015
+    }
    },
-   "plan": "AAPL long shares (breakout, individual leader), trigger > 360.84, stk stop 340.30, target 401.92",
-   "stock_stop": 340.3,
-   "target_stock": 401.92
+   "plan": "WMB short shares (failed_rally, XLE laggard), trigger < 66.78, stk stop 67.95, target 64.44",
+   "stock_stop": 67.95,
+   "target_stock": 64.44
   },
   {
-   "id": "20261127-scalp-SPY-C:entry",
-   "play_id": "20261127-scalp-SPY-C",
-   "symbol": "SPY",
+   "id": "20261127-swing-OKE-P:entry",
+   "play_id": "20261127-swing-OKE-P",
+   "symbol": "OKE",
    "kind": "entry",
    "status": "active",
-   "expires": "2026-11-27",
-   "module": "scalp",
-   "setup": "pm_break",
-   "direction": "call",
+   "expires": "2026-12-04",
+   "module": "swing",
+   "setup": "failed_rally",
+   "direction": "put",
    "trigger": {
-    "type": "above",
-    "price": 731.26
+    "type": "below",
+    "price": 86.99
    },
    "confirmation": {
-    "rvol_min": 1.0,
-    "vwap": "above",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0,
-    "skip_first_minutes": 5
+    "rvol_min": 1,
+    "vwap": "below",
+    "max_extension_pct": 0.025,
+    "spy_block_pct": 0.0075,
+    "skip_first_minutes": 5,
+    "rs_exempt": {
+     "min_move_pct": 0.01,
+     "hard_block_pct": 0.015
+    }
    },
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "SPY-20261127",
-   "plan": "SPY long shares (pm_break), trigger > 731.26, stk stop 723.95, target 745.88",
-   "stock_stop": 723.95,
-   "target_stock": 745.88
-  },
-  {
-   "id": "20261127-scalp-QQQ-C:entry",
-   "play_id": "20261127-scalp-QQQ-C",
-   "symbol": "QQQ",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-27",
-   "module": "scalp",
-   "setup": "pm_break",
-   "direction": "call",
-   "trigger": {
-    "type": "above",
-    "price": 652.35
-   },
-   "confirmation": {
-    "rvol_min": 1.0,
-    "vwap": "above",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0,
-    "skip_first_minutes": 5
-   },
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "QQQ-20261127",
-   "plan": "QQQ long shares (pm_break), trigger > 652.35, stk stop 645.83, target 665.39",
-   "stock_stop": 645.83,
-   "target_stock": 665.39
-  },
-  {
-   "id": "20261127-scalp-BABA-C:entry",
-   "play_id": "20261127-scalp-BABA-C",
-   "symbol": "BABA",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-27",
-   "module": "scalp",
-   "setup": "pm_break",
-   "direction": "call",
-   "trigger": {
-    "type": "above",
-    "price": 90.71
-   },
-   "confirmation": {
-    "rvol_min": 1.0,
-    "vwap": "above",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0,
-    "skip_first_minutes": 5
-   },
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "BABA-20261127",
-   "plan": "BABA long shares (pm_break), trigger > 90.71, stk stop 89.8, target 92.53",
-   "stock_stop": 89.8,
-   "target_stock": 92.53
-  },
-  {
-   "id": "20261127-scalp-BABA-C-orb:entry",
-   "play_id": "20261127-scalp-BABA-C-orb",
-   "symbol": "BABA",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-27",
-   "module": "scalp",
-   "setup": "orb",
-   "direction": "call",
-   "trigger": {
-    "type": "orb_high",
-    "minutes": 30
-   },
-   "confirmation": {
-    "rvol_min": 1.0,
-    "vwap": "above",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0,
-    "skip_first_minutes": 5
-   },
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "BABA-20261127",
-   "plan": "BABA long shares (orb 30m high), stop 1% / 2R target"
-  },
-  {
-   "id": "20261127-scalp-DELL-C:entry",
-   "play_id": "20261127-scalp-DELL-C",
-   "symbol": "DELL",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-27",
-   "module": "scalp",
-   "setup": "pm_break",
-   "direction": "call",
-   "trigger": {
-    "type": "above",
-    "price": 319.51
-   },
-   "confirmation": {
-    "rvol_min": 1.0,
-    "vwap": "above",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0,
-    "skip_first_minutes": 5
-   },
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "DELL-20261127",
-   "plan": "DELL long shares (pm_break), trigger > 319.51, stk stop 316.31, target 325.91",
-   "stock_stop": 316.31,
-   "target_stock": 325.91,
-   "track_only": true
-  },
-  {
-   "id": "20261127-scalp-BE-C:entry",
-   "play_id": "20261127-scalp-BE-C",
-   "symbol": "BE",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-27",
-   "module": "scalp",
-   "setup": "pm_break",
-   "direction": "call",
-   "trigger": {
-    "type": "above",
-    "price": 168.01
-   },
-   "confirmation": {
-    "rvol_min": 1.0,
-    "vwap": "above",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0,
-    "skip_first_minutes": 5
-   },
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "BE-20261127",
-   "plan": "BE long shares (pm_break), trigger > 168.01, stk stop 166.33, target 171.37",
-   "stock_stop": 166.33,
-   "target_stock": 171.37
-  },
-  {
-   "id": "20261127-scalp-MSTR-C:entry",
-   "play_id": "20261127-scalp-MSTR-C",
-   "symbol": "MSTR",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-27",
-   "module": "scalp",
-   "setup": "pm_break",
-   "direction": "call",
-   "trigger": {
-    "type": "above",
-    "price": 85.68
-   },
-   "confirmation": {
-    "rvol_min": 1.0,
-    "vwap": "above",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0,
-    "skip_first_minutes": 5
-   },
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "MSTR-20261127",
-   "plan": "MSTR long shares (pm_break), trigger > 85.68, stk stop 84.82, target 87.4",
-   "stock_stop": 84.82,
-   "target_stock": 87.4
-  },
-  {
-   "id": "20261127-scalp-MSTR-C-orb:entry",
-   "play_id": "20261127-scalp-MSTR-C-orb",
-   "symbol": "MSTR",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-27",
-   "module": "scalp",
-   "setup": "orb",
-   "direction": "call",
-   "trigger": {
-    "type": "orb_high",
-    "minutes": 30
-   },
-   "confirmation": {
-    "rvol_min": 1.0,
-    "vwap": "above",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0,
-    "skip_first_minutes": 5
-   },
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "MSTR-20261127",
-   "plan": "MSTR long shares (orb 30m high), stop 1% / 2R target"
-  },
-  {
-   "id": "20261127-scalp-CRWV-C:entry",
-   "play_id": "20261127-scalp-CRWV-C",
-   "symbol": "CRWV",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-27",
-   "module": "scalp",
-   "setup": "pm_break",
-   "direction": "call",
-   "trigger": {
-    "type": "above",
-    "price": 46.01
-   },
-   "confirmation": {
-    "rvol_min": 1.0,
-    "vwap": "above",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0,
-    "skip_first_minutes": 5
-   },
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "CRWV-20261127",
-   "plan": "CRWV long shares (pm_break), trigger > 46.01, stk stop 45.55, target 46.93",
-   "stock_stop": 45.55,
-   "target_stock": 46.93
+   "plan": "OKE short shares (failed_rally, XLE laggard), trigger < 86.99, stk stop 88.60, target 83.77",
+   "stock_stop": 88.6,
+   "target_stock": 83.77
   }
  ],
  "scan": {
