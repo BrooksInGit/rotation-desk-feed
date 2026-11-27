@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-11-25T21:50:00Z",
- "source": "evening run 2026-11-25",
+ "updated_at": "2026-11-27T14:05:00Z",
+ "source": "pre-market brief 2026-11-27",
  "slippage_frac": 0.25,
  "exit_rules": {
   "scalp": {
@@ -113,7 +113,7 @@
     "type": "below",
     "price": 261.92
    },
-   "plan": "IWM long 45 @ 264.45 still open (3rd night) in Alpaca after the 11/23 15:05 time_exit; bracket legs canceled, no protective orders. Alert only."
+   "plan": "IWM long 45 @ 264.45 still open (4th day; Alpaca 08:13 ET shows still long 45) in Alpaca after the 11/23 15:05 time_exit; bracket legs canceled, no protective orders. Alert only."
   },
   {
    "id": "20261123-scalp-IWM-C:target",
@@ -129,7 +129,7 @@
     "type": "above",
     "price": 269.86
    },
-   "plan": "IWM long 45 @ 264.45 still open (3rd night) in Alpaca after the 11/23 15:05 time_exit; bracket legs canceled, no protective orders. Alert only."
+   "plan": "IWM long 45 @ 264.45 still open (4th day; Alpaca 08:13 ET shows still long 45) in Alpaca after the 11/23 15:05 time_exit; bracket legs canceled, no protective orders. Alert only."
   },
   {
    "id": "20261124-swing-ROIV-C:entry",
@@ -263,6 +263,1070 @@
    "plan": "AAPL long shares (breakout, individual leader), trigger > 360.84, stk stop 340.30, target 401.92",
    "stock_stop": 340.3,
    "target_stock": 401.92
+  },
+  {
+   "id": "20261127-scalp-SPY-C:entry",
+   "play_id": "20261127-scalp-SPY-C",
+   "symbol": "SPY",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-27",
+   "module": "scalp",
+   "setup": "pm_break",
+   "direction": "call",
+   "trigger": {
+    "type": "above",
+    "price": 731.26
+   },
+   "confirmation": {
+    "rvol_min": 1.0,
+    "vwap": "above",
+    "max_extension_pct": 0.01,
+    "spy_block_pct": 0.0,
+    "skip_first_minutes": 5
+   },
+   "contract_rule": {
+    "dte": [
+     0,
+     7
+    ],
+    "delta": [
+     0.4,
+     0.6
+    ],
+    "max_spread_pct": 0.05
+   },
+   "pair": "SPY-20261127",
+   "plan": "SPY long shares (pm_break), trigger > 731.26, stk stop 723.95, target 745.88",
+   "stock_stop": 723.95,
+   "target_stock": 745.88
+  },
+  {
+   "id": "20261127-scalp-SPY-C-orb:entry",
+   "play_id": "20261127-scalp-SPY-C-orb",
+   "symbol": "SPY",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-27",
+   "module": "scalp",
+   "setup": "orb",
+   "direction": "call",
+   "trigger": {
+    "type": "orb_high",
+    "minutes": 30
+   },
+   "confirmation": {
+    "rvol_min": 1.0,
+    "vwap": "above",
+    "max_extension_pct": 0.01,
+    "spy_block_pct": 0.0,
+    "skip_first_minutes": 5
+   },
+   "contract_rule": {
+    "dte": [
+     0,
+     7
+    ],
+    "delta": [
+     0.4,
+     0.6
+    ],
+    "max_spread_pct": 0.05
+   },
+   "pair": "SPY-20261127",
+   "plan": "SPY long shares (orb 30m high), stop 1% / 2R target"
+  },
+  {
+   "id": "20261127-scalp-SPY-C-reclaim:entry",
+   "play_id": "20261127-scalp-SPY-C-reclaim",
+   "symbol": "SPY",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-27",
+   "module": "scalp",
+   "setup": "level_reclaim",
+   "direction": "call",
+   "trigger": {
+    "type": "reclaim_above",
+    "zone": [
+     717.61,
+     723.37
+    ],
+    "window": [
+     "09:45",
+     "11:30"
+    ]
+   },
+   "confirmation": {
+    "rvol_min": 1.0,
+    "vwap": "above",
+    "max_extension_pct": 0.01,
+    "spy_block_pct": 0.0075
+   },
+   "contract_rule": {
+    "dte": [
+     0,
+     7
+    ],
+    "delta": [
+     0.4,
+     0.6
+    ],
+    "max_spread_pct": 0.05
+   },
+   "stock_stop": 715.46,
+   "target_stock": 739.19,
+   "track_only": true,
+   "plan": "TRACKED SPY reclaim of shelf(n4) 717.61-723.37, stop 715.46, target 739.19"
+  },
+  {
+   "id": "20261127-scalp-QQQ-C:entry",
+   "play_id": "20261127-scalp-QQQ-C",
+   "symbol": "QQQ",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-27",
+   "module": "scalp",
+   "setup": "pm_break",
+   "direction": "call",
+   "trigger": {
+    "type": "above",
+    "price": 652.35
+   },
+   "confirmation": {
+    "rvol_min": 1.0,
+    "vwap": "above",
+    "max_extension_pct": 0.01,
+    "spy_block_pct": 0.0,
+    "skip_first_minutes": 5
+   },
+   "contract_rule": {
+    "dte": [
+     0,
+     7
+    ],
+    "delta": [
+     0.4,
+     0.6
+    ],
+    "max_spread_pct": 0.05
+   },
+   "pair": "QQQ-20261127",
+   "plan": "QQQ long shares (pm_break), trigger > 652.35, stk stop 645.83, target 665.39",
+   "stock_stop": 645.83,
+   "target_stock": 665.39
+  },
+  {
+   "id": "20261127-scalp-QQQ-C-orb:entry",
+   "play_id": "20261127-scalp-QQQ-C-orb",
+   "symbol": "QQQ",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-27",
+   "module": "scalp",
+   "setup": "orb",
+   "direction": "call",
+   "trigger": {
+    "type": "orb_high",
+    "minutes": 30
+   },
+   "confirmation": {
+    "rvol_min": 1.0,
+    "vwap": "above",
+    "max_extension_pct": 0.01,
+    "spy_block_pct": 0.0,
+    "skip_first_minutes": 5
+   },
+   "contract_rule": {
+    "dte": [
+     0,
+     7
+    ],
+    "delta": [
+     0.4,
+     0.6
+    ],
+    "max_spread_pct": 0.05
+   },
+   "pair": "QQQ-20261127",
+   "plan": "QQQ long shares (orb 30m high), stop 1% / 2R target"
+  },
+  {
+   "id": "20261127-scalp-QQQ-C-reclaim:entry",
+   "play_id": "20261127-scalp-QQQ-C-reclaim",
+   "symbol": "QQQ",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-27",
+   "module": "scalp",
+   "setup": "level_reclaim",
+   "direction": "call",
+   "trigger": {
+    "type": "reclaim_above",
+    "zone": [
+     642.07,
+     647.23
+    ],
+    "window": [
+     "09:45",
+     "11:30"
+    ]
+   },
+   "confirmation": {
+    "rvol_min": 1.0,
+    "vwap": "above",
+    "max_extension_pct": 0.01,
+    "spy_block_pct": 0.0075
+   },
+   "contract_rule": {
+    "dte": [
+     0,
+     7
+    ],
+    "delta": [
+     0.4,
+     0.6
+    ],
+    "max_spread_pct": 0.05
+   },
+   "stock_stop": 640.14,
+   "target_stock": 661.41,
+   "track_only": true,
+   "plan": "TRACKED QQQ reclaim of shelf(n5) 642.07-647.23, stop 640.14, target 661.41"
+  },
+  {
+   "id": "20261127-scalp-MU-C:entry",
+   "play_id": "20261127-scalp-MU-C",
+   "symbol": "MU",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-27",
+   "module": "scalp",
+   "setup": "pm_break",
+   "direction": "call",
+   "trigger": {
+    "type": "above",
+    "price": 650.41
+   },
+   "confirmation": {
+    "rvol_min": 1.0,
+    "vwap": "above",
+    "max_extension_pct": 0.01,
+    "spy_block_pct": 0.0,
+    "skip_first_minutes": 5
+   },
+   "contract_rule": {
+    "dte": [
+     0,
+     7
+    ],
+    "delta": [
+     0.4,
+     0.6
+    ],
+    "max_spread_pct": 0.05
+   },
+   "pair": "MU-20261127",
+   "plan": "MU long shares (pm_break), trigger > 650.41, stk stop 643.91, target 663.41",
+   "stock_stop": 643.91,
+   "target_stock": 663.41
+  },
+  {
+   "id": "20261127-scalp-MU-C-orb:entry",
+   "play_id": "20261127-scalp-MU-C-orb",
+   "symbol": "MU",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-27",
+   "module": "scalp",
+   "setup": "orb",
+   "direction": "call",
+   "trigger": {
+    "type": "orb_high",
+    "minutes": 30
+   },
+   "confirmation": {
+    "rvol_min": 1.0,
+    "vwap": "above",
+    "max_extension_pct": 0.01,
+    "spy_block_pct": 0.0,
+    "skip_first_minutes": 5
+   },
+   "contract_rule": {
+    "dte": [
+     0,
+     7
+    ],
+    "delta": [
+     0.4,
+     0.6
+    ],
+    "max_spread_pct": 0.05
+   },
+   "pair": "MU-20261127",
+   "plan": "MU long shares (orb 30m high), stop 1% / 2R target"
+  },
+  {
+   "id": "20261127-scalp-BABA-C:entry",
+   "play_id": "20261127-scalp-BABA-C",
+   "symbol": "BABA",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-27",
+   "module": "scalp",
+   "setup": "pm_break",
+   "direction": "call",
+   "trigger": {
+    "type": "above",
+    "price": 90.71
+   },
+   "confirmation": {
+    "rvol_min": 1.0,
+    "vwap": "above",
+    "max_extension_pct": 0.01,
+    "spy_block_pct": 0.0,
+    "skip_first_minutes": 5
+   },
+   "contract_rule": {
+    "dte": [
+     0,
+     7
+    ],
+    "delta": [
+     0.4,
+     0.6
+    ],
+    "max_spread_pct": 0.05
+   },
+   "pair": "BABA-20261127",
+   "plan": "BABA long shares (pm_break), trigger > 90.71, stk stop 89.8, target 92.53",
+   "stock_stop": 89.8,
+   "target_stock": 92.53
+  },
+  {
+   "id": "20261127-scalp-BABA-C-orb:entry",
+   "play_id": "20261127-scalp-BABA-C-orb",
+   "symbol": "BABA",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-27",
+   "module": "scalp",
+   "setup": "orb",
+   "direction": "call",
+   "trigger": {
+    "type": "orb_high",
+    "minutes": 30
+   },
+   "confirmation": {
+    "rvol_min": 1.0,
+    "vwap": "above",
+    "max_extension_pct": 0.01,
+    "spy_block_pct": 0.0,
+    "skip_first_minutes": 5
+   },
+   "contract_rule": {
+    "dte": [
+     0,
+     7
+    ],
+    "delta": [
+     0.4,
+     0.6
+    ],
+    "max_spread_pct": 0.05
+   },
+   "pair": "BABA-20261127",
+   "plan": "BABA long shares (orb 30m high), stop 1% / 2R target"
+  },
+  {
+   "id": "20261127-scalp-BABA-C-reclaim:entry",
+   "play_id": "20261127-scalp-BABA-C-reclaim",
+   "symbol": "BABA",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-27",
+   "module": "scalp",
+   "setup": "level_reclaim",
+   "direction": "call",
+   "trigger": {
+    "type": "reclaim_above",
+    "zone": [
+     87.94,
+     88.64
+    ],
+    "window": [
+     "09:45",
+     "11:30"
+    ]
+   },
+   "confirmation": {
+    "rvol_min": 1.0,
+    "vwap": "above",
+    "max_extension_pct": 0.01,
+    "spy_block_pct": 0.0075
+   },
+   "contract_rule": {
+    "dte": [
+     0,
+     7
+    ],
+    "delta": [
+     0.4,
+     0.6
+    ],
+    "max_spread_pct": 0.05
+   },
+   "stock_stop": 87.68,
+   "target_stock": 90.7,
+   "track_only": true,
+   "plan": "TRACKED BABA reclaim of shelf(n3) 87.94-88.64, stop 87.68, target 90.7"
+  },
+  {
+   "id": "20261127-scalp-DELL-C:entry",
+   "play_id": "20261127-scalp-DELL-C",
+   "symbol": "DELL",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-27",
+   "module": "scalp",
+   "setup": "pm_break",
+   "direction": "call",
+   "trigger": {
+    "type": "above",
+    "price": 319.51
+   },
+   "confirmation": {
+    "rvol_min": 1.0,
+    "vwap": "above",
+    "max_extension_pct": 0.01,
+    "spy_block_pct": 0.0,
+    "skip_first_minutes": 5
+   },
+   "contract_rule": {
+    "dte": [
+     0,
+     7
+    ],
+    "delta": [
+     0.4,
+     0.6
+    ],
+    "max_spread_pct": 0.05
+   },
+   "pair": "DELL-20261127",
+   "plan": "DELL long shares (pm_break), trigger > 319.51, stk stop 316.31, target 325.91",
+   "stock_stop": 316.31,
+   "target_stock": 325.91
+  },
+  {
+   "id": "20261127-scalp-DELL-C-orb:entry",
+   "play_id": "20261127-scalp-DELL-C-orb",
+   "symbol": "DELL",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-27",
+   "module": "scalp",
+   "setup": "orb",
+   "direction": "call",
+   "trigger": {
+    "type": "orb_high",
+    "minutes": 30
+   },
+   "confirmation": {
+    "rvol_min": 1.0,
+    "vwap": "above",
+    "max_extension_pct": 0.01,
+    "spy_block_pct": 0.0,
+    "skip_first_minutes": 5
+   },
+   "contract_rule": {
+    "dte": [
+     0,
+     7
+    ],
+    "delta": [
+     0.4,
+     0.6
+    ],
+    "max_spread_pct": 0.05
+   },
+   "pair": "DELL-20261127",
+   "plan": "DELL long shares (orb 30m high), stop 1% / 2R target"
+  },
+  {
+   "id": "20261127-scalp-DELL-C-reclaim:entry",
+   "play_id": "20261127-scalp-DELL-C-reclaim",
+   "symbol": "DELL",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-27",
+   "module": "scalp",
+   "setup": "level_reclaim",
+   "direction": "call",
+   "trigger": {
+    "type": "reclaim_above",
+    "zone": [
+     302.39,
+     304.81
+    ],
+    "window": [
+     "09:45",
+     "11:30"
+    ]
+   },
+   "confirmation": {
+    "rvol_min": 1.0,
+    "vwap": "above",
+    "max_extension_pct": 0.01,
+    "spy_block_pct": 0.0075
+   },
+   "contract_rule": {
+    "dte": [
+     0,
+     7
+    ],
+    "delta": [
+     0.4,
+     0.6
+    ],
+    "max_spread_pct": 0.05
+   },
+   "stock_stop": 301.48,
+   "target_stock": 319.5,
+   "track_only": true,
+   "plan": "TRACKED DELL reclaim of shelf(n2) 302.39-304.81, stop 301.48, target 319.5"
+  },
+  {
+   "id": "20261127-scalp-RKLB-C:entry",
+   "play_id": "20261127-scalp-RKLB-C",
+   "symbol": "RKLB",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-27",
+   "module": "scalp",
+   "setup": "pm_break",
+   "direction": "call",
+   "trigger": {
+    "type": "above",
+    "price": 50.91
+   },
+   "confirmation": {
+    "rvol_min": 1.0,
+    "vwap": "above",
+    "max_extension_pct": 0.01,
+    "spy_block_pct": 0.0,
+    "skip_first_minutes": 5
+   },
+   "contract_rule": {
+    "dte": [
+     0,
+     7
+    ],
+    "delta": [
+     0.4,
+     0.6
+    ],
+    "max_spread_pct": 0.05
+   },
+   "pair": "RKLB-20261127",
+   "plan": "RKLB long shares (pm_break), trigger > 50.91, stk stop 50.4, target 51.93",
+   "stock_stop": 50.4,
+   "target_stock": 51.93
+  },
+  {
+   "id": "20261127-scalp-RKLB-C-orb:entry",
+   "play_id": "20261127-scalp-RKLB-C-orb",
+   "symbol": "RKLB",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-27",
+   "module": "scalp",
+   "setup": "orb",
+   "direction": "call",
+   "trigger": {
+    "type": "orb_high",
+    "minutes": 30
+   },
+   "confirmation": {
+    "rvol_min": 1.0,
+    "vwap": "above",
+    "max_extension_pct": 0.01,
+    "spy_block_pct": 0.0,
+    "skip_first_minutes": 5
+   },
+   "contract_rule": {
+    "dte": [
+     0,
+     7
+    ],
+    "delta": [
+     0.4,
+     0.6
+    ],
+    "max_spread_pct": 0.05
+   },
+   "pair": "RKLB-20261127",
+   "plan": "RKLB long shares (orb 30m high), stop 1% / 2R target"
+  },
+  {
+   "id": "20261127-scalp-RKLB-C-reclaim:entry",
+   "play_id": "20261127-scalp-RKLB-C-reclaim",
+   "symbol": "RKLB",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-27",
+   "module": "scalp",
+   "setup": "level_reclaim",
+   "direction": "call",
+   "trigger": {
+    "type": "reclaim_above",
+    "zone": [
+     48.07,
+     48.45
+    ],
+    "window": [
+     "09:45",
+     "11:30"
+    ]
+   },
+   "confirmation": {
+    "rvol_min": 1.0,
+    "vwap": "above",
+    "max_extension_pct": 0.01,
+    "spy_block_pct": 0.0075
+   },
+   "contract_rule": {
+    "dte": [
+     0,
+     7
+    ],
+    "delta": [
+     0.4,
+     0.6
+    ],
+    "max_spread_pct": 0.05
+   },
+   "stock_stop": 47.93,
+   "target_stock": 50.9,
+   "track_only": true,
+   "plan": "TRACKED RKLB reclaim of shelf(n4) 48.07-48.45, stop 47.93, target 50.9"
+  },
+  {
+   "id": "20261127-scalp-BE-C:entry",
+   "play_id": "20261127-scalp-BE-C",
+   "symbol": "BE",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-27",
+   "module": "scalp",
+   "setup": "pm_break",
+   "direction": "call",
+   "trigger": {
+    "type": "above",
+    "price": 168.01
+   },
+   "confirmation": {
+    "rvol_min": 1.0,
+    "vwap": "above",
+    "max_extension_pct": 0.01,
+    "spy_block_pct": 0.0,
+    "skip_first_minutes": 5
+   },
+   "contract_rule": {
+    "dte": [
+     0,
+     7
+    ],
+    "delta": [
+     0.4,
+     0.6
+    ],
+    "max_spread_pct": 0.05
+   },
+   "pair": "BE-20261127",
+   "plan": "BE long shares (pm_break), trigger > 168.01, stk stop 166.33, target 171.37",
+   "stock_stop": 166.33,
+   "target_stock": 171.37
+  },
+  {
+   "id": "20261127-scalp-BE-C-orb:entry",
+   "play_id": "20261127-scalp-BE-C-orb",
+   "symbol": "BE",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-27",
+   "module": "scalp",
+   "setup": "orb",
+   "direction": "call",
+   "trigger": {
+    "type": "orb_high",
+    "minutes": 30
+   },
+   "confirmation": {
+    "rvol_min": 1.0,
+    "vwap": "above",
+    "max_extension_pct": 0.01,
+    "spy_block_pct": 0.0,
+    "skip_first_minutes": 5
+   },
+   "contract_rule": {
+    "dte": [
+     0,
+     7
+    ],
+    "delta": [
+     0.4,
+     0.6
+    ],
+    "max_spread_pct": 0.05
+   },
+   "pair": "BE-20261127",
+   "plan": "BE long shares (orb 30m high), stop 1% / 2R target"
+  },
+  {
+   "id": "20261127-scalp-BE-C-reclaim:entry",
+   "play_id": "20261127-scalp-BE-C-reclaim",
+   "symbol": "BE",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-27",
+   "module": "scalp",
+   "setup": "level_reclaim",
+   "direction": "call",
+   "trigger": {
+    "type": "reclaim_above",
+    "zone": [
+     162.39,
+     163.69
+    ],
+    "window": [
+     "09:45",
+     "11:30"
+    ]
+   },
+   "confirmation": {
+    "rvol_min": 1.0,
+    "vwap": "above",
+    "max_extension_pct": 0.01,
+    "spy_block_pct": 0.0075
+   },
+   "contract_rule": {
+    "dte": [
+     0,
+     7
+    ],
+    "delta": [
+     0.4,
+     0.6
+    ],
+    "max_spread_pct": 0.05
+   },
+   "stock_stop": 161.9,
+   "target_stock": 168.0,
+   "track_only": true,
+   "plan": "TRACKED BE reclaim of shelf(n3) 162.39-163.69, stop 161.9, target 168.0"
+  },
+  {
+   "id": "20261127-scalp-MSTR-C:entry",
+   "play_id": "20261127-scalp-MSTR-C",
+   "symbol": "MSTR",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-27",
+   "module": "scalp",
+   "setup": "pm_break",
+   "direction": "call",
+   "trigger": {
+    "type": "above",
+    "price": 85.68
+   },
+   "confirmation": {
+    "rvol_min": 1.0,
+    "vwap": "above",
+    "max_extension_pct": 0.01,
+    "spy_block_pct": 0.0,
+    "skip_first_minutes": 5
+   },
+   "contract_rule": {
+    "dte": [
+     0,
+     7
+    ],
+    "delta": [
+     0.4,
+     0.6
+    ],
+    "max_spread_pct": 0.05
+   },
+   "pair": "MSTR-20261127",
+   "plan": "MSTR long shares (pm_break), trigger > 85.68, stk stop 84.82, target 87.4",
+   "stock_stop": 84.82,
+   "target_stock": 87.4
+  },
+  {
+   "id": "20261127-scalp-MSTR-C-orb:entry",
+   "play_id": "20261127-scalp-MSTR-C-orb",
+   "symbol": "MSTR",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-27",
+   "module": "scalp",
+   "setup": "orb",
+   "direction": "call",
+   "trigger": {
+    "type": "orb_high",
+    "minutes": 30
+   },
+   "confirmation": {
+    "rvol_min": 1.0,
+    "vwap": "above",
+    "max_extension_pct": 0.01,
+    "spy_block_pct": 0.0,
+    "skip_first_minutes": 5
+   },
+   "contract_rule": {
+    "dte": [
+     0,
+     7
+    ],
+    "delta": [
+     0.4,
+     0.6
+    ],
+    "max_spread_pct": 0.05
+   },
+   "pair": "MSTR-20261127",
+   "plan": "MSTR long shares (orb 30m high), stop 1% / 2R target"
+  },
+  {
+   "id": "20261127-scalp-MSTR-C-reclaim:entry",
+   "play_id": "20261127-scalp-MSTR-C-reclaim",
+   "symbol": "MSTR",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-27",
+   "module": "scalp",
+   "setup": "level_reclaim",
+   "direction": "call",
+   "trigger": {
+    "type": "reclaim_above",
+    "zone": [
+     80.7,
+     81.34
+    ],
+    "window": [
+     "09:45",
+     "11:30"
+    ]
+   },
+   "confirmation": {
+    "rvol_min": 1.0,
+    "vwap": "above",
+    "max_extension_pct": 0.01,
+    "spy_block_pct": 0.0075
+   },
+   "contract_rule": {
+    "dte": [
+     0,
+     7
+    ],
+    "delta": [
+     0.4,
+     0.6
+    ],
+    "max_spread_pct": 0.05
+   },
+   "stock_stop": 80.46,
+   "target_stock": 85.67,
+   "track_only": true,
+   "plan": "TRACKED MSTR reclaim of pdh 80.7-81.34, stop 80.46, target 85.67"
+  },
+  {
+   "id": "20261127-scalp-CRWV-C:entry",
+   "play_id": "20261127-scalp-CRWV-C",
+   "symbol": "CRWV",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-27",
+   "module": "scalp",
+   "setup": "pm_break",
+   "direction": "call",
+   "trigger": {
+    "type": "above",
+    "price": 46.01
+   },
+   "confirmation": {
+    "rvol_min": 1.0,
+    "vwap": "above",
+    "max_extension_pct": 0.01,
+    "spy_block_pct": 0.0,
+    "skip_first_minutes": 5
+   },
+   "contract_rule": {
+    "dte": [
+     0,
+     7
+    ],
+    "delta": [
+     0.4,
+     0.6
+    ],
+    "max_spread_pct": 0.05
+   },
+   "pair": "CRWV-20261127",
+   "plan": "CRWV long shares (pm_break), trigger > 46.01, stk stop 45.55, target 46.93",
+   "stock_stop": 45.55,
+   "target_stock": 46.93
+  },
+  {
+   "id": "20261127-scalp-CRWV-C-orb:entry",
+   "play_id": "20261127-scalp-CRWV-C-orb",
+   "symbol": "CRWV",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-27",
+   "module": "scalp",
+   "setup": "orb",
+   "direction": "call",
+   "trigger": {
+    "type": "orb_high",
+    "minutes": 30
+   },
+   "confirmation": {
+    "rvol_min": 1.0,
+    "vwap": "above",
+    "max_extension_pct": 0.01,
+    "spy_block_pct": 0.0,
+    "skip_first_minutes": 5
+   },
+   "contract_rule": {
+    "dte": [
+     0,
+     7
+    ],
+    "delta": [
+     0.4,
+     0.6
+    ],
+    "max_spread_pct": 0.05
+   },
+   "pair": "CRWV-20261127",
+   "plan": "CRWV long shares (orb 30m high), stop 1% / 2R target"
+  },
+  {
+   "id": "20261127-scalp-CRWV-C-reclaim:entry",
+   "play_id": "20261127-scalp-CRWV-C-reclaim",
+   "symbol": "CRWV",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-27",
+   "module": "scalp",
+   "setup": "level_reclaim",
+   "direction": "call",
+   "trigger": {
+    "type": "reclaim_above",
+    "zone": [
+     43.01,
+     43.35
+    ],
+    "window": [
+     "09:45",
+     "11:30"
+    ]
+   },
+   "confirmation": {
+    "rvol_min": 1.0,
+    "vwap": "above",
+    "max_extension_pct": 0.01,
+    "spy_block_pct": 0.0075
+   },
+   "contract_rule": {
+    "dte": [
+     0,
+     7
+    ],
+    "delta": [
+     0.4,
+     0.6
+    ],
+    "max_spread_pct": 0.05
+   },
+   "stock_stop": 42.88,
+   "target_stock": 46.0,
+   "track_only": true,
+   "plan": "TRACKED CRWV reclaim of shelf(n3) 43.01-43.35, stop 42.88, target 46.0"
+  },
+  {
+   "id": "20261127-scalp-IONQ-C:entry",
+   "play_id": "20261127-scalp-IONQ-C",
+   "symbol": "IONQ",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-27",
+   "module": "scalp",
+   "setup": "pm_break",
+   "direction": "call",
+   "trigger": {
+    "type": "above",
+    "price": 25.31
+   },
+   "confirmation": {
+    "rvol_min": 1.0,
+    "vwap": "above",
+    "max_extension_pct": 0.01,
+    "spy_block_pct": 0.0,
+    "skip_first_minutes": 5
+   },
+   "contract_rule": {
+    "dte": [
+     0,
+     7
+    ],
+    "delta": [
+     0.4,
+     0.6
+    ],
+    "max_spread_pct": 0.05
+   },
+   "pair": "IONQ-20261127",
+   "plan": "IONQ long shares (pm_break), trigger > 25.31, stk stop 25.06, target 25.81",
+   "stock_stop": 25.06,
+   "target_stock": 25.81
+  },
+  {
+   "id": "20261127-scalp-IONQ-C-orb:entry",
+   "play_id": "20261127-scalp-IONQ-C-orb",
+   "symbol": "IONQ",
+   "kind": "entry",
+   "status": "active",
+   "expires": "2026-11-27",
+   "module": "scalp",
+   "setup": "orb",
+   "direction": "call",
+   "trigger": {
+    "type": "orb_high",
+    "minutes": 30
+   },
+   "confirmation": {
+    "rvol_min": 1.0,
+    "vwap": "above",
+    "max_extension_pct": 0.01,
+    "spy_block_pct": 0.0,
+    "skip_first_minutes": 5
+   },
+   "contract_rule": {
+    "dte": [
+     0,
+     7
+    ],
+    "delta": [
+     0.4,
+     0.6
+    ],
+    "max_spread_pct": 0.05
+   },
+   "pair": "IONQ-20261127",
+   "plan": "IONQ long shares (orb 30m high), stop 1% / 2R target"
   }
  ],
  "scan": {
@@ -1425,30 +2489,16 @@
    }
   ],
   "exclude": [
-   "ADXN",
-   "BMA",
-   "BZ",
-   "CLGN",
-   "DE",
-   "DSX",
-   "FINV",
-   "GASS",
-   "GDS",
-   "GLMD",
-   "GOTU",
-   "HDL",
-   "IMKTA",
-   "LI",
-   "MENS",
-   "NNOX",
-   "OMSE",
-   "PLSM",
-   "PSNY",
-   "VSA",
-   "YSG"
+   "KALA",
+   "LCFY",
+   "LESLQ",
+   "LEXX",
+   "SGRX",
+   "TGL",
+   "XYF"
   ],
   "params": {
-   "rvol_min": 1,
+   "rvol_min": 1.0,
    "base_minutes": 30,
    "max_base_depth_pct": 1.5,
    "min_move_pct": 1,
