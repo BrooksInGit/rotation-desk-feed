@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-11-27T17:14:00Z",
- "source": "hourly check 2026-11-27 12:05 ET",
+ "updated_at": "2026-11-27T18:15:00Z",
+ "source": "hourly check 2026-11-27 13:05 ET",
  "slippage_frac": 0.25,
  "exit_rules": {
   "scalp": {
@@ -186,35 +186,6 @@
    "target_stock": 275.09
   },
   {
-   "id": "20261125-swing-WMT-C:entry",
-   "play_id": "20261125-swing-WMT-C",
-   "symbol": "WMT",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-12-03",
-   "module": "swing",
-   "setup": "breakout",
-   "direction": "call",
-   "trigger": {
-    "type": "above",
-    "price": 132.89
-   },
-   "confirmation": {
-    "rvol_min": 1,
-    "vwap": "above",
-    "max_extension_pct": 0.025,
-    "spy_block_pct": 0.0075,
-    "skip_first_minutes": 5,
-    "rs_exempt": {
-     "min_move_pct": 0.01,
-     "hard_block_pct": 0.015
-    }
-   },
-   "plan": "WMT long shares (breakout, XLP leader), trigger > 132.89, stk stop 123.00, target 152.67",
-   "stock_stop": 123.0,
-   "target_stock": 152.67
-  },
-  {
    "id": "20261125-swing-AAPL-C:entry",
    "play_id": "20261125-swing-AAPL-C",
    "symbol": "AAPL",
@@ -312,43 +283,6 @@
    "plan": "QQQ long shares (pm_break), trigger > 652.35, stk stop 645.83, target 665.39",
    "stock_stop": 645.83,
    "target_stock": 665.39
-  },
-  {
-   "id": "20261127-scalp-MU-C:entry",
-   "play_id": "20261127-scalp-MU-C",
-   "symbol": "MU",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-27",
-   "module": "scalp",
-   "setup": "pm_break",
-   "direction": "call",
-   "trigger": {
-    "type": "above",
-    "price": 650.41
-   },
-   "confirmation": {
-    "rvol_min": 1.0,
-    "vwap": "above",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0,
-    "skip_first_minutes": 5
-   },
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "MU-20261127",
-   "plan": "MU long shares (pm_break), trigger > 650.41, stk stop 643.91, target 663.41",
-   "stock_stop": 643.91,
-   "target_stock": 663.41
   },
   {
    "id": "20261127-scalp-BABA-C:entry",
@@ -459,43 +393,6 @@
    "stock_stop": 316.31,
    "target_stock": 325.91,
    "track_only": true
-  },
-  {
-   "id": "20261127-scalp-RKLB-C:entry",
-   "play_id": "20261127-scalp-RKLB-C",
-   "symbol": "RKLB",
-   "kind": "entry",
-   "status": "active",
-   "expires": "2026-11-27",
-   "module": "scalp",
-   "setup": "pm_break",
-   "direction": "call",
-   "trigger": {
-    "type": "above",
-    "price": 50.91
-   },
-   "confirmation": {
-    "rvol_min": 1.0,
-    "vwap": "above",
-    "max_extension_pct": 0.01,
-    "spy_block_pct": 0.0,
-    "skip_first_minutes": 5
-   },
-   "contract_rule": {
-    "dte": [
-     0,
-     7
-    ],
-    "delta": [
-     0.4,
-     0.6
-    ],
-    "max_spread_pct": 0.05
-   },
-   "pair": "RKLB-20261127",
-   "plan": "RKLB long shares (pm_break), trigger > 50.91, stk stop 50.4, target 51.93",
-   "stock_stop": 50.4,
-   "target_stock": 51.93
   },
   {
    "id": "20261127-scalp-BE-C:entry",
