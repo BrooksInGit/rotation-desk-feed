@@ -169,6 +169,142 @@ def test_executor_off_without_paper_keys(tmp_path=None):
     assert x.Executor(d, None, "t", "1", lambda e: None).enabled
 
 
+# ---------------------------------------------------------------- live intraday discovery (manual 14)
+def _profile(per_min=1000.0, days=10):
+    return {date(2026, 10, 20 + k): [per_min * (m + 1) for m in range(390)] for k in range(days)}
+
+
+def _break_day(high_at=30, base_lo=104.2, end_min=90, vol=2000):
+    """Rises to 105 at minute `high_at`, then holds in a base above `base_lo` until minute `end_min`."""
+    out = []
+    for m in range(end_min):
+        if m < high_at:
+            px = 100 + 4.5 * m / high_at
+            out.append(bar(9, 30 + m, px, px + 0.2, px - 0.2, px + 0.1, v=vol, vw=px))
+        elif m == high_at:
+            out.append(bar(9, 30 + m, 104.6, 105.0, 104.5, 104.8, v=vol, vw=104.8))
+        else:
+            out.append(bar(9, 30 + m, 104.6, 104.9, base_lo, 104.7, v=vol, vw=104.6))
+    return out
+
+
+def test_scan_movers_group_and_lane():
+    syms = {"NVDA": {"group": "SMH"}, "AMD": {"group": "SMH"}, "SMH": {}, "XBI": {}, "MRVL": {"lane": True},
+            "SPY": {"index": True}, "HOOD": {"group": "XLF"}}
+    moves = {"NVDA": 0.03, "AMD": -0.02, "SMH": 0.012, "XBI": 0.005, "MRVL": -0.04, "SPY": 0.006, "HOOD": 0.05}
+    # defaults: own direction, with SPY's day. SPY is up, so the puts (AMD, MRVL) go; XBI moved < 1%; HOOD excluded
+    got = c.scan_movers(syms, moves, {"HOOD"}, c.scan_params({"params": {"top_n": 3}}))
+    assert [(s, d) for s, d, _ in got] == [("NVDA", "call"), ("SMH", "call"), ("SPY", "call")]
+    # without the SPY rule and with the group rule: AMD is down while SMH is up (skipped); MRVL (lane) counts
+    p = c.scan_params({"params": {"top_n": 3, "with_spy": False, "with_group": True}})
+    got = c.scan_movers(syms, moves, {"HOOD"}, p)
+    assert [(s, d) for s, d, _ in got] == [("MRVL", "put"), ("NVDA", "call"), ("SMH", "call")]
+    assert c.sector_today("call", 0.012) == "agree" and c.sector_today("put", 0.012) == "disagree"
+    assert c.sector_today("put", 0.001) == "flat" and c.sector_today("call", None) is None
+    assert c.snapshot_moves({"X": {"latestTrade": {"p": 110}, "prevDailyBar": {"c": 100}}})["X"] - 0.1 < 1e-9
+
+
+def test_intraday_break_qualifies():
+    p = c.scan_params({})
+    now = datetime(2026, 11, 9, 11, 0, tzinfo=ET)
+    setup, why = c.intraday_break(_break_day(), D, now, "call", p, _profile())
+    assert setup and not why, why
+    assert setup["trigger"] == 105.0 and setup["stop"] == 104.2
+    assert setup["held_min"] == 59 and abs(setup["rvol"] - 2.0) < 1e-9
+
+
+def test_intraday_break_rejections():
+    p = c.scan_params({})
+    now = datetime(2026, 11, 9, 11, 0, tzinfo=ET)
+    # high set too recently
+    _, why = c.intraday_break(_break_day(high_at=75), D, now, "call", p, _profile())
+    assert "set" in why
+    # base too deep
+    _, why = c.intraday_break(_break_day(base_lo=102.5), D, now, "call", p, _profile())
+    assert "deep" in why
+    # volume too light
+    _, why = c.intraday_break(_break_day(vol=800), D, now, "call", p, _profile())
+    assert "volume" in why
+    # wrong side of VWAP for a put
+    _, why = c.intraday_break(_break_day(), D, now, "put", p, _profile())
+    assert why
+    # a bar still forming at `now` is ignored, and no history means no volume read
+    _, why = c.intraday_break(_break_day(), D, now, "call", p, None)
+    assert why == "no volume history"
+
+
+def test_discovery_item_is_tracking_only_by_default():
+    p = c.scan_params({})
+    now = datetime(2026, 11, 9, 11, 0, tzinfo=ET)
+    setup, _ = c.intraday_break(_break_day(), D, now, "call", p, _profile())
+    raw = c.discovery_item("NVDA", "call", setup, p, now, {"group": "SMH"})
+    it = Item(raw)
+    assert it.id == "20261109-scalp-NVDA-C-intra:entry" and raw["track_only"] and raw["quiet"]
+    assert c.resolve_level(it, None) == ("above", 105.0)
+    assert raw["stock_stop"] == 104.2 and abs(raw["target_stock"] - 106.6) < 1e-9
+    assert it.armed_after == now
+    assert c.active_items({"watch": [raw]}, D)
+    p2 = c.scan_params({"params": {"execute": True, "telegram": True}})
+    raw2 = c.discovery_item("NVDA", "put", dict(setup, trigger=95.0, stop=96.0), p2, now, {})
+    assert not raw2["track_only"] and not raw2["quiet"] and raw2["trigger"]["type"] == "below"
+    assert raw2["target_stock"] == 93.0
+    raw3 = c.discovery_item("NVDA", "call", setup, c.scan_params({"params": {"execute": True}}), now, {})
+    assert not raw3["track_only"] and not raw3["quiet"]   # execution on must not be silenced into never ordering
+
+
+def test_monitor_scan_once_arms_and_survives_restart():
+    import asyncio
+    import monitor as mon
+
+    class FakeRest:
+        def stock_snapshots_many(self, syms):
+            px = {"NVDA": (104.7, 100.0), "SMH": (101.5, 100.0), "AMD": (97.0, 100.0), "INTC": (103.0, 100.0),
+                  "SPY": (100.4, 100.0)}
+            return {s: {"latestTrade": {"p": a}, "prevDailyBar": {"c": b}} for s, (a, b) in px.items() if s in syms}
+
+        def minute_bars(self, syms, start):
+            return {s: _break_day() if s == "NVDA" else _break_day(high_at=75) for s in syms}
+
+        def rvol_profile(self, sym, today):
+            return _profile()
+
+    class FakeRepo:
+        def __init__(self):
+            self.pending = []
+
+        def todays_events(self, d):
+            return list(self.pending)
+
+    m = mon.Monitor.__new__(mon.Monitor)
+    m.rest, m.repo, m.today, m.market_open = FakeRest(), FakeRepo(), D, True
+    m.items, m.discovered, m.auto_items, m.auto_plays, m.fired = [], [], [], set(), set()
+    m.scan_note, m.ws, m.stream_ok, m.subscribed = "", None, False, set()
+    m.feed_meta = {"scan": {"symbols": {"NVDA": {"group": "SMH"}, "AMD": {"group": "SMH"}, "INTC": {"group": "SMH"},
+                                        "SMH": {}}, "exclude": ["INTC"]}}
+    p = c.scan_params(m.feed_meta["scan"])
+    early = datetime(2026, 11, 9, 9, 50, tzinfo=ET)
+    asyncio.run(m.scan_once(early, p))
+    assert not m.discovered                                  # before 10:00 nothing runs
+    now = datetime(2026, 11, 9, 11, 0, tzinfo=ET)
+    asyncio.run(m.scan_once(now, p))
+    assert [i.symbol for i in m.discovered] == ["NVDA"], m.scan_note   # SMH's high is too fresh; AMD against SPY; INTC excluded
+    ev = m.repo.pending[0]
+    assert ev["kind"] == "discovery" and "item_id" not in ev and ev["group_move_pct"] == 1.5
+    assert ev["sector_today"] == "agree" and ev["spy_move_pct"] == 0.4
+    assert any(i.id == "20261109-scalp-NVDA-C-intra:entry" for i in m.stock_items())
+    asyncio.run(m.scan_once(now + timedelta(minutes=1), p))
+    assert len(m.discovered) == 1                            # never the same name twice
+    # restart: the found item comes back from the events file and is not treated as already fired
+    m2 = mon.Monitor.__new__(mon.Monitor)
+    m2.repo, m2.items, m2.auto_items = m.repo, [], []
+    for a in ("fired", "auto_plays", "track_only", "touched"):
+        setattr(m2, a, set() if a != "touched" else {})
+    m2.unconfirmed, m2.bars, m2.orb, m2.vwap, m2.discovered = {}, {}, {}, {}, []
+    m2.new_day(D)
+    assert [i.symbol for i in m2.discovered] == ["NVDA"] and not m2.fired
+
+
+
 if __name__ == "__main__":
     for name, fn in list(globals().items()):
         if name.startswith("test_"):

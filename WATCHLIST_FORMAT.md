@@ -49,3 +49,33 @@ Read by the monitor every 30 seconds. Only active items are watched.
 The item arms when price first trades into the zone inside the window, then triggers when price trades back
 above max(session VWAP, zone high) (calls) or below min(session VWAP, zone low) (puts) while still inside the window.
 Give it a `stock_stop` just beyond the zone. Set `track_only: true` while the setup is being measured.
+
+## Added 2026-11-17: live intraday discovery (manual 14)
+Optional top-level `scan` block. Published by the pre-market brief; every later run keeps it when it rewrites the file.
+
+```json
+"scan": {
+  "symbols": {"NVDA": {"group": "SMH"}, "SMH": {}, "SPY": {"index": true}, "MRVL": {"lane": true}},
+  "exclude": ["WIX"],
+  "params": {"rvol_min": 1.0, "base_minutes": 30, "max_base_depth_pct": 1.5, "min_move_pct": 1.0,
+             "max_new_per_scan": 2, "max_new_per_day": 6, "start": "10:00", "cutoff": "14:30",
+             "execute": false, "telegram": false}
+}
+```
+
+- `symbols`: the scan list. Direction is the stock's own move (manual 17); by default only names moving the same way as SPY count (`with_spy`). `group` is the name's sector ETF, used for the `sector_today` tag (and as a filter only if `with_group: true`); `lane: true`
+  lets a momentum-lane name count in either direction, `index: true` halves the move needed.
+- `exclude`: names to skip today (earnings today, anything the desk does not want).
+- `params`: any of the defaults in `desk_core.SCAN_DEFAULTS`.
+- From `start` to `cutoff` ET, once a minute, the monitor takes the `top_n` biggest movers and checks completed
+  1-minute bars for the intraday_break setup: same-time volume ≥ `rvol_min`, price on the trade's side of VWAP, the
+  high (calls) or low (puts) of day set at least `base_minutes` ago, and every bar since within
+  `max_base_depth_pct` of it. Names with an active desk entry are skipped, and a name is found at most once a day.
+- For each find (best volume first, at most `max_new_per_scan` per minute and `max_new_per_day` per day) it writes a
+  `discovery` event (no `item_id`; the armed item is in `item`) and starts watching the entry itself:
+  id `<YYYYMMDD>-scalp-<SYM>-<C|P>-intra:entry`, trigger = the high/low of day, `stock_stop` = the base low/high,
+  `target_stock` = 2R, `armed_after` = the find time. Its entries and exits are ordinary events.
+- `execute: false` (default) arms it `track_only`: measured, never ordered. `true` lets a confirmed entry go to the
+  paper executor like any desk entry. `telegram: true` sends a line on each find.
+- The desk does not publish these items in `watchlist.json`; the monitor holds them and restores them from the
+  events file after a restart. `status.json` shows `scan.on` and `scan.found_today`.

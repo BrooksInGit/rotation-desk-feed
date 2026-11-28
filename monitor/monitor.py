@@ -153,6 +153,13 @@ class Rest:
     def stock_snapshots(self, symbols: list[str]) -> dict:
         return self._get(f"{DATA}/v2/stocks/snapshots", {"symbols": ",".join(symbols), "feed": self.s.feed})
 
+    def stock_snapshots_many(self, symbols: list[str]) -> dict:
+        out: dict = {}
+        syms = sorted(set(symbols))
+        for k in range(0, len(syms), 100):
+            out.update(self.stock_snapshots(syms[k:k + 100]))
+        return out
+
     def option_snapshots(self, symbols: list[str]) -> dict:
         if not symbols:
             return {}
@@ -318,13 +325,16 @@ class Monitor:
         self.code_rev: str | None = None
         self.vwap: dict[str, float] = {}                 # session VWAP per symbol, refreshed by the sweep
         self.touched: dict[str, datetime] = {}           # reclaim items: when price first traded into the zone
+        self.discovered: list[Item] = []                 # entries the live scan armed today (manual 14)
+        self.scan_note: str = ""                         # last scan outcome, for the log and status.json
         self.exec = Executor(Path(__file__).resolve().parent, self.tg, s.tg_token, s.tg_chat, self.repo.pending.append)
 
     # ------------------------------------------------------------ helpers
     def all_items(self) -> list[Item]:
         desk = [i for i in self.items
                 if not (i.kind in core.STOCK_EXIT_KINDS | core.OPTION_EXIT_KINDS and i.raw.get("play_id") in self.auto_plays)]
-        return desk + self.auto_items
+        ids = {i.id for i in desk}
+        return desk + [i for i in self.discovered if i.id not in ids] + self.auto_items
 
     def stock_items(self) -> list[Item]:
         return [i for i in self.all_items() if i.kind in core.ENTRY_KINDS | core.STOCK_EXIT_KINDS and i.id not in self.fired]
@@ -422,9 +432,13 @@ class Monitor:
         self.orb.clear()
         self.vwap.clear()
         self.touched.clear()
+        self.discovered.clear()
         self.spy_change = None
         # never re-alert something already recorded today (e.g. after a restart)
         for ev in self.repo.todays_events(d):
+            if ev.get("kind") == "discovery" and ev.get("item"):
+                self.discovered.append(Item(ev["item"]))  # keep watching what the live scan found before a restart
+                continue
             if ev.get("track_only"):
                 self.track_only.add(ev["item_id"])
             if not ev.get("item_id"):
@@ -619,6 +633,8 @@ class Monitor:
                     "watching": len(self.stock_items()) + len(self.option_items()),
                     "feed": self.s.feed, "options_feed": self.s.options_feed,
                     "watchlist_updated_at": self.feed_meta.get("updated_at"),
+                    "scan": {"on": bool((self.feed_meta.get("scan") or {}).get("symbols")),
+                             "found_today": len(self.discovered)},
                 }
                 await asyncio.to_thread(self.repo.flush, datetime.now(ET))
                 await self.check_stream_health()
@@ -683,6 +699,74 @@ class Monitor:
             except Exception:
                 log.exception("sweep error")
             await asyncio.sleep(self.s.sweep_seconds)
+
+    async def scan_loop(self) -> None:
+        """Live intraday discovery (manual 14): during the scan window, every minute, look for intraday_break setups
+        among the desk's scan list (watchlist.json "scan") and arm them as entries the monitor watches itself."""
+        while True:
+            p = core.scan_params(self.feed_meta.get("scan") or {})
+            try:
+                await self.scan_once(datetime.now(ET), p)
+            except Exception:
+                log.exception("scan error")
+            await asyncio.sleep(max(30, int(p["every_s"])))
+
+    async def scan_once(self, now: datetime, p: dict) -> None:
+        scan = self.feed_meta.get("scan") or {}
+        symbols = core.scan_symbols(scan)
+        if not symbols or not self.market_open or not core.in_window(now, [p["start"], p["cutoff"]]):
+            return
+        room = int(p["max_new_per_day"]) - len(self.discovered)
+        if room <= 0:
+            self.scan_note = f"{now:%H:%M} daily limit reached"
+            return
+        groups = {(m.get("group") or "").upper() for m in symbols.values()} - {""}
+        snaps = await asyncio.to_thread(self.rest.stock_snapshots_many, sorted(set(symbols) | groups | {"SPY"}))
+        moves = core.snapshot_moves(snaps)
+        busy = ({i.symbol for i in self.items if i.kind in core.ENTRY_KINDS}
+                | {i.symbol for i in self.discovered} | {s.upper() for s in scan.get("exclude") or []})
+        movers = core.scan_movers(symbols, moves, busy, p)
+        if not movers:
+            self.scan_note = f"{now:%H:%M} no movers"
+            return
+        bars = await asyncio.to_thread(self.rest.minute_bars, [m[0] for m in movers], core.session_open(self.today))
+        found, why = [], []
+        for sym, direction, mv in movers:
+            prof = await asyncio.to_thread(self.rest.rvol_profile, sym, self.today)
+            setup, reason = core.intraday_break(bars.get(sym, []), self.today, now, direction, p, prof)
+            if setup:
+                found.append((sym, direction, mv, setup))
+            else:
+                why.append(f"{sym} {reason}")
+        found.sort(key=lambda x: -x[3]["rvol"])
+        take = found[:min(int(p["max_new_per_scan"]), room)]
+        self.scan_note = (f"{now:%H:%M} checked {len(movers)}: "
+                          + (", ".join(f"found {x[0]}" for x in take) or "none qualified"))
+        for sym, direction, mv, setup in take:
+            meta = symbols.get(sym, {})
+            raw = core.discovery_item(sym, direction, setup, p, now, meta)
+            g = (meta.get("group") or "").upper()
+            ev = {"id": f"{raw['id']}@discovered", "kind": "discovery", "time": now.isoformat(),
+                  "symbol": sym, "direction": direction, "module": "scalp", "setup": "intraday_break",
+                  "play_id": raw["play_id"], "price": setup["last"], "trigger_level": setup["trigger"],
+                  "stop": setup["stop"], "rvol": setup["rvol"], "session_vwap": setup["vwap"],
+                  "high_low_set_at": setup["set_at"], "base_minutes": setup["held_min"],
+                  "base_depth_pct": setup["depth_pct"], "move_pct": round(mv * 100, 2),
+                  "group": g or None, "group_move_pct": round(moves[g] * 100, 2) if g in moves else None,
+                  "sector_today": core.sector_today(direction, moves.get(g)),
+                  "spy_move_pct": round(moves["SPY"] * 100, 2) if "SPY" in moves else None,
+                  "track_only": raw["track_only"], "checked": [m[0] for m in movers], "item": raw}
+            self.discovered.append(Item(raw))
+            self.repo.pending.append(ev)
+            log.info("live scan found %s %s: break %s, stop %s, rvol %.2f", sym, direction, setup["trigger"],
+                     setup["stop"], setup["rvol"])
+            if p["telegram"]:
+                await self.tg(f"NEW INTRADAY · {sym} {direction.upper()} · {'above' if direction == 'call' else 'below'} "
+                              f"{setup['trigger']} · stop {setup['stop']} · vol {setup['rvol']}x · "
+                              f"{'tracking only' if raw['track_only'] else 'will enter on confirmation'}")
+        log.info("live scan %s%s", self.scan_note, ("; " + "; ".join(why)) if why else "")
+        if take:
+            await self.sync_subscriptions()
 
     async def time_exit_loop(self) -> None:
         """At 15:05 ET close every open scalp leg the monitor holds (manual 5: scalps are flat by 15:05)."""
@@ -811,7 +895,7 @@ class Monitor:
         self.exec.loop = asyncio.get_running_loop()
         await asyncio.gather(self.clock_loop(), self.feed_loop(), self.stream_loop(),
                              self.sweep_loop(), self.option_loop(), self.time_exit_loop(), self.exec.command_loop(),
-                             self.account_loop(), self.exec.exit_loop())
+                             self.account_loop(), self.exec.exit_loop(), self.scan_loop())
 
 
 # ================================================================ entry

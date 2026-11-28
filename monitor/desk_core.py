@@ -435,3 +435,136 @@ def format_alert(item: Item, ev: dict) -> str:
         lines.append(ev["note"])
     lines.append("Paper mode: nothing was ordered.")
     return "\n".join(lines)
+
+
+# ---------------------------------------------------------------- live intraday discovery (manual 14)
+SCAN_DEFAULTS = {
+    "start": "10:00", "cutoff": "14:30", "every_s": 60,
+    "top_n": 10,                 # biggest movers checked on bars each scan
+    "min_move_pct": 1.0,         # % from yesterday's close; index ETFs need index_move_factor of it
+    "index_move_factor": 0.5,
+    "rvol_min": 1.0,             # same-time relative volume (playbook rvol_min)
+    "with_spy": True,            # calls only when SPY is up on the day, puts only when down (playbook v10)
+    "with_group": False,         # require the group ETF to move the same way (off: manual 17, no sector gate)
+    "base_minutes": 30,          # the high/low of day must be at least this old
+    "max_base_depth_pct": 1.5,   # and every bar since must hold within this % of it
+    "max_new_per_scan": 2, "max_new_per_day": 6,
+    "max_extension_pct": 0.01, "spy_block_pct": 0.0, "skip_first_minutes": 0,
+    "contract_rule": {"dte": [0, 7], "delta": [0.4, 0.6], "max_spread_pct": 0.05},
+    "execute": False,            # False: arm as tracking-only (measured, never ordered)
+    "telegram": False,           # True: send a Telegram line when a name is found
+}
+
+
+def scan_params(scan: dict) -> dict:
+    p = dict(SCAN_DEFAULTS)
+    p.update((scan or {}).get("params") or {})
+    return p
+
+
+def scan_symbols(scan: dict) -> dict[str, dict]:
+    return {k.upper(): (v or {}) for k, v in ((scan or {}).get("symbols") or {}).items()}
+
+
+def snapshot_moves(snaps: dict) -> dict[str, float]:
+    """Symbol -> change from yesterday's close, from Alpaca stock snapshots."""
+    out = {}
+    for sym, s in (snaps or {}).items():
+        last = ((s or {}).get("latestTrade") or {}).get("p")
+        prev = ((s or {}).get("prevDailyBar") or {}).get("c")
+        if last and prev:
+            out[sym.upper()] = float(last) / float(prev) - 1
+    return out
+
+
+def scan_movers(symbols: dict[str, dict], moves: dict[str, float], exclude: set[str], p: dict) -> list[tuple[str, str, float]]:
+    """(symbol, direction, move) for names moving at least min_move_pct. Direction is the stock's own move
+    (manual 17); with_spy keeps only names moving the way SPY is; with_group (off by default) also needs the
+    group ETF moving the same way, except for momentum-lane names (lane: true). Biggest first, top_n of them."""
+    out = []
+    spy = moves.get("SPY")
+    for sym, meta in symbols.items():
+        if sym in exclude or sym not in moves:
+            continue
+        mv = moves[sym]
+        need = p["min_move_pct"] / 100 * (p["index_move_factor"] if meta.get("index") else 1)
+        if abs(mv) < need:
+            continue
+        if p["with_spy"] and (spy is None or spy * mv <= 0):
+            continue
+        g = (meta.get("group") or "").upper()
+        if p["with_group"] and not meta.get("lane") and g and g != sym:
+            gm = moves.get(g)
+            if gm is None or gm * mv <= 0:
+                continue
+        out.append((sym, "call" if mv > 0 else "put", mv))
+    out.sort(key=lambda x: -abs(x[2]))
+    return out[: int(p["top_n"])]
+
+
+def sector_today(direction: str, group_move: float | None) -> str | None:
+    """Manual 17 tag: does the sector ETF's move agree with the trade ("flat" under 0.3%)."""
+    if group_move is None:
+        return None
+    if abs(group_move) < 0.003:
+        return "flat"
+    return "agree" if (group_move > 0) == (direction == "call") else "disagree"
+
+
+def intraday_break(bars: list[dict], d: date, now: datetime, direction: str, p: dict,
+                   profile: dict | None) -> tuple[dict | None, str]:
+    """Manual 14.3 intraday_break on completed 1-minute bars: volume >= rvol_min, price on the trade's side of
+    VWAP, the high (calls) / low (puts) of day set at least base_minutes ago, and every bar since holding within
+    max_base_depth_pct of it. Returns (setup, "") or (None, reason)."""
+    day = [b for b in bars if to_et(b["t"]).date() == d and in_rth(to_et(b["t"]))
+           and to_et(b["t"]) + timedelta(minutes=1) <= now]
+    if len(day) < int(p["base_minutes"]) + 1:
+        return None, "too early in the session"
+    call = direction == "call"
+    ext = max(b["h"] for b in day) if call else min(b["l"] for b in day)
+    i = next(k for k, b in enumerate(day) if (b["h"] if call else b["l"]) == ext)
+    set_at = to_et(day[i]["t"])
+    held = (now - (set_at + timedelta(minutes=1))).total_seconds() / 60
+    if held < p["base_minutes"]:
+        return None, f"{'high' if call else 'low'} of day set {held:.0f} min ago (needs {p['base_minutes']})"
+    after = day[i + 1:]
+    base = min(b["l"] for b in after) if call else max(b["h"] for b in after)
+    depth = (ext - base) / ext * 100 if call else (base - ext) / ext * 100
+    if depth > p["max_base_depth_pct"]:
+        return None, f"base {depth:.2f}% deep (max {p['max_base_depth_pct']}%)"
+    st = session_stats(day, d)
+    last = day[-1]["c"]
+    if not st.vwap or (call and last < st.vwap) or (not call and last > st.vwap):
+        return None, f"{'below' if call else 'above'} VWAP {st.vwap or 0:.2f}"
+    # compare like with like: completed bars only, against the profile through the same last minute
+    rvol = rvol_same_time(st.volume, to_et(day[-1]["t"]), profile) if profile else None
+    if rvol is None:
+        return None, "no volume history"
+    if rvol < p["rvol_min"]:
+        return None, f"volume {rvol:.2f}x (min {p['rvol_min']}x)"
+    return {"trigger": round(ext, 4), "stop": round(base, 4), "last": round(last, 4), "vwap": round(st.vwap, 4),
+            "rvol": round(rvol, 2), "set_at": set_at.isoformat(), "held_min": round(held),
+            "depth_pct": round(depth, 2)}, ""
+
+
+def discovery_item(sym: str, direction: str, setup: dict, p: dict, now: datetime, meta: dict) -> dict:
+    """The watch item the monitor arms for a discovered intraday break (a scalp; 15:05 time exit applies)."""
+    call = direction == "call"
+    pid = f"{now:%Y%m%d}-scalp-{sym}-{'C' if call else 'P'}-intra"
+    stop, trig = setup["stop"], setup["trigger"]
+    return {
+        "id": f"{pid}:entry", "play_id": pid, "symbol": sym, "kind": "entry", "status": "active",
+        "expires": now.date().isoformat(), "armed_after": now.isoformat(),
+        "module": "scalp", "setup": "intraday_break", "direction": direction,
+        "trigger": {"type": "above" if call else "below", "price": trig},
+        "confirmation": {"rvol_min": p["rvol_min"], "vwap": "above" if call else "below",
+                         "max_extension_pct": p["max_extension_pct"], "spy_block_pct": p["spy_block_pct"],
+                         "skip_first_minutes": p["skip_first_minutes"]},
+        "contract_rule": p["contract_rule"], "stock_stop": stop,
+        "target_stock": round(trig + 2 * (trig - stop), 4),
+        "track_only": not p["execute"],
+        # monitor.fire never orders a quiet item, so an executable one is never quiet
+        "quiet": not (p["telegram"] or p["execute"]),
+        "discovered": "intraday", "group": meta.get("group"), "lane": bool(meta.get("lane")),
+        "plan": f"{sym} intraday_break {'>' if call else '<'} {trig} (found live {now:%H:%M}); stop {stop}, 2R, 15:05 close",
+    }
